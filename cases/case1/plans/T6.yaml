@@ -1,0 +1,90 @@
+id: T6
+question: 用全息舞台回顾：病程如何演进、病灶出现在哪里、关键指标怎样变化？
+reviewed_by: null
+steps:
+  - id: s1
+    title: 全息病程轨道
+    camera: b.holo.orbit
+    actions:
+      - {op: holoScene, targets: [b.holo.orbit]}
+      - {op: phaseHighlight, targets: [ph.vrd, ph.asct, ph.kd, ph.cart, ph.pom, ph.rt, ph.elra]}
+    claims:
+      - {type: quote, fact: u.4.5.p0}
+
+  - id: s2
+    title: 一线治疗与移植
+    camera: b.holo.orbit
+    actions:
+      - {op: holoScene, targets: [b.holo.orbit]}
+      - {op: phaseHighlight, targets: [ph.vrd, ph.asct]}
+    claims:
+      - {type: value, template: "{{d.2023-06-29}} 启动 VRD，诱导后疗效评估 {{f.resp.vgpr}}；{{d.2023-12-19}} 行自体造血干细胞移植", cite: [u.8.9.p0, u.8.15.p0]}
+
+  - id: s3
+    title: CAR-T 与深度缓解
+    camera: b.holo.orbit
+    actions:
+      - {op: holoScene, targets: [b.holo.orbit]}
+      - {op: phaseHighlight, targets: [ph.cart]}
+    claims:
+      - {type: value, template: "{{d.2024-05-17}} 回输 BCMA CAR-T；{{date:f.resp.scr}} 疗效评估 {{f.resp.scr}}", cite: [u.11.11.p0]}
+
+  - id: s4
+    title: 全息人体舱 · 第一次髓外进展
+    camera: b.holo.anatomy
+    actions:
+      - {op: holoScene, targets: [b.holo.anatomy]}
+      - {op: bodyMap, targets: [b.bodymap.scapula]}
+      - {op: drawHotspot, targets: [b.img.emd1_ct.h1]}
+    claims:
+      - {type: value, template: "{{date:f.site.emd1}} {{f.site.emd1}}（SUVmax {{f.suv.scapula.2024-05-08}}）"}
+
+  - id: s5
+    title: 第二次：左乳与右髂骨
+    camera: b.holo.anatomy
+    actions:
+      - {op: holoScene, targets: [b.holo.anatomy]}
+      - {op: bodyMap, targets: [b.bodymap.breast, b.bodymap.iliac]}
+      - {op: drawHotspot, targets: [b.img.emd2_breast.h1, b.img.emd2_iliac.h1]}
+    claims:
+      - {type: value, template: "{{date:f.site.emd2.breast}} {{f.site.emd2.breast}}、{{f.site.emd2.iliac}}（CXCR4 显像）"}
+
+  - id: s6
+    title: 第三次：皮下与腹股沟
+    camera: b.holo.anatomy
+    actions:
+      - {op: holoScene, targets: [b.holo.anatomy]}
+      - {op: bodyMap, targets: [b.bodymap.arm, b.bodymap.abd, b.bodymap.groin]}
+      - {op: drawHotspot, targets: [b.img.emd3_arm.h1, b.img.emd3_abd.h1, b.img.emd3_groin.h1]}
+    claims:
+      - {type: value, template: "{{date:f.site.emd3.abd}} {{f.site.emd3.abd}}、{{f.site.emd3.groin}}、{{f.site.emd3.arm}}"}
+
+  - id: s7
+    title: 数据棱镜 · M 蛋白
+    camera: b.holo.prism
+    actions:
+      - {op: holoScene, targets: [b.holo.prism]}
+      - {op: chartDraw, targets: [b.s.mprot]}
+      - {op: pointPulse, targets: [f.mprot.2024-05-08]}
+    claims:
+      - {type: value, template: "{{date:f.mprot.2024-05-08}} M蛋白 {{f.mprot.2024-05-08}}；{{date:f.mprot.2024-12-10}} {{f.mprot.2024-12-10}}"}
+
+  - id: s8
+    title: 数据棱镜 · IL-6
+    camera: b.holo.prism
+    actions:
+      - {op: holoScene, targets: [b.holo.prism]}
+      - {op: chartDraw, targets: [b.s.il6]}
+      - {op: pointPulse, targets: [f.il6.06]}
+    claims:
+      - {type: value, template: "IL-6 峰值 {{f.il6.06}}，出现在 {{date:f.il6.06}}"}
+
+  - id: s9
+    title: 数据棱镜 · 最新评估
+    camera: b.holo.prism
+    actions:
+      - {op: holoScene, targets: [b.holo.prism]}
+      - {op: chartDraw, targets: [b.s.spep_pct]}
+      - {op: pointPulse, targets: [f.spep_pct.2026-08-24]}
+    claims:
+      - {type: quote, fact: u.21.11.p1}

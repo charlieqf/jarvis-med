@@ -1,7 +1,7 @@
 import type { Bundle, Fact, Tour } from './types'
 
 export const CASE = 'case1'
-export const TOUR_IDS = ['T1', 'T2', 'T3', 'T4', 'T5']
+export const TOUR_IDS = ['T1', 'T2', 'T3', 'T4', 'T5', 'T6']
 const base = `${import.meta.env.BASE_URL}cases/${CASE}/`
 
 export const asset = (path: string) => base + path

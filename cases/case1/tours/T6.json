@@ -1,0 +1,454 @@
+{
+ "id": "T6",
+ "question": "用全息舞台回顾：病程如何演进、病灶出现在哪里、关键指标怎样变化？",
+ "content_version": "3c52bfa16b84",
+ "reviewed_by": null,
+ "steps": [
+  {
+   "id": "T6.s1",
+   "seq": 0,
+   "camera": "b.holo.orbit",
+   "title": "全息病程轨道",
+   "actions": [
+    {
+     "op": "holoScene",
+     "targets": [
+      "b.holo.orbit"
+     ]
+    },
+    {
+     "op": "phaseHighlight",
+     "targets": [
+      "ph.vrd",
+      "ph.asct",
+      "ph.kd",
+      "ph.cart",
+      "ph.pom",
+      "ph.rt",
+      "ph.elra"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T6.s1.c0",
+     "type": "quote",
+     "text": "确诊多发性骨髓瘤3年余，多线治疗后复发难治，伴髓外浸润",
+     "cite": [
+      "u.4.5.p0"
+     ],
+     "verbatim": true
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T6.s2",
+   "seq": 1,
+   "camera": "b.holo.orbit",
+   "title": "一线治疗与移植",
+   "actions": [
+    {
+     "op": "holoScene",
+     "targets": [
+      "b.holo.orbit"
+     ]
+    },
+    {
+     "op": "phaseHighlight",
+     "targets": [
+      "ph.vrd",
+      "ph.asct"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T6.s2.c0",
+     "type": "value",
+     "text": "2023.06.29 启动 VRD，诱导后疗效评估 VGPR；2023.12.19 行自体造血干细胞移植",
+     "cite": [
+      "d.2023-06-29",
+      "f.resp.vgpr",
+      "d.2023-12-19",
+      "u.8.9.p0",
+      "u.8.15.p0"
+     ],
+     "flags": []
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T6.s3",
+   "seq": 2,
+   "camera": "b.holo.orbit",
+   "title": "CAR-T 与深度缓解",
+   "actions": [
+    {
+     "op": "holoScene",
+     "targets": [
+      "b.holo.orbit"
+     ]
+    },
+    {
+     "op": "phaseHighlight",
+     "targets": [
+      "ph.cart"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T6.s3.c0",
+     "type": "value",
+     "text": "2024.05.17 回输 BCMA CAR-T；2024.12.10 疗效评估 sCR",
+     "cite": [
+      "d.2024-05-17",
+      "f.resp.scr",
+      "u.11.11.p0"
+     ],
+     "flags": []
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T6.s4",
+   "seq": 3,
+   "camera": "b.holo.anatomy",
+   "title": "全息人体舱 · 第一次髓外进展",
+   "actions": [
+    {
+     "op": "holoScene",
+     "targets": [
+      "b.holo.anatomy"
+     ]
+    },
+    {
+     "op": "bodyMap",
+     "targets": [
+      "b.bodymap.scapula"
+     ]
+    },
+    {
+     "op": "drawHotspot",
+     "targets": [
+      "b.img.emd1_ct.h1"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T6.s4.c0",
+     "type": "value",
+     "text": "2024.05.08 右侧肩胛骨后方肌肉肿块（SUVmax 9.39）",
+     "cite": [
+      "f.site.emd1",
+      "f.suv.scapula.2024-05-08"
+     ],
+     "flags": []
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T6.s5",
+   "seq": 4,
+   "camera": "b.holo.anatomy",
+   "title": "第二次：左乳与右髂骨",
+   "actions": [
+    {
+     "op": "holoScene",
+     "targets": [
+      "b.holo.anatomy"
+     ]
+    },
+    {
+     "op": "bodyMap",
+     "targets": [
+      "b.bodymap.breast",
+      "b.bodymap.iliac"
+     ]
+    },
+    {
+     "op": "drawHotspot",
+     "targets": [
+      "b.img.emd2_breast.h1",
+      "b.img.emd2_iliac.h1"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T6.s5.c0",
+     "type": "value",
+     "text": "2025.09 左侧乳腺内侧象限软组织肿物、髂骨右翼（CXCR4 显像）",
+     "cite": [
+      "f.site.emd2.breast",
+      "f.site.emd2.iliac"
+     ],
+     "flags": []
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T6.s6",
+   "seq": 5,
+   "camera": "b.holo.anatomy",
+   "title": "第三次：皮下与腹股沟",
+   "actions": [
+    {
+     "op": "holoScene",
+     "targets": [
+      "b.holo.anatomy"
+     ]
+    },
+    {
+     "op": "bodyMap",
+     "targets": [
+      "b.bodymap.arm",
+      "b.bodymap.abd",
+      "b.bodymap.groin"
+     ]
+    },
+    {
+     "op": "drawHotspot",
+     "targets": [
+      "b.img.emd3_arm.h1",
+      "b.img.emd3_abd.h1",
+      "b.img.emd3_groin.h1"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T6.s6.c0",
+     "type": "value",
+     "text": "2026.01 右侧腹皮下肿物、右侧腹股沟肿大淋巴结、左侧上臂皮下异常回声",
+     "cite": [
+      "f.site.emd3.abd",
+      "f.site.emd3.groin",
+      "f.site.emd3.arm"
+     ],
+     "flags": []
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T6.s7",
+   "seq": 6,
+   "camera": "b.holo.prism",
+   "title": "数据棱镜 · M 蛋白",
+   "actions": [
+    {
+     "op": "holoScene",
+     "targets": [
+      "b.holo.prism"
+     ]
+    },
+    {
+     "op": "chartDraw",
+     "targets": [
+      "b.s.mprot"
+     ]
+    },
+    {
+     "op": "pointPulse",
+     "targets": [
+      "f.mprot.2024-05-08"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T6.s7.c0",
+     "type": "value",
+     "text": "2024.05.08 M蛋白 10.6412g/L；2024.12.10 阴性",
+     "cite": [
+      "f.mprot.2024-05-08",
+      "f.mprot.2024-12-10"
+     ],
+     "flags": []
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T6.s8",
+   "seq": 7,
+   "camera": "b.holo.prism",
+   "title": "数据棱镜 · IL-6",
+   "actions": [
+    {
+     "op": "holoScene",
+     "targets": [
+      "b.holo.prism"
+     ]
+    },
+    {
+     "op": "chartDraw",
+     "targets": [
+      "b.s.il6"
+     ]
+    },
+    {
+     "op": "pointPulse",
+     "targets": [
+      "f.il6.06"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T6.s8.c0",
+     "type": "value",
+     "text": "IL-6 峰值 967.49，出现在 2024.05.24",
+     "cite": [
+      "f.il6.06"
+     ],
+     "flags": [
+      "image_reading"
+     ]
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T6.s9",
+   "seq": 8,
+   "camera": "b.holo.prism",
+   "title": "数据棱镜 · 最新评估",
+   "actions": [
+    {
+     "op": "holoScene",
+     "targets": [
+      "b.holo.prism"
+     ]
+    },
+    {
+     "op": "chartDraw",
+     "targets": [
+      "b.s.spep_pct"
+     ]
+    },
+    {
+     "op": "pointPulse",
+     "targets": [
+      "f.spep_pct.2026-08-24"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T6.s9.c0",
+     "type": "quote",
+     "text": "2026.08 评估：免疫固定电泳全阴性，M蛋白 <0.1%，sFLC κ/λ 0.42",
+     "cite": [
+      "u.21.11.p1"
+     ],
+     "verbatim": true
+    }
+   ],
+   "callouts": []
+  }
+ ],
+ "checks": [
+  {
+   "claim": "T6.s1.c0",
+   "type": "quote",
+   "cite": [
+    "u.4.5.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T6.s2.c0",
+   "type": "value",
+   "cite": [
+    "d.2023-06-29",
+    "f.resp.vgpr",
+    "d.2023-12-19",
+    "u.8.9.p0",
+    "u.8.15.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T6.s3.c0",
+   "type": "value",
+   "cite": [
+    "d.2024-05-17",
+    "f.resp.scr",
+    "u.11.11.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T6.s4.c0",
+   "type": "value",
+   "cite": [
+    "f.site.emd1",
+    "f.suv.scapula.2024-05-08"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T6.s5.c0",
+   "type": "value",
+   "cite": [
+    "f.site.emd2.breast",
+    "f.site.emd2.iliac"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T6.s6.c0",
+   "type": "value",
+   "cite": [
+    "f.site.emd3.abd",
+    "f.site.emd3.groin",
+    "f.site.emd3.arm"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T6.s7.c0",
+   "type": "value",
+   "cite": [
+    "f.mprot.2024-05-08",
+    "f.mprot.2024-12-10"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T6.s8.c0",
+   "type": "value",
+   "cite": [
+    "f.il6.06"
+   ],
+   "flags": [
+    "image_reading"
+   ],
+   "result": "pass"
+  },
+  {
+   "claim": "T6.s9.c0",
+   "type": "quote",
+   "cite": [
+    "u.21.11.p1"
+   ],
+   "flags": [],
+   "result": "pass"
+  }
+ ]
+}

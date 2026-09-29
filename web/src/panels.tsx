@@ -40,6 +40,7 @@ const KEYWORDS: Record<string, string[]> = {
   T3: ['高危', '髓外', '部位', '哪里', '复发部位', 'FISH', '1q21'],
   T4: ['CAR-T', 'CART', 'car-t', 'CRS', '不良反应', 'IL-6', '细胞治疗', '副作用'],
   T5: ['埃纳妥', '兆珂速', '联合', '文献', 'MagnetisMM', '双抗', '为什么选择', '最新'],
+  T6: ['全息', '全息舞台', '回顾', '总览'],
 }
 
 export function route(input: string, tours: Tour[]) {
