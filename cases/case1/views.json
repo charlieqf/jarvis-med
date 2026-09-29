@@ -16,7 +16,8 @@
     {"id": "sec.summary",    "label": "病例总结"},
     {"id": "sec.literature", "label": "文献回顾"},
     {"id": "sec.conclusion", "label": "总结"},
-    {"id": "sec.slides",     "label": "原版幻灯片"}
+    {"id": "sec.slides",     "label": "原版幻灯片"},
+    {"id": "sec.holo",       "label": "全息舞台"}
   ],
 
   "blocks": [
@@ -228,6 +229,15 @@
 
     {"id": "b.conclusion", "section": "sec.conclusion", "type": "text", "title": "u.31.4.p0", "units": ["u.31.3.*"]},
 
+    {"id": "b.holo.anatomy", "section": "sec.holo", "type": "holo_scene", "scene": "anatomy", "label": "全息人体舱 · 髓外病灶",
+     "pin_refs": ["b.bodymap.scapula", "b.bodymap.breast", "b.bodymap.iliac", "b.bodymap.arm", "b.bodymap.abd", "b.bodymap.groin"],
+     "note": "人体全息图与点位为示意背景，非患者影像；卡片中的影像来自原稿"},
+    {"id": "b.holo.orbit", "section": "sec.holo", "type": "holo_scene", "scene": "orbit", "label": "时空病程轨道",
+     "phase_refs": ["ph.vrd", "ph.asct", "ph.kd", "ph.cart", "ph.pom", "ph.rt", "ph.elra"],
+     "note": "螺旋轨道为示意背景，节点按治疗阶段顺序排列，不表示真实时间比例"},
+    {"id": "b.holo.prism", "section": "sec.holo", "type": "holo_scene", "scene": "prism", "label": "悬浮数据棱镜",
+     "series_refs": ["b.s.mprot", "b.s.flcl", "b.s.ngs", "b.s.il6", "b.s.suv_scapula", "b.s.spep_pct"],
+     "note": "棱镜为示意背景；每张数据卡是一条可比较的序列，数值均来自原稿"},
     {"id": "b.slides", "section": "sec.slides", "type": "slide_deck", "label": "原版幻灯片全部页面（含页面中的全部图片），可以逐页浏览、放大",
      "source": "slides", "range": "all"}
   ]

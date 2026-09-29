@@ -1,4 +1,4 @@
-# content_version 48289a18cd7a
+# content_version 3c52bfa16b84
 ## SECTIONS
 sec.overview | 病例概览
 sec.baseline | 初诊与基线评估
@@ -11,6 +11,7 @@ sec.summary | 病例总结
 sec.literature | 文献回顾
 sec.conclusion | 总结
 sec.slides | 原版幻灯片
+sec.holo | 全息舞台
 ## BLOCKS (camera/spotlight targets)
 b.brand.cover | type=image | section=sec.overview | 封面图片
 b.brand.logo | type=image | section=sec.overview | 医院标识
@@ -322,6 +323,9 @@ b.lit.int.bor | type=image | section=sec.literature | 最佳缓解率与泳道�
 b.lit.int.survival | type=text | section=sec.literature | 
 b.lit.int.km | type=image | section=sec.literature | PFS 与 OS 曲线
 b.conclusion | type=text | section=sec.conclusion | 总结
+b.holo.anatomy | type=holo_scene | section=sec.holo | 全息人体舱 · 髓外病灶
+b.holo.orbit | type=holo_scene | section=sec.holo | 时空病程轨道
+b.holo.prism | type=holo_scene | section=sec.holo | 悬浮数据棱镜
 b.slides | type=slide_deck | section=sec.slides | 原版幻灯片全部页面（含页面中的全部图片），可以逐页浏览、放大
 ## VALUE AND DATE FACTS (use in {{...}} placeholders)
 d.2023-01 | kind=date | raw=2023年1月 | date=2023-01 | 

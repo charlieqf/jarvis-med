@@ -1,7 +1,7 @@
 {
  "id": "T3",
  "question": "患者有哪些高危因素？髓外病灶出现在哪些部位？",
- "content_version": "48289a18cd7a",
+ "content_version": "3c52bfa16b84",
  "reviewed_by": null,
  "steps": [
   {
@@ -134,9 +134,15 @@
   {
    "id": "T3.s4",
    "seq": 3,
-   "camera": "b.bodymap",
+   "camera": "b.holo.anatomy",
    "title": "第三次：皮下与腹股沟",
    "actions": [
+    {
+     "op": "holoScene",
+     "targets": [
+      "b.holo.anatomy"
+     ]
+    },
     {
      "op": "bodyMap",
      "targets": [

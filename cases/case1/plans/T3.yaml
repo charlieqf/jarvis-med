@@ -36,8 +36,9 @@ steps:
 
   - id: s4
     title: 第三次：皮下与腹股沟
-    camera: b.bodymap
+    camera: b.holo.anatomy
     actions:
+      - {op: holoScene, targets: [b.holo.anatomy]}
       - {op: bodyMap, targets: [b.bodymap.arm, b.bodymap.abd, b.bodymap.groin]}
       - {op: drawHotspot, targets: [b.img.emd3_arm.h1, b.img.emd3_abd.h1, b.img.emd3_groin.h1]}
     claims:

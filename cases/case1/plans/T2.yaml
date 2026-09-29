@@ -63,3 +63,12 @@ steps:
       - {op: pointPulse, targets: [f.spep_pct.2026-01, f.spep_pct.2026-08-24]}
     claims:
       - {type: value, template: "血清蛋白电泳 M蛋白：{{date:f.spep_pct.2026-01}} {{f.spep_pct.2026-01}}；{{date:f.spep_pct.2026-08-24}} {{f.spep_pct.2026-08-24}}，免疫固定电泳 {{f.ife.2026-08-24}}", cite: [u.20.12.r2c0]}
+
+  - id: s7
+    title: 数据棱镜总览
+    camera: b.holo.prism
+    actions:
+      - {op: holoScene, targets: [b.holo.prism]}
+      - {op: chartDraw, targets: [b.s.mprot]}
+    claims:
+      - {type: quote, fact: u.21.11.p1}

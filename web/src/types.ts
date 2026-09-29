@@ -89,6 +89,12 @@ export interface Block {
   slides?: { n: number; src: string }[]
   // body map
   pins?: Pin[]
+  // holographic scene
+  scene?: string
+  note?: string
+  pin_refs?: string[]
+  phase_refs?: string[]
+  series_refs?: string[]
 }
 
 export interface CompareRow { id: string; label?: string; label_unit?: string; label_fact?: string; facts: string[] }

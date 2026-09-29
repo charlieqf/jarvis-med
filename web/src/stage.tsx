@@ -28,6 +28,7 @@ export interface Visual {
   pins: string[]
   countUp: string[]
   source?: string
+  holo?: string
   callouts: { target: string; claim: Claim }[]
   say: Claim[]
   title?: string
@@ -60,6 +61,7 @@ export function derive(step: Step): Visual {
       case 'countUp': v.countUp.push(...t); break
       case 'showSource': v.source = t[0]; break
       case 'camera': v.camera = t[0]; break
+      case 'holoScene': v.holo = t[0]; break
     }
   }
   return v
@@ -269,6 +271,9 @@ export function StageProvider({ bundle, tours, children }: { bundle: Bundle; tou
     }, stepDuration(step, state.speed))
     return () => clearTimeout(timer)
   }, [state.status, state.epoch, state.speed, state.answerId, state.index, state.tour, next, log])
+
+  // test hook for automated UI verification (read-only snapshot of the stage)
+  useEffect(() => { (window as unknown as { __jarvis: unknown }).__jarvis = { state, trace, bundle } }, [state, trace, bundle])
 
   const value = useMemo<Ctx>(() => ({
     bundle, tours, state, trace, log, play, playLive, next, prev, cancel,

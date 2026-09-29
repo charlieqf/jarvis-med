@@ -8,7 +8,7 @@ import * as echarts from 'echarts'
 import { useEffect, useMemo, useRef } from 'react'
 import { registerAnchor } from './anchors'
 import { badges, pretty } from './data'
-import { useFlags, useStage } from './stage'
+import { useStage } from './stage'
 import type { Fact, Series } from './types'
 import { FactValue } from './ui'
 
@@ -37,11 +37,10 @@ function dateMs(f: Fact) {
   return Date.UTC(+y, +m - 1, +day)
 }
 
-export function SeriesChart({ series, height = 240, mini = false }: { series: Series; height?: number; mini?: boolean }) {
+export function SeriesChart({ series, height = 240, mini = false, dark = false }: { series: Series; height?: number; mini?: boolean; dark?: boolean }) {
   const { bundle, state } = useStage()
   const el = useRef<HTMLDivElement>(null)
   const chart = useRef<echarts.ECharts | null>(null)
-  const flags = useFlags(series.id)
   const pts = useMemo(() => series.points.map(p => bundle.facts[p.fact]), [series, bundle])
   const unit = displayUnit(pts)
   const pulsed = state.visual.pointPulse.filter(id => series.points.some(p => p.fact === id))
@@ -85,7 +84,7 @@ export function SeriesChart({ series, height = 240, mini = false }: { series: Se
         },
       },
       series: [
-        { type: 'line', data, smooth: false, lineStyle: { color: NAVY, width: mini ? 1.5 : 2.5 }, showSymbol: true, connectNulls: true },
+        { type: 'line', data: dark ? data.map(d => ({ ...d, itemStyle: { ...d.itemStyle, color: '#bff6ff', borderColor: '#7ee8ff' } })) : data, smooth: false, lineStyle: { color: dark ? '#7ee8ff' : NAVY, width: mini ? 1.5 : 2.5, shadowColor: dark ? '#37d3ff' : 'transparent', shadowBlur: dark ? 8 : 0 }, showSymbol: true, connectNulls: true },
         { type: 'effectScatter', data: data.filter(d => pulsed.includes(d.id)).map(d => ({ ...d, label: { show: false } })),
           rippleEffect: { brushType: 'stroke', scale: 4 }, symbolSize: 14, itemStyle: { color: CYAN }, z: 5 },
         ...(series.scale === 'linear' && pts.some(p => p.kind === 'not_detected') ? [{
@@ -97,7 +96,7 @@ export function SeriesChart({ series, height = 240, mini = false }: { series: Se
             label: { formatter: '未检出', color: CYAN }, data: [{ yAxis: floor }] } }] : []),
       ],
     } as echarts.EChartsOption
-  }, [pts, unit.scale, unit.label, series.scale, mini, pulsed, bundle.facts])
+  }, [pts, unit.scale, unit.label, series.scale, mini, pulsed, bundle.facts, dark])
 
   useEffect(() => {
     if (!el.current) return
@@ -130,7 +129,7 @@ export function SeriesChart({ series, height = 240, mini = false }: { series: Se
   }, [pts, option, mini])
 
   return (
-    <div className={`chart-wrap ${flags.spot || draw ? 'is-spot' : ''}`} data-anchor={mini ? undefined : series.id}>
+    <div className="chart-wrap">
       <div ref={el} style={{ height }} />
       {!mini && series.held?.length ? (
         <div className="held">

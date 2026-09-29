@@ -1,7 +1,7 @@
 {
  "id": "T2",
  "question": "M 蛋白、游离轻链和 MRD 在各治疗阶段是怎么变化的？",
- "content_version": "48289a18cd7a",
+ "content_version": "3c52bfa16b84",
  "reviewed_by": null,
  "steps": [
   {
@@ -228,6 +228,38 @@
     }
    ],
    "callouts": []
+  },
+  {
+   "id": "T2.s7",
+   "seq": 6,
+   "camera": "b.holo.prism",
+   "title": "数据棱镜总览",
+   "actions": [
+    {
+     "op": "holoScene",
+     "targets": [
+      "b.holo.prism"
+     ]
+    },
+    {
+     "op": "chartDraw",
+     "targets": [
+      "b.s.mprot"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T2.s7.c0",
+     "type": "quote",
+     "text": "2026.08 评估：免疫固定电泳全阴性，M蛋白 <0.1%，sFLC κ/λ 0.42",
+     "cite": [
+      "u.21.11.p1"
+     ],
+     "verbatim": true
+    }
+   ],
+   "callouts": []
   }
  ],
  "checks": [
@@ -294,6 +326,15 @@
     "f.spep_pct.2026-08-24",
     "f.ife.2026-08-24",
     "u.20.12.r2c0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T2.s7.c0",
+   "type": "quote",
+   "cite": [
+    "u.21.11.p1"
    ],
    "flags": [],
    "result": "pass"

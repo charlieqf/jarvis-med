@@ -3,10 +3,11 @@ question: 这位患者 3 年多的治疗历程是怎样的？
 reviewed_by: null   # 待人工审核
 steps:
   - id: s1
-    title: 病例概要
-    camera: b.patient
+    title: 病程总览（全息轨道）
+    camera: b.holo.orbit
     actions:
-      - {op: spotlight, targets: [b.patient]}
+      - {op: holoScene, targets: [b.holo.orbit]}
+      - {op: phaseHighlight, targets: [ph.vrd, ph.asct, ph.kd, ph.cart, ph.pom, ph.rt, ph.elra]}
     claims:
       - {type: quote, fact: u.4.5.p0}
 

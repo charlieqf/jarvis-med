@@ -1,0 +1,80 @@
+/* ------------------------------------------------------------ lift to foreground */
+.lift-layer { position: fixed; inset: 0; pointer-events: none; z-index: 45 }
+.lift-card { position: fixed; transform-origin: center center; background: #fff; border-radius: 12px; overflow: hidden; will-change: transform }
+.lift-card > * { margin: 0 !important; width: 100% !important; height: 100% !important; box-shadow: none !important }
+.lift-card .tl-label { position: static !important; transform: none !important; display: block !important }
+
+/* ------------------------------------------------------------ holographic stage (dark) */
+.main > .scroll, .main > .holo-layer { grid-row: 1; grid-column: 1 }
+.holo-layer { position: relative; z-index: 20; background: radial-gradient(ellipse at 40% 60%, #0a2a44 0%, #041222 55%, #020912 100%); color: #dff8ff; overflow: hidden; animation: holoIn .7s ease; min-height: 0 }
+@keyframes holoIn { from { opacity: 0; filter: brightness(2) blur(6px) } }
+.holo-inner { display: grid; grid-template-columns: auto minmax(300px, 1fr); gap: 22px; height: 100%; padding: 16px 22px; min-height: 0 }
+.holo-stage { position: relative; height: 100%; aspect-ratio: 4 / 5; container-type: inline-size; border-radius: 18px; overflow: hidden; box-shadow: 0 0 80px rgba(30, 140, 200, .25), inset 0 0 0 1px rgba(120, 220, 255, .18) }
+.holo-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: breathe 9s ease-in-out infinite }
+@keyframes breathe { 50% { filter: brightness(1.12) saturate(1.1) } }
+.holo-scan { position: absolute; left: 28%; right: 28%; height: 2px; background: #b3f9ff; box-shadow: 0 0 18px 3px #6cdeff; animation: scan 7s ease-in-out infinite; opacity: .6 }
+@keyframes scan { 0%, 100% { top: 18%; opacity: 0 } 15%, 80% { opacity: .7 } 90% { top: 82%; opacity: 0 } }
+.holo-title { position: absolute; left: 6%; top: 4%; text-shadow: 0 0 14px #5ee7ff }
+.holo-title small { display: block; font: 600 1.5cqw var(--mono); letter-spacing: .3cqw; color: #7fd8ef }
+.holo-title strong { display: block; font-size: 3.6cqw; font-weight: 600; letter-spacing: .2cqw; margin-top: .6cqw }
+.holo-foot { position: absolute; left: 6%; right: 6%; bottom: 2.5%; font-size: 1.5cqw; color: #8fc3d6; text-align: center; background: rgba(2, 12, 22, .55); padding: .6cqw; border-radius: 6px }
+.holo-close { position: absolute; right: 18px; top: 14px; z-index: 5; border: 1px solid #3f7f99; background: rgba(8, 32, 50, .8); color: #bff4ff; border-radius: 8px; padding: 6px 12px; font-size: 12px }
+
+.holo-glass { position: absolute; width: 36%; padding: 1.4cqw 1.8cqw; background: rgba(9, 36, 58, .42); border: 1px solid rgba(145, 222, 255, .55); border-left: 2px solid #a0eeff; border-radius: 4px; backdrop-filter: blur(3px); box-shadow: inset 1px 1px 0 rgba(214, 255, 255, .25), 0 10px 20px rgba(0, 0, 0, .35), 0 0 16px rgba(85, 217, 255, .18); animation: glassFloat 6s ease-in-out infinite; transition: opacity .5s, transform .6s, box-shadow .5s, background .5s; transform: perspective(60cqw) rotateY(var(--ry, -10deg)) rotateZ(var(--rz, -2deg)) }
+.holo-glass.r { --ry: 12deg; --rz: 2deg }
+@keyframes glassFloat { 50% { translate: 0 -1cqw } }
+.holo-glass small { display: block; font: 1.7cqw var(--mono); color: #a7e6ff }
+.holo-glass strong { display: block; font-size: 2.3cqw; font-weight: 600; color: #f0fdff; margin: .5cqw 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+.holo-glass em { font-style: normal; font-size: 1.6cqw; color: #9fcfe0 }
+.holo-glass.on { background: rgba(24, 84, 120, .72); border-color: #dcffff; box-shadow: 0 0 34px rgba(87, 220, 255, .75), inset 0 0 22px rgba(139, 221, 255, .25); transform: perspective(60cqw) rotateY(0) rotateZ(0) scale(1.12); z-index: 6 }
+.holo-glass.dim { opacity: .35 }
+.holo-orbit { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none }
+.orbit-line { fill: none; stroke: #5fdcff; stroke-width: .35; opacity: .55; filter: drop-shadow(0 0 1.5px #28caff) }
+.orbit-dot { fill: #eaffff; filter: drop-shadow(0 0 2px #45d9ff) }
+.prism-card { width: 32% }
+.prism-card .fact { background: rgba(255, 255, 255, .08); color: #d7fbff }
+.prism-card .fact-date { color: #8fc3d6 }
+
+.holo-pin { position: absolute; width: 2.6cqw; height: 2.6cqw; margin: -1.3cqw 0 0 -1.3cqw; border-radius: 50%; border: 1px solid #ffe8ae; background: rgba(237, 184, 99, .45); box-shadow: 0 0 12px #ffba66; padding: 0; z-index: 4; transition: transform .4s, opacity .4s }
+.holo-pin span { position: absolute; left: 150%; top: -40%; white-space: nowrap; font-size: 1.6cqw; color: #ffdf9c; background: rgba(23, 36, 51, .8); padding: .3cqw .7cqw; border-left: 1px solid #ffce87 }
+.holo-pin.on { background: #fff1ba; transform: scale(1.5); box-shadow: 0 0 22px #ffd078, 0 0 0 1cqw rgba(255, 189, 98, .25); animation: pinlight 1.6s ease-in-out infinite }
+@keyframes pinlight { 50% { box-shadow: 0 0 32px #ffd078, 0 0 0 2cqw rgba(255, 189, 98, .05) } }
+.holo-pin.dim { opacity: .35 }
+.holo-links { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 3 }
+.holo-links path { fill: none; stroke: #72deff; stroke-width: .25; stroke-dasharray: 1 1.2; opacity: .35 }
+.holo-links path.on { stroke: #ffe3a3; stroke-width: .45; opacity: .95; stroke-dasharray: none }
+.holo-dock { position: absolute; width: 21%; padding: .9cqw; background: rgba(6, 32, 51, .62); border: 1px solid rgba(121, 223, 255, .6); border-radius: 5px; z-index: 5; animation: glassFloat 5s ease-in-out infinite; transition: transform .6s, opacity .5s, box-shadow .5s }
+.holo-dock.l { left: 3% }
+.holo-dock.r { right: 3% }
+.holo-dock b { font-size: 1.8cqw; color: #ccf8ff; font-weight: 500; margin-right: .6cqw }
+.holo-dock small { font: 1.4cqw var(--mono); color: #8fc3d6 }
+.holo-dock .figure { margin-top: .6cqw; border: 1px solid #285569 }
+.holo-dock.on { transform: scale(1.18); box-shadow: 0 0 26px rgba(255, 210, 120, .6); border-color: #ffe3a3; z-index: 7 }
+.holo-dock.dim { opacity: .3 }
+
+.holo-side { overflow: auto; padding: 6px 4px 16px; display: flex; flex-direction: column; gap: 12px; min-height: 0 }
+.holo-kicker { font: 600 11px var(--mono); letter-spacing: .25em; color: #6cbed7 }
+.holo-card { background: linear-gradient(140deg, rgba(16, 47, 67, .92), rgba(4, 19, 31, .92)); border: 1px solid rgba(147, 237, 255, .45); border-radius: 12px; padding: 12px 14px; box-shadow: 0 0 26px rgba(80, 207, 255, .15); animation: holoCard .7s cubic-bezier(.2, .9, .25, 1.1) both }
+@keyframes holoCard { from { opacity: 0; transform: translateX(40px) scale(.92) } }
+.holo-card-head { display: flex; gap: 10px; align-items: baseline; margin-bottom: 8px }
+.holo-card-head b { font-size: 15px; color: #effbff }
+.holo-card-head .src, .holo-card .mono { font: 11px var(--mono); color: #7fd8ef; margin-left: auto }
+.holo-card .fact { background: rgba(255, 255, 255, .08); color: #d7fbff }
+.holo-card p { color: #b7dbe8; font-size: 13px; line-height: 1.7; margin: 6px 0 }
+.holo-card .unit { color: #cfeff8 }
+.holo-card.compact { padding: 9px 12px }
+.holo-ev { font-size: 12.5px; color: #cfeff8; padding: 2px 0; display: flex; gap: 10px }
+.holo-ev .mono { font: 11px var(--mono); color: #7fd8ef; min-width: 78px }
+.holo-more { font-size: 12px; color: #7fa9bd }
+.holo-card.chart .holo-chart { background: rgba(255, 255, 255, .95); border-radius: 10px; padding: 6px }
+
+.holo-preview { padding: 0 }
+.holo-preview button { display: grid; grid-template-columns: 120px 1fr; gap: 14px; width: 100%; border: 0; padding: 0; background: #041222; border-radius: 12px; overflow: hidden; text-align: left; color: #dff8ff }
+.holo-preview img { width: 120px; height: 150px; object-fit: cover }
+.hp-text { padding: 14px 12px 12px 0; display: flex; flex-direction: column; gap: 4px }
+.hp-text small { font: 600 10.5px var(--mono); letter-spacing: .25em; color: #6cbed7 }
+.hp-text strong { font-size: 16px; color: #effbff }
+.hp-text em { font-style: normal; font-size: 12px; color: #9fcfe0; line-height: 1.5 }
+.hp-text i { font-style: normal; margin-top: auto; color: #7ee8ff; font-size: 13px }
+.holo-preview button:hover { box-shadow: 0 0 0 2px #7ee8ff, 0 0 30px rgba(126, 232, 255, .35) }
+.sec-holo { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) }

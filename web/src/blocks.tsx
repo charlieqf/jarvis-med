@@ -1,6 +1,7 @@
 import { Fragment, useEffect, useMemo, useRef, useState } from 'react'
 import { SeriesChart, StackedBar } from './charts'
 import { Timeline } from './timeline'
+import { HoloPreview } from './holo'
 import { asset, dateLabel } from './data'
 import { useFlags, useStage } from './stage'
 import type { Block, CompareRow, Pin } from './types'
@@ -20,6 +21,7 @@ export function BlockView({ block }: { block: Block }) {
       <div className="label-units">{block.total_labels?.map(u => <UnitText key={u} id={u} />)}</div>
       <div className="chart-source">图表数据点（原稿第 25 页原生图表）：{block.units?.map(u => <UnitText key={u} id={u} />)}</div></Card>
     case 'slide_deck': return <SlideDeck b={block} />
+    case 'holo_scene': return <HoloPreviewWrap b={block} />
     default: return <Card b={block}><em>未知区块类型 {block.type}</em></Card>
   }
 }
@@ -92,7 +94,8 @@ function SeriesGroup({ b }: { b: Block }) {
       <div className="card-head"><h3 className="block-title">指标总览</h3><span className="hint">每张卡片是一条可比较的序列；不同检测方法 / 部位 / 显像方式分开，不会画在同一条线上</span></div>
       <div className="prism">
         {b.series!.map(s => (
-          <div key={s.id} className={`facet ${expanded === s.id ? 'open' : ''}`}>
+          <div key={s.id} data-anchor={expanded === s.id ? s.id : undefined}
+            className={`facet ${expanded === s.id ? 'open' : ''} ${expanded === s.id && (state.visual.chartDraw.includes(s.id) || state.visual.spotlight.includes(s.id) || state.visual.camera === s.id) ? 'is-spot' : ''}`}>
             <button className="facet-head" onClick={() => setOpen(open === s.id ? null : s.id)}>
               <span>{s.label}</span><small>{s.points.length} 个点 · {s.scale === 'log' ? '对数' : '线性'}</small>
             </button>
@@ -260,6 +263,11 @@ function CompareRowView({ r }: { r: CompareRow }) {
       })}
     </tr>
   )
+}
+
+function HoloPreviewWrap({ b }: { b: Block }) {
+  const { openHolo } = useUI()
+  return <HoloPreview b={b} onOpen={() => openHolo(b.id)} />
 }
 
 // ------------------------------------------------------------------ slide deck

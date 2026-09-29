@@ -173,7 +173,9 @@ table.data tr.is-row { background: #e9f8fb; box-shadow: inset 4px 0 0 var(--cyan
 .prism { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px }
 .facet { border: 1px solid var(--line); border-radius: 12px; padding: 8px 10px; background: linear-gradient(180deg, #fff, #f8fbfe); transition: box-shadow .3s }
 .facet:hover { box-shadow: 0 6px 20px rgba(20,40,80,.08) }
-.facet.open { grid-column: 1 / -1; border-color: #bcd3ea }
+.facet.open { grid-column: 1 / -1; border-color: #bcd3ea; padding: 12px 14px }
+.facet.open .facet-head { font-size: 15px; padding-bottom: 8px }
+.facet.is-spot { border-color: var(--cyan); box-shadow: 0 0 0 3px var(--cyan-soft) }
 .facet-head { width: 100%; display: flex; justify-content: space-between; align-items: baseline; gap: 8px; border: 0; background: none; padding: 2px 0 4px; color: var(--navy); font-weight: 600; font-size: 13px; text-align: left }
 .facet-head small { color: var(--muted); font-weight: 400; font-size: 11px; white-space: nowrap }
 .chart-wrap { border-radius: 10px; transition: box-shadow .3s }

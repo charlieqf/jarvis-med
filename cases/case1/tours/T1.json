@@ -1,19 +1,31 @@
 {
  "id": "T1",
  "question": "这位患者 3 年多的治疗历程是怎样的？",
- "content_version": "48289a18cd7a",
+ "content_version": "3c52bfa16b84",
  "reviewed_by": null,
  "steps": [
   {
    "id": "T1.s1",
    "seq": 0,
-   "camera": "b.patient",
-   "title": "病例概要",
+   "camera": "b.holo.orbit",
+   "title": "病程总览（全息轨道）",
    "actions": [
     {
-     "op": "spotlight",
+     "op": "holoScene",
      "targets": [
-      "b.patient"
+      "b.holo.orbit"
+     ]
+    },
+    {
+     "op": "phaseHighlight",
+     "targets": [
+      "ph.vrd",
+      "ph.asct",
+      "ph.kd",
+      "ph.cart",
+      "ph.pom",
+      "ph.rt",
+      "ph.elra"
      ]
     }
    ],

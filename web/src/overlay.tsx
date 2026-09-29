@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { anchorElement, anchorRect } from './anchors'
 import { FigureFacts, ImageFigure } from './blocks'
 import { asset } from './data'
@@ -111,6 +111,71 @@ function Callout({ rect, claim }: { rect: DOMRect | null | undefined; claim: Cla
       </div>
     </>
   )
+}
+
+/* Lift layer: the step's highlighted content is copied out of the page, enlarged and flown to the
+ * foreground (FLIP with the Web Animations API); on the next step it flies back to its place.
+ * Canvas content (charts) is copied pixel-for-pixel. The in-page original stays, dimmed by the mask. */
+export function LiftLayer() {
+  const { state } = useStage()
+  const host = useRef<HTMLDivElement>(null)
+  const v = state.visual
+  const active = !!state.tour && (state.status === 'playing' || state.status === 'paused' || state.status === 'done') && !v.images.length
+
+  useEffect(() => {
+    const root = host.current
+    if (!root || !active) return
+    // what to lift: small, specific targets first; whole blocks only if nothing more specific
+    const specific = [...v.cells, ...v.rows, ...v.compareRows, ...v.pins, ...v.pulse]
+    const blocks = [...v.chartDraw, ...v.spotlight]
+    const ids = [...new Set(specific.length ? specific : blocks)].slice(0, 3)
+    let cancelled = false
+    const cards: { el: HTMLElement; from: DOMRect; to: { x: number; y: number; s: number } }[] = []
+    const timer = setTimeout(() => {   // let the camera scroll settle first
+      if (cancelled) return
+      const vw = window.innerWidth, vh = window.innerHeight
+      const topBand = 70, usableH = vh * 0.46
+      const els = ids.map(id => ({ id, el: anchorElement(id) as HTMLElement | null, r: anchorRect(id) }))
+        .filter(x => x.el && x.r && x.r.width > 8 && x.r.width * x.r.height < vw * vh * 0.5)
+      if (!els.length) return
+      const slotH = usableH / els.length
+      els.forEach(({ el, r }, i) => {
+        const clone = el!.cloneNode(true) as HTMLElement
+        clone.querySelectorAll('[data-anchor]').forEach(n => n.removeAttribute('data-anchor'))
+        clone.removeAttribute('data-anchor')
+        const srcCanvases = el!.querySelectorAll('canvas'), dstCanvases = clone.querySelectorAll('canvas')
+        dstCanvases.forEach((c, k) => { const s = srcCanvases[k]; c.width = s.width; c.height = s.height; c.getContext('2d')?.drawImage(s, 0, 0) })
+        const card = document.createElement('div')
+        card.className = 'lift-card'
+        Object.assign(card.style, { left: `${r!.left}px`, top: `${r!.top}px`, width: `${r!.width}px`, height: `${r!.height}px` })
+        card.appendChild(clone)
+        root.appendChild(card)
+        const s = Math.max(1.15, Math.min(2.6, (vw * 0.62) / r!.width, (slotH - 16) / r!.height))
+        const cx = vw / 2 + 140, cy = topBand + slotH * i + slotH / 2
+        const to = { x: cx - (r!.left + r!.width / 2), y: cy - (r!.top + r!.height / 2), s }
+        card.animate([
+          { transform: 'translate(0,0) scale(1)', boxShadow: '0 0 0 rgba(14,165,198,0)' },
+          { transform: `translate(${to.x}px, ${to.y}px) scale(${s})`, boxShadow: '0 24px 70px rgba(10,40,80,.35), 0 0 0 2px rgba(14,165,198,.9)' },
+        ], { duration: 750, easing: 'cubic-bezier(.2,.9,.25,1.15)', fill: 'forwards', delay: i * 120 })
+        cards.push({ el: card, from: r!, to })
+      })
+    }, 650)
+    return () => {
+      cancelled = true
+      clearTimeout(timer)
+      // fly back to where each piece came from, then remove
+      for (const c of cards) {
+        const back = c.el.animate([
+          { transform: `translate(${c.to.x}px, ${c.to.y}px) scale(${c.to.s})`, opacity: 1 },
+          { transform: 'translate(0,0) scale(1)', opacity: 0 },
+        ], { duration: 420, easing: 'cubic-bezier(.4,0,.2,1)', fill: 'forwards' })
+        back.finished.then(() => c.el.remove()).catch(() => c.el.remove())
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state.epoch, active])
+
+  return <div className="lift-layer" ref={host} aria-hidden="true" />
 }
 
 export function Caption() {

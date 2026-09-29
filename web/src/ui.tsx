@@ -9,8 +9,9 @@ import type { Fact } from './types'
 export interface UI {
   openSource: (factId: string) => void
   openSlide: (n: number) => void
+  openHolo: (id: string) => void
 }
-export const UICtx = createContext<UI>({ openSource: () => {}, openSlide: () => {} })
+export const UICtx = createContext<UI>({ openSource: () => {}, openSlide: () => {}, openHolo: () => {} })
 export const useUI = () => useContext(UICtx)
 
 export function Badges({ fact }: { fact?: Fact }) {

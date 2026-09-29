@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
 import { BlockView, Hero } from './blocks'
 import { loadBundle, loadTours } from './data'
-import { Caption, SourceViewer, StageLayer } from './overlay'
+import { Caption, LiftLayer, SourceViewer, StageLayer } from './overlay'
+import { HoloLayer } from './holo'
 import { ChatBox, Sidebar, TracePanel } from './panels'
 import { StageProvider, useStage } from './stage'
 import type { Bundle, Tour } from './types'
@@ -19,13 +20,15 @@ export default function App() {
 function Shell() {
   const { bundle, state, cancel } = useStage()
   const [source, setSource] = useState<{ fact?: string; slide?: number } | null>(null)
-  const ui = useMemo(() => ({ openSource: (fact: string) => setSource({ fact }), openSlide: (slide: number) => setSource({ slide }) }), [])
+  const [browseHolo, setBrowseHolo] = useState<string | null>(null)
+  const ui = useMemo(() => ({ openSource: (fact: string) => setSource({ fact }), openSlide: (slide: number) => setSource({ slide }), openHolo: (id: string) => setBrowseHolo(id) }), [])
   const touring = !!state.tour && state.status !== 'cancelled'
+  const holo = (touring ? state.visual.holo : undefined) ?? browseHolo
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') { if (source) setSource(null); else cancel('Esc') } }
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') { if (source) setSource(null); else if (browseHolo) setBrowseHolo(null); else cancel('Esc') } }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [source, cancel])
+  }, [source, cancel, browseHolo])
 
   return (
     <UICtx.Provider value={ui}>
@@ -46,13 +49,15 @@ function Shell() {
             })}
             <footer className="foot">所有数值均来自原稿 HOPE_案例1.pptx，点击任意数值可查看出处；标有“图读”“待核”“疑为”的内容尚未经人工审核。</footer>
           </div>
+          {holo && <HoloLayer key={holo} sceneId={holo} onClose={touring ? undefined : () => setBrowseHolo(null)} />}
           <Caption />
           <div className="dock">
             <ChatBox />
             <TracePanel />
           </div>
         </main>
-        <StageLayer />
+        {!holo && <StageLayer />}
+        {!holo && <LiftLayer />}
         {source && <SourceViewer factId={source.fact} slide={source.slide} onClose={() => setSource(null)} />}
       </div>
     </UICtx.Provider>

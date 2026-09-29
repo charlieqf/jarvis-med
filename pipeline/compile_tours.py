@@ -33,7 +33,7 @@ ENTITIES = ["M蛋白", "κ", "λ", "MRD", "NGS", "NGF", "SUVmax", "PET", "CXCR4"
             "FISH", "Ki-67", "C-myc", "sCR", "VGPR", "免疫固定电泳", "血清蛋白电泳", "乳腺", "髂骨", "腹股沟", "上臂", "腹壁",
             "肩胛", "Hb", "PLT", "CRP", "IgG", "ORR", "DOR", "PFS", "OS", "母细胞样", "浆细胞瘤", "NRAS", "IGLL5", "KRAS", "TET1"]
 OPS = {"camera", "spotlight", "pulse", "chartDraw", "pointPulse", "timelineSweep", "phaseHighlight", "rowFlash",
-       "cellZoom", "drawHotspot", "imageOpen", "compareRow", "showSource", "countUp", "bodyMap"}
+       "cellZoom", "drawHotspot", "imageOpen", "compareRow", "showSource", "countUp", "bodyMap", "holoScene"}
 COMPAT = ("analyte", "method", "specimen", "site", "tracer")
 
 
@@ -255,7 +255,7 @@ class Ctx:
         allowed = {"chartDraw": {"series", "stacked_bar"}, "pointPulse": {"fact"}, "phaseHighlight": {"phase"},
                    "drawHotspot": {"annotation"}, "imageOpen": {"image"}, "compareRow": {"row"},
                    "rowFlash": {"table_row"}, "cellZoom": {"fact"}, "showSource": {"fact"},
-                   "countUp": {"fact"}, "timelineSweep": {"event"}, "bodyMap": {"pin"}}.get(op)
+                   "countUp": {"fact"}, "timelineSweep": {"event"}, "bodyMap": {"pin"}, "holoScene": {"holo_scene"}}.get(op)
         for t in targets:
             self.check_target(where, t, allowed)
         if op == "pointPulse" and any(t not in self.series_facts for t in targets):
