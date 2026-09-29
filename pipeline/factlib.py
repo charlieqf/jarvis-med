@@ -266,6 +266,6 @@ def check_labels(fact, units, gene_of=None):
 
 def content_version(*paths):
     h = hashlib.sha256()
-    for p in paths:
-        h.update(Path(p).read_bytes())
+    for p in paths:  # normalise line endings: Windows (CRLF) and macOS (LF) checkouts must agree
+        h.update(Path(p).read_bytes().replace(b"\r\n", b"\n"))
     return h.hexdigest()[:12]

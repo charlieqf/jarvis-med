@@ -102,19 +102,9 @@ async function runJob(job) {
   const ready = await ask({ type: 'hello' })
   job.push('version', `校验器就绪，数据版本 ${ready.content_version}`, ready, ready.content_version === CONTENT_VERSION ? 'pass' : 'reject')
 
-  const args = ['-p', `用户问题：${job.question}\n请按输出协议给出回答计划。`,
-    '--system-prompt-file', PROMPT_FILE,
-    '--output-format', 'stream-json', '--verbose', '--include-partial-messages',
-    '--tools', '', '--strict-mcp-config', '--setting-sources', '', '--no-session-persistence',
-    '--model', CFG.model, '--effort', CFG.effort]
-  job.push('model', `启动模型（claude-code 提供方，模型 ${CFG.model}，工具/MCP/本地配置全部禁用）`, { args: args.filter((_, i) => i !== 1) })
-  const proc = spawn(CFG.claude, args, { cwd: SANDBOX, env })
-  job.procs.push(proc)
-
-  let firstAt = null, text = '', lineBuf = '', seq = 0, thinkChars = 0, lastThinkLog = 0, thinkTail = ''
   const pending = []
-  const firstTimer = setTimeout(() => { if (!firstAt) { job.push('timeout', `模型 ${CFG.firstTimeoutMs / 1000}s 内没有输出`, undefined, 'reject'); finish(job, 'reject') } }, CFG.firstTimeoutMs)
-  const totalTimer = setTimeout(() => { job.push('timeout', `超过总时限 ${CFG.totalTimeoutMs / 1000}s`, undefined, 'reject'); finish(job, 'reject') }, CFG.totalTimeoutMs)
+  let seq = 0
+  const rejectedSteps = []
 
   const handleLine = line => {
     line = line.trim().replace(/^```(json)?|```$/g, '').trim()
@@ -133,6 +123,7 @@ async function runJob(job) {
           job.push('step', `第 ${n + 1} 步通过校验，推送到舞台`, r.step, 'pass')
         } else {
           job.rejected.push(r.error)
+          rejectedSteps.push({ step: msg.step, error: r.error })
           job.push('reject', `第 ${n + 1} 步被拒绝：${r.error}`, msg.step, 'reject')
         }
       }))
@@ -143,45 +134,71 @@ async function runJob(job) {
     } else if (msg.type === 'end') job.push('plan', '模型声明计划结束')
   }
 
-  let evBuf = ''
-  proc.stdout.on('data', d => {
-    evBuf += d.toString('utf8')
-    let i
-    while ((i = evBuf.indexOf('\n')) >= 0) {
-      const raw = evBuf.slice(0, i); evBuf = evBuf.slice(i + 1)
-      if (!raw.trim()) continue
-      let ev
-      try { ev = JSON.parse(raw) } catch { continue }
-      if (ev.type === 'system' && ev.subtype === 'init') job.push('model', `模型会话已建立（${ev.model ?? CFG.model}）`, { model: ev.model, tools: ev.tools, mcp_servers: ev.mcp_servers })
-      if (ev.type === 'stream_event') {
-        const e = ev.event
-        if (e?.type === 'content_block_delta') {
-          if (!firstAt) { firstAt = Date.now(); job.push('model', `首个 token 到达：${((firstAt - job.t0) / 1000).toFixed(1)}s`, undefined, 'pass') }
+  const runModel = (userPrompt, label) => new Promise(resolve => {
+    const args = ['-p', userPrompt, '--system-prompt-file', PROMPT_FILE,
+      '--output-format', 'stream-json', '--verbose', '--include-partial-messages',
+      '--tools', '', '--strict-mcp-config', '--setting-sources', '', '--no-session-persistence',
+      '--model', CFG.model, '--effort', CFG.effort]
+    const t0 = Date.now()
+    job.push('model', `${label}：启动模型（claude-code，模型 ${CFG.model}，工具 / MCP / 本地配置全部禁用）`, { args: args.filter((_, i) => i !== 1) })
+    const proc = spawn(CFG.claude, args, { cwd: SANDBOX, env, stdio: ['ignore', 'pipe', 'pipe'] })
+    job.procs.push(proc)
+    let firstAt = null, lineBuf = '', evBuf = '', thinkChars = 0, lastThinkLog = 0, thinkTail = ''
+    const firstTimer = setTimeout(() => { if (!firstAt) { job.push('timeout', `模型 ${CFG.firstTimeoutMs / 1000}s 内没有输出`, undefined, 'reject'); proc.kill('SIGTERM') } }, CFG.firstTimeoutMs)
+    proc.stdout.on('data', d => {
+      evBuf += d.toString('utf8')
+      let i
+      while ((i = evBuf.indexOf('\n')) >= 0) {
+        const raw = evBuf.slice(0, i); evBuf = evBuf.slice(i + 1)
+        if (!raw.trim()) continue
+        let ev
+        try { ev = JSON.parse(raw) } catch { continue }
+        if (ev.type === 'system' && ev.subtype === 'init') job.push('model', `模型会话已建立（${ev.model ?? CFG.model}；可用工具 ${ev.tools?.length ?? 0} 个，MCP ${ev.mcp_servers?.length ?? 0} 个）`, { model: ev.model, tools: ev.tools, mcp_servers: ev.mcp_servers })
+        if (ev.type === 'stream_event' && ev.event?.type === 'content_block_delta') {
+          const e = ev.event
+          if (!firstAt) { firstAt = Date.now(); job.push('model', `首个 token 到达：${((firstAt - t0) / 1000).toFixed(1)}s`, undefined, 'pass') }
           if (e.delta?.type === 'thinking_delta') {
             thinkChars += e.delta.thinking.length; thinkTail = (thinkTail + e.delta.thinking).slice(-160)
             if (Date.now() - lastThinkLog > 1500) { lastThinkLog = Date.now(); job.push('thinking', `模型思考中（已 ${thinkChars} 字）…${thinkTail.replace(/\s+/g, ' ')}`) }
           } else if (e.delta?.type === 'text_delta') {
-            text += e.delta.text; lineBuf += e.delta.text
+            lineBuf += e.delta.text
             let j
             while ((j = lineBuf.indexOf('\n')) >= 0) { handleLine(lineBuf.slice(0, j)); lineBuf = lineBuf.slice(j + 1) }
           }
         }
+        if (ev.type === 'result') {
+          if (lineBuf.trim()) { handleLine(lineBuf); lineBuf = '' }
+          const u = ev.usage ?? {}
+          const inTok = (u.input_tokens ?? 0) + (u.cache_creation_input_tokens ?? 0) + (u.cache_read_input_tokens ?? 0)
+          job.push('usage', `${label}完成：输入 ${inTok} tokens（其中缓存读取 ${u.cache_read_input_tokens ?? 0}、缓存写入 ${u.cache_creation_input_tokens ?? 0}），输出 ${u.output_tokens ?? '?'} tokens，模型耗时 ${(ev.duration_api_ms / 1000).toFixed(1)}s`, u)
+          if (ev.is_error) job.push('error', `模型返回错误：${ev.result}`, undefined, 'reject')
+        }
       }
-      if (ev.type === 'result') {
-        if (lineBuf.trim()) { handleLine(lineBuf); lineBuf = '' }
-        const u = ev.usage ?? {}
-        job.push('usage', `模型完成：输入 ${u.input_tokens ?? '?'} tokens（缓存读 ${u.cache_read_input_tokens ?? 0}），输出 ${u.output_tokens ?? '?'} tokens，API ${(ev.duration_api_ms / 1000).toFixed(1)}s`, u)
-        if (ev.is_error) job.push('error', `模型返回错误：${ev.result}`, undefined, 'reject')
-      }
-    }
+    })
+    proc.stderr.on('data', d => job.push('model', `模型 stderr：${d.toString().slice(0, 200)}`))
+    proc.on('close', () => { clearTimeout(firstTimer); if (lineBuf.trim()) handleLine(lineBuf); resolve() })
   })
-  proc.stderr.on('data', d => job.push('model', `模型 stderr：${d.toString().slice(0, 200)}`))
-  proc.on('close', async code => {
-    clearTimeout(firstTimer); clearTimeout(totalTimer)
-    if (lineBuf.trim()) handleLine(lineBuf)
+
+  const totalTimer = setTimeout(() => { job.push('timeout', `超过总时限 ${CFG.totalTimeoutMs / 1000}s`, undefined, 'reject'); finish(job, 'reject') }, CFG.totalTimeoutMs)
+  await runModel(`用户问题：${job.question}
+请按输出协议给出回答计划。`, '第 1 轮')
+  await Promise.all(pending)
+  // one repair round (DESIGN §6.3): feed the structured errors back, ask for replacement steps only
+  if (!job.done && rejectedSteps.length) {
+    const errs = rejectedSteps.map((r, i) => `被拒步骤 ${i + 1}：${JSON.stringify(r.step)}
+错误：${r.error}`).join('\n\n')
+    job.push('repair', `${rejectedSteps.length} 个步骤被拒绝，把错误反馈给模型重试一次（只生成替换步骤）`, rejectedSteps)
+    rejectedSteps.length = 0
+    await runModel(`用户问题：${job.question}
+
+你之前输出的以下步骤未通过校验：
+${errs}
+
+请只输出修正后的替换步骤（同样的输出协议：step 行，最后 end 行），修正上述错误；不要重复已通过的内容。`, '修正轮')
     await Promise.all(pending)
-    if (!job.done) finish(job, job.passed ? 'done' : 'reject', job.passed ? undefined : `没有通过校验的步骤（模型退出码 ${code}）`)
-  })
+  }
+  clearTimeout(totalTimer)
+  if (!job.done) finish(job, job.passed ? 'done' : 'reject', job.passed ? undefined : '没有通过校验的步骤')
 }
 
 // ------------------------------------------------------------------ http
