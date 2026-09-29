@@ -37,7 +37,8 @@
      "cite": [
       "u.4.5.p0"
      ],
-     "verbatim": true
+     "verbatim": true,
+     "flags": []
     }
    ],
    "callouts": []
@@ -349,7 +350,8 @@
      "cite": [
       "u.21.11.p1"
      ],
-     "verbatim": true
+     "verbatim": true,
+     "flags": []
     }
    ],
    "callouts": []

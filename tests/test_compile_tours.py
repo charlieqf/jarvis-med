@@ -91,3 +91,8 @@ def test_gene_and_band_names_are_not_free_numbers(ctx):
 def test_real_free_number_still_rejected(ctx):
     with pytest.raises(CompileError, match="number"):
         claim(ctx, {"type": "value", "template": "共 13 项：{{f.fish.1q21.2023-06}}", "cite": ["u.5.6.r7c1"]})
+
+
+def test_quote_carries_pending_flags_of_inner_facts(ctx):
+    out = claim(ctx, {"type": "quote", "fact": "u.9.18.p3"})   # contains 移植前3.32×10⁻⁴ (proposed 3.21)
+    assert out["verbatim"] and "pending_review" in out["flags"]

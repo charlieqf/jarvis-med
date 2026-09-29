@@ -189,7 +189,13 @@ class Ctx:
                 raise CompileError(f"{cid}: quote must cite a source unit or statement fact, got {fid}")
             if f.get("excluded"):
                 raise CompileError(f"{cid}: {fid} is excluded")
-            return {"claim": cid, "type": t, "text": self.fmt_value(fid), "cite": [fid], "verbatim": True}
+            # a verbatim quote inherits the review flags of the facts located inside it
+            flags = set()
+            for inner in self.facts.values():
+                if (inner.get("loc") or {}).get("unit") == fid and inner.get("type") == "value":
+                    if effective(inner)["pending"]:
+                        flags.add("pending_review")
+            return {"claim": cid, "type": t, "text": self.fmt_value(fid), "cite": [fid], "verbatim": True, "flags": sorted(flags)}
         if t not in ("value", "change"):
             raise CompileError(f"{cid}: unknown claim type {t}")
         tpl = c["template"]

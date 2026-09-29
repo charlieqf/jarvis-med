@@ -37,7 +37,8 @@
      "cite": [
       "u.4.5.p0"
      ],
-     "verbatim": true
+     "verbatim": true,
+     "flags": []
     }
    ],
    "callouts": []
@@ -119,7 +120,8 @@
      "cite": [
       "u.9.5.p0"
      ],
-     "verbatim": true
+     "verbatim": true,
+     "flags": []
     },
     {
      "claim": "T1.s3.c1",
@@ -128,7 +130,8 @@
      "cite": [
       "u.10.5.p0"
      ],
-     "verbatim": true
+     "verbatim": true,
+     "flags": []
     }
    ],
    "callouts": []
@@ -178,7 +181,8 @@
      "cite": [
       "u.12.25.p0"
      ],
-     "verbatim": true
+     "verbatim": true,
+     "flags": []
     }
    ],
    "callouts": []
@@ -218,7 +222,8 @@
      "cite": [
       "u.13.5.p0"
      ],
-     "verbatim": true
+     "verbatim": true,
+     "flags": []
     },
     {
      "claim": "T1.s5.c1",
@@ -227,7 +232,8 @@
      "cite": [
       "u.15.5.p0"
      ],
-     "verbatim": true
+     "verbatim": true,
+     "flags": []
     }
    ],
    "callouts": []
@@ -266,7 +272,8 @@
      "cite": [
       "u.21.11.p0"
      ],
-     "verbatim": true
+     "verbatim": true,
+     "flags": []
     },
     {
      "claim": "T1.s6.c1",
@@ -275,7 +282,8 @@
      "cite": [
       "u.21.11.p1"
      ],
-     "verbatim": true
+     "verbatim": true,
+     "flags": []
     }
    ],
    "callouts": []

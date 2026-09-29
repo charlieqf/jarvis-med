@@ -32,7 +32,8 @@
      "cite": [
       "u.11.8.p0"
      ],
-     "verbatim": true
+     "verbatim": true,
+     "flags": []
     },
     {
      "claim": "T4.s1.c1",
@@ -41,7 +42,8 @@
      "cite": [
       "u.11.11.p0"
      ],
-     "verbatim": true
+     "verbatim": true,
+     "flags": []
     }
    ],
    "callouts": []
@@ -84,7 +86,8 @@
      "cite": [
       "u.11.15.p0"
      ],
-     "verbatim": true
+     "verbatim": true,
+     "flags": []
     },
     {
      "claim": "T4.s2.c2",

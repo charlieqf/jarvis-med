@@ -128,7 +128,8 @@ export function LiftLayer() {
     // what to lift: small, specific targets first; whole blocks only if nothing more specific
     const specific = [...v.cells, ...v.rows, ...v.compareRows, ...v.pins, ...v.pulse]
     const blocks = [...v.chartDraw, ...v.spotlight]
-    const ids = [...new Set(specific.length ? specific : blocks)].slice(0, 3)
+    // several small targets can be lifted together; whole blocks only one at a time
+    const ids = [...new Set(specific.length ? specific : blocks)].slice(0, specific.length ? 3 : 1)
     let cancelled = false
     const cards: { el: HTMLElement; from: DOMRect; to: { x: number; y: number; s: number } }[] = []
     const timer = setTimeout(() => {   // let the camera scroll settle first
@@ -148,7 +149,10 @@ export function LiftLayer() {
         .filter(x => x.r.width > 8 && x.r.width * x.r.height < vw * vh * 0.5)
       if (!els.length) return
       const slotH = usableH / els.length
-      els.forEach(({ el, r }, i) => {
+      // only lift what can actually be enlarged in its slot (lifting must never shrink content)
+      const fits = els.filter(({ r }) => Math.min((vw * 0.62) / r.width, (slotH - 16) / r.height) >= 1.1)
+      if (!fits.length) return
+      fits.forEach(({ el, r }, i) => {
         let clone = el!.cloneNode(true) as HTMLElement
         if (el!.tagName === 'TR') {   // keep column layout for table rows
           const table = document.createElement('table'); table.className = 'data'
@@ -167,7 +171,7 @@ export function LiftLayer() {
         Object.assign(card.style, { left: `${r!.left}px`, top: `${r!.top}px`, width: `${r!.width}px`, height: `${r!.height}px` })
         card.appendChild(clone)
         root.appendChild(card)
-        const s = Math.max(1.15, Math.min(2.6, (vw * 0.62) / r!.width, (slotH - 16) / r!.height))
+        const s = Math.min(2.6, (vw * 0.62) / r!.width, (slotH - 16) / r!.height)
         const cx = vw / 2 + 140, cy = topBand + slotH * i + slotH / 2
         const to = { x: cx - (r!.left + r!.width / 2), y: cy - (r!.top + r!.height / 2), s }
         card.animate([
