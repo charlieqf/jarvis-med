@@ -135,15 +135,32 @@ export function LiftLayer() {
       if (cancelled) return
       const vw = window.innerWidth, vh = window.innerHeight
       const topBand = 70, usableH = vh * 0.46
-      const els = ids.map(id => ({ id, el: anchorElement(id) as HTMLElement | null, r: anchorRect(id) }))
-        .filter(x => x.el && x.r && x.r.width > 8 && x.r.width * x.r.height < vw * vh * 0.5)
+      // lift meaningful units: a value inside a table lifts its whole row; a timeline marker lifts its label
+      const pick = (id: string) => {
+        let el = anchorElement(id) as HTMLElement | null
+        if (!el) return null
+        if (v.cells.includes(id)) el = (el.closest('tr') as HTMLElement | null) ?? el
+        if (el.classList.contains('tl-ev')) el = (el.querySelector('.tl-label') as HTMLElement | null) ?? el
+        const r = el.getBoundingClientRect()
+        return r.width || r.height ? { id, el, r } : { id, el, r: anchorRect(id) }
+      }
+      const els = ids.map(pick).filter((x): x is { id: string; el: HTMLElement; r: DOMRect } => !!x && !!x.r)
+        .filter(x => x.r.width > 8 && x.r.width * x.r.height < vw * vh * 0.5)
       if (!els.length) return
       const slotH = usableH / els.length
       els.forEach(({ el, r }, i) => {
-        const clone = el!.cloneNode(true) as HTMLElement
+        let clone = el!.cloneNode(true) as HTMLElement
+        if (el!.tagName === 'TR') {   // keep column layout for table rows
+          const table = document.createElement('table'); table.className = 'data'
+          const cols = el!.parentElement?.parentElement?.querySelector('tr')
+          const widths = cols ? [...cols.children].map(c => (c as HTMLElement).getBoundingClientRect().width) : []
+          const tb = document.createElement('tbody'); tb.appendChild(clone); table.appendChild(tb)
+          ;[...clone.children].forEach((c, k) => { if (widths[k]) (c as HTMLElement).style.width = `${widths[k]}px` })
+          clone = table
+        }
         clone.querySelectorAll('[data-anchor]').forEach(n => n.removeAttribute('data-anchor'))
         clone.removeAttribute('data-anchor')
-        const srcCanvases = el!.querySelectorAll('canvas'), dstCanvases = clone.querySelectorAll('canvas')
+        const srcCanvases = el.querySelectorAll('canvas'), dstCanvases = clone.querySelectorAll('canvas')
         dstCanvases.forEach((c, k) => { const s = srcCanvases[k]; c.width = s.width; c.height = s.height; c.getContext('2d')?.drawImage(s, 0, 0) })
         const card = document.createElement('div')
         card.className = 'lift-card'
