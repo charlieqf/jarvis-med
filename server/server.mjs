@@ -114,6 +114,7 @@ async function runJob(job) {
     if (msg.type === 'meta') job.push('plan', `回答计划：${msg.title ?? ''}`, msg)
     else if (msg.type === 'step' && msg.step) {
       const n = seq++
+      msg.step.id = `s${n + 1}`   // ids are assigned by the server, not trusted from the model
       job.push('plan', `收到第 ${n + 1} 步计划「${msg.step.title ?? ''}」，送校验`, msg.step)
       pending.push(ask({ type: 'step', plan_id: `L${job.id.slice(0, 4)}`, seq: n, step: msg.step }).then(r => {
         if (job.done) return
