@@ -85,7 +85,7 @@ export function StageLayer() {
       {imgs.length > 0 && (
         <div className="stage-images">
           {imgs.map(b => (
-            <div className="stage-image" key={b.id + state.epoch}>
+            <div className="stage-image" key={b.id + state.epoch} data-anchor={b.id}>
               <div className="card-head"><h4>{b.label}</h4><span className="src-chip">P{b.slide}</span></div>
               <ImageFigure b={b} large />
               <FigureFacts b={b} />
@@ -149,10 +149,16 @@ export function LiftLayer() {
         .filter(x => x.r.width > 8 && x.r.width * x.r.height < vw * vh * 0.5)
       if (!els.length) return
       const slotH = usableH / els.length
+      const PAD = 12, TARGET_FONT = 24   // every lifted card gets the same on-screen text size
+      const fitOf = (r: DOMRect) => Math.min((vw * 0.62) / (r.width + PAD * 2), (slotH - 12) / (r.height + PAD * 2))
+      const fontOf = (el: HTMLElement) => parseFloat(getComputedStyle(el.querySelector('.unit, .fact, span, td') ?? el).fontSize) || 14
       // only lift what can actually be enlarged in its slot (lifting must never shrink content)
-      const fits = els.filter(({ r }) => Math.min((vw * 0.62) / r.width, (slotH - 16) / r.height) >= 1.1)
+      const fits = els.filter(({ r }) => fitOf(r) >= 1.1)
       if (!fits.length) return
-      fits.forEach(({ el, r }, i) => {
+      // one scale for the whole step: the target font size, limited by the tightest fit
+      const common = Math.min(2.6, ...fits.map(({ el, r }) => Math.min(fitOf(r), TARGET_FONT / fontOf(el))))
+      fits.forEach(({ el, r: r0 }, i) => {
+        const r = new DOMRect(r0.left - PAD, r0.top - PAD, r0.width + PAD * 2, r0.height + PAD * 2)
         let clone = el!.cloneNode(true) as HTMLElement
         if (el!.tagName === 'TR') {   // keep column layout for table rows
           const table = document.createElement('table'); table.className = 'data'
@@ -171,7 +177,7 @@ export function LiftLayer() {
         Object.assign(card.style, { left: `${r!.left}px`, top: `${r!.top}px`, width: `${r!.width}px`, height: `${r!.height}px` })
         card.appendChild(clone)
         root.appendChild(card)
-        const s = Math.min(2.6, (vw * 0.62) / r!.width, (slotH - 16) / r!.height)
+        const s = Math.max(1.1, common)
         const cx = vw / 2 + 140, cy = topBand + slotH * i + slotH / 2
         const to = { x: cx - (r!.left + r!.width / 2), y: cy - (r!.top + r!.height / 2), s }
         card.animate([

@@ -140,3 +140,15 @@
 .holo-card.point .holo-card-head .mono { margin-left: 0; min-width: 84px }
 .claim-not_in_source { color: #8a5a0b; background: #fff7e8; border: 1px solid #f4d6a4; border-radius: 8px; padding: 4px 10px; display: inline-block }
 .chat .chat-notice button.x { background: none; color: #8a5a0b; padding: 0 4px; font-size: 16px; margin-left: auto }
+/* lifted cards: content keeps its own size inside a padded box (no forced stretching) */
+.lift-card { padding: 12px; box-sizing: border-box; display: flex; align-items: center; justify-content: flex-start }
+.lift-card > * { width: auto !important; height: auto !important; max-width: 100% }
+.lift-card > table.data { width: 100% !important }
+.lift-card > .tl-label { border: 0 !important; box-shadow: none !important; padding: 0 !important }
+/* orbit cards stay inside the stage: narrower, inset, grow towards the centre, gentler tilt */
+.orbit-card { width: 33%; --ry: -6deg; --rz: -1.5deg; transform-origin: left center }
+.orbit-card.r { --ry: 6deg; --rz: 1.5deg; transform-origin: right center }
+.orbit-card.on { transform: perspective(60cqw) rotateY(0) rotateZ(0) scale(1.08) }
+.orbit-card.focus { transform: perspective(60cqw) scale(1.14) }
+@keyframes popForward { from { transform: perspective(60cqw) scale(.85); opacity: .3 } }
+.prism-card { width: 31% }

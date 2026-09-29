@@ -29,7 +29,7 @@ const DOCK_Y = { l: [14, 32, 50, 68], r: [18, 40, 62] }
 const DOCK_W = 21 // % of stage width
 
 // reference layout: stage cards alternate left/right from bottom to top along the spiral
-const ORBIT_POS = [[4, 78], [60, 70], [4, 60], [60, 52], [4, 42], [60, 34], [4, 24], [60, 16]]
+const ORBIT_POS = [[6, 78], [61, 70], [6, 60], [61, 52], [6, 42], [61, 34], [6, 24], [61, 16]]   // card width 33% -> 6..39 / 61..94
 const ORBIT_PATH = 'M34 106 C92 94 90 78 50 72 S2 62 36 50 S92 36 60 28 S14 18 40 10'
 const PRISM_POS = [[3, 12], [3, 38], [3, 64], [65, 12], [65, 38], [65, 64]]
 
@@ -160,7 +160,7 @@ function Orbit({ b }: { b: Block }) {
           {focus.map(id => {
             const i = phases.findIndex(p => p.id === id)
             const [x, y] = ORBIT_POS[i]
-            const cx = x < 50 ? x + 36 : x, cy = (y + 5) * 1.25
+            const cx = x < 50 ? x + 33 : x, cy = (y + 5) * 1.25
             return <line key={id + state.epoch} className="orbit-beam" x1={50} y1={70} x2={cx} y2={cy} pathLength={1} />
           })}
         </svg>
