@@ -220,6 +220,15 @@ export function StageProvider({ bundle, tours, children }: { bundle: Bundle; tou
           if (stateRef.current.answerId !== answerId) { log('drop', `丢弃：回答已取消后到达的服务端事件（${e.kind}）`, undefined, 'dropped'); continue }
           log(e.kind, `[服务端 +${(e.t / 1000).toFixed(1)}s] ${e.text}`, e.data, e.status)
           if (e.kind === 'step') dispatch({ type: 'append', answerId, step: e.data as Step })
+          if (e.kind === 'not_in_source' && e.status === 'pass') {
+            // fixed wording (never model free text) + spotlight on the validated nearest anchors
+            const nearest = ((e.data as { nearest?: string[] })?.nearest ?? []).slice(0, 3)
+            const step: Step = { id: `nis.${answerId}`, seq: 0, camera: nearest[0] ?? 'sec.overview', title: '原稿未涉及',
+              actions: nearest.length ? [{ op: 'spotlight', targets: nearest }] : [],
+              say: [{ claim: 'nis', type: 'not_in_source', text: '本病例资料（原稿）未涉及这个问题。' + (nearest.length ? '下面高亮的是原稿中最接近的相关内容。' : ''), cite: nearest }],
+              callouts: [] }
+            dispatch({ type: 'append', answerId, step })
+          }
         }
         if (done) { dispatch({ type: 'liveEnd', answerId }); return }
       } catch (e) { log('error', `轮询失败：${e}`, undefined, 'reject') }

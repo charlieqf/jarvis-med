@@ -26,7 +26,7 @@ from factlib import content_version, effective, load_raw, unit_index  # noqa: E4
 
 SUPER = str.maketrans("0123456789-", "⁰¹²³⁴⁵⁶⁷⁸⁹⁻")
 PLACEHOLDER = re.compile(r"\{\{\s*(?:(date|change):)?([^}]+?)\s*\}\}")
-FREE_NUMBER = re.compile(r"(?<![A-Za-z0-9\-])\d+(?:\.\d+)?(?![A-Za-z])")
+FREE_NUMBER = re.compile(r"(?<![A-Za-z0-9\-.])\d+(?:\.\d+)?(?![A-Za-z0-9.])")
 CAUSAL = ["因为", "由于", "导致", "引起", "造成", "所以", "因此", "提示", "说明", "证明", "表明", "意味着", "归因"]
 ENTITIES = ["M蛋白", "κ", "λ", "MRD", "NGS", "NGF", "SUVmax", "PET", "CXCR4", "CRS", "IL-6", "BCMA", "CAR-T", "VRD", "KD",
             "移植", "放疗", "CMV", "埃纳妥", "兆珂速", "达雷妥尤", "泊马度胺", "托珠单抗", "1q21", "FGFR3", "13q14", "Rb1", "P53",

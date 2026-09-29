@@ -138,3 +138,5 @@
 .holo-card.point .holo-card-head { margin: 0 }
 .holo-card.point .holo-card-head { justify-content: flex-start }
 .holo-card.point .holo-card-head .mono { margin-left: 0; min-width: 84px }
+.claim-not_in_source { color: #8a5a0b; background: #fff7e8; border: 1px solid #f4d6a4; border-radius: 8px; padding: 4px 10px; display: inline-block }
+.chat .chat-notice button.x { background: none; color: #8a5a0b; padding: 0 4px; font-size: 16px; margin-left: auto }

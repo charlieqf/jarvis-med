@@ -80,3 +80,14 @@ def test_unknown_anchor_rejected(ctx):
 def test_point_pulse_needs_plotted_point(ctx):
     with pytest.raises(CompileError):
         ctx.action({"op": "pointPulse", "targets": ["f.pt.age"]}, "test")
+
+
+def test_gene_and_band_names_are_not_free_numbers(ctx):
+    out = claim(ctx, {"type": "value", "template": "1q21 扩增 {{f.fish.1q21.2023-06}}；13q14 缺失 {{f.fish.13q14.2023-06}}；Rb1 缺失 {{f.fish.rb1.2023-06}}；FGFR3/IgH 重排 {{f.fish.fgfr3.2023-06}}",
+                      "cite": ["u.5.6.r7c1"]})
+    assert "1q21 扩增 8%" in out["text"] and "13q14 缺失 14%" in out["text"]
+
+
+def test_real_free_number_still_rejected(ctx):
+    with pytest.raises(CompileError, match="number"):
+        claim(ctx, {"type": "value", "template": "共 13 项：{{f.fish.1q21.2023-06}}", "cite": ["u.5.6.r7c1"]})

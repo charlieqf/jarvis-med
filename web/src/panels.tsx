@@ -57,7 +57,7 @@ export function ChatBox() {
   const { tours, play, playLive, log } = useStage()
   const [text, setText] = useState('')
   const [code, setCode] = useState(readCode)
-  const [needCode, setNeedCode] = useState(false)
+  const [needCode, setNeedCode] = useState(() => !readCode())
   const [notice, setNotice] = useState<string | null>(null)
   const submit = async () => {
     const q = text.trim()

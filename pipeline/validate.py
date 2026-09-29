@@ -83,7 +83,7 @@ def after(a, b):
 
 
 # a standalone number in an editorial label (digits glued to Latin letters, e.g. CXCR4 / IL-6, are names)
-LABEL_NUMBER = re.compile(r"(?<![A-Za-z0-9\-])\d+(?:\.\d+)?(?![A-Za-z])")
+LABEL_NUMBER = re.compile(r"(?<![A-Za-z0-9\-.])\d+(?:\.\d+)?(?![A-Za-z0-9.])")
 
 
 def fact_date(fact, by_id):

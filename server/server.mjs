@@ -130,6 +130,7 @@ async function runJob(job) {
       }))
     } else if (msg.type === 'not_in_source') {
       pending.push(ask({ type: 'not_in_source', nearest: msg.nearest ?? [] }).then(r => {
+        if (r.type === 'nis_ok') job.nis = true
         job.push('not_in_source', `原稿中没有这个问题的答案：${msg.reason ?? ''}`, { ...msg, check: r.type }, r.type === 'nis_ok' ? 'pass' : 'reject')
       }))
     } else if (msg.type === 'end') job.push('plan', '模型声明计划结束')
@@ -199,7 +200,8 @@ ${errs}
     await Promise.all(pending)
   }
   clearTimeout(totalTimer)
-  if (!job.done) finish(job, job.passed ? 'done' : 'reject', job.passed ? undefined : '没有通过校验的步骤')
+  if (!job.done) finish(job, job.passed || job.nis ? 'done' : 'reject',
+    job.passed ? undefined : job.nis ? `回答结束：原稿未涉及此问题，已给出最接近的原稿内容，用时 ${((Date.now() - job.t0) / 1000).toFixed(1)}s` : '没有通过校验的步骤')
 }
 
 // ------------------------------------------------------------------ http
