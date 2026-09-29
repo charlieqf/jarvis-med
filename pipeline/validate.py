@@ -168,8 +168,12 @@ def v1_structure(facts, views, raw, units, rep):
             if not ann or (ann.get("annotates") or {}).get("picture_id") != b["shape"]:
                 rep.err("V1", f"{a['id']}: shape {a['shape']} is not an annotation on picture {b['shape']}")
         for o in b.get("overlays", []):
-            if (b["slide"], o["shape"]) not in pictures:
-                rep.err("V1", f"{b['id']}: overlay shape {o['shape']} not found")
+            if (pictures.get((b["slide"], o["shape"])) or {}).get("kind") != "picture":
+                rep.err("V1", f"{b['id']}: overlay shape {o['shape']} is not a picture")
+        for sh in b.get("placements", []):
+            pl = pictures.get((b["slide"], sh))
+            if not pl or pl.get("file") != pic.get("file"):
+                rep.err("V1", f"{b['id']}: placement {sh} is not the same picture as shape {b['shape']}")
     return by_id
 
 
@@ -186,7 +190,28 @@ def referenced_units(views, units):
     return used
 
 
-def v2_omission(facts, views, units, rep):
+def v2_pictures(views, raw, rep):
+    """Every picture file in the PPT must be shown by an image view; the slide deck view
+    must cover every rendered slide."""
+    shapes = {(s["slide"], sh["id"]): sh for s in raw["slides"] for sh in s["shapes"]}
+    shown = set()
+    for b in views["blocks"]:
+        if b["type"] == "image":
+            for sh in [b["shape"]] + b.get("placements", []) + [o["shape"] for o in b.get("overlays", [])]:
+                if (b["slide"], sh) in shapes:
+                    shown.add(shapes[(b["slide"], sh)].get("file"))
+    all_files = {sh["file"] for sh in shapes.values() if sh.get("kind") == "picture"}
+    missing = sorted(all_files - shown)
+    for f in missing:
+        where = [k for k, sh in shapes.items() if sh.get("file") == f]
+        rep.err("V2", f"PPT picture not shown by any image view: {f} (slide/shape {where[:3]})")
+    deck = [b for b in views["blocks"] if b["type"] == "slide_deck"]
+    if not deck or deck[0].get("range") != "all":
+        rep.err("V2", "no slide_deck view covering all original slides")
+    return [f"picture:{f}" for f in missing]
+
+
+def v2_omission(facts, views, units, raw, rep):
     used = referenced_units(views, units)
     by_id = {f["id"]: f for f in facts}
     # a referenced date fact is rendered as a date chip showing its whole source unit
@@ -195,6 +220,7 @@ def v2_omission(facts, views, units, rep):
     missing = [f["id"] for f in facts if f["type"] == "unit" and not f.get("excluded") and f["id"] not in used]
     for m in missing:
         rep.err("V2", f"PPT unit not shown by any view: {m} {units[m][1][:40]!r}")
+    missing += v2_pictures(views, raw, rep)
     unused_values = [f["id"] for f in facts if f["type"] == "value" and f["id"] not in used
                      and (f.get("loc") or {}).get("unit") not in used]
     for u in unused_values:
@@ -253,7 +279,7 @@ def v4_views(views, by_id, rep):
     for p, k, v in walk(views):
         if isinstance(v, str) and k in ("label",) and LABEL_NUMBER.search(v):
             rep.err("V4", f"{p}.label contains a digit (numbers must come from facts): {v!r}")
-        if isinstance(v, (int, float)) and k not in ("slide", "shape"):
+        if isinstance(v, (int, float)) and k not in ("slide", "shape") and not p.endswith(".placements"):
             rep.err("V4", f"{p}.{k}: literal number {v} in views")
 
     for b in views["blocks"]:
@@ -366,7 +392,7 @@ def validate(case_dir, facts_doc=None, views=None, release=False):
     by_id = v1_structure(facts, views, raw, units, rep)
     if rep.errors:  # later gates assume references resolve
         return rep, {}
-    stats = {"missing_units": v2_omission(facts, views, units, rep),
+    stats = {"missing_units": v2_omission(facts, views, units, raw, rep),
              "image_facts": v3_reread(facts, units, rep, by_id)}
     v4_views(views, by_id, rep)
     stats["open_reviews"] = len(v5_review(facts, rep, release))

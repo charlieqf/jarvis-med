@@ -15,10 +15,13 @@
     {"id": "sec.regimen",    "label": "埃纳妥单抗联合方案"},
     {"id": "sec.summary",    "label": "病例总结"},
     {"id": "sec.literature", "label": "文献回顾"},
-    {"id": "sec.conclusion", "label": "总结"}
+    {"id": "sec.conclusion", "label": "总结"},
+    {"id": "sec.slides",     "label": "原版幻灯片"}
   ],
 
   "blocks": [
+    {"id": "b.brand.cover", "section": "sec.overview", "type": "image", "role": "cover", "slide": 1, "shape": 12, "label": "封面图片"},
+    {"id": "b.brand.logo", "section": "sec.overview", "type": "image", "role": "logo", "slide": 1, "shape": 11, "label": "医院标识"},
     {"id": "b.patient", "section": "sec.overview", "type": "table", "title": "u.4.4.p0", "caption": "u.4.5.p0", "table": "u.4.6"},
     {"id": "b.dx", "section": "sec.overview", "type": "text", "title": "u.7.4.p0", "units": ["u.7.13.*"]},
 
@@ -178,6 +181,8 @@
      "units": ["u.23.15.p0", "u.23.45.*", "u.23.55.p0", "u.23.50.*", "u.23.62.p0", "u.23.60.p0", "u.23.64.p0", "u.23.65.*",
                "u.23.82.p0", "u.23.68.p0", "u.23.75.*", "u.23.71.p0", "u.23.76.p0", "u.23.74.p0", "u.23.81.p0", "u.23.80.*"],
      "citations": ["u.23.6.p0"]},
+    {"id": "b.lit.us.flow_arrows", "section": "sec.literature", "type": "image", "role": "diagram_part", "slide": 23, "shape": 63,
+     "placements": [63, 67, 70, 73], "label": "研究设计流程图中的箭头"},
     {"id": "b.lit.us.baseline", "section": "sec.literature", "type": "text", "title": "u.24.2.*",
      "units": ["u.24.7.p0", "u.24.9.p0", "u.24.10.*", "u.24.11.*"], "footnotes": ["u.24.12.*"], "citations": ["u.24.4.p0"]},
     {"id": "b.lit.us.tbl_patient", "section": "sec.literature", "type": "table", "table": "u.24.3"},
@@ -212,6 +217,9 @@
      "label_units": ["u.29.7.p0", "u.29.8.p0", "u.29.9.p0", "u.29.10.p0", "u.29.11.p0", "u.29.12.p0", "u.29.13.*", "u.29.14.*"],
      "facts": ["f.lit.pfs.at_risk", "f.lit.os.at_risk"]},
 
-    {"id": "b.conclusion", "section": "sec.conclusion", "type": "text", "title": "u.31.4.p0", "units": ["u.31.3.*"]}
+    {"id": "b.conclusion", "section": "sec.conclusion", "type": "text", "title": "u.31.4.p0", "units": ["u.31.3.*"]},
+
+    {"id": "b.slides", "section": "sec.slides", "type": "slide_deck", "label": "原版幻灯片全部页面（含页面中的全部图片），可以逐页浏览、放大",
+     "source": "slides", "range": "all"}
   ]
 }

@@ -146,6 +146,12 @@ def test_unit_view_removed_is_omission(base):
     assert_caught(mutate(base, m), "V2")
 
 
+def test_picture_view_removed_is_omission(base):
+    def m(f, v):
+        v["blocks"] = [b for b in v["blocks"] if b["id"] != "b.brand.logo"]
+    assert_caught(mutate(base, m), "V2")
+
+
 def test_dangling_reference(base):
     def m(f, v):
         v["blocks"][0]["title"] = "u.99.1.p0"
