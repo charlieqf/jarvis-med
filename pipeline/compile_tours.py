@@ -264,25 +264,36 @@ class Ctx:
             raise CompileError(f"{where}: timelineSweep needs [from_event, to_event]")
         return {"op": op, "targets": targets}
 
+    def compile_step(self, s, seq, plan_id):
+        """Compile one plan step (used by batch compile and by the live plan worker)."""
+        where = f"{plan_id}.{s.get('id', f's{seq + 1}')}"
+        if not s.get("camera"):
+            raise CompileError(f"{where}: step needs a camera target")
+        self.check_target(where, s["camera"])
+        if not s.get("claims"):
+            raise CompileError(f"{where}: step has no claims")
+        claims = [self.claim(c, f"{where}.c{j}") for j, c in enumerate(s["claims"])]
+        ids = {c["claim"] for c in claims}
+        callouts = []
+        for co in s.get("callouts", []):
+            cid = f"{where}.c{co['claim']}"
+            if cid not in ids:
+                raise CompileError(f"{where}: callout refers to missing claim {co['claim']}")
+            self.check_target(where, co["target"])
+            callouts.append({"target": co["target"], "claim": cid})
+        step = {"id": where, "seq": seq, "camera": s["camera"], "title": s.get("title"),
+                "actions": [self.action(a, where) for a in s.get("actions", [])],
+                "say": claims, "callouts": callouts}
+        checks = [{"claim": c["claim"], "type": c["type"], "cite": c["cite"], "flags": c.get("flags", []), "result": "pass"}
+                  for c in claims]
+        return step, checks
+
     def compile(self, plan, version):
         steps, checks = [], []
         for i, s in enumerate(plan["steps"]):
-            where = f"{plan['id']}.{s['id']}"
-            self.check_target(where, s["camera"])
-            claims = [self.claim(c, f"{where}.c{j}") for j, c in enumerate(s.get("claims", []))]
-            ids = {c["claim"] for c in claims}
-            callouts = []
-            for co in s.get("callouts", []):
-                cid = f"{where}.c{co['claim']}"
-                if cid not in ids:
-                    raise CompileError(f"{where}: callout refers to missing claim {co['claim']}")
-                self.check_target(where, co["target"])
-                callouts.append({"target": co["target"], "claim": cid})
-            steps.append({"id": where, "seq": i, "camera": s["camera"], "title": s.get("title"),
-                          "actions": [self.action(a, where) for a in s.get("actions", [])],
-                          "say": claims, "callouts": callouts})
-            checks += [{"claim": c["claim"], "type": c["type"], "cite": c["cite"], "flags": c.get("flags", []), "result": "pass"}
-                       for c in claims]
+            step, ch = self.compile_step(s, i, plan["id"])
+            steps.append(step)
+            checks += ch
         return {"id": plan["id"], "question": plan["question"], "content_version": version,
                 "reviewed_by": plan.get("reviewed_by"), "steps": steps, "checks": checks}
 

@@ -48,28 +48,38 @@ export function route(input: string, tours: Tour[]) {
   return { best: scores[0], all: scores }
 }
 
+const CODE_KEY = 'jarvis_access_code'
+const readCode = () => { try { return localStorage.getItem(CODE_KEY) ?? '' } catch { return '' } }
+const saveCode = (c: string) => { try { localStorage.setItem(CODE_KEY, c) } catch { /* private mode */ } }
+
 export function ChatBox() {
-  const { tours, play, log } = useStage()
+  const { tours, play, playLive, log } = useStage()
   const [text, setText] = useState('')
+  const [code, setCode] = useState(readCode)
+  const [needCode, setNeedCode] = useState(false)
   const [notice, setNotice] = useState<string | null>(null)
-  const submit = () => {
+  const submit = async () => {
     const q = text.trim()
     if (!q) return
     const r = route(q, tours)
     log('input', `用户提问：「${q}」`)
-    log('route', `预编导览匹配：${r.all.map(x => `${x.t.id}=${x.score}`).join('，')}`, r.all.map(x => ({ id: x.t.id, score: x.score })))
-    if (r.best.score >= 1 && r.best.score > (r.all[1]?.score ?? 0)) {
-      play(r.best.t, { via: 'match', score: r.best.score, input: q })
-      setNotice(null)
-    } else {
-      setNotice('这个问题没有匹配到预先审核过的导览。模型实时编排（慢速路径）将在 P3 接入；目前可以点击左侧的推荐问题。')
-      log('fallback', '未明确命中预编导览 → 慢速路径（模型实时编排回答计划）将在 P3 接入；可以先点击左侧推荐问题', undefined, 'pending')
+    const exact = tours.find(t => t.question === q)
+    log('route', `预编导览匹配：${r.all.map(x => `${x.t.id}=${x.score}`).join('，')}（≥2 或原题才走快速路径）`, r.all.map(x => ({ id: x.t.id, score: x.score })))
+    if (exact || (r.best.score >= 2 && r.best.score > (r.all[1]?.score ?? 0))) {
+      play(exact ?? r.best.t, { via: 'match', score: r.best.score, input: q })
+      setNotice(null); setText('')
+      return
     }
+    if (!code) { setNeedCode(true); setNotice('实时回答需要访问码'); return }
+    const res = await playLive(q, code)
+    if (res === 'unauthorized') { setNeedCode(true); setNotice('访问码不正确，请重新输入'); return }
+    setNotice(res === 'error' ? '服务端暂时不可用，可以先点击左侧推荐问题' : null)
     setText('')
   }
   return (
     <form className="chat" onSubmit={e => { e.preventDefault(); submit() }}>
       <input value={text} onChange={e => setText(e.target.value)} placeholder="用自然语言提问，例如：CAR-T 之后发生了什么？" aria-label="提问" />
+      {needCode && <input className="code" value={code} onChange={e => { setCode(e.target.value.trim()); saveCode(e.target.value.trim()) }} placeholder="访问码" aria-label="访问码" />}
       <button type="submit">提问</button>
       {notice && <div className="chat-notice" role="status">{notice}<button type="button" className="x" onClick={() => setNotice(null)}>×</button></div>}
     </form>
@@ -80,7 +90,8 @@ export function ChatBox() {
 
 const KIND_LABEL: Record<string, string> = {
   input: '提问', route: '路由', version: '版本', plan: '计划', check: '校验', step: '执行', done: '完成',
-  pause: '暂停', cancel: '取消', drop: '丢弃', fallback: '回退',
+  pause: '暂停', cancel: '取消', drop: '丢弃', fallback: '回退', model: '模型', thinking: '思考', reject: '拒绝',
+  usage: '用量', error: '错误', timeout: '超时', parse: '解析', not_in_source: '无答案', worker: '校验器',
 }
 
 export function TracePanel() {

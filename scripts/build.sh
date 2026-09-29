@@ -6,6 +6,7 @@ export PYTHONIOENCODING=utf-8
 cd "$(dirname "$0")/.."
 python pipeline/build_facts.py "$CASE"      # facts.src.yaml + raw -> facts.json
 python pipeline/compile_tours.py "$CASE"    # plans -> tours (bound to content_version)
+python pipeline/build_catalog.py "$CASE"    # anchor catalog for the model prompt
 python pipeline/validate.py "$CASE"         # quality gates V1-V6
 python pipeline/review.py "$CASE"           # regenerate review.md
 python pipeline/compile_web.py "$CASE"      # bundle for the web app

@@ -118,12 +118,22 @@ export function Caption() {
   const { openSource } = useUI()
   const t = state.tour
   if (!t) return null
+  if (state.index < 0) {
+    return (
+      <div className="caption-bar">
+        <div className="cap-head"><span className="cap-q">实时回答 · {t.question}</span><span className="cap-step">模型正在编排回答计划…</span></div>
+        <div className="cap-body"><p className="claim generating"><i className="spinner" />正在检索原稿内容并逐步校验，第一步通过校验后立即开始播放（过程见下方 Agent 过程面板）</p></div>
+        <div className="cap-ctrl"><button className="ghost" onClick={() => cancel('用户结束')}>结束</button></div>
+      </div>
+    )
+  }
   const step = t.steps[state.index]
+  const liveNote = state.live && !state.live.finished ? '（后续步骤生成中）' : ''
   return (
     <div className="caption-bar">
       <div className="cap-head">
-        <span className="cap-q">{t.id} · {t.question}</span>
-        <span className="cap-step">{state.index + 1}/{t.steps.length} · {step.title}</span>
+        <span className="cap-q">{t.id === 'LIVE' ? '实时回答' : t.id} · {t.question}</span>
+        <span className="cap-step">{state.index + 1}/{t.steps.length}{liveNote} · {step.title}</span>
       </div>
       <div className="cap-body" key={state.epoch}>
         {step.say.map(c => (

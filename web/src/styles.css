@@ -302,3 +302,10 @@ table.data tr.is-row { background: #e9f8fb; box-shadow: inset 4px 0 0 var(--cyan
 }
 
 .stage-image .figure { height: min(46vh, 460px); width: auto; max-width: 100% }
+
+.chat input.code { flex: 0 0 140px; font-family: var(--mono) }
+.generating { color: var(--muted) }
+.spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--cyan-soft); border-top-color: var(--cyan); border-radius: 50%; margin-right: 8px; vertical-align: -2px; animation: spin .8s linear infinite }
+@keyframes spin { to { transform: rotate(360deg) } }
+.tr.tr-thinking .tr-x { color: var(--muted) }
+.tr.tr-model .tr-k { color: #6246a8 }

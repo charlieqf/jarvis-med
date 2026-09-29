@@ -1,0 +1,1015 @@
+# content_version 978518b92bf4
+## SECTIONS
+sec.overview | 病例概览
+sec.baseline | 初诊与基线评估
+sec.timeline | 治疗时间轴
+sec.trends | 指标趋势
+sec.imaging | 影像与病理图片
+sec.pathology | 病理与分子特征
+sec.regimen | 埃纳妥单抗联合方案
+sec.summary | 病例总结
+sec.literature | 文献回顾
+sec.conclusion | 总结
+sec.slides | 原版幻灯片
+## BLOCKS (camera/spotlight targets)
+b.brand.cover | type=image | section=sec.overview | 封面图片
+b.brand.logo | type=image | section=sec.overview | 医院标识
+b.patient | type=table | section=sec.overview | 患者基本情况
+  row b.patient.r0 | 项目 || 内容
+  row b.patient.r1 | 姓名 / 性别 / 年龄 || WP ／ 女 ／ 39岁
+  row b.patient.r2 | 主诉 || 确诊多发性骨髓瘤3年余
+  row b.patient.r3 | 确诊诊断 || 多发性骨髓瘤（IgG-λ型，DS IIIA，ISS II，RISS II）
+  row b.patient.r4 | 既往史 || 既往体健
+  row b.patient.r5 | 一般情况 || 青年女性，慢性病程
+b.dx | type=text | section=sec.overview | 确诊诊断
+b.onset | type=text | section=sec.baseline | 初诊与基线评估
+b.baseline_labs | type=table | section=sec.baseline | 
+  row b.baseline_labs.r0 | 检查项目 || 结果
+  row b.baseline_labs.r1 | 血常规 || WBC ，Hb 98g/L，PLT
+  row b.baseline_labs.r2 | 生化 || LDH 350U/L，TP 87.7g/L，ALB 31.4g/L，GLB 56.3g/L，LDH 350U/L，URIC 50mol/L
+  row b.baseline_labs.r3 | 体液免疫 || IgG 51g/L，IgA 0.1g/L，IgM 0.13g/L，κ 0.4g/L，λ 4.3g/L
+  row b.baseline_labs.r4 | 骨髓形态与活检 || 幼浆/瘤细胞约12%；骨髓活检浆细胞15%~17%
+  row b.baseline_labs.r5 | BM免疫分型（NGF） || 克隆性浆细胞3.765%
+  row b.baseline_labs.r6 | PB免疫分型（NGF） || 克隆性浆细胞1.9*10-3
+  row b.baseline_labs.r7 | MM-FISH（初诊） || 13q14缺失14%，1q21扩增8%，Rb1缺失15%，P53缺失阴性，IgH重排阳性，加作为FGFR3/IgH重排阳性20%
+  row b.baseline_labs.r8 | 基因突变（初诊） || KRAS 9.6%，IGLL5 27.3%
+b.baseline_mm | type=table | section=sec.baseline | MM 全套（基线）
+  row b.baseline_mm.r0 | 指标 || 结果
+  row b.baseline_mm.r1 | 血清蛋白电泳 || 40.9%（36.8918g/L）
+  row b.baseline_mm.r2 | 血清免疫固定电泳 || IgG-λ型
+  row b.baseline_mm.r3 | 血清游离轻链 || κ <5.8 mg/L，λ 315 mg/L
+  row b.baseline_mm.r4 | 尿蛋白电泳 || 提示生理性蛋白尿
+  row b.baseline_mm.r5 | 尿免疫固定电泳 || λ轻链型
+  row b.baseline_mm.r6 | sBCMA || 158.2 ng/mL
+  row b.baseline_mm.r7 | β2-MG || 2.17 mg/L
+  row b.baseline_mm.r8 | 24h尿蛋白 || 0.49 g
+  row b.baseline_mm.r9 | VEGF || 218.44 pg/ml
+b.baseline_imaging | type=text | section=sec.baseline | 影像评估
+b.phases | type=phases | section=sec.timeline | 
+  phase ph.vrd | VRD 诱导 | 2023-06-29 → 2023-11-05
+  phase ph.asct | 干细胞采集与自体移植 | 2023-11-05 → 2024-03-12
+  phase ph.kd | KD 巩固 | 2024-03-12 → 2024-05-13
+  phase ph.cart | BCMA CAR-T | 2024-05-13 → 2024-06
+  phase ph.pom | 泊马度胺维持 | 2024-06 → 2025-09
+  phase ph.rt | 局部放疗 | 2025-09 → 2026-01
+  phase ph.elra | 埃纳妥单抗联合兆珂速 | 2026-01-30 → ongoing
+b.events | type=timeline | section=sec.timeline | 
+  event ev.onset | 2023-01 | 起病 | kind=clinical
+  event ev.presentation | 2023-06 | 就诊并确诊 | kind=diagnosis
+  event ev.vrd_start | 2023-06-29 | 启动 VRD | kind=treatment
+  event ev.vrd_eval | 2023-10-12 | VRD 诱导后复查 | kind=assessment | DATE-INFERRED
+  event ev.collection | 2023-11-05 | 干细胞采集 | kind=procedure
+  event ev.asct | 2023-12-19 | 自体造血干细胞移植 | kind=procedure
+  event ev.post_asct | 2024-03-07 | 移植后复查 | kind=assessment
+  event ev.lymph | 2024-03-12 | 采集淋巴细胞 | kind=procedure
+  event ev.kd | 2024-03-12 | KD 巩固 | kind=treatment
+  event ev.emd1 | 2024-05-08 | 髓外进展：右肩胛区 | kind=relapse
+  event ev.emd1_biopsy | 2024-05-12 | 右肩胛区肿块穿刺 | kind=pathology
+  event ev.fc | 2024-05-13 | FC 预处理 | kind=treatment
+  event ev.cart | 2024-05-17 | 回输 BCMA CAR-T | kind=treatment
+  event ev.crs | 2025-05-23 | CRS | kind=adverse_event | PENDING-REVIEW
+  event ev.cart_eval1 | 2024-06-20 | CAR-T 后评估 | kind=assessment
+  event ev.pom | 2024-06 | 泊马度胺维持 | kind=treatment | DATE-INFERRED
+  event ev.cart_eval2 | 2024-09-11 | 维持期评估 | kind=assessment
+  event ev.scr | 2024-12-10 | 疗效评估 sCR | kind=assessment
+  event ev.emd2 | 2025-09 | 髓外复发：左乳与右髂骨 | kind=relapse
+  event ev.rt | 2025-09 | 局部放疗 | kind=treatment
+  event ev.emd3 | 2026-01 | 再次进展：皮下与腹股沟 | kind=relapse
+  event ev.emd3_path | 2026-01 | 左上臂穿刺 | kind=pathology
+  event ev.dara | 2026-01-30 | 启动兆珂速 | kind=treatment
+  event ev.elra | 2026-01-31 | 启动埃纳妥单抗 | kind=treatment
+  event ev.dose_0223 | 2026-02-23 | 联合给药 | kind=treatment
+  event ev.cmv1 | 2026-03 | CMV 病毒感染 | kind=adverse_event | DATE-INFERRED
+  event ev.dose_c2 | 2026-03-28 | 联合给药 | kind=treatment
+  event ev.dose_0406 | 2026-04-06 | 联合给药 | kind=treatment
+  event ev.cmv2 | 2026-05 | CMV 病毒感染 | kind=adverse_event | DATE-INFERRED
+  event ev.adm_0602 | 2026-06-02 | 维持期入院评估 | kind=assessment
+  event ev.dose_0603 | 2026-06-03 | 联合给药 | kind=treatment
+  event ev.adm_0822 | 2026-08-22 | 最新评估 | kind=assessment
+b.trends | type=series_group | section=sec.trends | 
+  series b.s.mprot | M蛋白 | scale=linear
+    point f.mprot.2023-06 | 2023-06 | raw=36.8918g/L | kind=exact
+    point f.mprot.2023-10 | 2023-10-12 | raw=0.9352g/L | kind=exact | DATE-INFERRED
+    point f.mprot.2024-03-07 | 2024-03-07 | raw=3.7996g/L | kind=exact
+    point f.mprot.2024-05-08 | 2024-05-08 | raw=10.6412g/L | kind=exact
+    point f.mprot.2024-06-20 | 2024-06-20 | raw=3.4017g/L | kind=exact
+    point f.mprot.2024-09-11 | 2024-09-11 | raw=0.0806g/L | kind=exact
+    point f.mprot.2024-12-10 | 2024-12-10 | raw=阴性 | kind=not_detected
+  series b.s.spep_pct | 血清蛋白电泳 M 峰占比 | scale=linear
+    point f.spep_pct.2023-06 | 2023-06 | raw=40.9% | kind=exact
+    point f.spep_pct.2026-01 | 2026-01 | raw=3.6% | kind=exact
+    point f.spep_pct.2026-08-24 | 2026-08-24 | raw=<0.1% | kind=bound
+  series b.s.flck | 血清游离轻链 κ | scale=log
+    point f.flck.2023-06 | 2023-06 | raw=<5.8 mg/L | kind=bound
+    point f.flck.2023-10 | 2023-10-12 | raw=6.73mg/L | kind=exact | DATE-INFERRED
+    point f.flck.2024-03-07 | 2024-03-07 | raw=12.81mg/L | kind=exact
+    point f.flck.2024-05-08 | 2024-05-08 | raw=9.67mg/L | kind=exact
+    point f.flck.2024-06-20 | 2024-06-20 | raw=0.58mg/L | kind=exact
+    point f.flck.2024-09-11 | 2024-09-11 | raw=0.56mg/L | kind=exact
+    point f.flck.2024-12-10 | 2024-12-10 | raw=1.25mg/L | kind=exact
+    point f.flck.2026-01 | 2026-01 | raw=7.07 | kind=exact
+    held f.flck.2026-08-24 | not plotted: 原文未注明单位，确认前不并入曲线
+  series b.s.flcl | 血清游离轻链 λ（受累轻链） | scale=log
+    point f.flcl.2023-06 | 2023-06 | raw=315 mg/L | kind=exact
+    point f.flcl.2023-10 | 2023-10-12 | raw=8.01mg/L | kind=exact | DATE-INFERRED
+    point f.flcl.2024-03-07 | 2024-03-07 | raw=16.29mg/L | kind=exact
+    point f.flcl.2024-05-08 | 2024-05-08 | raw=87.82mg/L | kind=exact
+    point f.flcl.2024-06-20 | 2024-06-20 | raw=1.33mg/L | kind=exact
+    point f.flcl.2024-09-11 | 2024-09-11 | raw=1.32mg/L | kind=exact
+    point f.flcl.2024-12-10 | 2024-12-10 | raw=2.9mg/L | kind=exact
+    point f.flcl.2026-01 | 2026-01 | raw=15.1 mg/L | kind=exact
+    held f.flcl.2026-08-24 | not plotted: 原文未注明单位，确认前不并入曲线
+  series b.s.flcr | κ/λ 比值 | scale=linear
+    point f.flcr.2026-01 | 2026-01 | raw=0.47 | kind=exact
+    point f.flcr.2026-08-24 | 2026-08-24 | raw=0.42 | kind=exact
+  series b.s.ngs | 骨髓 NGS-MRD | scale=log
+    point f.ngs.img.base | 2023-06-28 | raw=1.46E-01 | kind=exact | IMAGE-READING
+    point f.ngs.img.1 | 2023-10-12 | raw=3.21E-04 | kind=exact | IMAGE-READING
+    point f.ngs.img.2 | 2024-03-11 | raw=2.04E-04 | kind=exact | IMAGE-READING
+    point f.ngs.img.3 | 2024-06-19 | raw=0 | kind=not_detected | IMAGE-READING
+    point f.ngs.img.4 | 2024-09-11 | raw=0 | kind=not_detected | IMAGE-READING
+    point f.ngs.img.5 | 2024-12-16 | raw=0 | kind=not_detected | IMAGE-READING
+    point f.ngs.img.6 | 2025-05-28 | raw=0 | kind=not_detected | IMAGE-READING
+  series b.s.ngf | 骨髓 NGF-MRD / 免疫分型 | scale=log
+    point f.ngf.2023-06 | 2023-06 | raw=3.765% | kind=exact
+    point f.ngf.2023-10 | 2023-10-12 | raw=9.1*10^{-4} | kind=exact | DATE-INFERRED
+    point f.ngf.2024-05-08 | 2024-05-08 | raw=2.1*10^{-4} | kind=exact
+    point f.ngf.2024-06-20 | 2024-06-20 | raw=<2.8*10^{-5} | kind=bound
+    point f.ngf.2026-01 | 2026-01 | raw=1.2×10^{-3} | kind=exact
+  series b.s.suv_scapula | SUVmax · 右侧肩胛骨后方肌肉（糖代谢） | scale=linear
+    point f.suv.scapula.2024-05-08 | 2024-05-08 | raw=9.39 | kind=exact
+    point f.suv.scapula.2024-06-20 | 2024-06-20 | raw=2.1 | kind=exact
+  series b.s.suv_bone_base | SUVmax · 多发骨质破坏（示踪剂未注明） | scale=linear
+    point f.suv.bone.2023-06 | 2023-06 | raw=15.2 | kind=exact
+  series b.s.suv_shoulder_base | SUVmax · 左肩关节三角肌走行区（示踪剂未注明） | scale=linear
+    point f.suv.shoulder.2023-06 | 2023-06 | raw=8.2 | kind=exact
+  series b.s.suv_breast | SUVmax · 左乳（CXCR4） | scale=linear
+    point f.suv.breast.2025-09 | 2025-09 | raw=3.73 | kind=exact
+  series b.s.suv_iliac | SUVmax · 右髂骨（CXCR4） | scale=linear
+    point f.suv.iliac.2025-09 | 2025-09 | raw=5.32 | kind=exact
+  series b.s.il6 | IL-6（CAR-T 回输后） | scale=linear
+    point f.il6.01 | 2024-05-18 | raw=1.25 | kind=exact | IMAGE-READING
+    point f.il6.02 | 2024-05-20 | raw=2.44 | kind=exact | IMAGE-READING
+    point f.il6.03 | 2024-05-21 | raw=1.64 | kind=exact | IMAGE-READING
+    point f.il6.04 | 2024-05-22 | raw=3.71 | kind=exact | IMAGE-READING
+    point f.il6.05 | 2024-05-23 | raw=52.21 | kind=exact | IMAGE-READING
+    point f.il6.06 | 2024-05-24 | raw=967.49 | kind=exact | IMAGE-READING
+    point f.il6.07 | 2024-05-25 | raw=624.45 | kind=exact | IMAGE-READING
+    point f.il6.08 | 2024-05-26 | raw=86.05 | kind=exact | IMAGE-READING
+    point f.il6.09 | 2024-05-27 | raw=15.54 | kind=exact | IMAGE-READING
+    point f.il6.10 | 2024-05-28 | raw=22.52 | kind=exact | IMAGE-READING
+    point f.il6.11 | 2024-05-29 | raw=42.65 | kind=exact | IMAGE-READING
+    point f.il6.12 | 2024-05-30 | raw=28.95 | kind=exact | IMAGE-READING
+    point f.il6.13 | 2024-06-01 | raw=19.07 | kind=exact | IMAGE-READING
+    point f.il6.14 | 2024-06-02 | raw=31.32 | kind=exact | IMAGE-READING
+    point f.il6.15 | 2024-06-02 | raw=61.81 | kind=exact | PENDING-REVIEW,IMAGE-READING
+    point f.il6.16 | 2024-06-04 | raw=68.43 | kind=exact | IMAGE-READING
+  series b.s.hb | Hb | scale=linear
+    point f.hb.2023-06 | 2023-06 | raw=98g/L | kind=exact
+    point f.hb.2026-06-02 | 2026-06-02 | raw=74g/L | kind=exact
+    point f.hb.2026-08-22 | 2026-08-22 | raw=110g/L | kind=exact
+  series b.s.plt | PLT | scale=linear
+    point f.plt.2026-06-02 | 2026-06-02 | raw=83×10⁹/L | kind=exact
+    point f.plt.2026-08-22 | 2026-08-22 | raw=68×10^{9}/L | kind=exact
+  series b.s.wbc | WBC | scale=linear
+    point f.wbc.2026-06-02 | 2026-06-02 | raw=4.07×10⁹/L | kind=exact
+    point f.wbc.2026-08-22 | 2026-08-22 | raw=6.27×10^{9}/L | kind=exact
+  series b.s.crp | CRP | scale=linear
+    point f.crp.2026-06-02 | 2026-06-02 | raw=15.69mg/L | kind=exact
+    point f.crp.2026-08-22 | 2026-08-22 | raw=4.36mg/L | kind=exact
+b.bodymap | type=body_map | section=sec.imaging | 髓外病灶部位示意（人体图为示意，非患者影像）
+  pin b.bodymap.scapula | region=right_scapula | facts=f.site.emd1
+  pin b.bodymap.breast | region=left_breast | facts=f.site.emd2.breast
+  pin b.bodymap.iliac | region=right_iliac | facts=f.site.emd2.iliac
+  pin b.bodymap.arm | region=left_upper_arm | facts=f.site.emd3.arm
+  pin b.bodymap.abd | region=right_abdominal_wall | facts=f.site.emd3.abd
+  pin b.bodymap.groin | region=right_groin | facts=f.site.emd3.groin
+b.img.emd1_ct | type=image | section=sec.imaging | 胸部 CT · 右肩胛区肿块
+  hotspot b.img.emd1_ct.h1 | facts=f.site.emd1,f.suv.scapula.2024-05-08,f.size.scapula.2024-05-08
+b.img.path2024 | type=image | section=sec.imaging | 右肩胛区穿刺病理
+b.img.il6 | type=image | section=sec.imaging | IL-6 曲线原图
+b.img.mrd | type=image | section=sec.imaging | MRD 结果原图
+b.img.emd2_breast | type=image | section=sec.imaging | CXCR4 PET-CT · 左乳
+  hotspot b.img.emd2_breast.h1 | facts=f.site.emd2.breast,f.suv.breast.2025-09
+b.img.emd2_iliac | type=image | section=sec.imaging | CXCR4 PET-CT · 右髂骨
+  hotspot b.img.emd2_iliac.h1 | facts=f.site.emd2.iliac,f.suv.iliac.2025-09
+b.img.emd3_arm | type=image | section=sec.imaging | 低剂量 CT · 上臂层面
+  hotspot b.img.emd3_arm.h1 | facts=f.site.emd3.arm
+b.img.emd3_abd | type=image | section=sec.imaging | 低剂量 CT · 腹部层面
+  hotspot b.img.emd3_abd.h1 | facts=f.site.emd3.abd
+b.img.emd3_groin | type=image | section=sec.imaging | 低剂量 CT · 盆腔层面
+  hotspot b.img.emd3_groin.h1 | facts=f.site.emd3.groin
+b.rt_plan | type=table | section=sec.timeline | 局部放疗计划
+  row b.rt_plan.r0 | 靶区 || 部位 || 剂量
+  row b.rt_plan.r1 | GTVp1 || 乳腺病灶 || 40Gy / 20次
+  row b.rt_plan.r2 | GTVp2 || 髂骨病灶 || 40Gy / 20次
+  row b.rt_plan.r3 | CTV1 || 左全乳 || 30Gy / 15次
+b.relapse_labs | type=table | section=sec.timeline | 实验室评估（2026.01）
+  row b.relapse_labs.r0 | 项目 || 结果
+  row b.relapse_labs.r1 | 血MM全套 || SPEP 3.6%，IgG-λ型
+  row b.relapse_labs.r2 | 血清游离轻链 || κ 7.07 / λ 15.1 mg/L，κ/λ 0.47
+  row b.relapse_labs.r3 | 尿MM全套 || 阴性
+  row b.relapse_labs.r4 | 骨髓穿刺 || 浆细胞少见
+  row b.relapse_labs.r5 | MM免疫分型（BM） || 1.2×10^{-3}
+b.path_heading | type=text | section=sec.pathology | 病理与分子特征（2026.01 左上臂穿刺）
+b.ihc | type=table | section=sec.pathology | 免疫组化
+  row b.ihc.r0 | 标志物 || 结果
+  row b.ihc.r1 | CD38 / CD138 || （+）
+  row b.ihc.r2 | Kappa / Lambda || （-）/（+）
+  row b.ihc.r3 | C-myc || （+）约70%
+  row b.ihc.r4 | Ki-67 || （+）约90%
+  row b.ihc.r5 | BCMA || （+）93.8%
+  row b.ihc.r6 | EBER || （-）
+b.fish | type=table | section=sec.pathology | FISH 与基因突变
+  row b.fish.r0 | FISH 检测 || 结果
+  row b.fish.r1 | 13q14 缺失 || 90%
+  row b.fish.r2 | Rb1 缺失 || 90%
+  row b.fish.r3 | 1q21 扩增 || 90%，4个拷贝数
+  row b.fish.r4 | FGFR3/IgH 重排 || 90%
+  row b.fish.r5 | P53 缺失 || 阴性
+b.molecular | type=compare_matrix | section=sec.pathology | 不同时间点、不同样本的分子结果并列
+  compare_row b.mol.13q14 | facts=f.fish.13q14.2023-06,f.fish.13q14.2026-01
+  compare_row b.mol.rb1 | facts=f.fish.rb1.2023-06,f.fish.rb1.2026-01
+  compare_row b.mol.1q21 | facts=f.fish.1q21.2023-06,f.fish.1q21.2026-01,f.fish.1q21cn.2026-01
+  compare_row b.mol.fgfr3 | facts=f.fish.fgfr3.2023-06,f.fish.fgfr3.2026-01
+  compare_row b.mol.p53 | facts=f.fish.p53.2023-06,f.fish.p53.2026-01
+  compare_row b.mol.kras | facts=f.mut.kras.2023-06
+  compare_row b.mol.nras | facts=f.mut.nras.2024-05-12,f.mut.nras.2026-01
+  compare_row b.mol.igll5 | facts=f.mut.igll5.2023-06,f.mut.igll5.2024-05-12,f.mut.igll5.2026-01
+  compare_row b.mol.tet1 | facts=f.mut.tet1.2024-05-12
+  compare_row b.mol.bcma | facts=f.sbcma.2023-06,f.bcma.2024-05-12,f.bcma.2026-01
+b.regimen | type=text | section=sec.regimen | 治疗历程（六）· 埃纳妥单抗联合兆珂速方案
+b.adm_0602 | type=table | section=sec.regimen | 入院检查（06-02/06-03）
+  row b.adm_0602.r0 | 项目 || 结果
+  row b.adm_0602.r1 | 血常规 || WBC 4.07×10⁹/L，Hb 74g/L，中性粒 2.52×10⁹/L，血小板83×10⁹/L
+  row b.adm_0602.r2 | CRP || 15.69mg/L
+  row b.adm_0602.r3 | 生化 || ALB 40.7g/L，肌酐 42μmol/L，球蛋白 28.7g/L，TP 69.4g/L
+  row b.adm_0602.r4 | 心肌标志物 || 肌钙蛋白T 3.55，BNP前体 21.5
+  row b.adm_0602.r5 | 凝血 || 纤维蛋白原 4.16g/L
+b.immvir_0602 | type=table | section=sec.regimen | 免疫与病毒学
+  row b.immvir_0602.r0 | 项目 || 结果
+  row b.immvir_0602.r1 | 体液免疫 || κ 163.00，λ 72.70 IgA<0.07，IgG 2.39，IgM<0.04
+  row b.immvir_0602.r2 | CMV-DNA || 6.87×10^{2}（缬更昔洛韦抗病毒治疗）
+  row b.immvir_0602.r3 | EBV-DNA || <1×10^{2}
+  row b.immvir_0602.r4 | 本次治疗 || 埃纳妥单抗 + 兆珂速 + 丙种球蛋白
+b.adm_0822 | type=table | section=sec.regimen | 入院检查（08-22）
+  row b.adm_0822.r0 | 项目 || 结果
+  row b.adm_0822.r1 | 血常规 || CRP 4.36mg/L，WBC 6.27×10^{9}/L，Hb 110g/L，PLT 68×10^{9}/L
+  row b.adm_0822.r2 | 生化 || 肌酐 50μmol/L，钾 3.67mmol/L
+  row b.adm_0822.r3 | 心肌标志物 || 肌钙蛋白T 11.8，BNP <5.00
+  row b.adm_0822.r4 | 心电图 || 窦性心律
+  row b.adm_0822.r5 | 本次治疗 || 埃纳妥76mg + 兆珂速1800mg + 护胃补钙
+b.report_0824 | type=table | section=sec.regimen | 检验报告（08-24 标本）
+  row b.report_0824.r0 | 项目 || 结果
+  row b.report_0824.r1 | 免疫固定电泳 || 全阴性
+  row b.report_0824.r2 | 血清蛋白电泳 || M蛋白 <0.1%，A/G 2.27
+  row b.report_0824.r3 | 血清游离轻链 || κ 0.57 / λ 1.35，κ/λ 0.42
+b.case_summary | type=text | section=sec.summary | 病例总结
+  group b.sum.features
+  group b.sum.outcomes
+  group b.sum.takeaway
+b.lit.us.design | type=text | section=sec.literature | 
+b.lit.us.flow_arrows | type=image | section=sec.literature | 研究设计流程图中的箭头
+b.lit.us.baseline | type=text | section=sec.literature | 
+b.lit.us.tbl_patient | type=table | section=sec.literature | 
+  row b.lit.us.tbl_patient.r0 | N=47
+  row b.lit.us.tbl_patient.r1 | 中位年龄， 岁 (范围)* || 68.0 (36.0-89.0)
+  row b.lit.us.tbl_patient.r2 | 男性，n (%) || 24 (51.1)
+  row b.lit.us.tbl_patient.r3 | 种族/民族，n (%)
+  row b.lit.us.tbl_patient.r4 | 非裔美国人或黑人 || 8 (17.0)
+  row b.lit.us.tbl_patient.r5 | 亚裔 || 3 (6.4)
+  row b.lit.us.tbl_patient.r6 | 白人 || 34 (72.3)
+  row b.lit.us.tbl_patient.r7 | 未知 || 1 (2.1)
+  row b.lit.us.tbl_patient.r8 | 未报告 || 1 (2.1)
+  row b.lit.us.tbl_patient.r9 | ECOG PS，n (%)
+  row b.lit.us.tbl_patient.r10 | 0 || 15 (31.9)
+  row b.lit.us.tbl_patient.r11 | 1 || 28 (59.6)
+  row b.lit.us.tbl_patient.r12 | 2 || 4 (8.5)
+  row b.lit.us.tbl_patient.r13 | R-ISS疾病期，n (%)
+  row b.lit.us.tbl_patient.r14 | Ⅰ || 14 (29.8)
+  row b.lit.us.tbl_patient.r15 | Ⅱ || 24 (51.1)
+  row b.lit.us.tbl_patient.r16 | Ⅲ || 7 (14.9)
+  row b.lit.us.tbl_patient.r17 | 未知 || 2 (4.3)
+b.lit.us.tbl_disease | type=table | section=sec.literature | 
+  row b.lit.us.tbl_disease.r0 | N=47
+  row b.lit.us.tbl_disease.r1 | 细胞遗传学风险，n (%)
+  row b.lit.us.tbl_disease.r2 | 标危 || 32 (68.1)
+  row b.lit.us.tbl_disease.r3 | 高危* || 13 (27.7)
+  row b.lit.us.tbl_disease.r4 | 缺失 || 2 (4.3)
+  row b.lit.us.tbl_disease.r5 | 髓外疾病（BICR），n (%)
+  row b.lit.us.tbl_disease.r6 | 是^{†} || 15 (31.9)
+  row b.lit.us.tbl_disease.r7 | 否 || 32 (68.1)
+  row b.lit.us.tbl_disease.r8 | 具有≥1个预后不良因素‡ || 32 (68.1)
+  row b.lit.us.tbl_disease.r9 | 既往治疗线数，中位数 (范围） || 5.0 (2.0-22.0)
+  row b.lit.us.tbl_disease.r10 | 既往干细胞移植治疗，n (%) || 35 (74.5)
+  row b.lit.us.tbl_disease.r11 | 暴露状态
+  row b.lit.us.tbl_disease.r12 | 三重暴露^{§} || 47 (100)
+  row b.lit.us.tbl_disease.r13 | 五重暴露^{¶} || 37 (78.7)
+  row b.lit.us.tbl_disease.r14 | 难治状态
+  row b.lit.us.tbl_disease.r15 | 三重难治^{§} || 44 (93.6)
+  row b.lit.us.tbl_disease.r16 | 五重难治^{¶} || 22 (46.8)
+  row b.lit.us.tbl_disease.r17 | 最后一线治疗难治，n (%) || 46 (97.9)
+b.lit.us.response | type=text | section=sec.literature | 
+b.lit.us.orr_chart | type=stacked_bar | section=sec.literature | 缓解构成
+b.lit.us.dor | type=text | section=sec.literature | 
+b.lit.us.dor_km | type=image | section=sec.literature | 缓解持续时间曲线
+b.lit.int.design | type=text | section=sec.literature | 
+  group b.lit.int.bg
+  group b.lit.int.obj
+  group b.lit.int.methods
+b.lit.int.response | type=text | section=sec.literature | 
+b.lit.int.bor | type=image | section=sec.literature | 最佳缓解率与泳道图
+b.lit.int.survival | type=text | section=sec.literature | 
+b.lit.int.km | type=image | section=sec.literature | PFS 与 OS 曲线
+b.conclusion | type=text | section=sec.conclusion | 总结
+b.slides | type=slide_deck | section=sec.slides | 原版幻灯片全部页面（含页面中的全部图片），可以逐页浏览、放大
+## VALUE AND DATE FACTS (use in {{...}} placeholders)
+d.2023-01 | kind=date | raw=2023年1月 | date=2023-01 | 
+d.2023-06 | kind=date | raw=2023年6月 | date=2023-06 | 
+d.2023-06.dx | kind=date | raw=2023年6月 | date=2023-06 | 
+d.2023-06-29 | kind=date | raw=2023.06.29 | date=2023-06-29 | 
+d.2023-06-28.dwi | kind=date | raw=2023-06-28 | date=2023-06-28 | 
+d.vrd_eval | kind=date | raw=None | date=2023-10-12 |  | DATE-INFERRED
+d.2023-11-05 | kind=date | raw=2023.11.05 | date=2023-11-05 | 
+d.2023-12-19 | kind=date | raw=2023.12.19 | date=2023-12-19 | 
+d.2024-03-07 | kind=date | raw=2024.03.07 | date=2024-03-07 | 
+d.2024-03-12.lymph | kind=date | raw=2024.03.12 | date=2024-03-12 | 
+d.2024-03-12.kd | kind=date | raw=2024.03.12 | date=2024-03-12 | 
+d.2024-05-08 | kind=date | raw=2024.05.08 | date=2024-05-08 | 
+d.2024-05-12 | kind=date | raw=2024.05.12 | date=2024-05-12 | 
+d.2024-05-13 | kind=date | raw=2024.05.13 | date=2024-05-13 | 
+d.2024-05-17 | kind=date | raw=2024.05.17 | date=2024-05-17 | 
+d.crs | kind=date | raw=2025.05.23 | date=2025-05-23 |  | PENDING-REVIEW | review: proposed {'value': '2024-05-23'}
+d.2024-06-20 | kind=date | raw=2024.06.20 | date=2024-06-20 | 
+d.pom_start | kind=date | raw=None | date=2024-06 |  | DATE-INFERRED
+d.2024-09-11 | kind=date | raw=2024.09.11 | date=2024-09-11 | 
+d.2024-12-10 | kind=date | raw=2024.12.10 | date=2024-12-10 | 
+d.2025-09 | kind=date | raw=2025.09 | date=2025-09 | 
+d.2025-09-04.pet | kind=date | raw=None | date=2025-09-04 |  | IMAGE-READING
+d.rt_end | kind=date | raw=None | date=2026-01 |  | DATE-INFERRED
+d.2025-09-16 | kind=date | raw=2025-09-16 | date=2025-09-16 | 
+d.2026-01 | kind=date | raw=2026.01 | date=2026-01 | 
+d.2026-01.lab | kind=date | raw=2026.01 | date=2026-01 | 
+d.2026-01.path | kind=date | raw=2026.01 | date=2026-01 | 
+d.2026-01.reg | kind=date | raw=2026年1月 | date=2026-01 | 
+d.2026-01-12 | kind=date | raw=2026-01-12 | date=2026-01-12 | 
+d.2026-01-30 | kind=date | raw=2026.01.30 | date=2026-01-30 | 
+d.2026-01-31 | kind=date | raw=2026.01.31 | date=2026-01-31 | 
+d.2026-02-23 | kind=date | raw=2026.02.23 | date=2026-02-23 | 
+d.cmv1 | kind=date | raw=None | date=2026-03 |  | DATE-INFERRED
+d.2026-03-28 | kind=date | raw=2026.03.28 | date=2026-03-28 | 
+d.2026-04-06 | kind=date | raw=2026.04.06 | date=2026-04-06 | 
+d.cmv2 | kind=date | raw=None | date=2026-05 |  | DATE-INFERRED
+d.2026-06-02 | kind=date | raw=06-02 | date=2026-06-02 | 
+d.2026-06-03 | kind=date | raw=2026.06.03 | date=2026-06-03 | 
+d.2026-08-22 | kind=date | raw=08-22 | date=2026-08-22 | 
+d.2026-08-24 | kind=date | raw=08-24 | date=2026-08-24 | 
+f.pt.age | kind=exact | raw=39岁 | date=None | analyte=年龄
+f.hb.2023-06 | kind=exact | raw=98g/L | date=2023-06 | analyte=Hb,specimen=血
+f.wbc.2023-06 | kind=missing | raw=WBC | date=2023-06 | analyte=WBC
+f.plt.2023-06 | kind=missing | raw=PLT | date=2023-06 | analyte=PLT
+f.ldh.2023-06 | kind=exact | raw=350U/L | date=2023-06 | analyte=LDH
+f.ldh.dup | kind=statement | raw=LDH 350U/L | date=None |  | PENDING-REVIEW | review: proposed {'exclude': True}
+f.tp.2023-06 | kind=exact | raw=87.7g/L | date=2023-06 | analyte=TP
+f.alb.2023-06 | kind=exact | raw=31.4g/L | date=2023-06 | analyte=ALB
+f.glb.2023-06 | kind=exact | raw=56.3g/L | date=2023-06 | analyte=GLB
+f.uric.2023-06 | kind=exact | raw=50mol/L | date=2023-06 | analyte=URIC
+f.igg.2023-06 | kind=exact | raw=51g/L | date=2023-06 | analyte=IgG,specimen=血清
+f.bm_pc_biopsy.2023-06 | kind=statement | raw=15%~17% | date=2023-06 | 
+f.ngf.2023-06 | kind=exact | raw=3.765% | date=2023-06 | analyte=克隆性浆细胞比例,method=NGF,specimen=骨髓
+f.pb_ngf.2023-06 | kind=exact | raw=1.9*10-3 | date=2023-06 | analyte=克隆性浆细胞比例,method=NGF,specimen=外周血
+f.fish.13q14.2023-06 | kind=exact | raw=14% | date=2023-06 | analyte=13q14缺失,method=FISH,specimen=初诊样本
+f.fish.1q21.2023-06 | kind=exact | raw=8% | date=2023-06 | analyte=1q21扩增,method=FISH,specimen=初诊样本
+f.fish.rb1.2023-06 | kind=exact | raw=15% | date=2023-06 | analyte=Rb1缺失,method=FISH,specimen=初诊样本
+f.fish.p53.2023-06 | kind=not_detected | raw=阴性 | date=2023-06 | analyte=P53缺失,method=FISH,specimen=初诊样本
+f.fish.fgfr3.2023-06 | kind=exact | raw=20% | date=2023-06 | analyte=FGFR3/IgH重排,method=FISH,specimen=初诊样本
+f.fish.wording | kind=qualitative | raw=加作 | date=None |  | PENDING-REVIEW | review: proposed {'text': '加做'}
+f.mut.kras.2023-06 | kind=exact | raw=9.6% | date=2023-06 | analyte=VAF,gene=KRAS,specimen=初诊样本
+f.mut.igll5.2023-06 | kind=exact | raw=27.3% | date=2023-06 | analyte=VAF,gene=IGLL5,specimen=初诊样本
+f.spep_pct.2023-06 | kind=exact | raw=40.9% | date=2023-06 | analyte=M蛋白,method=SPEP,specimen=血清
+f.mprot.2023-06 | kind=exact | raw=36.8918g/L | date=2023-06 | analyte=M蛋白,method=SPEP,specimen=血清
+f.flck.2023-06 | kind=bound | raw=<5.8 mg/L | date=2023-06 | analyte=游离轻链κ,specimen=血清
+f.flcl.2023-06 | kind=exact | raw=315 mg/L | date=2023-06 | analyte=游离轻链λ,specimen=血清
+f.sbcma.2023-06 | kind=exact | raw=158.2 ng/mL | date=2023-06 | analyte=sBCMA,specimen=血清
+f.suv.bone.2023-06 | kind=exact | raw=15.2 | date=2023-06 | analyte=SUVmax,site=多发骨质破坏,tracer=未注明
+f.suv.shoulder.2023-06 | kind=exact | raw=8.2 | date=2023-06 | analyte=SUVmax,site=左肩关节三角肌走行区,tracer=未注明
+f.mprot.2023-10 | kind=exact | raw=0.9352g/L | date=2023-10-12 | analyte=M蛋白,method=SPEP,specimen=血清 | DATE-INFERRED
+f.flck.2023-10 | kind=exact | raw=6.73mg/L | date=2023-10-12 | analyte=游离轻链κ,specimen=血清 | DATE-INFERRED
+f.flcl.2023-10 | kind=exact | raw=8.01mg/L | date=2023-10-12 | analyte=游离轻链λ,specimen=血清 | DATE-INFERRED
+f.ngf.2023-10 | kind=exact | raw=9.1*10^{-4} | date=2023-10-12 | analyte=克隆性浆细胞比例,method=NGF,specimen=骨髓 | DATE-INFERRED
+f.ngs.2023-10.text | kind=exact | raw=3.21*10^{-4} | date=2023-10-12 | analyte=优势克隆比例,method=NGS,specimen=骨髓 | DATE-INFERRED
+f.ngs.base.text | kind=exact | raw=1.46*10^{-1} | date=2023-06 | analyte=优势克隆比例,method=NGS,specimen=骨髓
+f.resp.vgpr | kind=qualitative | raw=VGPR | date=2023-10-12 | analyte=疗效评估 | DATE-INFERRED
+f.mprot.2024-03-07 | kind=exact | raw=3.7996g/L | date=2024-03-07 | analyte=M蛋白,method=SPEP,specimen=血清
+f.flck.2024-03-07 | kind=exact | raw=12.81mg/L | date=2024-03-07 | analyte=游离轻链κ,specimen=血清
+f.flcl.2024-03-07 | kind=exact | raw=16.29mg/L | date=2024-03-07 | analyte=游离轻链λ,specimen=血清
+f.ngs.2024-03.text | kind=exact | raw=2.04*10^{-4} | date=2024-03-07 | analyte=优势克隆比例,method=NGS,specimen=骨髓
+f.ngs.pre_asct.text | kind=exact | raw=3.32*10^{-4} | date=2023-10-12 | analyte=优势克隆比例,method=NGS,specimen=骨髓 | PENDING-REVIEW,DATE-INFERRED | review: proposed {'value': 0.000321}
+f.mprot.2024-05-08 | kind=exact | raw=10.6412g/L | date=2024-05-08 | analyte=M蛋白,method=SPEP,specimen=血清
+f.flck.2024-05-08 | kind=exact | raw=9.67mg/L | date=2024-05-08 | analyte=游离轻链κ,specimen=血清
+f.flcl.2024-05-08 | kind=exact | raw=87.82mg/L | date=2024-05-08 | analyte=游离轻链λ,specimen=血清
+f.ngf.2024-05-08 | kind=exact | raw=2.1*10^{-4} | date=2024-05-08 | analyte=克隆性浆细胞比例,method=NGF,specimen=骨髓
+f.suv.scapula.2024-05-08 | kind=exact | raw=9.39 | date=2024-05-08 | analyte=SUVmax,site=右侧肩胛骨后方肌肉,tracer=糖代谢
+f.size.scapula.2024-05-08 | kind=statement | raw=76*54mm | date=2024-05-08 | 
+f.site.emd1 | kind=qualitative | raw=右侧肩胛骨后方肌肉肿块 | date=2024-05-08 | analyte=髓外病灶部位
+f.tissue_ngf.2024-05-12 | kind=exact | raw=36.4% | date=2024-05-12 | analyte=克隆性浆细胞比例,method=NGF,specimen=右肩胛区组织
+f.bcma.2024-05-12 | kind=exact | raw=99% | date=2024-05-12 | analyte=BCMA阳性率,method=流式,specimen=右肩胛区组织
+f.gene.nars | kind=qualitative | raw=NARS | date=2024-05-12 |  | PENDING-REVIEW | review: proposed {'text': 'NRAS'}
+f.mut.nras.2024-05-12 | kind=exact | raw=34.8% | date=2024-05-12 | analyte=VAF,gene_fact=f.gene.nars,specimen=右肩胛区组织
+f.mut.igll5.2024-05-12 | kind=exact | raw=68.10% | date=2024-05-12 | analyte=VAF,gene=IGLL5,specimen=右肩胛区组织
+f.mut.tet1.2024-05-12 | kind=exact | raw=37.8% | date=2024-05-12 | analyte=VAF,gene=TET1,specimen=右肩胛区组织
+f.path.2024.report | kind=statement | raw=病理诊断：（右肩胛区穿刺）浆细胞瘤，浸润肌肉组织生长，请结合骨髓情况。免疫组化(I24-06771)：LCA(-)，MPO(-)，CD138(+)，CD38(+)，EMA(-)，Kappa(-)，Lambda(-)，Plasma Cell(+)，CD56(+)，Bcl-2(-)，Mum1(+)，P53(-)，Ki-67(60%+)，CD19(-)，CD20(-)，CD79a(-)，Pax-5(-)。 | date=2024-05-12 |  | IMAGE-READING
+f.il6.ref | kind=statement | raw=IL-6 参考值≤5.4 | date=None |  | IMAGE-READING
+f.il6.01 | kind=exact | raw=1.25 | date=2024-05-18 | analyte=IL-6,specimen=血清 | IMAGE-READING
+f.il6.02 | kind=exact | raw=2.44 | date=2024-05-20 | analyte=IL-6,specimen=血清 | IMAGE-READING
+f.il6.03 | kind=exact | raw=1.64 | date=2024-05-21 | analyte=IL-6,specimen=血清 | IMAGE-READING
+f.il6.04 | kind=exact | raw=3.71 | date=2024-05-22 | analyte=IL-6,specimen=血清 | IMAGE-READING
+f.il6.05 | kind=exact | raw=52.21 | date=2024-05-23 | analyte=IL-6,specimen=血清 | IMAGE-READING
+f.il6.06 | kind=exact | raw=967.49 | date=2024-05-24 | analyte=IL-6,specimen=血清 | IMAGE-READING
+f.il6.07 | kind=exact | raw=624.45 | date=2024-05-25 | analyte=IL-6,specimen=血清 | IMAGE-READING
+f.il6.08 | kind=exact | raw=86.05 | date=2024-05-26 | analyte=IL-6,specimen=血清 | IMAGE-READING
+f.il6.09 | kind=exact | raw=15.54 | date=2024-05-27 | analyte=IL-6,specimen=血清 | IMAGE-READING
+f.il6.10 | kind=exact | raw=22.52 | date=2024-05-28 | analyte=IL-6,specimen=血清 | IMAGE-READING
+f.il6.11 | kind=exact | raw=42.65 | date=2024-05-29 | analyte=IL-6,specimen=血清 | IMAGE-READING
+f.il6.12 | kind=exact | raw=28.95 | date=2024-05-30 | analyte=IL-6,specimen=血清 | IMAGE-READING
+f.il6.13 | kind=exact | raw=19.07 | date=2024-06-01 | analyte=IL-6,specimen=血清 | IMAGE-READING
+f.il6.14 | kind=exact | raw=31.32 | date=2024-06-02 | analyte=IL-6,specimen=血清 | IMAGE-READING
+f.il6.15 | kind=exact | raw=61.81 | date=2024-06-02 | analyte=IL-6,specimen=血清 | PENDING-REVIEW,IMAGE-READING | review: proposed {'date': '2024-06-03'}
+f.il6.16 | kind=exact | raw=68.43 | date=2024-06-04 | analyte=IL-6,specimen=血清 | IMAGE-READING
+f.crs.grade | kind=qualitative | raw=CRS反应2级 | date=2025-05-23 | analyte=CRS分级 | DATE-PENDING-REVIEW
+f.mprot.2024-06-20 | kind=exact | raw=3.4017g/L | date=2024-06-20 | analyte=M蛋白,method=SPEP,specimen=血清
+f.flck.2024-06-20 | kind=exact | raw=0.58mg/L | date=2024-06-20 | analyte=游离轻链κ,specimen=血清
+f.flcl.2024-06-20 | kind=exact | raw=1.33mg/L | date=2024-06-20 | analyte=游离轻链λ,specimen=血清
+f.ngf.2024-06-20 | kind=bound | raw=<2.8*10^{-5} | date=2024-06-20 | analyte=克隆性浆细胞比例,method=NGF,specimen=骨髓,result=未见浆细胞
+f.ngs.2024-06-20.text | kind=not_detected | raw=阴性 | date=2024-06-20 | analyte=优势克隆比例,method=NGS,specimen=骨髓
+f.suv.scapula.2024-06-20 | kind=exact | raw=2.1 | date=2024-06-20 | analyte=SUVmax,site=右侧肩胛骨后方肌肉,tracer=糖代谢
+f.mprot.2024-09-11 | kind=exact | raw=0.0806g/L | date=2024-09-11 | analyte=M蛋白,method=SPEP,specimen=血清
+f.flck.2024-09-11 | kind=exact | raw=0.56mg/L | date=2024-09-11 | analyte=游离轻链κ,specimen=血清
+f.flcl.2024-09-11 | kind=exact | raw=1.32mg/L | date=2024-09-11 | analyte=游离轻链λ,specimen=血清
+f.pet.2024-09-11 | kind=qualitative | raw=未伴葡萄糖代谢增高 | date=2024-09-11 | analyte=PET代谢,tracer=糖代谢
+f.mprot.2024-12-10 | kind=not_detected | raw=阴性 | date=2024-12-10 | analyte=M蛋白,method=SPEP,specimen=血清
+f.flck.2024-12-10 | kind=exact | raw=1.25mg/L | date=2024-12-10 | analyte=游离轻链κ,specimen=血清
+f.flcl.2024-12-10 | kind=exact | raw=2.9mg/L | date=2024-12-10 | analyte=游离轻链λ,specimen=血清
+f.resp.scr | kind=qualitative | raw=sCR | date=2024-12-10 | analyte=疗效评估
+f.ngs.img.base | kind=exact | raw=1.46E-01 | date=2023-06-28 | analyte=优势克隆比例,method=NGS,specimen=骨髓 | IMAGE-READING
+f.ngs.img.1 | kind=exact | raw=3.21E-04 | date=2023-10-12 | analyte=优势克隆比例,method=NGS,specimen=骨髓 | IMAGE-READING
+f.ngs.img.2 | kind=exact | raw=2.04E-04 | date=2024-03-11 | analyte=优势克隆比例,method=NGS,specimen=骨髓 | IMAGE-READING
+f.ngs.img.3 | kind=not_detected | raw=0 | date=2024-06-19 | analyte=优势克隆比例,method=NGS,specimen=骨髓 | IMAGE-READING
+f.ngs.img.4 | kind=not_detected | raw=0 | date=2024-09-11 | analyte=优势克隆比例,method=NGS,specimen=骨髓 | IMAGE-READING
+f.ngs.img.5 | kind=not_detected | raw=0 | date=2024-12-16 | analyte=优势克隆比例,method=NGS,specimen=骨髓 | IMAGE-READING
+f.ngs.img.6 | kind=not_detected | raw=0 | date=2025-05-28 | analyte=优势克隆比例,method=NGS,specimen=骨髓 | IMAGE-READING
+f.site.emd2.breast | kind=qualitative | raw=左侧乳腺内侧象限软组织肿物 | date=2025-09 | analyte=髓外病灶部位
+f.site.emd2.iliac | kind=qualitative | raw=髂骨右翼 | date=2025-09 | analyte=病灶部位
+f.suv.breast.2025-09 | kind=exact | raw=3.73 | date=2025-09 | analyte=SUVmax,site=左侧乳腺内侧象限,tracer=CXCR4
+f.suv.iliac.2025-09 | kind=exact | raw=5.32 | date=2025-09 | analyte=SUVmax,site=髂骨右翼,tracer=CXCR4
+f.birads.9 | kind=qualitative | raw=BI-RADS 4b类 | date=2025-09 | analyte=BI-RADS,site=左乳9点钟
+f.site.emd3.abd | kind=qualitative | raw=右侧腹皮下肿物 | date=2026-01 | analyte=髓外病灶部位
+f.site.emd3.groin | kind=qualitative | raw=右侧腹股沟肿大淋巴结 | date=2026-01 | analyte=髓外病灶部位
+f.site.emd3.arm | kind=qualitative | raw=左侧上臂皮下异常回声 | date=2026-01 | analyte=髓外病灶部位
+f.spep_pct.2026-01 | kind=exact | raw=3.6% | date=2026-01 | analyte=M蛋白,method=SPEP,specimen=血清
+f.flck.2026-01 | kind=exact | raw=7.07 | date=2026-01 | analyte=游离轻链κ,specimen=血清
+f.flcl.2026-01 | kind=exact | raw=15.1 mg/L | date=2026-01 | analyte=游离轻链λ,specimen=血清
+f.flcr.2026-01 | kind=exact | raw=0.47 | date=2026-01 | analyte=κ/λ比值,specimen=血清
+f.ngf.2026-01 | kind=exact | raw=1.2×10^{-3} | date=2026-01 | analyte=克隆性浆细胞比例,method=NGF,specimen=骨髓
+f.ihc.cmyc.2026-01 | kind=exact | raw=约70% | date=2026-01 | analyte=C-myc阳性率,method=IHC,specimen=左上臂组织
+f.ihc.ki67.2026-01 | kind=exact | raw=约90% | date=2026-01 | analyte=Ki-67阳性率,method=IHC,specimen=左上臂组织
+f.bcma.2026-01 | kind=exact | raw=93.8% | date=2026-01 | analyte=BCMA阳性率,method=IHC,specimen=左上臂组织
+f.fish.13q14.2026-01 | kind=exact | raw=90% | date=2026-01 | analyte=13q14缺失,method=FISH,specimen=左上臂组织
+f.fish.rb1.2026-01 | kind=exact | raw=90% | date=2026-01 | analyte=Rb1缺失,method=FISH,specimen=左上臂组织
+f.fish.1q21.2026-01 | kind=exact | raw=90% | date=2026-01 | analyte=1q21扩增,method=FISH,specimen=左上臂组织
+f.fish.1q21cn.2026-01 | kind=statement | raw=4个拷贝数 | date=2026-01 | 
+f.fish.fgfr3.2026-01 | kind=exact | raw=90% | date=2026-01 | analyte=FGFR3/IgH重排,method=FISH,specimen=左上臂组织
+f.fish.p53.2026-01 | kind=not_detected | raw=阴性 | date=2026-01 | analyte=P53缺失,method=FISH,specimen=左上臂组织
+f.mut.nras.2026-01 | kind=exact | raw=43.2% | date=2026-01 | analyte=VAF,gene=NRAS,specimen=左上臂组织
+f.mut.igll5.2026-01 | kind=exact | raw=80.9% | date=2026-01 | analyte=VAF,gene=IGLL5,specimen=左上臂组织
+f.path.blastoid | kind=qualitative | raw=母细胞样 | date=2026-01 | analyte=病理形态
+f.wbc.2026-06-02 | kind=exact | raw=4.07×10⁹/L | date=2026-06-02 | analyte=WBC,specimen=血
+f.hb.2026-06-02 | kind=exact | raw=74g/L | date=2026-06-02 | analyte=Hb,specimen=血
+f.plt.2026-06-02 | kind=exact | raw=83×10⁹/L | date=2026-06-02 | analyte=PLT,specimen=血
+f.crp.2026-06-02 | kind=exact | raw=15.69mg/L | date=2026-06-02 | analyte=CRP,specimen=血
+f.humoral.2026-06 | kind=statement | raw=κ 163.00，λ 72.70 | date=2026-06-02 | 
+f.cmv.2026-06 | kind=exact | raw=6.87×10^{2} | date=2026-06-02 | analyte=CMV-DNA,specimen=血
+f.troponin.2026-06 | kind=exact | raw=3.55 | date=2026-06-02 | analyte=肌钙蛋白T
+f.crp.2026-08-22 | kind=exact | raw=4.36mg/L | date=2026-08-22 | analyte=CRP,specimen=血
+f.wbc.2026-08-22 | kind=exact | raw=6.27×10^{9}/L | date=2026-08-22 | analyte=WBC,specimen=血
+f.hb.2026-08-22 | kind=exact | raw=110g/L | date=2026-08-22 | analyte=Hb,specimen=血
+f.plt.2026-08-22 | kind=exact | raw=68×10^{9}/L | date=2026-08-22 | analyte=PLT,specimen=血
+f.ife.2026-08-24 | kind=not_detected | raw=全阴性 | date=2026-08-24 | analyte=免疫固定电泳,specimen=血清
+f.spep_pct.2026-08-24 | kind=bound | raw=<0.1% | date=2026-08-24 | analyte=M蛋白,method=SPEP,specimen=血清
+f.flck.2026-08-24 | kind=exact | raw=0.57 | date=2026-08-24 | analyte=游离轻链κ,specimen=血清 | PENDING-REVIEW | review: proposed {'unit': 'mg/L'}
+f.flcl.2026-08-24 | kind=exact | raw=1.35 | date=2026-08-24 | analyte=游离轻链λ,specimen=血清 | PENDING-REVIEW | review: proposed {'unit': 'mg/L'}
+f.flcr.2026-08-24 | kind=exact | raw=0.42 | date=2026-08-24 | analyte=κ/λ比值,specimen=血清
+f.sum.p_abbrev | kind=qualitative | raw=P | date=None |  | PENDING-REVIEW | review: proposed {'text': '泊马度胺（P）'}
+f.lit.orr.pr | kind=exact | raw=6.4 | date=None | analyte=缓解构成,category=PR,study=MM3-US
+f.lit.orr.vgpr | kind=exact | raw=17.0 | date=None | analyte=缓解构成,category=VGPR,study=MM3-US
+f.lit.orr.cr | kind=exact | raw=14.9 | date=None | analyte=缓解构成,category=CR,study=MM3-US
+f.lit.orr.scr | kind=exact | raw=27.7 | date=None | analyte=缓解构成,category=sCR,study=MM3-US
+f.lit.orr.total | kind=exact | raw=66.0% | date=None | analyte=ORR,study=MM3-US
+f.lit.orr.vgpr_plus | kind=exact | raw=59.6% | date=None | analyte=≥VGPR,study=MM3-US
+f.lit.orr.cr_plus | kind=exact | raw=42.6% | date=None | analyte=≥CR,study=MM3-US
+f.lit.dor.median | kind=exact | raw=40.8个月 | date=None | analyte=中位DOR,study=MM3-US
+f.lit.dor.at_risk | kind=statement | raw=No. at risk（0,3,…,42 月）：31, 27, 24, 20, 18, 16, 14, 13, 11, 11, 10, 10, 10, 3, 0 | date=None |  | IMAGE-READING
+f.lit.bor.interrupt | kind=statement | raw=治疗中断/停药时：sCR 16.7%，CR 26.7%，VGPR 26.7%，PR 16.7%，MR 3.3%，SD 10.0%；ORR 86.7%（95% CI 69.3-96.2），≥CR 43.3% | date=None |  | IMAGE-READING
+f.lit.bor.anytime | kind=statement | raw=任何时间：sCR 20.0%，CR 40.0%，VGPR 33.3%，PR 6.7%；ORR 100%（95% CI 88.4-100），≥CR 60.0% | date=None |  | IMAGE-READING
+f.lit.pfs.at_risk | kind=statement | raw=PFS 存在风险人数（0,3,…,51 月）：30,30,30,30,29,29,27,25,23,21,20,18,17,16,14,10,1,0 | date=None |  | IMAGE-READING
+f.lit.os.at_risk | kind=statement | raw=OS 存在风险人数（0,3,…,51 月）：30,30,30,30,29,29,28,27,24,23,23,22,20,19,18,16,4,0 | date=None |  | IMAGE-READING
+## SOURCE UNITS (quote verbatim with {type: quote, fact: <id>}; also cite them for wording)
+u.1.5.p0 | p1 | 苏州大学
+u.1.5.p1 | p1 | 附属第一医院
+u.1.7.p0 | p1 | 一例复发难治多发性骨髓瘤
+u.1.7.p1 | p1 | 病例诊治分享
+u.4.4.p0 | p4 | 患者基本情况
+u.4.5.p0 | p4 | 确诊多发性骨髓瘤3年余，多线治疗后复发难治，伴髓外浸润
+u.4.6.r0c0 | p4 | 项目
+u.4.6.r0c1 | p4 | 内容
+u.4.6.r1c0 | p4 | 姓名 / 性别 / 年龄
+u.4.6.r1c1 | p4 | WP ／ 女 ／ 39岁
+u.4.6.r2c0 | p4 | 主诉
+u.4.6.r2c1 | p4 | 确诊多发性骨髓瘤3年余
+u.4.6.r3c0 | p4 | 确诊诊断
+u.4.6.r3c1 | p4 | 多发性骨髓瘤（IgG-λ型，DS IIIA，ISS II，RISS II）
+u.4.6.r4c0 | p4 | 既往史
+u.4.6.r4c1 | p4 | 既往体健
+u.4.6.r5c0 | p4 | 一般情况
+u.4.6.r5c1 | p4 | 青年女性，慢性病程
+u.5.4.p0 | p5 | 初诊与基线评估
+u.5.5.p0 | p5 | 2023年1月起病：胸肋骨及腰背部疼痛，后累及全身，进行性加重，2023年6月至我院就诊
+u.5.6.r0c0 | p5 | 检查项目
+u.5.6.r0c1 | p5 | 结果
+u.5.6.r1c0 | p5 | 血常规
+u.5.6.r1c1 | p5 | WBC ，Hb 98g/L，PLT
+u.5.6.r2c0 | p5 | 生化
+u.5.6.r2c1 | p5 | LDH 350U/L，TP 87.7g/L，ALB 31.4g/L，GLB 56.3g/L，LDH 350U/L，URIC 50mol/L
+u.5.6.r3c0 | p5 | 体液免疫
+u.5.6.r3c1 | p5 | IgG 51g/L，IgA 0.1g/L，IgM 0.13g/L，κ 0.4g/L，λ 4.3g/L
+u.5.6.r4c0 | p5 | 骨髓形态与活检
+u.5.6.r4c1 | p5 | 幼浆/瘤细胞约12%；骨髓活检浆细胞15%~17%
+u.5.6.r5c0 | p5 | BM免疫分型（NGF）
+u.5.6.r5c1 | p5 | 克隆性浆细胞3.765%
+u.5.6.r6c0 | p5 | PB免疫分型（NGF）
+u.5.6.r6c1 | p5 | 克隆性浆细胞1.9*10-3
+u.5.6.r7c0 | p5 | MM-FISH（初诊）
+u.5.6.r7c1 | p5 | 13q14缺失14%，1q21扩增8%，Rb1缺失15%，P53缺失阴性，IgH重排阳性，加作为FGFR3/IgH重排阳性20%
+u.5.6.r8c0 | p5 | 基因突变（初诊）
+u.5.6.r8c1 | p5 | KRAS 9.6%，IGLL5 27.3%
+u.6.4.p0 | p6 | 初诊与基线评估（二）· 血清学与影像诊断
+u.6.6.p0 | p6 | MM 全套（基线）
+u.6.7.r0c0 | p6 | 指标
+u.6.7.r0c1 | p6 | 结果
+u.6.7.r1c0 | p6 | 血清蛋白电泳
+u.6.7.r1c1 | p6 | 40.9%（36.8918g/L）
+u.6.7.r2c0 | p6 | 血清免疫固定电泳
+u.6.7.r2c1 | p6 | IgG-λ型
+u.6.7.r3c0 | p6 | 血清游离轻链
+u.6.7.r3c1 | p6 | κ <5.8 mg/L，λ 315 mg/L
+u.6.7.r4c0 | p6 | 尿蛋白电泳
+u.6.7.r4c1 | p6 | 提示生理性蛋白尿
+u.6.7.r5c0 | p6 | 尿免疫固定电泳
+u.6.7.r5c1 | p6 | λ轻链型
+u.6.7.r6c0 | p6 | sBCMA
+u.6.7.r6c1 | p6 | 158.2 ng/mL
+u.6.7.r7c0 | p6 | β2-MG
+u.6.7.r7c1 | p6 | 2.17 mg/L
+u.6.7.r8c0 | p6 | 24h尿蛋白
+u.6.7.r8c1 | p6 | 0.49 g
+u.6.7.r9c0 | p6 | VEGF
+u.6.7.r9c1 | p6 | 218.44 pg/ml
+u.6.9.p0 | p6 | 影像评估
+u.6.10.p0 | p6 | PET-CT：多发骨质破坏伴高代谢，SUVmax 15.2，左肩关节三角肌走行区局限性高代谢SUVmax 8.2），骨髓瘤侵犯可能。
+u.6.10.p1 | p6 | 类PET：胸骨、双侧肱骨、多发肋骨、胸腰椎及附件、骨盆及双侧股骨多发弥散受限，L5-S1椎间盘突出
+u.7.4.p0 | p7 | 确诊诊断
+u.7.13.p0 | p7 | 青年女性，合并多发骨质破坏、椎体及肋骨病变，高危细胞遗传学异常，1q21+t（4；14）
+u.7.13.p1 | p7 | 多发性骨髓瘤（IgG-λ型）
+u.7.13.p2 | p7 | DS分期 IIIA
+u.7.13.p3 | p7 | ISS分期 II
+u.7.13.p4 | p7 | RISS分期 II
+u.8.4.p0 | p8 | 治疗历程（一）· 一线治疗与自体移植
+u.8.5.p0 | p8 | 初诊后于2023年6月起接受一线诱导治疗并序贯自体移植
+u.8.8.p0 | p8 | 2023.06.29
+u.8.9.p0 | p8 | 启动 VRD 方案治疗，共4周期
+u.8.9.p1 | p8 | 4疗程后复查
+u.8.9.p2 | p8 | - M蛋白 0.9352g/L，IgG-λ型，κ 6.73mg/L，λ 8.01mg/L
+u.8.9.p3 | p8 | - 骨髓形态浆细胞0.5%
+u.8.9.p4 | p8 | - BM-NGF-MRD：分析9.1*10^{-4}的浆细胞群体为单克隆性浆细胞，BM-NGS-MRD：3.21*10^{-4}（基线1.46*10^{-1}）
+u.8.9.p5 | p8 | - DWI-MRI：多骨弥散受限，较前2023-06-28明显好转
+u.8.9.p6 | p8 | 疗效评估：VGPR
+u.8.11.p0 | p8 | 2023.11.05
+u.8.12.p0 | p8 | 行干细胞采集，其中MNC：6.9*10^{8}/kg，CD34+ 5.106*10^{6}/kg
+u.8.14.p0 | p8 | 2023.12.19
+u.8.15.p0 | p8 | 行自体造血干细胞移植，美法仑200mg/m^{2}预处理，回输MNC：3.45*10^{8}/kg，CD34+ 2.553*10^{6}/kg，剩余冻存
+u.9.4.p0 | p9 | 治疗历程（二）· 采集淋巴细胞及巩固
+u.9.5.p0 | p9 | 移植后M蛋白未转阴，有升高趋势
+u.9.17.p0 | p9 | 2024.03.07
+u.9.18.p0 | p9 | 移植后3月复查
+u.9.18.p1 | p9 | - M蛋白 3.7996g/L，IgG-λ型，κ 12.81mg/L，λ 16.29mg/L
+u.9.18.p2 | p9 | - 骨髓形态浆细胞少见，骨髓活检浆细胞<2%
+u.9.18.p3 | p9 | - BM-NGS-MRD：2.04*10^{-4}（移植前3.32*10^{-4}，基线1.46*10^{-1}）
+u.9.20.p0 | p9 | 2024.03.12
+u.9.21.p0 | p9 | 家属意愿积极，采集淋巴细胞，后续拟行CART治疗
+u.9.28.p0 | p9 | 行 KD 方案巩固，d1 20mg/m^{2}，d2 27mg/m^{2}，36mg/m^{2} d8-9，d15-16
+u.9.29.p0 | p9 | 2024.03.12
+u.10.4.p0 | p10 | 治疗历程（二）· 髓外进展
+u.10.5.p0 | p10 | KD巩固过程中出现右肩疼痛明显，查体可见质硬肿块，约5*7cm
+u.10.17.p0 | p10 | 2024.05.08
+u.10.18.p0 | p10 | - M蛋白 10.6412g/L，IgG-λ型，κ 9.67mg/L，λ 87.82mg/L
+u.10.18.p1 | p10 | - 骨髓形态浆细胞少见，骨髓活检浆细胞<2%
+u.10.18.p2 | p10 | - BM-NGF-MRD：分析2.1*10^{-4}的浆细胞群体为单克隆性浆细胞，
+u.10.18.p3 | p10 | - PET-CT：全身骨骼多处骨质破坏伴糖代谢增高，右侧肩胛骨后方肌肉肿块伴糖代谢增高（SUVmax：9.39，大小约76*54mm），右侧腮腺结节、胰腺、肝脏、脾脏等处糖代谢增高灶
+u.10.20.p0 | p10 | 2024.05.12
+u.10.21.p0 | p10 | 完善右肩胛区肿块穿刺
+u.10.21.p1 | p10 | - 组织-NGF-MRD：分析36.4%的浆细胞群体为单克隆性浆细胞，BCMA 99%
+u.10.21.p2 | p10 | - 基因突变（组织）：NARS 34.8%，IGLL5 68.10%，TET1 37.8%
+u.11.4.p0 | p11 | 治疗历程（三）· BCMA CAR-T
+u.11.7.p0 | p11 | 2024.05.13
+u.11.8.p0 | p11 | FC 方案预处理，氟达拉滨 30mg/m^{2} d1-3，CTX 500mg/m^{2} d1-3
+u.11.10.p0 | p11 | 2024.05.17
+u.11.11.p0 | p11 | 回输 BCMA CAR-T 细胞，回输过程顺利，无明显不适
+u.11.13.p0 | p11 | 2025.05.23
+u.11.15.p0 | p11 | 出现反复发热，伴IL-6升高，考虑CRS反应2级，予以托珠单抗治疗后体温控制，指标回落
+u.12.4.p0 | p12 | 治疗历程（三）· BCMA CAR-T 与持续缓解
+u.12.13.p0 | p12 | 2024.06.20 评估
+u.12.14.p0 | p12 | - M蛋白  3.4017g/L，IgG-λ型，κ 0.58mg/L，λ 1.33mg/L
+u.12.14.p1 | p12 | - 骨髓形态浆细胞少见，骨髓活检未见浆细胞
+u.12.14.p2 | p12 | - BM-NGF-MRD：未见浆细胞（<2.8*10^{-5}，70w细胞）
+u.12.14.p3 | p12 | - BM-NGS-MRD：阴性
+u.12.14.p4 | p12 | - PET-CT：全身骨骼多处骨质破坏，部分糖代谢轻度增高，右侧肩胛骨后方肌肉伴糖代谢轻度增高（SUVmax：2.1），与前次PET/CT（2024-05-08）相比病灶代谢减低
+u.12.15.p0 | p12 | - M蛋白  0.0806g/L，IgG-λ型，κ 0.56mg/L，λ 1.32mg/L
+u.12.15.p1 | p12 | - PET-CT：全身骨骼多处骨质密度不均，未伴葡萄糖代谢增高，与前次PET/CT（2024-06-20）相比病灶代谢减低，骨骼病灶代谢减低
+u.12.7.p0 | p12 | 2024.09.11 评估
+u.12.11.p0 | p12 | 2024.12.10 评估
+u.12.17.p0 | p12 | - M蛋白  阴性，κ 1.25mg/L，λ 2.9mg/L，疗效评估sCR
+u.12.25.p0 | p12 | CART后予以泊马度胺维持治疗
+u.13.4.p0 | p13 | 治疗历程（四）·疾病再次髓外复发-乳腺
+u.13.5.p0 | p13 | CAR-T 深度缓解约一年后出现髓外复发
+u.13.7.p0 | p13 | 临床表现与检查
+u.13.8.p0 | p13 | 2025.09：左侧胸部出现硬块
+u.13.8.p1 | p13 | -乳腺B超：左乳9点钟实性结节，BI-RADS 4b类，5点实性结节 BI-RADS 3类
+u.13.8.p2 | p13 | -PET-CT：左侧乳腺内侧象限软组织肿物伴CXCR4 表达增高（SUVmax 3.73），髂骨右翼CXCR4 表达增高（SUVmax 5.32）
+u.13.8.p3 | p13 | -乳腺活检病理：符合浆细胞瘤，累及侵犯乳腺实质
+u.13.11.p0 | p13 | 局部放疗计划
+u.13.12.r0c0 | p13 | 靶区
+u.13.12.r0c1 | p13 | 部位
+u.13.12.r0c2 | p13 | 剂量
+u.13.12.r1c0 | p13 | GTVp1
+u.13.12.r1c1 | p13 | 乳腺病灶
+u.13.12.r1c2 | p13 | 40Gy / 20次
+u.13.12.r2c0 | p13 | GTVp2
+u.13.12.r2c1 | p13 | 髂骨病灶
+u.13.12.r2c2 | p13 | 40Gy / 20次
+u.13.12.r3c0 | p13 | CTV1
+u.13.12.r3c1 | p13 | 左全乳
+u.13.12.r3c2 | p13 | 30Gy / 15次
+u.13.13.p0 | p13 | 对髓外复发病灶行局部放疗，
+u.13.13.p1 | p13 | 控制局部进展并为进一步全身治疗争取时间
+u.14.4.p0 | p14 | 治疗历程（四）·疾病再次髓外复发-乳腺
+u.15.5.p0 | p15 | 髓外复发放疗后再次进展，累及皮下软组织与腹股沟淋巴结
+u.15.7.p0 | p15 | 临床发现与检查
+u.15.8.p0 | p15 | 2026.01：右中腹和左侧上臂出现皮下结节，腹股沟区新发肿块，伴左大腿活动困难
+u.15.8.p1 | p15 | - 低剂量CT：右侧腹皮下肿物，右侧腹股沟肿大淋巴结，较前2025-09-16新增
+u.15.8.p2 | p15 | - 全身MRI：多骨弥散受限，左股骨上段稍前进展，右腹壁皮下及右侧腹股沟异常信号
+u.15.8.p3 | p15 | - B超：左侧上臂皮下异常回声
+u.15.11.p0 | p15 | 实验室评估（2026.01）
+u.15.12.r0c0 | p15 | 项目
+u.15.12.r0c1 | p15 | 结果
+u.15.12.r1c0 | p15 | 血MM全套
+u.15.12.r1c1 | p15 | SPEP 3.6%，IgG-λ型
+u.15.12.r2c0 | p15 | 血清游离轻链
+u.15.12.r2c1 | p15 | κ 7.07 / λ 15.1 mg/L，κ/λ 0.47
+u.15.12.r3c0 | p15 | 尿MM全套
+u.15.12.r3c1 | p15 | 阴性
+u.15.12.r4c0 | p15 | 骨髓穿刺
+u.15.12.r4c1 | p15 | 浆细胞少见
+u.15.12.r5c0 | p15 | MM免疫分型（BM）
+u.15.12.r5c1 | p15 | 1.2×10^{-3}
+u.15.13.p0 | p15 | 治疗历程（五）·疾病再次髓外复发-皮下及腹股沟区
+u.16.13.p0 | p16 | 治疗历程（五）·疾病再次髓外复发-皮下及腹股沟区
+u.17.4.p0 | p17 | 病理与分子特征（2026.01 左上臂穿刺）
+u.17.5.p0 | p17 | 组织病理：浆细胞瘤（母细胞样），BCMA 高表达，为 BCMA 靶向治疗提供依据
+u.17.7.p0 | p17 | 免疫组化
+u.17.8.r0c0 | p17 | 标志物
+u.17.8.r0c1 | p17 | 结果
+u.17.8.r1c0 | p17 | CD38 / CD138
+u.17.8.r1c1 | p17 | （+）
+u.17.8.r2c0 | p17 | Kappa / Lambda
+u.17.8.r2c1 | p17 | （-）/（+）
+u.17.8.r3c0 | p17 | C-myc
+u.17.8.r3c1 | p17 | （+）约70%
+u.17.8.r4c0 | p17 | Ki-67
+u.17.8.r4c1 | p17 | （+）约90%
+u.17.8.r5c0 | p17 | BCMA
+u.17.8.r5c1 | p17 | （+）93.8%
+u.17.8.r6c0 | p17 | EBER
+u.17.8.r6c1 | p17 | （-）
+u.17.11.p0 | p17 | FISH 与基因突变
+u.17.12.r0c0 | p17 | FISH 检测
+u.17.12.r0c1 | p17 | 结果
+u.17.12.r1c0 | p17 | 13q14 缺失
+u.17.12.r1c1 | p17 | 90%
+u.17.12.r2c0 | p17 | Rb1 缺失
+u.17.12.r2c1 | p17 | 90%
+u.17.12.r3c0 | p17 | 1q21 扩增
+u.17.12.r3c1 | p17 | 90%，4个拷贝数
+u.17.12.r4c0 | p17 | FGFR3/IgH 重排
+u.17.12.r4c1 | p17 | 90%
+u.17.12.r5c0 | p17 | P53 缺失
+u.17.12.r5c1 | p17 | 阴性
+u.17.13.p0 | p17 | 基因突变：NRAS 43.2%，IGLL5 80.9%
+u.18.4.p0 | p18 | 治疗历程（六）· 埃纳妥单抗联合兆珂速方案
+u.18.5.p0 | p18 | 2026年1月起，针对难治复发伴髓外浸润 MM 启动双药联合治疗
+u.18.7.p0 | p18 | 方案给药经过
+u.18.10.p0 | p18 | 2026.01.30
+u.18.11.p0 | p18 | 启动兆珂速
+u.18.11.p1 | p18 | 1800mg 每周1次
+u.18.13.p0 | p18 | 2026.01.31
+u.18.14.p0 | p18 | 启动埃纳妥单抗
+u.18.14.p1 | p18 | 76mg 每周1次
+u.18.16.p0 | p18 | 2026.02.23
+u.18.17.p0 | p18 | 埃纳妥单抗 76mg+兆珂速1800mg
+u.18.19.p0 | p18 | 2026.03.28
+u.18.20.p0 | p18 | 埃纳妥76mg +
+u.18.20.p1 | p18 | 兆珂速1800mg
+u.18.20.p2 | p18 | C2
+u.18.23.p0 | p18 | 方案特点（双靶点联合）
+u.18.24.p0 | p18 | 埃纳妥单抗　BCMA×CD3 双特异性抗体　→　靶向 BCMA
+u.18.24.p1 | p18 | 兆珂速　达雷妥尤单抗（抗CD38单抗）　→　靶向 CD38
+u.18.25.p0 | p18 | 此后每月1次维持用药 · 本患者 BCMA 高表达（93.8%）为靶向治疗提供依据
+u.18.29.p0 | p18 | CMV病毒感染
+u.18.31.p0 | p18 | 2026.04.06
+u.18.32.p0 | p18 | 埃纳妥单抗 76mg+兆珂速1800mg
+u.18.34.p0 | p18 | CMV病毒感染
+u.18.38.p0 | p18 | 2026.06.03
+u.18.39.p0 | p18 | 埃纳妥单抗 76mg+兆珂速1800mg
+u.19.4.p0 | p19 | 近期评估 · 2026.06 住院
+u.19.5.p0 | p19 | 维持联合治疗期间入院评估
+u.19.7.p0 | p19 | 入院检查（06-02/06-03）
+u.19.8.r0c0 | p19 | 项目
+u.19.8.r0c1 | p19 | 结果
+u.19.8.r1c0 | p19 | 血常规
+u.19.8.r1c1 | p19 | WBC 4.07×10⁹/L，Hb 74g/L，中性粒 2.52×10⁹/L，血小板83×10⁹/L
+u.19.8.r2c0 | p19 | CRP
+u.19.8.r2c1 | p19 | 15.69mg/L
+u.19.8.r3c0 | p19 | 生化
+u.19.8.r3c1 | p19 | ALB 40.7g/L，肌酐 42μmol/L，球蛋白 28.7g/L，TP 69.4g/L
+u.19.8.r4c0 | p19 | 心肌标志物
+u.19.8.r4c1 | p19 | 肌钙蛋白T 3.55，BNP前体 21.5
+u.19.8.r5c0 | p19 | 凝血
+u.19.8.r5c1 | p19 | 纤维蛋白原 4.16g/L
+u.19.11.p0 | p19 | 免疫与病毒学
+u.19.12.r0c0 | p19 | 项目
+u.19.12.r0c1 | p19 | 结果
+u.19.12.r1c0 | p19 | 体液免疫
+u.19.12.r1c1 | p19 | κ 163.00，λ 72.70 IgA<0.07，IgG 2.39，IgM<0.04
+u.19.12.r2c0 | p19 | CMV-DNA
+u.19.12.r2c1 | p19 | 6.87×10^{2}（缬更昔洛韦抗病毒治疗）
+u.19.12.r3c0 | p19 | EBV-DNA
+u.19.12.r3c1 | p19 | <1×10^{2}
+u.19.12.r4c0 | p19 | 本次治疗
+u.19.12.r4c1 | p19 | 埃纳妥单抗 + 兆珂速 + 丙种球蛋白
+u.19.15.p0 | p19 | - MRI：多骨弥散受限，较前（2026-01-12）好转，右腹壁皮下及右侧腹股沟区淋巴结异常信号较前明显缩小
+u.20.4.p0 | p20 | 最新评估 · 2026.08 住院与检验报告
+u.20.5.p0 | p20 | 免疫固定电泳全阴性，M蛋白显著下降，疗效进一步加深
+u.20.7.p0 | p20 | 入院检查（08-22）
+u.20.8.r0c0 | p20 | 项目
+u.20.8.r0c1 | p20 | 结果
+u.20.8.r1c0 | p20 | 血常规
+u.20.8.r1c1 | p20 | CRP 4.36mg/L，WBC 6.27×10^{9}/L，Hb 110g/L，PLT 68×10^{9}/L
+u.20.8.r2c0 | p20 | 生化
+u.20.8.r2c1 | p20 | 肌酐 50μmol/L，钾 3.67mmol/L
+u.20.8.r3c0 | p20 | 心肌标志物
+u.20.8.r3c1 | p20 | 肌钙蛋白T 11.8，BNP <5.00
+u.20.8.r4c0 | p20 | 心电图
+u.20.8.r4c1 | p20 | 窦性心律
+u.20.8.r5c0 | p20 | 本次治疗
+u.20.8.r5c1 | p20 | 埃纳妥76mg + 兆珂速1800mg + 护胃补钙
+u.20.11.p0 | p20 | 检验报告（08-24 标本）
+u.20.12.r0c0 | p20 | 项目
+u.20.12.r0c1 | p20 | 结果
+u.20.12.r1c0 | p20 | 免疫固定电泳
+u.20.12.r1c1 | p20 | 全阴性
+u.20.12.r2c0 | p20 | 血清蛋白电泳
+u.20.12.r2c1 | p20 | M蛋白 <0.1%，A/G 2.27
+u.20.12.r3c0 | p20 | 血清游离轻链
+u.20.12.r3c1 | p20 | κ 0.57 / λ 1.35，κ/λ 0.42
+u.21.4.p0 | p21 | 病例总结
+u.21.6.p0 | p21 | 病例特点
+u.21.7.p0 | p21 | · 青年女性，IgG-λ型 MM，DS IIIA / ISS II / RISS II
+u.21.7.p1 | p21 | · 高危因素：1q21扩增、FGFR3/IgH重排、母细胞样形态、多次髓外浸润
+u.21.7.p2 | p21 | · 历经 VRD、自体移植、KD、BCMA CAR-T、P、放疗等多线治疗后复发难治
+u.21.10.p0 | p21 | 治疗与疗效
+u.21.11.p0 | p21 | · 2026年1月启用埃纳妥单抗联合兆珂速方案
+u.21.11.p1 | p21 | · 2026.08 评估：免疫固定电泳全阴性，M蛋白 <0.1%，sFLC κ/λ 0.42
+u.21.11.p2 | p21 | · CMV 再激活经规范化管理控制，方案整体可耐受
+u.21.15.p0 | p21 | 埃纳妥单抗（BCMA×CD3双抗）联合兆珂速（抗CD38单抗）
+u.21.15.p1 | p21 | 为多线治疗失败的复发难治 MM 伴髓外浸润患者提供双靶点治疗策略
+u.21.16.p0 | p21 | 本病例 BCMA 高表达（93.8%），提示 BCMA 靶向治疗具有良好的应用潜力
+u.23.2.p0 | p23 | MagnetisMM-3研究美国亚组：
+u.23.2.p1 | p23 | 探讨了埃纳妥单抗获得持续缓解后，降低频率给药的疗效和安全性
+u.23.6.p0 | p23 | Lesokhin AM, et al. Nat Med 2023;29:2259-2267.
+u.23.15.p0 | p23 | 研究方法
+u.23.45.p0 | p23 | MagnetisMM-3研究是一项正在进行的多中心、开放标签、单臂、2期研究，旨在研究埃纳妥单抗治疗RRMM的疗效和安全性。队列A共纳入123名对≥1种IMiD、 ≥1种PI和≥1种抗CD38单抗难治且BCMA初治的RRMM患者，接受埃纳妥单抗治疗。主要终点为BICR评估的ORR^{1,2}
+u.23.45.p1 | p23 | 本次报告队列A美国亚组结果（n=47），数据截止2025年3月10日，中位随访时间为39.6个月（95% CI 38.7-41.5个月）^{2}
+u.23.55.p0 | p23 | RRMM患者
+u.23.50.p0 | p23 | 对≥1种PI、 ≥1种IMiD和≥1种抗CD38单克隆抗体难治的患者
+u.23.50.p1 | p23 | ECOG PS≤2
+u.23.62.p0 | p23 | 队列A美国亚组
+u.23.60.p0 | p23 | 既往未接受过靶向BCMA疗法治疗的患者（n=47）
+u.23.64.p0 | p23 | 剂量递增期
+u.23.65.p0 | p23 | 第1周期
+u.23.65.p1 | p23 | 第1天：12mg SC
+u.23.65.p2 | p23 | 第4天：32mg SC
+u.23.68.p0 | p23 | 76mg SC QW
+u.23.71.p0 | p23 | 76mg SC Q2W
+u.23.74.p0 | p23 | 76mg SC Q4W
+u.23.75.p0 | p23 | QW≥6个周期，
+u.23.75.p1 | p23 | ≥PR且持续≥2个月
+u.23.76.p0 | p23 | Q2W≥6个周期
+u.23.80.p0 | p23 | 主要研究终点：
+u.23.80.p1 | p23 | BICR评估的ORR
+u.23.80.p2 | p23 | 次要研究终点：
+u.23.80.p3 | p23 | MRD阴性率 （10^{-5}）
+u.23.80.p4 | p23 | TTR
+u.23.80.p5 | p23 | DOR
+u.23.80.p6 | p23 | PFS
+u.23.80.p7 | p23 | OS
+u.23.80.p8 | p23 | 安全性等
+u.23.81.p0 | p23 | 治疗至出现疾病进展或不可耐受的毒性
+u.23.82.p0 | p23 | 全剂量治疗期
+u.24.2.p0 | p24 | MagnetisMM-3研究美国亚组：
+u.24.2.p1 | p24 | 基线普遍预后不良，47%患者转为Q2W，17%进一步转为Q4W
+u.24.3.r0c1 | p24 | N=47
+u.24.3.r1c0 | p24 | 中位年龄， 岁 (范围)*
+u.24.3.r1c1 | p24 | 68.0 (36.0-89.0)
+u.24.3.r2c0 | p24 | 男性，n (%)
+u.24.3.r2c1 | p24 | 24 (51.1)
+u.24.3.r3c0 | p24 | 种族/民族，n (%)
+u.24.3.r4c0 | p24 | 非裔美国人或黑人
+u.24.3.r4c1 | p24 | 8 (17.0)
+u.24.3.r5c0 | p24 | 亚裔
+u.24.3.r5c1 | p24 | 3 (6.4)
+u.24.3.r6c0 | p24 | 白人
+u.24.3.r6c1 | p24 | 34 (72.3)
+u.24.3.r7c0 | p24 | 未知
+u.24.3.r7c1 | p24 | 1 (2.1)
+u.24.3.r8c0 | p24 | 未报告
+u.24.3.r8c1 | p24 | 1 (2.1)
+u.24.3.r9c0 | p24 | ECOG PS，n (%)
+u.24.3.r10c0 | p24 | 0
+u.24.3.r10c1 | p24 | 15 (31.9)
+u.24.3.r11c0 | p24 | 1
+u.24.3.r11c1 | p24 | 28 (59.6)
+u.24.3.r12c0 | p24 | 2
+u.24.3.r12c1 | p24 | 4 (8.5)
+u.24.3.r13c0 | p24 | R-ISS疾病期，n (%)
+u.24.3.r14c0 | p24 | Ⅰ
+u.24.3.r14c1 | p24 | 14 (29.8)
+u.24.3.r15c0 | p24 | Ⅱ
+u.24.3.r15c1 | p24 | 24 (51.1)
+u.24.3.r16c0 | p24 | Ⅲ
+u.24.3.r16c1 | p24 | 7 (14.9)
+u.24.3.r17c0 | p24 | 未知
+u.24.3.r17c1 | p24 | 2 (4.3)
+u.24.4.p0 | p24 | Ajay Nooka, et al. Efficacy and Safety of Less Frequent Dosing With Elranatamab (ELRA) in Patients With Relapsed or Refractory Multiple Myeloma (RRMM): A US Subgroup Analysis from MagnetisMM-3. IMS 2025. Abstract PA-046.
+u.24.5.r0c1 | p24 | N=47
+u.24.5.r1c0 | p24 | 细胞遗传学风险，n (%)
+u.24.5.r2c0 | p24 | 标危
+u.24.5.r2c1 | p24 | 32 (68.1)
+u.24.5.r3c0 | p24 | 高危*
+u.24.5.r3c1 | p24 | 13 (27.7)
+u.24.5.r4c0 | p24 | 缺失
+u.24.5.r4c1 | p24 | 2 (4.3)
+u.24.5.r5c0 | p24 | 髓外疾病（BICR），n (%)
+u.24.5.r6c0 | p24 | 是^{†}
+u.24.5.r6c1 | p24 | 15 (31.9)
+u.24.5.r7c0 | p24 | 否
+u.24.5.r7c1 | p24 | 32 (68.1)
+u.24.5.r8c0 | p24 | 具有≥1个预后不良因素‡
+u.24.5.r8c1 | p24 | 32 (68.1)
+u.24.5.r9c0 | p24 | 既往治疗线数，中位数 (范围）
+u.24.5.r9c1 | p24 | 5.0 (2.0-22.0)
+u.24.5.r10c0 | p24 | 既往干细胞移植治疗，n (%)
+u.24.5.r10c1 | p24 | 35 (74.5)
+u.24.5.r11c0 | p24 | 暴露状态
+u.24.5.r12c0 | p24 | 三重暴露^{§}
+u.24.5.r12c1 | p24 | 47 (100)
+u.24.5.r13c0 | p24 | 五重暴露^{¶}
+u.24.5.r13c1 | p24 | 37 (78.7)
+u.24.5.r14c0 | p24 | 难治状态
+u.24.5.r15c0 | p24 | 三重难治^{§}
+u.24.5.r15c1 | p24 | 44 (93.6)
+u.24.5.r16c0 | p24 | 五重难治^{¶}
+u.24.5.r16c1 | p24 | 22 (46.8)
+u.24.5.r17c0 | p24 | 最后一线治疗难治，n (%)
+u.24.5.r17c1 | p24 | 46 (97.9)
+u.24.7.p0 | p24 | 患者特征
+u.24.9.p0 | p24 | 治疗特征
+u.24.10.p0 | p24 | 93.6%的患者三重耐药，46.8%的患者五重耐药
+u.24.10.p1 | p24 | 68.1%伴有≥1个预后不良特征
+u.24.10.p2 | p24 | 31.9%的患者伴有髓外病变
+u.24.11.p0 | p24 | 22例（47%）患者从QW转为Q2W，Q2W给药的中位治疗持续时间为11.1个月（范围：0.03-25.9）
+u.24.11.p1 | p24 | 在17例完成≥6个周期Q2W给药的患者中，8例（17%）患者转为Q4W，Q4W给药的中位治疗持续时间为15.0个月（范围：6.5-20.7）
+u.24.11.p2 | p24 | 至数据截止日期，5例（10.6%）患者仍在接受治疗
+u.24.12.p0 | p24 | *包含t (4;14)、t(14;16) 及del (17p) 染色体异常；†髓外疾病定义为存在任何浆细胞瘤（含髓外浆细胞瘤和/或伴软组织成分的髓旁浆细胞瘤）； ‡不良预后特征指满足以下至少一项：ECOG PS 2 分、R-ISS Ⅲ 期、BICR确认基线存在EMD、高危细胞遗传学特征、BMPC比例≥50%；^{ §}三重指≥1种蛋白酶体抑制剂、≥1种免疫调节药物及≥1种抗CD38抗体治疗； ^{¶}五重指≥2种蛋白酶体抑制剂、≥2种免疫调节药物及≥1种抗CD38抗体治疗
+u.24.12.p1 | p24 | BICR：盲法独立中心审查；BMPC：骨髓浆细胞；ECOG PS：美国东部肿瘤协作组体能状态评分；EMD：髓外疾病； Q2W：每2周1次；Q4W：每4周1次；QW：每周1次；R-ISS：修订版多发性骨髓瘤国际分期系统
+u.25.11.p0 | p25 | 主要终点：BICR评估的ORR*
+u.25.2.p0 | p25 | MagnetisMM-3研究美国亚组：
+u.25.2.p1 | p25 | 埃纳妥单抗治疗实现快速且深度的缓解：中位起效时间 1.1个月，ORR 66%
+u.25.3.s0v0 | p25 | 6.4
+u.25.3.s1v0 | p25 | 17.0
+u.25.3.s2v0 | p25 | 14.9
+u.25.3.s3v0 | p25 | 27.7
+u.25.6.p0 | p25 | ≥VGPR
+u.25.6.p1 | p25 | 59.6%
+u.25.8.p0 | p25 | ≥CR
+u.25.8.p1 | p25 | 42.6%
+u.25.9.p0 | p25 | ORR 66.0%
+u.25.14.p0 | p25 | 结果：缓解速度和深度
+u.25.15.p0 | p25 | BICR评估的ORR为66.0%（95% CI 50.7-79.1）
+u.25.15.p1 | p25 | sCR率 27.7%；CR率 14.9%
+u.25.15.p2 | p25 | 中位起效时间为1.1个月（范围：1.0-7.4）
+u.25.15.p3 | p25 | 中位至≥CR时间为4.76个月（范围：1.2-12.8）
+u.25.16.p0 | p25 | MagnetisMM-3队列A美国亚组（N=47）
+u.25.17.p0 | p25 | Ajay Nooka, et al. Efficacy and Safety of Less Frequent Dosing With Elranatamab (ELRA) in Patients With Relapsed or Refractory Multiple Myeloma (RRMM): A US Subgroup Analysis from MagnetisMM-3. IMS 2025. Abstract PA-046.
+u.25.18.p0 | p25 | BICR：盲法独立中心审查；CI：置信区间；CR：完全缓解；ORR：客观缓解率；PR：部分缓解；sCR，严格意义的完全缓解；TTR，起效时间；VGPR：非常好的部分缓解
+u.26.2.p0 | p26 | MagnetisMM-3研究美国亚组：
+u.26.2.p1 | p26 | 埃纳妥单抗治疗实现持久的缓解，降低给药频率后仍可长期维持缓解
+u.26.7.p0 | p26 | 结果：缓解持续时间
+u.26.8.p0 | p26 | 中位缓解持续时间长达40.8个月（95% CI 24.0-NE）且数据仍未成熟
+u.26.8.p1 | p26 | 降低给药频率（Q2W或Q4W） 仍能长期维持缓解
+u.26.8.p2 | p26 | 18例转为Q2W的患者中，14例（77.8%）在转换后≥6个月时仍维持缓解状态或缓解程度进一步改善
+u.26.8.p3 | p26 | 8例转为Q4W的患者中，7例（87.5%）在转换后≥6个月时仍维持缓解状态
+u.26.9.p0 | p26 | CI：置信区间；DOR：缓解持续时间；NE：不可评估；Q2W：每2周1次；Q4W：每4周1次
+u.26.10.p0 | p26 | Ajay Nooka, et al. Efficacy and Safety of Less Frequent Dosing With Elranatamab (ELRA) in Patients With Relapsed or Refractory Multiple Myeloma (RRMM): A US Subgroup Analysis from MagnetisMM-3. IMS 2025. Abstract PA-046.
+u.26.5.p0 | p26 | 缓解持续时间（DOR）
+u.26.13.p0 | p26 | 概率
+u.26.16.p0 | p26 | 中位DOR 40.8个月（95% CI 24.0-NE）
+u.26.19.p0 | p26 | 月
+u.27.4.p0 | p27 | MagnetisMM-3研究的回顾性分析：
+u.27.4.p1 | p27 | 旨在探讨埃纳妥单抗治疗RRMM持续缓解超6个月，停止治疗后的疗效和安全性
+u.27.6.p0 | p27 | 研究背景
+u.27.8.p0 | p27 | 研究目的
+u.27.10.p0 | p27 | 研究方法
+u.27.11.p0 | p27 | MagnetisMM-3 (NCT04649359) 是一项多中心、开放标签、单臂、Ⅱ期临床研究，旨在评估埃纳妥单抗在既往未接受或接受过BCMA靶向治疗的复发/难治性多发性骨髓瘤患者中的疗效和安全性
+u.27.12.p0 | p27 | 旨在通过对MagnetisMM-3进行事后分析，研究接受埃纳妥单抗治疗缓解维持超过6个月后长期中断或永久停止使用的患者的治疗结果
+u.27.13.p0 | p27 | MagnetisMM-3研究评估了埃纳妥单抗单药治疗在复发/难治性多发性骨髓瘤患者中的疗效和安全性
+u.27.13.p1 | p27 | 主要终点为由盲态独立评审委员会 (BICR) 根据IMWG标准评估的ORR
+u.27.13.p2 | p27 | 安全性评估截止至新抗癌治疗启动、末次给药后90天或研究结束（以最早发生者为准）
+u.27.13.p3 | p27 | 本事后分析纳入了在整个研究期间任意时间点均未接受连续超过6个月的治疗（长期中断或永久停用埃纳妥单抗），但仍在接受疗效评估（未开始新的抗癌治疗）的患者
+u.27.13.p4 | p27 | 为确保充分随访并获取所有潜在的疾病进展（PD）事件，无进展生存期（PFS）通过计算机算法推导得出：若患者任一参数显示明确的PD（即，对于可通过SPEP/UPEP测量疾病的患者，由FLC评估PD），则判定出现PD
+u.27.13.p5 | p27 | 对于疾病可进行SPEP/UPEP评估且未出现PD的患者，末次有效评估以可测量参数作为依据，除非FLC检测于末次可测量评估后>28天进行
+u.27.13.p6 | p27 | 数据截止日期为2025年9月8日，约为最后一名患者首次给药后45个月
+u.27.14.p0 | p27 | Lesokhin AM et al. Prolonged Elranatamab Treatment Interruption in Patients With Relapsed or Refractory Multiple Myeloma is Feasible: A Retrospective Analysis From MagnetisMM-3. Poster presented at ASH 2025 (Abstract 2269).
+u.27.19.p0 | p27 | BCMA：B细胞成熟抗原；BICR：盲态独立中心评审；FLC：游离轻链；IMWG：国际骨髓瘤工作组；ORR：客观缓解率；PD：疾病进展；SPEP：血清蛋白电泳；UPEP：尿蛋白电泳
+u.28.4.p0 | p28 | MagnetisMM-3研究的回顾性分析
+u.28.4.p1 | p28 | 停药或中断后，大多数患者仍能维持深度缓解，最佳ORR率高达100%；且恢复用药后仍然有效
+u.28.6.p0 | p28 | 结果：缓解率
+u.28.7.p0 | p28 | 中断或停药时，ORR为86.7%，其中≥CR率达43.3%
+u.28.7.p1 | p28 | 任何时间点最佳ORR为100%，其中≥CR率高达60.0%
+u.28.7.p2 | p28 | 2名患者分别在剂量中断约12个月和14个月后重新启动埃纳妥单抗：
+u.28.7.p3 | p28 | 2名患者在剂量中断时已达到≥CR，数据截止时仍维持≥CR；
+u.28.7.p4 | p28 | 1名患者出现早期复发迹象（血清和尿免疫固定电泳阳性），恢复治疗后重新转阴
+u.28.11.p0 | p28 | 截至数据截止日期，中位治疗持续时间为13.0（范围： 1.2-39.1）个月。中位停药持续时间为17.9（范围：6.5-36.3）个月；中位总体随访时间和中断/停药后的随访时间分别为45.2（范围：9.9–49.9）个月和 21.8（范围：7.5–46.9）个月
+u.28.11.p1 | p28 | BOR：最佳缓解率；CI：置信区间；CR：完全缓解；MR：微小缓解；ORR：客观缓解率；PR：部分缓解；sCR：严格意义的完全缓解；SD：疾病稳定；VGPR：非常好的部分缓解
+u.28.12.p0 | p28 | 治疗中断/停药时
+u.28.13.p0 | p28 | 任何时间
+u.28.14.p0 | p28 | 患者，%
+u.28.9.p0 | p28 | 最佳缓解率（BOR）
+u.28.2.p0 | p28 | Lesokhin AM et al. Prolonged Elranatamab Treatment Interruption in Patients With Relapsed or Refractory Multiple Myeloma is Feasible: A Retrospective Analysis From MagnetisMM-3. Poster presented at ASH 2025 (Abstract 2269).
+u.28.98.p0 | p28 | 自首次给药以来的时间，月
+u.28.99.p0 | p28 | 患者
+u.28.168.p0 | p28 | sCR
+u.28.169.p0 | p28 | CR
+u.28.170.p0 | p28 | VGPR
+u.28.171.p0 | p28 | PR
+u.28.172.p0 | p28 | 明确的PD
+u.28.173.p0 | p28 | 死亡
+u.28.174.p0 | p28 | 持续进行，无事件发生
+u.28.175.p0 | p28 | 正在接受治疗
+u.28.176.p0 | p28 | 停止治疗
+u.28.158.p0 | p28 | 最佳总体缓解
+u.28.177.p0 | p28 | 治疗和缓解的持续时间
+u.28.3.p0 | p28 | 在MagnetisMM-3纳入的187名患者中，30名患者符合事后分析纳入标准
+u.28.3.p1 | p28 | 中位年龄68.5岁（范围：52-84），50.0%为女性，66.7%为白人
+u.28.3.p2 | p28 | 患者中位既往治疗线数为5（范围：2-14）；100%三重难治，33.3%五重难治
+u.29.2.p0 | p29 | PFS和OS
+u.29.5.p0 | p29 | 结果：PFS和OS
+u.29.6.p0 | p29 | 中位PFS尚未达到（95% CI：NE-NE），45个月无事件生存率为 72.7%（95% CI：50.7–86.1
+u.29.6.p1 | p29 | 中位OS尚未达到（ 95% CI：NE-NE ），45个月生存率为76.6%（95% CI：54.8–88.9）
+u.29.7.p0 | p29 | 月
+u.29.8.p0 | p29 | 月
+u.29.9.p0 | p29 | 概率，%
+u.29.10.p0 | p29 | 概率，%
+u.29.11.p0 | p29 | 45个月概率
+u.29.12.p0 | p29 | 45个月概率
+u.29.13.p0 | p29 | 存在
+u.29.13.p1 | p29 | 风险人数
+u.29.14.p0 | p29 | 存在
+u.29.14.p1 | p29 | 风险人数
+u.29.16.p0 | p29 | CI：置信区间；NE：不可评估；OS：总生存期；PFS：无进展生存期
+u.29.17.p0 | p29 | MagnetisMM-3研究的回顾性分析：
+u.29.17.p1 | p29 | 持续缓解超6个月停止治疗后，仍可实现长期生存获益：45个月PFS和OS率均高于70%
+u.29.18.p0 | p29 | Lesokhin AM et al. Prolonged Elranatamab Treatment Interruption in Patients With Relapsed or Refractory Multiple Myeloma is Feasible: A Retrospective Analysis From MagnetisMM-3. Poster presented at ASH 2025 (Abstract 2269).
+u.31.3.p0 | p31 | 埃纳妥单抗可用于BCMA CAR-T 治疗后复发的患者，对于BCMA高表达的患者仍有显著疗效。
+u.31.3.p1 | p31 | 埃纳妥单抗治疗实现持久的缓解，降低给药频率后仍可长期维持缓解。
+u.31.3.p2 | p31 | 停药或中断后，大多数患者仍能维持深度缓解，最佳ORR率高达100%；且恢复用药后仍然有效。
+u.31.4.p0 | p31 | 总结
+u.32.5.p0 | p32 | 苏州大学附属第一医院

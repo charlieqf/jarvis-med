@@ -79,6 +79,7 @@ interface State {
   speed: number
   visual: Visual
   epoch: number            // increments on every applied step -> replays entrance animations
+  live?: { finished: boolean; waiting: boolean }   // streaming answer from the model
 }
 
 type Msg =
@@ -86,19 +87,38 @@ type Msg =
   | { type: 'goto'; answerId: string; index: number }
   | { type: 'pause' } | { type: 'resume' } | { type: 'cancel' } | { type: 'done'; answerId: string }
   | { type: 'speed'; speed: number }
+  | { type: 'startLive'; answerId: string; tour: Tour }
+  | { type: 'append'; answerId: string; step: Step }
+  | { type: 'wait'; answerId: string }
+  | { type: 'liveEnd'; answerId: string }
 
 function reducer(s: State, m: Msg): State {
   switch (m.type) {
     case 'start':
-      return { ...s, answerId: m.answerId, tour: m.tour, index: 0, status: 'playing', visual: derive(m.tour.steps[0]), epoch: s.epoch + 1 }
+      return { ...s, answerId: m.answerId, tour: m.tour, index: 0, status: 'playing', visual: derive(m.tour.steps[0]), epoch: s.epoch + 1, live: undefined }
     case 'goto':
       if (m.answerId !== s.answerId || !s.tour || m.index < 0 || m.index >= s.tour.steps.length) return s
       return { ...s, index: m.index, visual: derive(s.tour.steps[m.index]), epoch: s.epoch + 1 }
     case 'pause': return s.status === 'playing' ? { ...s, status: 'paused' } : s
     case 'resume': return s.status === 'paused' || s.status === 'done' ? { ...s, status: 'playing' } : s
     case 'done': return m.answerId === s.answerId ? { ...s, status: 'done' } : s
-    case 'cancel': return { ...s, answerId: undefined, tour: undefined, status: 'cancelled', visual: EMPTY, epoch: s.epoch + 1 }
+    case 'cancel': return { ...s, answerId: undefined, tour: undefined, status: 'cancelled', visual: EMPTY, epoch: s.epoch + 1, live: undefined }
     case 'speed': return { ...s, speed: m.speed }
+    case 'startLive':
+      return { ...s, answerId: m.answerId, tour: m.tour, index: -1, status: 'playing', visual: EMPTY, epoch: s.epoch + 1, live: { finished: false, waiting: true } }
+    case 'append': {
+      if (m.answerId !== s.answerId || !s.tour) return s
+      const tour = { ...s.tour, steps: [...s.tour.steps, { ...m.step, seq: s.tour.steps.length }] }
+      if (s.live?.waiting && s.status !== 'paused') {
+        const index = s.index + 1
+        return { ...s, tour, index, visual: derive(tour.steps[index]), epoch: s.epoch + 1, live: { ...s.live, waiting: false } }
+      }
+      return { ...s, tour }
+    }
+    case 'wait': return m.answerId === s.answerId && s.live ? { ...s, live: { ...s.live, waiting: true } } : s
+    case 'liveEnd':
+      if (m.answerId !== s.answerId || !s.live) return s
+      return { ...s, live: { ...s.live, finished: true }, status: s.live.waiting ? 'done' : s.status }
   }
 }
 
@@ -109,6 +129,7 @@ interface Ctx {
   trace: TraceEvent[]
   log: (kind: string, text: string, data?: unknown, status?: string) => void
   play: (tour: Tour, route?: { via: string; score?: number; input?: string }) => void
+  playLive: (question: string, code: string) => Promise<'ok' | 'unauthorized' | 'error'>
   next: () => void
   prev: () => void
   pause: () => void
@@ -167,6 +188,45 @@ export function StageProvider({ bundle, tours, children }: { bundle: Bundle; tou
     dispatch({ type: 'start', answerId, tour })
   }, [bundle.content_version, cancel, log])
 
+  const playLive = useCallback(async (question: string, code: string) => {
+    cancel('新问题开始')
+    const answerId = newAnswerId()
+    const tour: Tour = { id: 'LIVE', question, content_version: bundle.content_version, reviewed_by: null, steps: [], checks: [] }
+    stateRef.current = { ...stateRef.current, answerId, tour, live: { finished: false, waiting: true } }
+    dispatch({ type: 'startLive', answerId, tour })
+    log('route', '未命中预编导览 → 慢速路径：请求服务端实时编排回答计划', { question })
+    let r: Response
+    try {
+      r = await fetch(`${import.meta.env.BASE_URL}api/ask`, { method: 'POST', headers: { 'content-type': 'application/json', 'x-access-code': code }, body: JSON.stringify({ question }) })
+    } catch (e) { log('error', `无法连接服务端：${e}`, undefined, 'reject'); dispatch({ type: 'liveEnd', answerId }); return 'error' }
+    if (r.status === 401) { log('error', '访问码不正确', undefined, 'reject'); dispatch({ type: 'cancel' }); return 'unauthorized' }
+    if (!r.ok) { log('error', `服务端错误 ${r.status}`, undefined, 'reject'); dispatch({ type: 'liveEnd', answerId }); return 'error' }
+    const { jobId, content_version } = await r.json()
+    if (content_version !== bundle.content_version) log('version', `服务端数据版本 ${content_version} ≠ 页面 ${bundle.content_version}，请刷新页面`, undefined, 'reject')
+    log('route', `服务端任务 ${jobId} 已创建，开始接收实时事件`, { jobId })
+    let after = -1
+    const poll = async () => {
+      if (stateRef.current.answerId !== answerId) {   // cancelled on the client: tell the server, stop polling
+        fetch(`${import.meta.env.BASE_URL}api/cancel/${jobId}`, { method: 'POST' }).catch(() => {})
+        return
+      }
+      try {
+        const res = await fetch(`${import.meta.env.BASE_URL}api/job/${jobId}?after=${after}`)
+        const { events, done } = await res.json() as { events: { n: number; t: number; kind: string; text: string; data?: unknown; status?: string }[]; done: boolean }
+        for (const e of events) {
+          after = e.n
+          if (stateRef.current.answerId !== answerId) { log('drop', `丢弃：回答已取消后到达的服务端事件（${e.kind}）`, undefined, 'dropped'); continue }
+          log(e.kind, `[服务端 +${(e.t / 1000).toFixed(1)}s] ${e.text}`, e.data, e.status)
+          if (e.kind === 'step') dispatch({ type: 'append', answerId, step: e.data as Step })
+        }
+        if (done) { dispatch({ type: 'liveEnd', answerId }); return }
+      } catch (e) { log('error', `轮询失败：${e}`, undefined, 'reject') }
+      setTimeout(poll, 300)
+    }
+    poll()
+    return 'ok'
+  }, [bundle.content_version, cancel, log])
+
   const goto = useCallback((index: number) => {
     const s = stateRef.current
     if (!s.answerId) return
@@ -175,14 +235,17 @@ export function StageProvider({ bundle, tours, children }: { bundle: Bundle; tou
   const next = useCallback(() => {
     const s = stateRef.current
     if (!s.tour) return
-    if (s.index + 1 >= s.tour.steps.length) { dispatch({ type: 'done', answerId: s.answerId! }); return }
+    if (s.index + 1 >= s.tour.steps.length) {
+      if (s.live && !s.live.finished) { dispatch({ type: 'wait', answerId: s.answerId! }); return }   // next step still being generated
+      dispatch({ type: 'done', answerId: s.answerId! }); return
+    }
     goto(s.index + 1)
   }, [goto])
   const prev = useCallback(() => goto(stateRef.current.index - 1), [goto])
 
   // log every applied step
   useEffect(() => {
-    if (!state.tour || !state.answerId) return
+    if (!state.tour || !state.answerId || state.index < 0) return
     const st = state.tour.steps[state.index]
     log('step', `步骤 ${st.seq + 1}/${state.tour.steps.length}「${st.title ?? ''}」镜头 → ${st.camera}；动作：${st.actions.map(a => `${a.op}(${a.targets.join(', ')})`).join('；') || '无'}`,
       st, 'playing')
@@ -197,7 +260,7 @@ export function StageProvider({ bundle, tours, children }: { bundle: Bundle; tou
 
   // auto-advance
   useEffect(() => {
-    if (state.status !== 'playing' || !state.tour) return
+    if (state.status !== 'playing' || !state.tour || state.index < 0 || state.live?.waiting) return
     const step = state.tour.steps[state.index]
     const id = state.answerId
     const timer = setTimeout(() => {
@@ -208,12 +271,12 @@ export function StageProvider({ bundle, tours, children }: { bundle: Bundle; tou
   }, [state.status, state.epoch, state.speed, state.answerId, state.index, state.tour, next, log])
 
   const value = useMemo<Ctx>(() => ({
-    bundle, tours, state, trace, log, play, next, prev, cancel,
+    bundle, tours, state, trace, log, play, playLive, next, prev, cancel,
     pause: () => dispatch({ type: 'pause' }),
     resume: () => dispatch({ type: 'resume' }),
     setSpeed: (speed: number) => dispatch({ type: 'speed', speed }),
     clearTrace: () => setTrace([]),
-  }), [bundle, tours, state, trace, log, play, next, prev, cancel])
+  }), [bundle, tours, state, trace, log, play, playLive, next, prev, cancel])
 
   return <StageCtx.Provider value={value}>{children}</StageCtx.Provider>
 }
