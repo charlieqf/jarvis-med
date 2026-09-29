@@ -71,6 +71,7 @@ function finish(job, status, text) {
   if (job.done) return
   job.done = true
   for (const p of job.procs) { try { p.kill('SIGTERM'); setTimeout(() => { try { p.kill('SIGKILL') } catch {} }, 2000) } catch {} }
+  console.log(`${new Date().toISOString()} done job=${job.id} status=${status} passed=${job.passed} rejected=${job.rejected.length} ms=${Date.now() - job.t0}`)
   job.push('done', text ?? `回答结束：通过 ${job.passed} 步，拒绝 ${job.rejected.length} 步，用时 ${((Date.now() - job.t0) / 1000).toFixed(1)}s`, undefined, status)
 }
 
@@ -223,6 +224,7 @@ createServer(async (req, res) => {
     const job = newJob(question.trim())
     current = job
     job.push('input', `服务端收到问题：「${job.question}」`)
+    console.log(`${new Date().toISOString()} ask job=${job.id} q=${JSON.stringify(job.question)}`)
     runJob(job).catch(e => { job.push('error', String(e), undefined, 'reject'); finish(job, 'reject') })
     return json(res, 200, { jobId: job.id, content_version: CONTENT_VERSION })
   }
