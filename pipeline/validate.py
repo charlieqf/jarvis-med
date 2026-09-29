@@ -279,7 +279,7 @@ def v4_views(views, by_id, rep):
     for p, k, v in walk(views):
         if isinstance(v, str) and k in ("label",) and LABEL_NUMBER.search(v):
             rep.err("V4", f"{p}.label contains a digit (numbers must come from facts): {v!r}")
-        if isinstance(v, (int, float)) and k not in ("slide", "shape") and not p.endswith(".placements"):
+        if isinstance(v, (int, float)) and not isinstance(v, bool) and k not in ("slide", "shape") and not p.endswith(".placements"):
             rep.err("V4", f"{p}.{k}: literal number {v} in views")
 
     for b in views["blocks"]:

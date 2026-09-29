@@ -3,7 +3,7 @@
 > 本文件由 `pipeline/review.py` 根据 `facts.json` 自动生成，**请不要手工编辑**。
 > 审核方式：`python pipeline/review.py cases/case1 --set <事实id>=confirmed|rejected|excluded --by <审核人> [--note 说明]`
 
-- 数据版本 `content_version`：`04fecac0b202`
+- 数据版本 `content_version`：`978518b92bf4`
 - 质量门：0 个错误，5 个警告；原文单元遗漏 0 个
 - 审核项：共 51 项，**待审 51 项**
 
