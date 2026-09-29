@@ -69,7 +69,7 @@ export function SeriesChart({ series, height = 240, mini = false }: { series: Se
     return {
       animationDuration: 1400, animationEasing: 'cubicOut',
       grid: mini ? { left: 8, right: 8, top: 8, bottom: 8 } : { left: 64, right: 24, top: 28, bottom: 36 },
-      xAxis: { type: 'time', show: !mini, axisLine: { lineStyle: { color: '#c9d3e0' } }, axisLabel: { color: MUTED, formatter: '{yyyy}.{MM}' }, splitLine: { show: false } },
+      xAxis: { type: 'time', show: !mini, axisLine: { lineStyle: { color: '#c9d3e0' } }, axisLabel: { color: MUTED, formatter: { year: '{yyyy}', month: '{yyyy}.{MM}', day: '{MM}.{dd}' } as unknown as string }, splitLine: { show: false } },
       yAxis: {
         type: series.scale === 'log' ? 'log' : 'value', show: !mini, name: mini ? '' : unit.label, nameTextStyle: { color: MUTED },
         min: series.scale === 'log' ? floor / 2 : undefined,
