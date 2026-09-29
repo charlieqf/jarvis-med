@@ -38,14 +38,28 @@ def bbox(shape, sw, sh):
             round(shape.width / sw, 4), round(shape.height / sh, 4)]
 
 
+def xml_run_text(r_el):
+    """Text of one <a:r>, keeping superscripts/subscripts visible: 10^{-4}, x_{2}."""
+    t = r_el.find(f"{A_NS}t")
+    text = (t.text or "") if t is not None else ""
+    rpr = r_el.find(f"{A_NS}rPr")
+    baseline = int(rpr.get("baseline", 0)) if rpr is not None else 0
+    if baseline > 0 and text.strip():
+        return "^{" + text + "}"
+    if baseline < 0 and text.strip():
+        return "_{" + text + "}"
+    return text
+
+
 def run_text(r):
-    """Keep superscripts/subscripts visible in plain text: 10^{-4}, x_{2}."""
-    baseline = int(r._r.find(f"{A_NS}rPr").get("baseline", 0)) if r._r.find(f"{A_NS}rPr") is not None else 0
-    if baseline > 0 and r.text.strip():
-        return "^{" + r.text + "}"
-    if baseline < 0 and r.text.strip():
-        return "_{" + r.text + "}"
-    return r.text
+    return xml_run_text(r._r)
+
+
+def xml_cell_text(tc_el):
+    """Table cell text with superscripts kept; paragraphs joined by newline."""
+    paras = ["".join(xml_run_text(r) for r in p.iterfind(f"{A_NS}r"))
+             for p in tc_el.iter(f"{A_NS}p")]
+    return "\n".join(p for p in paras if p.strip()).strip()
 
 
 def is_red(r):
@@ -91,7 +105,7 @@ def walk(shapes, sw, sh, media_dir, media_index, group=None):
                              round(s.crop_right, 4), round(s.crop_bottom, 4)])
         elif getattr(s, "has_table", False) and s.has_table:
             rec.update(kind="table",
-                       rows=[[c.text.strip() for c in r.cells] for r in s.table.rows])
+                       rows=[[xml_cell_text(c._tc) for c in r.cells] for r in s.table.rows])
         elif getattr(s, "has_chart", False) and s.has_chart:
             ch = s.chart
             rec.update(kind="chart", chart_type=str(ch.chart_type),
@@ -140,8 +154,7 @@ def alternate_content_tables(slide, sw, sh):
         tbl = frame.find(f".//{A_NS}tbl")
         if tbl is None:
             continue
-        rows = [["".join(t.text or "" for t in tc.iter(f"{A_NS}t")).strip()
-                 for tc in tr.iterfind(f"{A_NS}tc")]
+        rows = [[xml_cell_text(tc) for tc in tr.iterfind(f"{A_NS}tc")]
                 for tr in tbl.iterfind(f"{A_NS}tr")]
         box = [int(off.get("x")) / sw, int(off.get("y")) / sh, int(ext.get("cx")) / sw, int(ext.get("cy")) / sh]
         out.append({"id": int(c_nv.get("id")), "name": c_nv.get("name"), "kind": "table",

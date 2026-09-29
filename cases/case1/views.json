@@ -1,0 +1,217 @@
+{
+  "schema": "views/0.2",
+  "lens": ["case-course", "trial"],
+  "rules": "视图只能引用 fact id（u.* 原文单元 / d.* 日期 / f.* 数值），或以 .* 结尾的单元前缀；label 为编辑性短标题，不允许包含数字",
+
+  "meta": {"id": "v.meta", "title": ["u.1.7.p0", "u.1.7.p1"], "institution": ["u.1.5.p0", "u.1.5.p1", "u.32.5.p0"]},
+
+  "sections": [
+    {"id": "sec.overview",   "label": "病例概览"},
+    {"id": "sec.baseline",   "label": "初诊与基线评估"},
+    {"id": "sec.timeline",   "label": "治疗时间轴"},
+    {"id": "sec.trends",     "label": "指标趋势"},
+    {"id": "sec.imaging",    "label": "影像与病理图片"},
+    {"id": "sec.pathology",  "label": "病理与分子特征"},
+    {"id": "sec.regimen",    "label": "埃纳妥单抗联合方案"},
+    {"id": "sec.summary",    "label": "病例总结"},
+    {"id": "sec.literature", "label": "文献回顾"},
+    {"id": "sec.conclusion", "label": "总结"}
+  ],
+
+  "blocks": [
+    {"id": "b.patient", "section": "sec.overview", "type": "table", "title": "u.4.4.p0", "caption": "u.4.5.p0", "table": "u.4.6"},
+    {"id": "b.dx", "section": "sec.overview", "type": "text", "title": "u.7.4.p0", "units": ["u.7.13.*"]},
+
+    {"id": "b.onset", "section": "sec.baseline", "type": "text", "title": "u.5.4.p0", "units": ["u.5.5.p0"]},
+    {"id": "b.baseline_labs", "section": "sec.baseline", "type": "table", "table": "u.5.6"},
+    {"id": "b.baseline_mm", "section": "sec.baseline", "type": "table", "title": "u.6.6.p0", "heading": "u.6.4.p0", "table": "u.6.7"},
+    {"id": "b.baseline_imaging", "section": "sec.baseline", "type": "text", "title": "u.6.9.p0", "units": ["u.6.10.*"]},
+
+    {"id": "b.phases", "section": "sec.timeline", "type": "phases", "phases": [
+      {"id": "ph.vrd",  "label": "VRD 诱导",            "start": "d.2023-06-29",     "end": "d.2023-11-05",     "chapter": ["u.8.4.p0", "u.8.5.p0"]},
+      {"id": "ph.asct", "label": "干细胞采集与自体移植", "start": "d.2023-11-05",     "end": "d.2024-03-12.kd",  "chapter": ["u.9.4.p0", "u.9.5.p0"]},
+      {"id": "ph.kd",   "label": "KD 巩固",             "start": "d.2024-03-12.kd",  "end": "d.2024-05-13",     "chapter": ["u.10.4.p0"]},
+      {"id": "ph.cart", "label": "BCMA CAR-T",          "start": "d.2024-05-13",     "end": "d.pom_start",      "chapter": ["u.11.4.p0", "u.12.4.p0"]},
+      {"id": "ph.pom",  "label": "泊马度胺维持",        "start": "d.pom_start",      "end": "d.2025-09",        "chapter": ["u.12.25.p0"]},
+      {"id": "ph.rt",   "label": "局部放疗",            "start": "d.2025-09",        "end": "d.rt_end",         "chapter": ["u.13.4.p0", "u.14.4.p0", "u.15.13.p0", "u.16.13.p0"]},
+      {"id": "ph.elra", "label": "埃纳妥单抗联合兆珂速", "start": "d.2026-01-30",    "end": null,               "chapter": ["u.18.4.p0"]}
+    ]},
+
+    {"id": "b.events", "section": "sec.timeline", "type": "timeline", "events": [
+      {"id": "ev.onset",        "date": "d.2023-01",         "kind": "clinical",      "label": "起病",               "units": ["u.5.5.p0"]},
+      {"id": "ev.presentation", "date": "d.2023-06",         "kind": "diagnosis",     "label": "就诊并确诊",         "units": ["u.8.5.p0"], "links": ["b.baseline_labs", "b.baseline_mm", "b.dx"]},
+      {"id": "ev.vrd_start",    "date": "d.2023-06-29",      "kind": "treatment",     "label": "启动 VRD",           "units": ["u.8.9.p0"]},
+      {"id": "ev.vrd_eval",     "date": "d.vrd_eval",        "kind": "assessment",    "label": "VRD 诱导后复查",     "units": ["u.8.9.p1", "u.8.9.p2", "u.8.9.p3", "u.8.9.p4", "u.8.9.p5", "u.8.9.p6"],
+       "facts": ["f.mprot.2023-10", "f.flck.2023-10", "f.flcl.2023-10", "f.ngf.2023-10", "f.ngs.2023-10.text", "f.resp.vgpr"]},
+      {"id": "ev.collection",   "date": "d.2023-11-05",      "kind": "procedure",     "label": "干细胞采集",         "units": ["u.8.12.p0"]},
+      {"id": "ev.asct",         "date": "d.2023-12-19",      "kind": "procedure",     "label": "自体造血干细胞移植", "units": ["u.8.15.p0"]},
+      {"id": "ev.post_asct",    "date": "d.2024-03-07",      "kind": "assessment",    "label": "移植后复查",         "units": ["u.9.18.*"],
+       "facts": ["f.mprot.2024-03-07", "f.flck.2024-03-07", "f.flcl.2024-03-07", "f.ngs.2024-03.text"]},
+      {"id": "ev.lymph",        "date": "d.2024-03-12.lymph", "kind": "procedure",    "label": "采集淋巴细胞",       "units": ["u.9.21.p0"]},
+      {"id": "ev.kd",           "date": "d.2024-03-12.kd",   "kind": "treatment",     "label": "KD 巩固",            "units": ["u.9.28.p0"]},
+      {"id": "ev.emd1",         "date": "d.2024-05-08",      "kind": "relapse",       "label": "髓外进展：右肩胛区", "units": ["u.10.5.p0", "u.10.18.*"],
+       "facts": ["f.mprot.2024-05-08", "f.flck.2024-05-08", "f.flcl.2024-05-08", "f.ngf.2024-05-08", "f.suv.scapula.2024-05-08", "f.site.emd1"], "links": ["b.img.emd1_ct"]},
+      {"id": "ev.emd1_biopsy",  "date": "d.2024-05-12",      "kind": "pathology",     "label": "右肩胛区肿块穿刺",   "units": ["u.10.21.*"],
+       "facts": ["f.tissue_ngf.2024-05-12", "f.bcma.2024-05-12", "f.mut.nras.2024-05-12", "f.mut.igll5.2024-05-12", "f.mut.tet1.2024-05-12"], "links": ["b.img.path2024"]},
+      {"id": "ev.fc",           "date": "d.2024-05-13",      "kind": "treatment",     "label": "FC 预处理",          "units": ["u.11.8.p0"]},
+      {"id": "ev.cart",         "date": "d.2024-05-17",      "kind": "treatment",     "label": "回输 BCMA CAR-T",    "units": ["u.11.11.p0"]},
+      {"id": "ev.crs",          "date": "d.crs",             "kind": "adverse_event", "label": "CRS",                "units": ["u.11.15.p0"], "facts": ["f.crs.grade"], "links": ["b.s.il6"]},
+      {"id": "ev.cart_eval1",   "date": "d.2024-06-20",      "kind": "assessment",    "label": "CAR-T 后评估",       "units": ["u.12.14.*"],
+       "facts": ["f.mprot.2024-06-20", "f.flck.2024-06-20", "f.flcl.2024-06-20", "f.ngf.2024-06-20", "f.ngs.2024-06-20.text", "f.suv.scapula.2024-06-20"]},
+      {"id": "ev.pom",          "date": "d.pom_start",       "kind": "treatment",     "label": "泊马度胺维持",       "units": ["u.12.25.p0"]},
+      {"id": "ev.cart_eval2",   "date": "d.2024-09-11",      "kind": "assessment",    "label": "维持期评估",         "units": ["u.12.15.*"],
+       "facts": ["f.mprot.2024-09-11", "f.flck.2024-09-11", "f.flcl.2024-09-11", "f.pet.2024-09-11"]},
+      {"id": "ev.scr",          "date": "d.2024-12-10",      "kind": "assessment",    "label": "疗效评估 sCR",       "units": ["u.12.17.p0"],
+       "facts": ["f.mprot.2024-12-10", "f.flck.2024-12-10", "f.flcl.2024-12-10", "f.resp.scr"]},
+      {"id": "ev.emd2",         "date": "d.2025-09",         "kind": "relapse",       "label": "髓外复发：左乳与右髂骨", "units": ["u.13.5.p0", "u.13.7.p0", "u.13.8.*"],
+       "facts": ["f.site.emd2.breast", "f.site.emd2.iliac", "f.suv.breast.2025-09", "f.suv.iliac.2025-09", "f.birads.9"], "links": ["b.img.emd2_breast", "b.img.emd2_iliac", "b.rt_plan"]},
+      {"id": "ev.rt",           "date": "d.2025-09",         "kind": "treatment",     "label": "局部放疗",           "units": ["u.13.13.*"], "links": ["b.rt_plan"]},
+      {"id": "ev.emd3",         "date": "d.2026-01",         "kind": "relapse",       "label": "再次进展：皮下与腹股沟", "units": ["u.15.5.p0", "u.15.7.p0", "u.15.8.*"],
+       "facts": ["f.site.emd3.abd", "f.site.emd3.groin", "f.site.emd3.arm"], "links": ["b.relapse_labs", "b.img.emd3_arm", "b.img.emd3_abd", "b.img.emd3_groin"]},
+      {"id": "ev.emd3_path",    "date": "d.2026-01.path",    "kind": "pathology",     "label": "左上臂穿刺",         "units": ["u.17.5.p0"], "facts": ["f.path.blastoid", "f.bcma.2026-01"], "links": ["b.ihc", "b.fish"]},
+      {"id": "ev.dara",         "date": "d.2026-01-30",      "kind": "treatment",     "label": "启动兆珂速",         "units": ["u.18.11.*"]},
+      {"id": "ev.elra",         "date": "d.2026-01-31",      "kind": "treatment",     "label": "启动埃纳妥单抗",     "units": ["u.18.14.*"]},
+      {"id": "ev.dose_0223",    "date": "d.2026-02-23",      "kind": "treatment",     "label": "联合给药",           "units": ["u.18.17.p0"]},
+      {"id": "ev.cmv1",         "date": "d.cmv1",            "kind": "adverse_event", "label": "CMV 病毒感染",       "units": ["u.18.29.p0"]},
+      {"id": "ev.dose_c2",      "date": "d.2026-03-28",      "kind": "treatment",     "label": "联合给药",           "units": ["u.18.20.*"]},
+      {"id": "ev.dose_0406",    "date": "d.2026-04-06",      "kind": "treatment",     "label": "联合给药",           "units": ["u.18.32.p0"]},
+      {"id": "ev.cmv2",         "date": "d.cmv2",            "kind": "adverse_event", "label": "CMV 病毒感染",       "units": ["u.18.34.p0"]},
+      {"id": "ev.adm_0602",     "date": "d.2026-06-02",      "kind": "assessment",    "label": "维持期入院评估",     "units": ["u.19.4.p0", "u.19.5.p0"], "links": ["b.adm_0602", "b.immvir_0602"]},
+      {"id": "ev.dose_0603",    "date": "d.2026-06-03",      "kind": "treatment",     "label": "联合给药",           "units": ["u.18.39.p0"]},
+      {"id": "ev.adm_0822",     "date": "d.2026-08-22",      "kind": "assessment",    "label": "最新评估",           "units": ["u.20.4.p0", "u.20.5.p0"],
+       "facts": ["f.ife.2026-08-24", "f.spep_pct.2026-08-24"], "links": ["b.adm_0822", "b.report_0824"]}
+    ]},
+
+    {"id": "b.trends", "section": "sec.trends", "type": "series_group", "series": [
+      {"id": "b.s.mprot", "label": "M蛋白", "scale": "linear", "points": [
+        {"fact": "f.mprot.2023-06"}, {"fact": "f.mprot.2023-10"}, {"fact": "f.mprot.2024-03-07"}, {"fact": "f.mprot.2024-05-08"},
+        {"fact": "f.mprot.2024-06-20"}, {"fact": "f.mprot.2024-09-11"}, {"fact": "f.mprot.2024-12-10"}]},
+      {"id": "b.s.spep_pct", "label": "血清蛋白电泳 M 峰占比", "scale": "linear", "points": [
+        {"fact": "f.spep_pct.2023-06"}, {"fact": "f.spep_pct.2026-01"}, {"fact": "f.spep_pct.2026-08-24"}]},
+      {"id": "b.s.flck", "label": "血清游离轻链 κ", "scale": "log", "points": [
+        {"fact": "f.flck.2023-06"}, {"fact": "f.flck.2023-10"}, {"fact": "f.flck.2024-03-07"}, {"fact": "f.flck.2024-05-08"},
+        {"fact": "f.flck.2024-06-20"}, {"fact": "f.flck.2024-09-11"}, {"fact": "f.flck.2024-12-10"}, {"fact": "f.flck.2026-01"}],
+       "held": [{"fact": "f.flck.2026-08-24", "reason": "原文未注明单位，确认前不并入曲线"}]},
+      {"id": "b.s.flcl", "label": "血清游离轻链 λ（受累轻链）", "scale": "log", "points": [
+        {"fact": "f.flcl.2023-06"}, {"fact": "f.flcl.2023-10"}, {"fact": "f.flcl.2024-03-07"}, {"fact": "f.flcl.2024-05-08"},
+        {"fact": "f.flcl.2024-06-20"}, {"fact": "f.flcl.2024-09-11"}, {"fact": "f.flcl.2024-12-10"}, {"fact": "f.flcl.2026-01"}],
+       "held": [{"fact": "f.flcl.2026-08-24", "reason": "原文未注明单位，确认前不并入曲线"}]},
+      {"id": "b.s.flcr", "label": "κ/λ 比值", "scale": "linear", "points": [{"fact": "f.flcr.2026-01"}, {"fact": "f.flcr.2026-08-24"}]},
+      {"id": "b.s.ngs", "label": "骨髓 NGS-MRD", "scale": "log", "points": [
+        {"fact": "f.ngs.img.base", "corroborate": ["f.ngs.base.text"]},
+        {"fact": "f.ngs.img.1", "corroborate": ["f.ngs.2023-10.text", "f.ngs.pre_asct.text"]},
+        {"fact": "f.ngs.img.2", "corroborate": ["f.ngs.2024-03.text"]},
+        {"fact": "f.ngs.img.3", "corroborate": ["f.ngs.2024-06-20.text"]},
+        {"fact": "f.ngs.img.4"}, {"fact": "f.ngs.img.5"}, {"fact": "f.ngs.img.6"}]},
+      {"id": "b.s.ngf", "label": "骨髓 NGF-MRD / 免疫分型", "scale": "log", "points": [
+        {"fact": "f.ngf.2023-06"}, {"fact": "f.ngf.2023-10"}, {"fact": "f.ngf.2024-05-08"}, {"fact": "f.ngf.2024-06-20"}, {"fact": "f.ngf.2026-01"}]},
+      {"id": "b.s.suv_scapula", "label": "SUVmax · 右侧肩胛骨后方肌肉（糖代谢）", "scale": "linear", "points": [
+        {"fact": "f.suv.scapula.2024-05-08"}, {"fact": "f.suv.scapula.2024-06-20"}]},
+      {"id": "b.s.suv_bone_base", "label": "SUVmax · 多发骨质破坏（示踪剂未注明）", "scale": "linear", "points": [{"fact": "f.suv.bone.2023-06"}]},
+      {"id": "b.s.suv_shoulder_base", "label": "SUVmax · 左肩关节三角肌走行区（示踪剂未注明）", "scale": "linear", "points": [{"fact": "f.suv.shoulder.2023-06"}]},
+      {"id": "b.s.suv_breast", "label": "SUVmax · 左乳（CXCR4）", "scale": "linear", "points": [{"fact": "f.suv.breast.2025-09"}]},
+      {"id": "b.s.suv_iliac", "label": "SUVmax · 右髂骨（CXCR4）", "scale": "linear", "points": [{"fact": "f.suv.iliac.2025-09"}]},
+      {"id": "b.s.il6", "label": "IL-6（CAR-T 回输后）", "scale": "linear", "reference": "f.il6.ref", "source_image": "b.img.il6", "points": [
+        {"fact": "f.il6.01"}, {"fact": "f.il6.02"}, {"fact": "f.il6.03"}, {"fact": "f.il6.04"}, {"fact": "f.il6.05"}, {"fact": "f.il6.06"},
+        {"fact": "f.il6.07"}, {"fact": "f.il6.08"}, {"fact": "f.il6.09"}, {"fact": "f.il6.10"}, {"fact": "f.il6.11"}, {"fact": "f.il6.12"},
+        {"fact": "f.il6.13"}, {"fact": "f.il6.14"}, {"fact": "f.il6.15"}, {"fact": "f.il6.16"}]},
+      {"id": "b.s.hb", "label": "Hb", "scale": "linear", "points": [{"fact": "f.hb.2023-06"}, {"fact": "f.hb.2026-06-02"}, {"fact": "f.hb.2026-08-22"}]},
+      {"id": "b.s.plt", "label": "PLT", "scale": "linear", "points": [{"fact": "f.plt.2026-06-02"}, {"fact": "f.plt.2026-08-22"}]},
+      {"id": "b.s.wbc", "label": "WBC", "scale": "linear", "points": [{"fact": "f.wbc.2026-06-02"}, {"fact": "f.wbc.2026-08-22"}]},
+      {"id": "b.s.crp", "label": "CRP", "scale": "linear", "points": [{"fact": "f.crp.2026-06-02"}, {"fact": "f.crp.2026-08-22"}]}
+    ]},
+
+    {"id": "b.img.emd1_ct", "section": "sec.imaging", "type": "image", "slide": 10, "shape": 8, "label": "胸部 CT · 右肩胛区肿块",
+     "annotations": [{"id": "b.img.emd1_ct.h1", "shape": 10, "facts": ["f.site.emd1", "f.suv.scapula.2024-05-08", "f.size.scapula.2024-05-08"]}]},
+    {"id": "b.img.path2024", "section": "sec.imaging", "type": "image", "slide": 10, "shape": 9, "label": "右肩胛区穿刺病理", "facts": ["f.path.2024.report"]},
+    {"id": "b.img.il6", "section": "sec.imaging", "type": "image", "slide": 11, "shape": 17, "label": "IL-6 曲线原图",
+     "annotations": [{"id": "b.img.il6.legend", "shape": 23, "facts": []}]},
+    {"id": "b.img.mrd", "section": "sec.imaging", "type": "image", "slide": 12, "shape": 28, "label": "MRD 结果原图",
+     "facts": ["f.ngs.img.base", "f.ngs.img.1", "f.ngs.img.2", "f.ngs.img.3", "f.ngs.img.4", "f.ngs.img.5", "f.ngs.img.6"]},
+    {"id": "b.img.emd2_breast", "section": "sec.imaging", "type": "image", "slide": 14, "shape": 15, "label": "CXCR4 PET-CT · 左乳", "date": "d.2025-09-04.pet",
+     "annotations": [{"id": "b.img.emd2_breast.h1", "shape": 21, "facts": ["f.site.emd2.breast", "f.suv.breast.2025-09"]}]},
+    {"id": "b.img.emd2_iliac", "section": "sec.imaging", "type": "image", "slide": 14, "shape": 16, "label": "CXCR4 PET-CT · 右髂骨", "date": "d.2025-09-04.pet",
+     "annotations": [{"id": "b.img.emd2_iliac.h1", "shape": 22, "facts": ["f.site.emd2.iliac", "f.suv.iliac.2025-09"]}]},
+    {"id": "b.img.emd3_arm", "section": "sec.imaging", "type": "image", "slide": 16, "shape": 10, "label": "低剂量 CT · 上臂层面",
+     "annotations": [{"id": "b.img.emd3_arm.h1", "shape": 17, "facts": ["f.site.emd3.arm"]}]},
+    {"id": "b.img.emd3_abd", "section": "sec.imaging", "type": "image", "slide": 16, "shape": 14, "label": "低剂量 CT · 腹部层面",
+     "overlays": [{"shape": 16, "reason": "原 PPT 中覆盖在影像上的遮挡块，保持原样"}],
+     "annotations": [{"id": "b.img.emd3_abd.h1", "shape": 18, "facts": ["f.site.emd3.abd"]}]},
+    {"id": "b.img.emd3_groin", "section": "sec.imaging", "type": "image", "slide": 16, "shape": 15, "label": "低剂量 CT · 盆腔层面",
+     "annotations": [{"id": "b.img.emd3_groin.h1", "shape": 19, "facts": ["f.site.emd3.groin"]}]},
+
+    {"id": "b.rt_plan", "section": "sec.timeline", "type": "table", "title": "u.13.11.p0", "table": "u.13.12", "notes": ["u.13.13.*"]},
+    {"id": "b.relapse_labs", "section": "sec.timeline", "type": "table", "title": "u.15.11.p0", "table": "u.15.12"},
+
+    {"id": "b.path_heading", "section": "sec.pathology", "type": "text", "title": "u.17.4.p0", "units": ["u.17.5.p0"]},
+    {"id": "b.ihc", "section": "sec.pathology", "type": "table", "title": "u.17.7.p0", "table": "u.17.8"},
+    {"id": "b.fish", "section": "sec.pathology", "type": "table", "title": "u.17.11.p0", "table": "u.17.12", "notes": ["u.17.13.p0"]},
+    {"id": "b.molecular", "section": "sec.pathology", "type": "compare_matrix", "label": "不同时间点、不同样本的分子结果并列",
+     "rows": [
+       {"id": "b.mol.13q14", "label_unit": "u.17.12.r1c0", "facts": ["f.fish.13q14.2023-06", "f.fish.13q14.2026-01"]},
+       {"id": "b.mol.rb1",   "label_unit": "u.17.12.r2c0", "facts": ["f.fish.rb1.2023-06", "f.fish.rb1.2026-01"]},
+       {"id": "b.mol.1q21",  "label_unit": "u.17.12.r3c0", "facts": ["f.fish.1q21.2023-06", "f.fish.1q21.2026-01", "f.fish.1q21cn.2026-01"]},
+       {"id": "b.mol.fgfr3", "label_unit": "u.17.12.r4c0", "facts": ["f.fish.fgfr3.2023-06", "f.fish.fgfr3.2026-01"]},
+       {"id": "b.mol.p53",   "label_unit": "u.17.12.r5c0", "facts": ["f.fish.p53.2023-06", "f.fish.p53.2026-01"]},
+       {"id": "b.mol.kras",  "label": "KRAS",  "facts": ["f.mut.kras.2023-06"]},
+       {"id": "b.mol.nras",  "label_fact": "f.gene.nars", "facts": ["f.mut.nras.2024-05-12", "f.mut.nras.2026-01"]},
+       {"id": "b.mol.igll5", "label": "IGLL5", "facts": ["f.mut.igll5.2023-06", "f.mut.igll5.2024-05-12", "f.mut.igll5.2026-01"]},
+       {"id": "b.mol.tet1",  "label": "TET1",  "facts": ["f.mut.tet1.2024-05-12"]},
+       {"id": "b.mol.bcma",  "label": "BCMA",  "facts": ["f.sbcma.2023-06", "f.bcma.2024-05-12", "f.bcma.2026-01"]}
+     ]},
+
+    {"id": "b.regimen", "section": "sec.regimen", "type": "text", "title": "u.18.4.p0",
+     "units": ["u.18.5.p0", "u.18.7.p0", "u.18.23.p0", "u.18.24.*", "u.18.25.p0"]},
+    {"id": "b.adm_0602", "section": "sec.regimen", "type": "table", "title": "u.19.7.p0", "table": "u.19.8"},
+    {"id": "b.immvir_0602", "section": "sec.regimen", "type": "table", "title": "u.19.11.p0", "table": "u.19.12", "notes": ["u.19.15.p0"]},
+    {"id": "b.adm_0822", "section": "sec.regimen", "type": "table", "title": "u.20.7.p0", "table": "u.20.8"},
+    {"id": "b.report_0824", "section": "sec.regimen", "type": "table", "title": "u.20.11.p0", "table": "u.20.12"},
+
+    {"id": "b.case_summary", "section": "sec.summary", "type": "text", "title": "u.21.4.p0",
+     "groups": [
+       {"id": "b.sum.features", "title": "u.21.6.p0", "units": ["u.21.7.*"]},
+       {"id": "b.sum.outcomes", "title": "u.21.10.p0", "units": ["u.21.11.*"]},
+       {"id": "b.sum.takeaway", "units": ["u.21.15.*", "u.21.16.p0"]}
+     ]},
+
+    {"id": "b.lit.us.design", "section": "sec.literature", "type": "text", "title": "u.23.2.*",
+     "units": ["u.23.15.p0", "u.23.45.*", "u.23.55.p0", "u.23.50.*", "u.23.62.p0", "u.23.60.p0", "u.23.64.p0", "u.23.65.*",
+               "u.23.82.p0", "u.23.68.p0", "u.23.75.*", "u.23.71.p0", "u.23.76.p0", "u.23.74.p0", "u.23.81.p0", "u.23.80.*"],
+     "citations": ["u.23.6.p0"]},
+    {"id": "b.lit.us.baseline", "section": "sec.literature", "type": "text", "title": "u.24.2.*",
+     "units": ["u.24.7.p0", "u.24.9.p0", "u.24.10.*", "u.24.11.*"], "footnotes": ["u.24.12.*"], "citations": ["u.24.4.p0"]},
+    {"id": "b.lit.us.tbl_patient", "section": "sec.literature", "type": "table", "table": "u.24.3"},
+    {"id": "b.lit.us.tbl_disease", "section": "sec.literature", "type": "table", "table": "u.24.5"},
+    {"id": "b.lit.us.response", "section": "sec.literature", "type": "text", "title": "u.25.2.*",
+     "units": ["u.25.14.p0", "u.25.15.*", "u.25.16.p0", "u.25.11.p0"], "footnotes": ["u.25.18.p0"], "citations": ["u.25.17.p0"]},
+    {"id": "b.lit.us.orr_chart", "section": "sec.literature", "type": "stacked_bar", "label": "缓解构成",
+     "segments": ["f.lit.orr.pr", "f.lit.orr.vgpr", "f.lit.orr.cr", "f.lit.orr.scr"],
+     "units": ["u.25.3.*"], "totals": ["f.lit.orr.total", "f.lit.orr.vgpr_plus", "f.lit.orr.cr_plus"],
+     "total_labels": ["u.25.9.p0", "u.25.6.*", "u.25.8.*"]},
+    {"id": "b.lit.us.dor", "section": "sec.literature", "type": "text", "title": "u.26.2.*",
+     "units": ["u.26.7.p0", "u.26.8.*"], "footnotes": ["u.26.9.p0"], "citations": ["u.26.10.p0"]},
+    {"id": "b.lit.us.dor_km", "section": "sec.literature", "type": "image", "slide": 26, "shape": 3, "label": "缓解持续时间曲线",
+     "label_units": ["u.26.5.p0", "u.26.13.p0", "u.26.16.p0", "u.26.19.p0"], "facts": ["f.lit.dor.median", "f.lit.dor.at_risk"],
+     "annotations": [{"id": "b.lit.us.dor_km.frame", "shape": 4, "facts": []}]},
+
+    {"id": "b.lit.int.design", "section": "sec.literature", "type": "text", "title": "u.27.4.*",
+     "groups": [
+       {"id": "b.lit.int.bg", "title": "u.27.6.p0", "units": ["u.27.11.p0"]},
+       {"id": "b.lit.int.obj", "title": "u.27.8.p0", "units": ["u.27.12.p0"]},
+       {"id": "b.lit.int.methods", "title": "u.27.10.p0", "units": ["u.27.13.*"]}
+     ], "footnotes": ["u.27.19.p0"], "citations": ["u.27.14.p0"]},
+    {"id": "b.lit.int.response", "section": "sec.literature", "type": "text", "title": "u.28.4.*",
+     "units": ["u.28.3.*", "u.28.6.p0", "u.28.7.*"], "footnotes": ["u.28.11.*"], "citations": ["u.28.2.p0"]},
+    {"id": "b.lit.int.bor", "section": "sec.literature", "type": "image", "slide": 28, "shape": 8, "label": "最佳缓解率与泳道图",
+     "label_units": ["u.28.9.p0", "u.28.12.p0", "u.28.13.p0", "u.28.14.p0", "u.28.177.p0", "u.28.98.p0", "u.28.99.p0", "u.28.158.p0",
+                     "u.28.168.p0", "u.28.169.p0", "u.28.170.p0", "u.28.171.p0", "u.28.172.p0", "u.28.173.p0", "u.28.174.p0", "u.28.175.p0", "u.28.176.p0"],
+     "facts": ["f.lit.bor.interrupt", "f.lit.bor.anytime"]},
+    {"id": "b.lit.int.survival", "section": "sec.literature", "type": "text", "title": "u.29.17.*",
+     "units": ["u.29.2.p0", "u.29.5.p0", "u.29.6.*"], "footnotes": ["u.29.16.p0"], "citations": ["u.29.18.p0"]},
+    {"id": "b.lit.int.km", "section": "sec.literature", "type": "image", "slide": 29, "shape": 3, "label": "PFS 与 OS 曲线",
+     "label_units": ["u.29.7.p0", "u.29.8.p0", "u.29.9.p0", "u.29.10.p0", "u.29.11.p0", "u.29.12.p0", "u.29.13.*", "u.29.14.*"],
+     "facts": ["f.lit.pfs.at_risk", "f.lit.os.at_risk"]},
+
+    {"id": "b.conclusion", "section": "sec.conclusion", "type": "text", "title": "u.31.4.p0", "units": ["u.31.3.*"]}
+  ]
+}

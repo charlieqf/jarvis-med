@@ -1,0 +1,307 @@
+# Authored fact layer for case1 (input to pipeline/build_facts.py).
+#
+# Every source unit (paragraph / table cell / chart point in raw/slides.json) automatically
+# becomes a `unit` fact (kind=statement). This file adds finer facts that point INTO a unit:
+#   in:   unit id (see pipeline/factlib.py for the id scheme)
+#   raw:  exact substring of that unit's text (occ: n picks the n-th occurrence, default 0)
+#   kind: exact | bound | not_detected | qualitative | missing | statement | date
+#   attrs: analyte / method / specimen / site / tracer / gene ... (compatibility keys)
+#   implied_unit: unit that is not inside `raw` but stated in the same unit text (basis required)
+#   date: a date fact id, or inline {value, basis: from_image|inferred, note}
+#   review: {proposed: {...}, issue: "...", basis: "..."}  -> status starts as unreviewed
+# Facts that come from inside a picture use  img: {slide, shape, file}  instead of `in`,
+# and facts with no source at all use  origin: inferred  (both always need human review).
+
+excluded_units:
+  - {match: "u.2.", reason: 目录页}
+  - {match: "u.3.", reason: 目录页}
+  - {match: "u.22.", reason: 目录页}
+  - {match: "u.30.", reason: 目录页}
+  - {match: "u.28.9[1-7].p0", reason: 泳道图坐标轴刻度（叠加在原图上，原图已包含）}
+  - {match: "u.32.3.p0", reason: 结束页致谢}
+
+dates:
+  - {id: d.2023-01, in: u.5.5.p0, raw: "2023年1月", value: "2023-01"}
+  - {id: d.2023-06, in: u.5.5.p0, raw: "2023年6月", value: "2023-06"}
+  - {id: d.2023-06.dx, in: u.8.5.p0, raw: "2023年6月", value: "2023-06"}
+  - {id: d.2023-06-29, in: u.8.8.p0, raw: "2023.06.29", value: "2023-06-29"}
+  - {id: d.2023-06-28.dwi, in: u.8.9.p5, raw: "2023-06-28", value: "2023-06-28"}
+  - {id: d.vrd_eval, value: "2023-10-12", basis: inferred,
+     note: "第8页“4疗程后复查”未写日期；取第12页 MRD 表中 MRD1 的检测日期 2023/10/12"}
+  - {id: d.2023-11-05, in: u.8.11.p0, raw: "2023.11.05", value: "2023-11-05"}
+  - {id: d.2023-12-19, in: u.8.14.p0, raw: "2023.12.19", value: "2023-12-19"}
+  - {id: d.2024-03-07, in: u.9.17.p0, raw: "2024.03.07", value: "2024-03-07"}
+  - {id: d.2024-03-12.lymph, in: u.9.20.p0, raw: "2024.03.12", value: "2024-03-12"}
+  - {id: d.2024-03-12.kd, in: u.9.29.p0, raw: "2024.03.12", value: "2024-03-12"}
+  - {id: d.2024-05-08, in: u.10.17.p0, raw: "2024.05.08", value: "2024-05-08"}
+  - {id: d.2024-05-12, in: u.10.20.p0, raw: "2024.05.12", value: "2024-05-12"}
+  - {id: d.2024-05-13, in: u.11.7.p0, raw: "2024.05.13", value: "2024-05-13"}
+  - {id: d.2024-05-17, in: u.11.10.p0, raw: "2024.05.17", value: "2024-05-17"}
+  - {id: d.crs, in: u.11.13.p0, raw: "2025.05.23", value: "2025-05-23",
+     review: {proposed: {value: "2024-05-23"},
+              basis: "CAR-T 于 2024.05.17 回输；第11页 IL-6 曲线横轴为 2024/05/18–06/04，峰值在 2024/05/24"}}
+  - {id: d.2024-06-20, in: u.12.13.p0, raw: "2024.06.20", value: "2024-06-20"}
+  - {id: d.pom_start, value: "2024-06", basis: inferred,
+     note: "第12页“CART后予以泊马度胺维持治疗”未写起始日期；取 CAR-T 后首次评估所在月份"}
+  - {id: d.2024-09-11, in: u.12.7.p0, raw: "2024.09.11", value: "2024-09-11"}
+  - {id: d.2024-12-10, in: u.12.11.p0, raw: "2024.12.10", value: "2024-12-10"}
+  - {id: d.2025-09, in: u.13.8.p0, raw: "2025.09", value: "2025-09"}
+  - {id: d.2025-09-04.pet, value: "2025-09-04", basis: from_image,
+     note: "第14页 PET 影像角落时间戳 20250904", img: {slide: 14, shape: 15, file: 623811d3fff3.png}}
+  - {id: d.rt_end, value: "2026-01", basis: inferred,
+     note: "放疗起止日期未写；以 2026.01 再次进展作为该阶段结束"}
+  - {id: d.2025-09-16, in: u.15.8.p1, raw: "2025-09-16", value: "2025-09-16"}
+  - {id: d.2026-01, in: u.15.8.p0, raw: "2026.01", value: "2026-01"}
+  - {id: d.2026-01.lab, in: u.15.11.p0, raw: "2026.01", value: "2026-01"}
+  - {id: d.2026-01.path, in: u.17.4.p0, raw: "2026.01", value: "2026-01"}
+  - {id: d.2026-01.reg, in: u.18.5.p0, raw: "2026年1月", value: "2026-01"}
+  - {id: d.2026-01-12, in: u.19.15.p0, raw: "2026-01-12", value: "2026-01-12"}
+  - {id: d.2026-01-30, in: u.18.10.p0, raw: "2026.01.30", value: "2026-01-30"}
+  - {id: d.2026-01-31, in: u.18.13.p0, raw: "2026.01.31", value: "2026-01-31"}
+  - {id: d.2026-02-23, in: u.18.16.p0, raw: "2026.02.23", value: "2026-02-23"}
+  - {id: d.cmv1, value: "2026-03", basis: inferred,
+     note: "第18页时间轴上“CMV病毒感染”箭头位于 2026.02.23 与 2026.03.28 之间，未写具体日期"}
+  - {id: d.2026-03-28, in: u.18.19.p0, raw: "2026.03.28", value: "2026-03-28"}
+  - {id: d.2026-04-06, in: u.18.31.p0, raw: "2026.04.06", value: "2026-04-06"}
+  - {id: d.cmv2, value: "2026-05", basis: inferred,
+     note: "第18页时间轴上第二个“CMV病毒感染”箭头位于 2026.04.06 与 2026.06.03 之间，未写具体日期"}
+  - {id: d.2026-06-02, in: u.19.7.p0, raw: "06-02", value: "2026-06-02", note: "年份取自本页标题 2026.06"}
+  - {id: d.2026-06-03, in: u.18.38.p0, raw: "2026.06.03", value: "2026-06-03"}
+  - {id: d.2026-08-22, in: u.20.7.p0, raw: "08-22", value: "2026-08-22", note: "年份取自本页标题 2026.08"}
+  - {id: d.2026-08-24, in: u.20.11.p0, raw: "08-24", value: "2026-08-24", note: "年份取自本页标题 2026.08"}
+
+facts:
+  # ---------------- patient / diagnosis
+  - {id: f.pt.age, in: u.4.6.r1c1, raw: "39岁", kind: exact, attrs: {analyte: 年龄}}
+
+  # ---------------- slide 5: baseline labs (date d.2023-06)
+  - {id: f.hb.2023-06, in: u.5.6.r1c1, raw: "98g/L", kind: exact, date: d.2023-06, attrs: {analyte: Hb, specimen: 血}}
+  - {id: f.wbc.2023-06, in: u.5.6.r1c1, raw: "WBC", kind: missing, date: d.2023-06, attrs: {analyte: WBC},
+     review: {issue: "原文 WBC 后没有数值", basis: "第5页血常规单元格为“WBC ，Hb 98g/L，PLT”"}}
+  - {id: f.plt.2023-06, in: u.5.6.r1c1, raw: "PLT", kind: missing, date: d.2023-06, attrs: {analyte: PLT},
+     review: {issue: "原文 PLT 后没有数值", basis: "同上"}}
+  - {id: f.ldh.2023-06, in: u.5.6.r2c1, raw: "350U/L", occ: 0, kind: exact, date: d.2023-06, attrs: {analyte: LDH}}
+  - {id: f.ldh.dup, in: u.5.6.r2c1, raw: "LDH 350U/L", occ: 1, kind: statement,
+     review: {proposed: {exclude: true}, basis: "同一单元格中 LDH 350U/L 出现两次"}}
+  - {id: f.tp.2023-06, in: u.5.6.r2c1, raw: "87.7g/L", kind: exact, date: d.2023-06, attrs: {analyte: TP}}
+  - {id: f.alb.2023-06, in: u.5.6.r2c1, raw: "31.4g/L", kind: exact, date: d.2023-06, attrs: {analyte: ALB}}
+  - {id: f.glb.2023-06, in: u.5.6.r2c1, raw: "56.3g/L", kind: exact, date: d.2023-06, attrs: {analyte: GLB}}
+  - {id: f.uric.2023-06, in: u.5.6.r2c1, raw: "50mol/L", kind: exact, date: d.2023-06, attrs: {analyte: URIC},
+     review: {issue: "单位疑有误（通常为 μmol/L），数值请核对", basis: "mol/L 量级不符合血尿酸"}}
+  - {id: f.igg.2023-06, in: u.5.6.r3c1, raw: "51g/L", kind: exact, date: d.2023-06, attrs: {analyte: IgG, specimen: 血清}}
+  - {id: f.bm_pc_biopsy.2023-06, in: u.5.6.r4c1, raw: "15%~17%", kind: statement, date: d.2023-06}
+  - {id: f.ngf.2023-06, in: u.5.6.r5c1, raw: "3.765%", kind: exact, date: d.2023-06,
+     attrs: {analyte: 克隆性浆细胞比例, method: NGF, specimen: 骨髓}}
+  - {id: f.pb_ngf.2023-06, in: u.5.6.r6c1, raw: "1.9*10-3", kind: exact, date: d.2023-06,
+     attrs: {analyte: 克隆性浆细胞比例, method: NGF, specimen: 外周血},
+     implied_unit: {unit: fraction, basis: "“克隆性浆细胞”比例"}}
+  - {id: f.fish.13q14.2023-06, in: u.5.6.r7c1, raw: "14%", kind: exact, date: d.2023-06, attrs: {analyte: 13q14缺失, method: FISH, specimen: 初诊样本}}
+  - {id: f.fish.1q21.2023-06, in: u.5.6.r7c1, raw: "8%", kind: exact, date: d.2023-06, attrs: {analyte: 1q21扩增, method: FISH, specimen: 初诊样本}}
+  - {id: f.fish.rb1.2023-06, in: u.5.6.r7c1, raw: "15%", kind: exact, date: d.2023-06, attrs: {analyte: Rb1缺失, method: FISH, specimen: 初诊样本}}
+  - {id: f.fish.p53.2023-06, in: u.5.6.r7c1, raw: "阴性", kind: not_detected, date: d.2023-06, attrs: {analyte: P53缺失, method: FISH, specimen: 初诊样本}}
+  - {id: f.fish.fgfr3.2023-06, in: u.5.6.r7c1, raw: "20%", kind: exact, date: d.2023-06, attrs: {analyte: FGFR3/IgH重排, method: FISH, specimen: 初诊样本}}
+  - {id: f.fish.wording, in: u.5.6.r7c1, raw: "加作", kind: qualitative,
+     review: {proposed: {text: "加做"}, basis: "疑为笔误"}}
+  - {id: f.mut.kras.2023-06, in: u.5.6.r8c1, raw: "9.6%", kind: exact, date: d.2023-06, attrs: {analyte: VAF, gene: KRAS, specimen: 初诊样本}}
+  - {id: f.mut.igll5.2023-06, in: u.5.6.r8c1, raw: "27.3%", kind: exact, date: d.2023-06, attrs: {analyte: VAF, gene: IGLL5, specimen: 初诊样本}}
+
+  # ---------------- slide 6: MM panel + imaging (date d.2023-06)
+  - {id: f.spep_pct.2023-06, in: u.6.7.r1c1, raw: "40.9%", kind: exact, date: d.2023-06, attrs: {analyte: M蛋白, method: SPEP, specimen: 血清}}
+  - {id: f.mprot.2023-06, in: u.6.7.r1c1, raw: "36.8918g/L", kind: exact, date: d.2023-06, attrs: {analyte: M蛋白, method: SPEP, specimen: 血清}}
+  - {id: f.flck.2023-06, in: u.6.7.r3c1, raw: "<5.8 mg/L", kind: bound, date: d.2023-06, attrs: {analyte: 游离轻链κ, specimen: 血清}}
+  - {id: f.flcl.2023-06, in: u.6.7.r3c1, raw: "315 mg/L", kind: exact, date: d.2023-06, attrs: {analyte: 游离轻链λ, specimen: 血清}}
+  - {id: f.sbcma.2023-06, in: u.6.7.r6c1, raw: "158.2 ng/mL", kind: exact, date: d.2023-06, attrs: {analyte: sBCMA, specimen: 血清}}
+  - {id: f.suv.bone.2023-06, in: u.6.10.p0, raw: "15.2", kind: exact, date: d.2023-06,
+     attrs: {analyte: SUVmax, site: 多发骨质破坏, tracer: 未注明},
+     review: {issue: "基线 PET-CT 未注明示踪剂（原文为“高代谢”）；后续 2024 年两次为“糖代谢”", basis: "若确认为糖代谢(FDG)，可与后续糖代谢 PET 同类比较"}}
+  - {id: f.suv.shoulder.2023-06, in: u.6.10.p0, raw: "8.2", kind: exact, date: d.2023-06,
+     attrs: {analyte: SUVmax, site: 左肩关节三角肌走行区, tracer: 未注明}}
+
+  # ---------------- slide 8: after VRD x4 (date inferred)
+  - {id: f.mprot.2023-10, in: u.8.9.p2, raw: "0.9352g/L", kind: exact, date: d.vrd_eval, attrs: {analyte: M蛋白, method: SPEP, specimen: 血清}}
+  - {id: f.flck.2023-10, in: u.8.9.p2, raw: "6.73mg/L", kind: exact, date: d.vrd_eval, attrs: {analyte: 游离轻链κ, specimen: 血清}}
+  - {id: f.flcl.2023-10, in: u.8.9.p2, raw: "8.01mg/L", kind: exact, date: d.vrd_eval, attrs: {analyte: 游离轻链λ, specimen: 血清}}
+  - {id: f.ngf.2023-10, in: u.8.9.p4, raw: "9.1*10^{-4}", kind: exact, date: d.vrd_eval,
+     attrs: {analyte: 克隆性浆细胞比例, method: NGF, specimen: 骨髓}, implied_unit: {unit: fraction, basis: "“分析…的浆细胞群体为单克隆性浆细胞”为比例"}}
+  - {id: f.ngs.2023-10.text, in: u.8.9.p4, raw: "3.21*10^{-4}", kind: exact, date: d.vrd_eval,
+     attrs: {analyte: 优势克隆比例, method: NGS, specimen: 骨髓}, implied_unit: {unit: fraction, basis: "NGS-MRD 克隆比例"}}
+  - {id: f.ngs.base.text, in: u.8.9.p4, raw: "1.46*10^{-1}", kind: exact, date: d.2023-06,
+     attrs: {analyte: 优势克隆比例, method: NGS, specimen: 骨髓}, implied_unit: {unit: fraction, basis: "NGS-MRD 克隆比例（基线）"}}
+  - {id: f.resp.vgpr, in: u.8.9.p6, raw: "VGPR", kind: qualitative, date: d.vrd_eval, attrs: {analyte: 疗效评估}}
+
+  # ---------------- slide 9: 3 months after ASCT (2024-03-07)
+  - {id: f.mprot.2024-03-07, in: u.9.18.p1, raw: "3.7996g/L", kind: exact, date: d.2024-03-07, attrs: {analyte: M蛋白, method: SPEP, specimen: 血清}}
+  - {id: f.flck.2024-03-07, in: u.9.18.p1, raw: "12.81mg/L", kind: exact, date: d.2024-03-07, attrs: {analyte: 游离轻链κ, specimen: 血清}}
+  - {id: f.flcl.2024-03-07, in: u.9.18.p1, raw: "16.29mg/L", kind: exact, date: d.2024-03-07, attrs: {analyte: 游离轻链λ, specimen: 血清}}
+  - {id: f.ngs.2024-03.text, in: u.9.18.p3, raw: "2.04*10^{-4}", kind: exact, date: d.2024-03-07,
+     attrs: {analyte: 优势克隆比例, method: NGS, specimen: 骨髓}, implied_unit: {unit: fraction, basis: "NGS-MRD 克隆比例"}}
+  - {id: f.ngs.pre_asct.text, in: u.9.18.p3, raw: "3.32*10^{-4}", kind: exact, date: d.vrd_eval,
+     attrs: {analyte: 优势克隆比例, method: NGS, specimen: 骨髓}, implied_unit: {unit: fraction, basis: "NGS-MRD 克隆比例（移植前）"},
+     review: {proposed: {value: 0.000321}, basis: "第8页与第12页 MRD 表均为 3.21×10⁻⁴"}}
+
+  # ---------------- slide 10: extramedullary progression (2024-05-08 / 05-12)
+  - {id: f.mprot.2024-05-08, in: u.10.18.p0, raw: "10.6412g/L", kind: exact, date: d.2024-05-08, attrs: {analyte: M蛋白, method: SPEP, specimen: 血清}}
+  - {id: f.flck.2024-05-08, in: u.10.18.p0, raw: "9.67mg/L", kind: exact, date: d.2024-05-08, attrs: {analyte: 游离轻链κ, specimen: 血清}}
+  - {id: f.flcl.2024-05-08, in: u.10.18.p0, raw: "87.82mg/L", kind: exact, date: d.2024-05-08, attrs: {analyte: 游离轻链λ, specimen: 血清}}
+  - {id: f.ngf.2024-05-08, in: u.10.18.p2, raw: "2.1*10^{-4}", kind: exact, date: d.2024-05-08,
+     attrs: {analyte: 克隆性浆细胞比例, method: NGF, specimen: 骨髓}, implied_unit: {unit: fraction, basis: "单克隆性浆细胞比例"}}
+  - {id: f.suv.scapula.2024-05-08, in: u.10.18.p3, raw: "9.39", kind: exact, date: d.2024-05-08,
+     attrs: {analyte: SUVmax, site: 右侧肩胛骨后方肌肉, tracer: 糖代谢}}
+  - {id: f.size.scapula.2024-05-08, in: u.10.18.p3, raw: "76*54mm", kind: statement, date: d.2024-05-08}
+  - {id: f.site.emd1, in: u.10.18.p3, raw: "右侧肩胛骨后方肌肉肿块", kind: qualitative, date: d.2024-05-08, attrs: {analyte: 髓外病灶部位}}
+  - {id: f.tissue_ngf.2024-05-12, in: u.10.21.p1, raw: "36.4%", kind: exact, date: d.2024-05-12,
+     attrs: {analyte: 克隆性浆细胞比例, method: NGF, specimen: 右肩胛区组织}}
+  - {id: f.bcma.2024-05-12, in: u.10.21.p1, raw: "99%", kind: exact, date: d.2024-05-12,
+     attrs: {analyte: BCMA阳性率, method: 流式, specimen: 右肩胛区组织}}
+  - {id: f.gene.nars, in: u.10.21.p2, raw: "NARS", kind: qualitative, date: d.2024-05-12,
+     review: {proposed: {text: "NRAS"}, basis: "第17页为 NRAS；NARS 不是骨髓瘤常见突变基因"}}
+  - {id: f.mut.nras.2024-05-12, in: u.10.21.p2, raw: "34.8%", kind: exact, date: d.2024-05-12,
+     attrs: {analyte: VAF, gene_fact: f.gene.nars, specimen: 右肩胛区组织}}
+  - {id: f.mut.igll5.2024-05-12, in: u.10.21.p2, raw: "68.10%", kind: exact, date: d.2024-05-12,
+     attrs: {analyte: VAF, gene: IGLL5, specimen: 右肩胛区组织}}
+  - {id: f.mut.tet1.2024-05-12, in: u.10.21.p2, raw: "37.8%", kind: exact, date: d.2024-05-12,
+     attrs: {analyte: VAF, gene: TET1, specimen: 右肩胛区组织}}
+  - {id: f.path.2024.report, img: {slide: 10, shape: 9, file: d65c2753a8f3.png}, kind: statement, date: d.2024-05-12,
+     raw: "病理诊断：（右肩胛区穿刺）浆细胞瘤，浸润肌肉组织生长，请结合骨髓情况。免疫组化(I24-06771)：LCA(-)，MPO(-)，CD138(+)，CD38(+)，EMA(-)，Kappa(-)，Lambda(-)，Plasma Cell(+)，CD56(+)，Bcl-2(-)，Mum1(+)，P53(-)，Ki-67(60%+)，CD19(-)，CD20(-)，CD79a(-)，Pax-5(-)。"}
+
+  # ---------------- slide 11: CAR-T, CRS, IL-6 curve (image)
+  - {id: f.il6.ref, img: {slide: 11, shape: 17, file: d778f8424d8c.png}, kind: statement, raw: "IL-6 参考值≤5.4",
+     review: {issue: "IL-6 未注明单位", basis: "图表标题仅写参考值≤5.4"}}
+  - {id: f.il6.01, img: {slide: 11, shape: 17, file: d778f8424d8c.png}, raw: "1.25", kind: exact, date: {value: "2024-05-18", basis: from_image}, attrs: {analyte: IL-6, specimen: 血清}}
+  - {id: f.il6.02, img: {slide: 11, shape: 17, file: d778f8424d8c.png}, raw: "2.44", kind: exact, date: {value: "2024-05-20", basis: from_image}, attrs: {analyte: IL-6, specimen: 血清}}
+  - {id: f.il6.03, img: {slide: 11, shape: 17, file: d778f8424d8c.png}, raw: "1.64", kind: exact, date: {value: "2024-05-21", basis: from_image}, attrs: {analyte: IL-6, specimen: 血清}}
+  - {id: f.il6.04, img: {slide: 11, shape: 17, file: d778f8424d8c.png}, raw: "3.71", kind: exact, date: {value: "2024-05-22", basis: from_image}, attrs: {analyte: IL-6, specimen: 血清}}
+  - {id: f.il6.05, img: {slide: 11, shape: 17, file: d778f8424d8c.png}, raw: "52.21", kind: exact, date: {value: "2024-05-23", basis: from_image}, attrs: {analyte: IL-6, specimen: 血清}}
+  - {id: f.il6.06, img: {slide: 11, shape: 17, file: d778f8424d8c.png}, raw: "967.49", kind: exact, date: {value: "2024-05-24", basis: from_image}, attrs: {analyte: IL-6, specimen: 血清}}
+  - {id: f.il6.07, img: {slide: 11, shape: 17, file: d778f8424d8c.png}, raw: "624.45", kind: exact, date: {value: "2024-05-25", basis: from_image}, attrs: {analyte: IL-6, specimen: 血清}}
+  - {id: f.il6.08, img: {slide: 11, shape: 17, file: d778f8424d8c.png}, raw: "86.05", kind: exact, date: {value: "2024-05-26", basis: from_image}, attrs: {analyte: IL-6, specimen: 血清}}
+  - {id: f.il6.09, img: {slide: 11, shape: 17, file: d778f8424d8c.png}, raw: "15.54", kind: exact, date: {value: "2024-05-27", basis: from_image}, attrs: {analyte: IL-6, specimen: 血清}}
+  - {id: f.il6.10, img: {slide: 11, shape: 17, file: d778f8424d8c.png}, raw: "22.52", kind: exact, date: {value: "2024-05-28", basis: from_image}, attrs: {analyte: IL-6, specimen: 血清}}
+  - {id: f.il6.11, img: {slide: 11, shape: 17, file: d778f8424d8c.png}, raw: "42.65", kind: exact, date: {value: "2024-05-29", basis: from_image}, attrs: {analyte: IL-6, specimen: 血清}}
+  - {id: f.il6.12, img: {slide: 11, shape: 17, file: d778f8424d8c.png}, raw: "28.95", kind: exact, date: {value: "2024-05-30", basis: from_image}, attrs: {analyte: IL-6, specimen: 血清}}
+  - {id: f.il6.13, img: {slide: 11, shape: 17, file: d778f8424d8c.png}, raw: "19.07", kind: exact, date: {value: "2024-06-01", basis: from_image}, attrs: {analyte: IL-6, specimen: 血清}}
+  - {id: f.il6.14, img: {slide: 11, shape: 17, file: d778f8424d8c.png}, raw: "31.32", kind: exact, date: {value: "2024-06-02", basis: from_image}, attrs: {analyte: IL-6, specimen: 血清}}
+  - {id: f.il6.15, img: {slide: 11, shape: 17, file: d778f8424d8c.png}, raw: "61.81", kind: exact, date: {value: "2024-06-02", basis: from_image}, attrs: {analyte: IL-6, specimen: 血清},
+     review: {proposed: {date: "2024-06-03"}, basis: "横轴上 2024/06/02 出现两次，且缺少 06/03"}}
+  - {id: f.il6.16, img: {slide: 11, shape: 17, file: d778f8424d8c.png}, raw: "68.43", kind: exact, date: {value: "2024-06-04", basis: from_image}, attrs: {analyte: IL-6, specimen: 血清}}
+  - {id: f.crs.grade, in: u.11.15.p0, raw: "CRS反应2级", kind: qualitative, date: d.crs, attrs: {analyte: CRS分级}}
+
+  # ---------------- slide 12: post CAR-T assessments + MRD table (image)
+  - {id: f.mprot.2024-06-20, in: u.12.14.p0, raw: "3.4017g/L", kind: exact, date: d.2024-06-20, attrs: {analyte: M蛋白, method: SPEP, specimen: 血清}}
+  - {id: f.flck.2024-06-20, in: u.12.14.p0, raw: "0.58mg/L", kind: exact, date: d.2024-06-20, attrs: {analyte: 游离轻链κ, specimen: 血清}}
+  - {id: f.flcl.2024-06-20, in: u.12.14.p0, raw: "1.33mg/L", kind: exact, date: d.2024-06-20, attrs: {analyte: 游离轻链λ, specimen: 血清}}
+  - {id: f.ngf.2024-06-20, in: u.12.14.p2, raw: "<2.8*10^{-5}", kind: bound, date: d.2024-06-20,
+     attrs: {analyte: 克隆性浆细胞比例, method: NGF, specimen: 骨髓, result: 未见浆细胞}, implied_unit: {unit: fraction, basis: "检测灵敏度（70w细胞）"}}
+  - {id: f.ngs.2024-06-20.text, in: u.12.14.p3, raw: "阴性", kind: not_detected, date: d.2024-06-20,
+     attrs: {analyte: 优势克隆比例, method: NGS, specimen: 骨髓}}
+  - {id: f.suv.scapula.2024-06-20, in: u.12.14.p4, raw: "2.1", kind: exact, date: d.2024-06-20,
+     attrs: {analyte: SUVmax, site: 右侧肩胛骨后方肌肉, tracer: 糖代谢}}
+  - {id: f.mprot.2024-09-11, in: u.12.15.p0, raw: "0.0806g/L", kind: exact, date: d.2024-09-11, attrs: {analyte: M蛋白, method: SPEP, specimen: 血清}}
+  - {id: f.flck.2024-09-11, in: u.12.15.p0, raw: "0.56mg/L", kind: exact, date: d.2024-09-11, attrs: {analyte: 游离轻链κ, specimen: 血清}}
+  - {id: f.flcl.2024-09-11, in: u.12.15.p0, raw: "1.32mg/L", kind: exact, date: d.2024-09-11, attrs: {analyte: 游离轻链λ, specimen: 血清}}
+  - {id: f.pet.2024-09-11, in: u.12.15.p1, raw: "未伴葡萄糖代谢增高", kind: qualitative, date: d.2024-09-11, attrs: {analyte: PET代谢, tracer: 糖代谢}}
+  - {id: f.mprot.2024-12-10, in: u.12.17.p0, raw: "阴性", kind: not_detected, date: d.2024-12-10, attrs: {analyte: M蛋白, method: SPEP, specimen: 血清}}
+  - {id: f.flck.2024-12-10, in: u.12.17.p0, raw: "1.25mg/L", kind: exact, date: d.2024-12-10, attrs: {analyte: 游离轻链κ, specimen: 血清}}
+  - {id: f.flcl.2024-12-10, in: u.12.17.p0, raw: "2.9mg/L", kind: exact, date: d.2024-12-10, attrs: {analyte: 游离轻链λ, specimen: 血清}}
+  - {id: f.resp.scr, in: u.12.17.p0, raw: "sCR", kind: qualitative, date: d.2024-12-10, attrs: {analyte: 疗效评估}}
+  - {id: f.ngs.img.base, img: {slide: 12, shape: 28, file: f9ba58bdc203.png}, raw: "1.46E-01", kind: exact,
+     date: {value: "2023-06-28", basis: from_image}, attrs: {analyte: 优势克隆比例, method: NGS, specimen: 骨髓},
+     implied_unit: {unit: fraction, basis: "表头“优势克隆1”比例"}}
+  - {id: f.ngs.img.1, img: {slide: 12, shape: 28, file: f9ba58bdc203.png}, raw: "3.21E-04", kind: exact,
+     date: {value: "2023-10-12", basis: from_image}, attrs: {analyte: 优势克隆比例, method: NGS, specimen: 骨髓},
+     implied_unit: {unit: fraction, basis: "表头“优势克隆1”比例"}}
+  - {id: f.ngs.img.2, img: {slide: 12, shape: 28, file: f9ba58bdc203.png}, raw: "2.04E-04", kind: exact,
+     date: {value: "2024-03-11", basis: from_image}, attrs: {analyte: 优势克隆比例, method: NGS, specimen: 骨髓},
+     implied_unit: {unit: fraction, basis: "表头“优势克隆1”比例"}}
+  - {id: f.ngs.img.3, img: {slide: 12, shape: 28, file: f9ba58bdc203.png}, raw: "0", kind: not_detected,
+     date: {value: "2024-06-19", basis: from_image}, attrs: {analyte: 优势克隆比例, method: NGS, specimen: 骨髓}}
+  - {id: f.ngs.img.4, img: {slide: 12, shape: 28, file: f9ba58bdc203.png}, raw: "0", kind: not_detected,
+     date: {value: "2024-09-11", basis: from_image}, attrs: {analyte: 优势克隆比例, method: NGS, specimen: 骨髓}}
+  - {id: f.ngs.img.5, img: {slide: 12, shape: 28, file: f9ba58bdc203.png}, raw: "0", kind: not_detected,
+     date: {value: "2024-12-16", basis: from_image}, attrs: {analyte: 优势克隆比例, method: NGS, specimen: 骨髓}}
+  - {id: f.ngs.img.6, img: {slide: 12, shape: 28, file: f9ba58bdc203.png}, raw: "0", kind: not_detected,
+     date: {value: "2025-05-28", basis: from_image}, attrs: {analyte: 优势克隆比例, method: NGS, specimen: 骨髓}}
+
+  # ---------------- slide 13: breast / iliac relapse (2025.09)
+  - {id: f.site.emd2.breast, in: u.13.8.p2, raw: "左侧乳腺内侧象限软组织肿物", kind: qualitative, date: d.2025-09, attrs: {analyte: 髓外病灶部位}}
+  - {id: f.site.emd2.iliac, in: u.13.8.p2, raw: "髂骨右翼", kind: qualitative, date: d.2025-09, attrs: {analyte: 病灶部位}}
+  - {id: f.suv.breast.2025-09, in: u.13.8.p2, raw: "3.73", kind: exact, date: d.2025-09,
+     attrs: {analyte: SUVmax, site: 左侧乳腺内侧象限, tracer: CXCR4}}
+  - {id: f.suv.iliac.2025-09, in: u.13.8.p2, raw: "5.32", kind: exact, date: d.2025-09,
+     attrs: {analyte: SUVmax, site: 髂骨右翼, tracer: CXCR4}}
+  - {id: f.birads.9, in: u.13.8.p1, raw: "BI-RADS 4b类", kind: qualitative, date: d.2025-09, attrs: {analyte: BI-RADS, site: 左乳9点钟}}
+
+  # ---------------- slide 15: subcutaneous / inguinal relapse (2026.01)
+  - {id: f.site.emd3.abd, in: u.15.8.p1, raw: "右侧腹皮下肿物", kind: qualitative, date: d.2026-01, attrs: {analyte: 髓外病灶部位}}
+  - {id: f.site.emd3.groin, in: u.15.8.p1, raw: "右侧腹股沟肿大淋巴结", kind: qualitative, date: d.2026-01, attrs: {analyte: 髓外病灶部位}}
+  - {id: f.site.emd3.arm, in: u.15.8.p3, raw: "左侧上臂皮下异常回声", kind: qualitative, date: d.2026-01, attrs: {analyte: 髓外病灶部位}}
+  - {id: f.spep_pct.2026-01, in: u.15.12.r1c1, raw: "3.6%", kind: exact, date: d.2026-01.lab, attrs: {analyte: M蛋白, method: SPEP, specimen: 血清}}
+  - {id: f.flck.2026-01, in: u.15.12.r2c1, raw: "7.07", kind: exact, date: d.2026-01.lab, attrs: {analyte: 游离轻链κ, specimen: 血清},
+     implied_unit: {unit: mg/L, basis: "同一单元格“κ 7.07 / λ 15.1 mg/L”共用单位"}}
+  - {id: f.flcl.2026-01, in: u.15.12.r2c1, raw: "15.1 mg/L", kind: exact, date: d.2026-01.lab, attrs: {analyte: 游离轻链λ, specimen: 血清}}
+  - {id: f.flcr.2026-01, in: u.15.12.r2c1, raw: "0.47", kind: exact, date: d.2026-01.lab, attrs: {analyte: κ/λ比值, specimen: 血清}}
+  - {id: f.ngf.2026-01, in: u.15.12.r5c1, raw: "1.2×10^{-3}", kind: exact, date: d.2026-01.lab,
+     attrs: {analyte: 克隆性浆细胞比例, method: NGF, specimen: 骨髓}, implied_unit: {unit: fraction, basis: "MM免疫分型克隆比例"}}
+
+  # ---------------- slide 17: pathology 2026.01
+  - {id: f.ihc.cmyc.2026-01, in: u.17.8.r3c1, raw: "70%", kind: exact, date: d.2026-01.path, attrs: {analyte: C-myc阳性率, method: IHC, specimen: 左上臂组织}}
+  - {id: f.ihc.ki67.2026-01, in: u.17.8.r4c1, raw: "90%", kind: exact, date: d.2026-01.path, attrs: {analyte: Ki-67阳性率, method: IHC, specimen: 左上臂组织}}
+  - {id: f.bcma.2026-01, in: u.17.8.r5c1, raw: "93.8%", kind: exact, date: d.2026-01.path, attrs: {analyte: BCMA阳性率, method: IHC, specimen: 左上臂组织}}
+  - {id: f.fish.13q14.2026-01, in: u.17.12.r1c1, raw: "90%", kind: exact, date: d.2026-01.path, attrs: {analyte: 13q14缺失, method: FISH, specimen: 左上臂组织}}
+  - {id: f.fish.rb1.2026-01, in: u.17.12.r2c1, raw: "90%", kind: exact, date: d.2026-01.path, attrs: {analyte: Rb1缺失, method: FISH, specimen: 左上臂组织}}
+  - {id: f.fish.1q21.2026-01, in: u.17.12.r3c1, raw: "90%", kind: exact, date: d.2026-01.path, attrs: {analyte: 1q21扩增, method: FISH, specimen: 左上臂组织}}
+  - {id: f.fish.1q21cn.2026-01, in: u.17.12.r3c1, raw: "4个拷贝数", kind: statement, date: d.2026-01.path}
+  - {id: f.fish.fgfr3.2026-01, in: u.17.12.r4c1, raw: "90%", kind: exact, date: d.2026-01.path, attrs: {analyte: FGFR3/IgH重排, method: FISH, specimen: 左上臂组织}}
+  - {id: f.fish.p53.2026-01, in: u.17.12.r5c1, raw: "阴性", kind: not_detected, date: d.2026-01.path, attrs: {analyte: P53缺失, method: FISH, specimen: 左上臂组织}}
+  - {id: f.mut.nras.2026-01, in: u.17.13.p0, raw: "43.2%", kind: exact, date: d.2026-01.path, attrs: {analyte: VAF, gene: NRAS, specimen: 左上臂组织}}
+  - {id: f.mut.igll5.2026-01, in: u.17.13.p0, raw: "80.9%", kind: exact, date: d.2026-01.path, attrs: {analyte: VAF, gene: IGLL5, specimen: 左上臂组织}}
+  - {id: f.path.blastoid, in: u.17.5.p0, raw: "母细胞样", kind: qualitative, date: d.2026-01.path, attrs: {analyte: 病理形态}}
+
+  # ---------------- slide 19: 2026.06 admission
+  - {id: f.wbc.2026-06-02, in: u.19.8.r1c1, raw: "4.07×10⁹/L", kind: exact, date: d.2026-06-02, attrs: {analyte: WBC, specimen: 血}}
+  - {id: f.hb.2026-06-02, in: u.19.8.r1c1, raw: "74g/L", kind: exact, date: d.2026-06-02, attrs: {analyte: Hb, specimen: 血}}
+  - {id: f.plt.2026-06-02, in: u.19.8.r1c1, raw: "83×10⁹/L", kind: exact, date: d.2026-06-02, attrs: {analyte: PLT, specimen: 血}}
+  - {id: f.crp.2026-06-02, in: u.19.8.r2c1, raw: "15.69mg/L", kind: exact, date: d.2026-06-02, attrs: {analyte: CRP, specimen: 血}}
+  - {id: f.humoral.2026-06, in: u.19.12.r1c1, raw: "κ 163.00，λ 72.70", kind: statement, date: d.2026-06-02,
+     review: {issue: "体液免疫 κ、λ、IgA、IgG、IgM 均未注明单位", basis: "单位缺失，无法与血清游离轻链（mg/L）比较"}}
+  - {id: f.cmv.2026-06, in: u.19.12.r2c1, raw: "6.87×10^{2}", kind: exact, date: d.2026-06-02, attrs: {analyte: CMV-DNA, specimen: 血},
+     review: {issue: "CMV-DNA 未注明单位", basis: "拷贝数单位缺失"}}
+  - {id: f.troponin.2026-06, in: u.19.8.r4c1, raw: "3.55", kind: exact, date: d.2026-06-02, attrs: {analyte: 肌钙蛋白T},
+     review: {issue: "肌钙蛋白T、BNP前体未注明单位", basis: "第19、20页均无单位"}}
+
+  # ---------------- slide 20: 2026.08 admission and report
+  - {id: f.crp.2026-08-22, in: u.20.8.r1c1, raw: "4.36mg/L", kind: exact, date: d.2026-08-22, attrs: {analyte: CRP, specimen: 血}}
+  - {id: f.wbc.2026-08-22, in: u.20.8.r1c1, raw: "6.27×10^{9}/L", kind: exact, date: d.2026-08-22, attrs: {analyte: WBC, specimen: 血}}
+  - {id: f.hb.2026-08-22, in: u.20.8.r1c1, raw: "110g/L", kind: exact, date: d.2026-08-22, attrs: {analyte: Hb, specimen: 血}}
+  - {id: f.plt.2026-08-22, in: u.20.8.r1c1, raw: "68×10^{9}/L", kind: exact, date: d.2026-08-22, attrs: {analyte: PLT, specimen: 血}}
+  - {id: f.ife.2026-08-24, in: u.20.12.r1c1, raw: "全阴性", kind: not_detected, date: d.2026-08-24, attrs: {analyte: 免疫固定电泳, specimen: 血清}}
+  - {id: f.spep_pct.2026-08-24, in: u.20.12.r2c1, raw: "<0.1%", kind: bound, date: d.2026-08-24, attrs: {analyte: M蛋白, method: SPEP, specimen: 血清}}
+  - {id: f.flck.2026-08-24, in: u.20.12.r3c1, raw: "0.57", kind: exact, date: d.2026-08-24, attrs: {analyte: 游离轻链κ, specimen: 血清},
+     review: {proposed: {unit: mg/L}, basis: "原文未注明单位；按此前同类检测推定为 mg/L"}}
+  - {id: f.flcl.2026-08-24, in: u.20.12.r3c1, raw: "1.35", kind: exact, date: d.2026-08-24, attrs: {analyte: 游离轻链λ, specimen: 血清},
+     review: {proposed: {unit: mg/L}, basis: "原文未注明单位；按此前同类检测推定为 mg/L"}}
+  - {id: f.flcr.2026-08-24, in: u.20.12.r3c1, raw: "0.42", kind: exact, date: d.2026-08-24, attrs: {analyte: κ/λ比值, specimen: 血清}}
+
+  # ---------------- slide 21 / 18: wording that needs confirmation
+  - {id: f.sum.p_abbrev, in: u.21.7.p2, raw: "P", kind: qualitative,
+     review: {proposed: {text: "泊马度胺（P）"}, basis: "第12页“CART后予以泊马度胺维持治疗”"}}
+
+  # ---------------- literature: native chart (slide 25) and image-derived data (26, 28, 29)
+  - {id: f.lit.orr.pr, in: u.25.3.s0v0, raw: "6.4", kind: exact, attrs: {analyte: 缓解构成, category: PR, study: MM3-US}, implied_unit: {unit: "%", basis: "图表单位为患者百分比"}}
+  - {id: f.lit.orr.vgpr, in: u.25.3.s1v0, raw: "17.0", kind: exact, attrs: {analyte: 缓解构成, category: VGPR, study: MM3-US}, implied_unit: {unit: "%", basis: "同上"}}
+  - {id: f.lit.orr.cr, in: u.25.3.s2v0, raw: "14.9", kind: exact, attrs: {analyte: 缓解构成, category: CR, study: MM3-US}, implied_unit: {unit: "%", basis: "同上"}}
+  - {id: f.lit.orr.scr, in: u.25.3.s3v0, raw: "27.7", kind: exact, attrs: {analyte: 缓解构成, category: sCR, study: MM3-US}, implied_unit: {unit: "%", basis: "同上"}}
+  - {id: f.lit.orr.total, in: u.25.9.p0, raw: "66.0%", kind: exact, attrs: {analyte: ORR, study: MM3-US}}
+  - {id: f.lit.orr.vgpr_plus, in: u.25.6.p1, raw: "59.6%", kind: exact, attrs: {analyte: ≥VGPR, study: MM3-US}}
+  - {id: f.lit.orr.cr_plus, in: u.25.8.p1, raw: "42.6%", kind: exact, attrs: {analyte: ≥CR, study: MM3-US}}
+  - {id: f.lit.dor.median, in: u.26.16.p0, raw: "40.8个月", kind: exact, attrs: {analyte: 中位DOR, study: MM3-US}}
+  - {id: f.lit.dor.at_risk, img: {slide: 26, shape: 3, file: c45f2a503df2.png}, kind: statement,
+     raw: "No. at risk（0,3,…,42 月）：31, 27, 24, 20, 18, 16, 14, 13, 11, 11, 10, 10, 10, 3, 0"}
+  - {id: f.lit.bor.interrupt, img: {slide: 28, shape: 8, file: d2d3c0054988.png}, kind: statement,
+     raw: "治疗中断/停药时：sCR 16.7%，CR 26.7%，VGPR 26.7%，PR 16.7%，MR 3.3%，SD 10.0%；ORR 86.7%（95% CI 69.3-96.2），≥CR 43.3%"}
+  - {id: f.lit.bor.anytime, img: {slide: 28, shape: 8, file: d2d3c0054988.png}, kind: statement,
+     raw: "任何时间：sCR 20.0%，CR 40.0%，VGPR 33.3%，PR 6.7%；ORR 100%（95% CI 88.4-100），≥CR 60.0%"}
+  - {id: f.lit.pfs.at_risk, img: {slide: 29, shape: 3, file: b4008a33270a.png}, kind: statement,
+     raw: "PFS 存在风险人数（0,3,…,51 月）：30,30,30,30,29,29,27,25,23,21,20,18,17,16,14,10,1,0"}
+  - {id: f.lit.os.at_risk, img: {slide: 29, shape: 3, file: b4008a33270a.png}, kind: statement,
+     raw: "OS 存在风险人数（0,3,…,51 月）：30,30,30,30,29,29,28,27,24,23,23,22,20,19,18,16,4,0"}

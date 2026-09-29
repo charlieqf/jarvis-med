@@ -6,3 +6,4 @@ dist/
 .env.*
 .DS_Store
 ~$*.pptx
+.pytest_cache/
