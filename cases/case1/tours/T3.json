@@ -1,7 +1,7 @@
 {
  "id": "T3",
  "question": "患者有哪些高危因素？髓外病灶出现在哪些部位？",
- "content_version": "d61d7ae723d6",
+ "content_version": "04fecac0b202",
  "reviewed_by": null,
  "steps": [
   {
@@ -74,7 +74,6 @@
      "text": "2024.05.08 右侧肩胛骨后方肌肉肿块（SUVmax 9.39）",
      "cite": [
       "f.site.emd1",
-      "f.site.emd1",
       "f.suv.scapula.2024-05-08"
      ],
      "flags": []
@@ -125,7 +124,6 @@
      "text": "2025.09 左侧乳腺内侧象限软组织肿物、髂骨右翼（CXCR4 显像）",
      "cite": [
       "f.site.emd2.breast",
-      "f.site.emd2.breast",
       "f.site.emd2.iliac"
      ],
      "flags": []
@@ -136,15 +134,15 @@
   {
    "id": "T3.s4",
    "seq": 3,
-   "camera": "b.img.emd3_arm",
+   "camera": "b.bodymap",
    "title": "第三次：皮下与腹股沟",
    "actions": [
     {
      "op": "bodyMap",
      "targets": [
-      "b.img.emd3_arm.h1",
-      "b.img.emd3_abd.h1",
-      "b.img.emd3_groin.h1"
+      "b.bodymap.arm",
+      "b.bodymap.abd",
+      "b.bodymap.groin"
      ]
     },
     {
@@ -162,7 +160,6 @@
      "type": "value",
      "text": "2026.01 右侧腹皮下肿物、右侧腹股沟肿大淋巴结、左侧上臂皮下异常回声",
      "cite": [
-      "f.site.emd3.abd",
       "f.site.emd3.abd",
       "f.site.emd3.groin",
       "f.site.emd3.arm"
@@ -259,7 +256,6 @@
    "type": "value",
    "cite": [
     "f.site.emd1",
-    "f.site.emd1",
     "f.suv.scapula.2024-05-08"
    ],
    "flags": [],
@@ -270,7 +266,6 @@
    "type": "value",
    "cite": [
     "f.site.emd2.breast",
-    "f.site.emd2.breast",
     "f.site.emd2.iliac"
    ],
    "flags": [],
@@ -280,7 +275,6 @@
    "claim": "T3.s4.c0",
    "type": "value",
    "cite": [
-    "f.site.emd3.abd",
     "f.site.emd3.abd",
     "f.site.emd3.groin",
     "f.site.emd3.arm"

@@ -93,7 +93,7 @@ class Ctx:
                     reg[node["id"]] = node.get("type") or kind
                 for k, v in node.items():
                     walk(v, {"events": "event", "phases": "phase", "series": "series", "annotations": "annotation",
-                             "rows": "row", "groups": "group"}.get(k, kind))
+                             "rows": "row", "groups": "group", "pins": "pin"}.get(k, kind))
             elif isinstance(node, list):
                 for v in node:
                     walk(v, kind)
@@ -234,7 +234,7 @@ class Ctx:
         for e in ENTITIES:
             if e in free and e not in src:
                 raise CompileError(f"{cid}: entity {e!r} in template is not in the cited facts")
-        return {"claim": cid, "type": t, "text": text, "cite": cite, "flags": sorted(flags)}
+        return {"claim": cid, "type": t, "text": text, "cite": list(dict.fromkeys(cite)), "flags": sorted(flags)}
 
     # ------------------------------------------------------------ steps
 
@@ -255,7 +255,7 @@ class Ctx:
         allowed = {"chartDraw": {"series", "stacked_bar"}, "pointPulse": {"fact"}, "phaseHighlight": {"phase"},
                    "drawHotspot": {"annotation"}, "imageOpen": {"image"}, "compareRow": {"row"},
                    "rowFlash": {"table_row"}, "cellZoom": {"fact"}, "showSource": {"fact"},
-                   "countUp": {"fact"}, "timelineSweep": {"event"}, "bodyMap": {"annotation"}}.get(op)
+                   "countUp": {"fact"}, "timelineSweep": {"event"}, "bodyMap": {"pin"}}.get(op)
         for t in targets:
             self.check_target(where, t, allowed)
         if op == "pointPulse" and any(t not in self.series_facts for t in targets):

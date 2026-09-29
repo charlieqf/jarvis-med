@@ -124,6 +124,15 @@
       {"id": "b.s.crp", "label": "CRP", "scale": "linear", "points": [{"fact": "f.crp.2026-06-02"}, {"fact": "f.crp.2026-08-22"}]}
     ]},
 
+    {"id": "b.bodymap", "section": "sec.imaging", "type": "body_map", "label": "髓外病灶部位示意（人体图为示意，非患者影像）",
+     "pins": [
+       {"id": "b.bodymap.scapula", "region": "right_scapula", "annotation": "b.img.emd1_ct.h1", "facts": ["f.site.emd1"], "date": "d.2024-05-08"},
+       {"id": "b.bodymap.breast",  "region": "left_breast",   "annotation": "b.img.emd2_breast.h1", "facts": ["f.site.emd2.breast"], "date": "d.2025-09"},
+       {"id": "b.bodymap.iliac",   "region": "right_iliac",   "annotation": "b.img.emd2_iliac.h1", "facts": ["f.site.emd2.iliac"], "date": "d.2025-09"},
+       {"id": "b.bodymap.arm",     "region": "left_upper_arm", "annotation": "b.img.emd3_arm.h1", "facts": ["f.site.emd3.arm"], "date": "d.2026-01"},
+       {"id": "b.bodymap.abd",     "region": "right_abdominal_wall", "annotation": "b.img.emd3_abd.h1", "facts": ["f.site.emd3.abd"], "date": "d.2026-01"},
+       {"id": "b.bodymap.groin",   "region": "right_groin",   "annotation": "b.img.emd3_groin.h1", "facts": ["f.site.emd3.groin"], "date": "d.2026-01"}
+     ]},
     {"id": "b.img.emd1_ct", "section": "sec.imaging", "type": "image", "slide": 10, "shape": 8, "label": "胸部 CT · 右肩胛区肿块",
      "annotations": [{"id": "b.img.emd1_ct.h1", "shape": 10, "facts": ["f.site.emd1", "f.suv.scapula.2024-05-08", "f.size.scapula.2024-05-08"]}]},
     {"id": "b.img.path2024", "section": "sec.imaging", "type": "image", "slide": 10, "shape": 9, "label": "右肩胛区穿刺病理", "facts": ["f.path.2024.report"]},

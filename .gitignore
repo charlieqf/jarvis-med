@@ -9,3 +9,4 @@ dist/
 .pytest_cache/
 web/public/cases/
 node_modules/
+web/dist/

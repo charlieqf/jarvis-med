@@ -1,7 +1,7 @@
 {
  "id": "T4",
  "question": "BCMA CAR-T 治疗的效果和不良反应如何？",
- "content_version": "d61d7ae723d6",
+ "content_version": "04fecac0b202",
  "reviewed_by": null,
  "steps": [
   {
@@ -71,7 +71,6 @@
      "type": "value",
      "text": "IL-6 峰值 967.49，出现在 2024.05.24",
      "cite": [
-      "f.il6.06",
       "f.il6.06"
      ],
      "flags": [
@@ -131,7 +130,6 @@
      "type": "value",
      "text": "2024.06.20 BM-NGS-MRD 阴性；BM-NGF-MRD <2.8×10⁻⁵",
      "cite": [
-      "f.ngs.2024-06-20.text",
       "f.ngs.2024-06-20.text",
       "f.ngf.2024-06-20"
      ],
@@ -199,8 +197,7 @@
      "text": "2024.12.10 M蛋白 阴性，疗效评估 sCR",
      "cite": [
       "f.resp.scr",
-      "f.mprot.2024-12-10",
-      "f.resp.scr"
+      "f.mprot.2024-12-10"
      ],
      "flags": []
     }
@@ -231,7 +228,6 @@
    "claim": "T4.s2.c0",
    "type": "value",
    "cite": [
-    "f.il6.06",
     "f.il6.06"
    ],
    "flags": [
@@ -264,7 +260,6 @@
    "type": "value",
    "cite": [
     "f.ngs.2024-06-20.text",
-    "f.ngs.2024-06-20.text",
     "f.ngf.2024-06-20"
    ],
    "flags": [],
@@ -285,8 +280,7 @@
    "type": "value",
    "cite": [
     "f.resp.scr",
-    "f.mprot.2024-12-10",
-    "f.resp.scr"
+    "f.mprot.2024-12-10"
    ],
    "flags": [],
    "result": "pass"

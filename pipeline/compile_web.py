@@ -61,6 +61,8 @@ def main(case_dir):
         rec = {k: f.get(k) for k in ("id", "type", "kind", "raw", "origin", "attrs", "excluded") if f.get(k) is not None}
         loc = f.get("loc") or {}
         rec["slide"] = loc.get("slide")
+        if f["type"] == "unit":  # where the text sits on the original slide (for "show source")
+            rec["bbox"] = shapes[(loc["slide"], loc["shape"])]["bbox"]
         if "unit" in loc and f["type"] != "unit":
             rec["unit"], rec["span"] = loc["unit"], loc["span"]
             inner.setdefault(loc["unit"], []).append(f["id"])

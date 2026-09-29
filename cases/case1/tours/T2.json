@@ -1,7 +1,7 @@
 {
  "id": "T2",
  "question": "M 蛋白、游离轻链和 MRD 在各治疗阶段是怎么变化的？",
- "content_version": "d61d7ae723d6",
+ "content_version": "04fecac0b202",
  "reviewed_by": null,
  "steps": [
   {
@@ -65,8 +65,6 @@
      "text": "2024.03.07 M蛋白 3.7996g/L；2024.05.08 升至 10.6412g/L",
      "cite": [
       "f.mprot.2024-03-07",
-      "f.mprot.2024-03-07",
-      "f.mprot.2024-05-08",
       "f.mprot.2024-05-08"
      ],
      "flags": []
@@ -100,7 +98,6 @@
      "type": "value",
      "text": "2024.12.10 M蛋白 阴性，疗效评估 sCR",
      "cite": [
-      "f.mprot.2024-12-10",
       "f.mprot.2024-12-10",
       "f.resp.scr"
      ],
@@ -182,7 +179,6 @@
      "cite": [
       "f.ngs.img.base",
       "f.ngs.img.3",
-      "f.ngs.img.3",
       "u.8.9.p4"
      ],
      "flags": [
@@ -224,8 +220,6 @@
      "text": "血清蛋白电泳 M蛋白：2026.01 3.6%；2026.08.24 <0.1%，免疫固定电泳 全阴性",
      "cite": [
       "f.spep_pct.2026-01",
-      "f.spep_pct.2026-01",
-      "f.spep_pct.2026-08-24",
       "f.spep_pct.2026-08-24",
       "f.ife.2026-08-24",
       "u.20.12.r2c0"
@@ -253,8 +247,6 @@
    "type": "value",
    "cite": [
     "f.mprot.2024-03-07",
-    "f.mprot.2024-03-07",
-    "f.mprot.2024-05-08",
     "f.mprot.2024-05-08"
    ],
    "flags": [],
@@ -264,7 +256,6 @@
    "claim": "T2.s3.c0",
    "type": "value",
    "cite": [
-    "f.mprot.2024-12-10",
     "f.mprot.2024-12-10",
     "f.resp.scr"
    ],
@@ -288,7 +279,6 @@
    "cite": [
     "f.ngs.img.base",
     "f.ngs.img.3",
-    "f.ngs.img.3",
     "u.8.9.p4"
    ],
    "flags": [
@@ -301,8 +291,6 @@
    "type": "value",
    "cite": [
     "f.spep_pct.2026-01",
-    "f.spep_pct.2026-01",
-    "f.spep_pct.2026-08-24",
     "f.spep_pct.2026-08-24",
     "f.ife.2026-08-24",
     "u.20.12.r2c0"

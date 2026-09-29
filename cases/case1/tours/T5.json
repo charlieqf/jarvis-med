@@ -1,7 +1,7 @@
 {
  "id": "T5",
  "question": "为什么选择埃纳妥单抗联合兆珂速？目前疗效如何？文献证据是什么？",
- "content_version": "d61d7ae723d6",
+ "content_version": "04fecac0b202",
  "reviewed_by": null,
  "steps": [
   {
@@ -147,7 +147,6 @@
      "type": "value",
      "text": "2026.08.24 免疫固定电泳 全阴性；M蛋白 <0.1%；κ/λ 0.42",
      "cite": [
-      "f.ife.2026-08-24",
       "f.ife.2026-08-24",
       "f.spep_pct.2026-08-24",
       "f.flcr.2026-08-24"
@@ -322,7 +321,6 @@
    "claim": "T5.s4.c0",
    "type": "value",
    "cite": [
-    "f.ife.2026-08-24",
     "f.ife.2026-08-24",
     "f.spep_pct.2026-08-24",
     "f.flcr.2026-08-24"

@@ -1,7 +1,7 @@
 {
  "id": "T1",
  "question": "这位患者 3 年多的治疗历程是怎样的？",
- "content_version": "d61d7ae723d6",
+ "content_version": "04fecac0b202",
  "reviewed_by": null,
  "steps": [
   {
@@ -154,7 +154,6 @@
      "text": "2024.05.17 回输 BCMA CAR-T；2024.12.10 疗效评估 sCR",
      "cite": [
       "d.2024-05-17",
-      "f.resp.scr",
       "f.resp.scr",
       "u.11.11.p0"
      ],
@@ -316,7 +315,6 @@
    "type": "value",
    "cite": [
     "d.2024-05-17",
-    "f.resp.scr",
     "f.resp.scr",
     "u.11.11.p0"
    ],

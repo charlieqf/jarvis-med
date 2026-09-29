@@ -36,9 +36,9 @@ steps:
 
   - id: s4
     title: 第三次：皮下与腹股沟
-    camera: b.img.emd3_arm
+    camera: b.bodymap
     actions:
-      - {op: bodyMap, targets: [b.img.emd3_arm.h1, b.img.emd3_abd.h1, b.img.emd3_groin.h1]}
+      - {op: bodyMap, targets: [b.bodymap.arm, b.bodymap.abd, b.bodymap.groin]}
       - {op: drawHotspot, targets: [b.img.emd3_arm.h1, b.img.emd3_abd.h1, b.img.emd3_groin.h1]}
     claims:
       - {type: value, template: "{{date:f.site.emd3.abd}} {{f.site.emd3.abd}}、{{f.site.emd3.groin}}、{{f.site.emd3.arm}}"}
