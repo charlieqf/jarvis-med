@@ -17,7 +17,7 @@ export function Sidebar() {
             <li key={t.id}>
               <button className={state.tour?.id === t.id ? 'on' : ''} onClick={() => play(t, { via: 'click' })} disabled={stale}>
                 <span className="tid">{t.id}</span>{t.question}
-                {stale ? <em className="badge badge-pending">待重审</em> : !t.reviewed_by && <em className="badge badge-issue">计划待审</em>}
+                {stale && <em className="badge badge-pending">待重审</em>}
               </button>
             </li>
           )

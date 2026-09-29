@@ -1,9 +1,10 @@
 import { Fragment, useEffect, useMemo, useRef, useState } from 'react'
 import { SeriesChart, StackedBar } from './charts'
+import { Timeline } from './timeline'
 import { asset, dateLabel } from './data'
 import { useFlags, useStage } from './stage'
 import type { Block, CompareRow, Pin } from './types'
-import { Badges, FactValue, SourceChip, Title, UnitText, useUI } from './ui'
+import { FactValue, SourceChip, Title, UnitText, useUI } from './ui'
 
 export function BlockView({ block }: { block: Block }) {
   switch (block.type) {
@@ -76,91 +77,6 @@ function Row({ anchor, cells, head }: { anchor: string; cells: (string | null)[]
     <tr data-anchor={anchor} key={f.epoch} className={f.row ? 'is-row' : ''}>
       {cells.map((c, i) => <Cell key={i}>{c ? <UnitText id={c} /> : null}</Cell>)}
     </tr>
-  )
-}
-
-// ------------------------------------------------------------------ timeline
-
-const T0 = Date.UTC(2023, 0, 1), T1 = Date.UTC(2026, 9, 1)
-function ms(iso?: string) {
-  if (!iso) return T0
-  const [y, m = '6', d = '15'] = iso.split('-')
-  return Date.UTC(+y, +m - 1, +d)
-}
-const xPct = (iso?: string) => ((ms(iso) - T0) / (T1 - T0)) * 100
-const PHASE_COLORS = ['#dbe7f6', '#e3ecd9', '#f3e6d2', '#d9eef2', '#e8e0f2', '#f4dcd6', '#d6ecec']
-
-function Timeline({ b }: { b: Block }) {
-  const { bundle, state } = useStage()
-  const phases = bundle.blocks.find(x => x.type === 'phases')!.phases!
-  const events = b.events!
-  const [open, setOpen] = useState<string | null>(null)
-  const v = state.visual
-  const sweep = v.sweep ? [xPct(bundle.facts[events.find(e => e.id === v.sweep![0])!.date].eff.date),
-    xPct(bundle.facts[events.find(e => e.id === v.sweep![1])!.date].eff.date)] : null
-  const lit = (d?: string) => sweep ? xPct(d) >= sweep[0] - 0.01 && xPct(d) <= sweep[1] + 0.01 : false
-  const years = [2023, 2024, 2025, 2026]
-  const f = useFlags(b.id)
-  const shown = v.pulse.filter(id => events.some(e => e.id === id))
-  const detail = open ?? (shown.length === 1 ? shown[0] : null)
-  const orbit = useRef<HTMLDivElement>(null)
-  // follow the sweep / pulsed events horizontally
-  const focusPct = sweep ? sweep[0] : shown.length ? xPct(bundle.facts[events.find(e => e.id === shown[0])!.date].eff.date) : null
-  useEffect(() => {
-    const o = orbit.current
-    if (!o || focusPct == null) return
-    const plane = o.firstElementChild as HTMLElement
-    o.scrollTo({ left: Math.max(0, (focusPct / 100) * plane.offsetWidth - o.clientWidth * 0.2), behavior: 'smooth' })
-  }, [focusPct, state.epoch])
-
-  return (
-    <section data-anchor={b.id} key={f.epoch} className={`card timeline-card ${f.spot ? 'is-spot' : ''}`}>
-      <div className="card-head"><h3 className="block-title">治疗时间轴 · 轨道视图</h3><span className="hint">点击节点查看原文；阶段色带的起止若为推断会以虚线表示</span></div>
-      <div className="orbit" ref={orbit}>
-        <div className="orbit-plane">
-          {years.map(y => <div key={y} className="year" style={{ left: `${xPct(`${y}-01-01`)}%` }}>{y}</div>)}
-          <div className="track" />
-          {phases.map((p, i) => {
-            const pf = useFlagsStatic(p.id, v)
-            const s = bundle.facts[p.start], e = p.end ? bundle.facts[p.end] : null
-            const inferred = s.date_basis === 'inferred' || e?.date_basis === 'inferred'
-            return <div key={p.id} data-anchor={p.id} className={`band ${pf ? 'is-lit' : ''} ${inferred ? 'inferred' : ''}`}
-              style={{ left: `${xPct(s.eff.date)}%`, width: `${Math.max(0.6, xPct(e?.eff.date ?? '2026-09') - xPct(s.eff.date))}%`, background: PHASE_COLORS[i % 7] }}
-              title={p.chapter.map(u => bundle.facts[u]?.raw).join(' / ')}><span>{p.label}</span></div>
-          })}
-          {sweep && <div className="sweep" key={state.epoch} style={{ ['--from' as string]: `${sweep[0]}%`, ['--to' as string]: `${sweep[1]}%` }} />}
-          {events.map((ev, i) => {
-            const d = bundle.facts[ev.date]
-            const pulse = v.pulse.includes(ev.id)
-            return (
-              <button key={ev.id} data-anchor={ev.id}
-                className={`ev ev-${ev.kind} lane-${i % 6} ${lit(d.eff.date) ? 'is-lit' : ''} ${pulse ? 'is-pulse' : ''} ${d.eff.pending ? 'date-pending' : ''}`}
-                style={{ left: `${xPct(d.eff.date)}%` }} onClick={() => setOpen(open === ev.id ? null : ev.id)}>
-                <i className="dot" /><span className="ev-label"><b>{dateLabel(d.eff.date)}{d.date_basis === 'inferred' ? '（推断）' : ''}</b>{ev.label}</span>
-              </button>
-            )
-          })}
-        </div>
-      </div>
-      <div className="legend">
-        {phases.map((p, i) => <span key={p.id}><i style={{ background: PHASE_COLORS[i % 7] }} />{p.label}</span>)}
-      </div>
-      {detail && <EventDetail id={detail} onClose={() => setOpen(null)} />}
-    </section>
-  )
-}
-const useFlagsStatic = (id: string, v: { phases: string[] }) => v.phases.includes(id)
-
-function EventDetail({ id, onClose }: { id: string; onClose: () => void }) {
-  const { bundle } = useStage()
-  const ev = bundle.blocks.find(b => b.type === 'timeline')!.events!.find(e => e.id === id)!
-  const d = bundle.facts[ev.date]
-  return (
-    <div className="ev-detail">
-      <div className="card-head"><h4>{dateLabel(d.eff.date)} · {ev.label} <Badges fact={d} /></h4><SourceChip slide={bundle.facts[ev.units[0]]?.slide ?? d.slide} /><button className="x" onClick={onClose}>×</button></div>
-      {d.date_note && <p className="note">日期说明：{d.date_note}</p>}
-      {ev.units.map(u => <UnitText key={u} id={u} as="p" />)}
-    </div>
   )
 }
 

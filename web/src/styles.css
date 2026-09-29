@@ -115,41 +115,57 @@ table.data tr.is-row { background: #e9f8fb; box-shadow: inset 4px 0 0 var(--cyan
 .compare td { min-width: 120px }
 .cmp-meta { font-size: 11px; color: var(--muted) }
 
-/* ------------------------------------------------------------ timeline (orbit view) */
-.timeline-card { overflow: hidden }
-.orbit { perspective: 1100px; overflow-x: auto; padding: 8px 0 4px }
-.orbit-plane { position: relative; height: 380px; min-width: 2300px; transform: rotateX(14deg); transform-origin: 50% 60%; margin: 0 18px }
-.year { position: absolute; top: 0; font: 600 12px var(--mono); color: var(--muted); border-left: 1px dashed #cfd9e6; height: 100%; padding-left: 6px }
-.track { position: absolute; left: 0; right: 0; top: 190px; height: 4px; border-radius: 2px; background: linear-gradient(90deg, #cfdced, #9fb6d4) }
-.band { position: absolute; top: 178px; height: 28px; border-radius: 8px; opacity: .9; overflow: hidden; border: 1px solid rgba(27,58,107,.12); transition: box-shadow .4s, transform .4s }
-.band span { font-size: 11px; color: var(--navy); padding: 0 6px; white-space: nowrap; line-height: 26px }
-.band.inferred { border-style: dashed }
-.band.is-lit { box-shadow: 0 0 0 3px var(--cyan), 0 0 24px rgba(14,165,198,.45); transform: translateY(-2px); z-index: 2 }
-.ev { position: absolute; top: 186px; transform: translateX(-6px); border: 0; background: none; padding: 0; z-index: 3 }
-.ev .dot { display: block; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2px solid var(--navy); transition: transform .3s, background .3s }
-.ev-relapse .dot { border-color: var(--coral) }
-.ev-adverse_event .dot { border-color: var(--amber) }
-.ev-assessment .dot { border-color: var(--ok) }
-.ev-label { position: absolute; left: 50%; transform: translateX(-50%); white-space: nowrap; font-size: 11px; color: var(--ink); background: rgba(255,255,255,.9); border: 1px solid var(--line); border-radius: 8px; padding: 2px 7px; opacity: .78; transition: opacity .3s, box-shadow .3s }
-.ev-label b { font: 600 10px var(--mono); color: var(--muted); margin-right: 5px }
-.lane-0 .ev-label { bottom: 22px } .lane-1 .ev-label { top: 22px } .lane-2 .ev-label { bottom: 58px } .lane-3 .ev-label { top: 58px } .lane-4 .ev-label { bottom: 94px } .lane-5 .ev-label { top: 94px }
-.ev-label::after, .ev-label::before { content: ''; position: absolute; left: 50%; width: 1px; background: #d5dfeb }
-.lane-0 .ev-label::after, .lane-2 .ev-label::after, .lane-4 .ev-label::after { top: 100% }
-.lane-1 .ev-label::before, .lane-3 .ev-label::before, .lane-5 .ev-label::before { bottom: 100% }
-.lane-0 .ev-label::after, .lane-1 .ev-label::before { height: 8px }
-.lane-2 .ev-label::after, .lane-3 .ev-label::before { height: 44px }
-.lane-4 .ev-label::after, .lane-5 .ev-label::before { height: 80px }
-.ev:hover .ev-label { opacity: 1; z-index: 6; border-color: var(--navy-2) }
-.ev.is-lit .dot { background: var(--cyan); border-color: var(--cyan) }
-.ev.is-lit .ev-label { opacity: 1; box-shadow: 0 2px 10px rgba(14,165,198,.25) }
-.ev.is-pulse .dot { transform: scale(1.6); box-shadow: 0 0 0 0 rgba(14,165,198,.6); animation: ping 1.4s ease-out infinite }
-.ev.is-pulse .ev-label { opacity: 1; border-color: var(--cyan); z-index: 5; font-weight: 600 }
-.ev.date-pending .ev-label { border-style: dashed; border-color: #f0c07a }
+/* ------------------------------------------------------------ timeline (segmented track + phase columns) */
+.timeline-card { overflow: visible }
+.tl { position: relative }
+.tl-track-area { position: relative; height: 350px; margin: 0 }
+.tl-band { position: absolute; top: 140px; height: 58px; padding: 6px 10px; background: var(--fill); border-right: 2px solid #fff; display: flex; flex-direction: column; justify-content: center; transition: box-shadow .4s, transform .4s, filter .4s }
+.tl-band:first-child { border-radius: 12px 0 0 12px }
+.tl-band:nth-last-child(1 of .tl-band) { border-radius: 0 12px 12px 0 }
+.tl-band.inferred { background-image: repeating-linear-gradient(135deg, transparent 0 8px, rgba(255,255,255,.45) 8px 10px) }
+.tl-band-name { font-size: 13.5px; font-weight: 700; color: var(--ink); line-height: 1.25; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.tl-band-dates { font: 500 11.5px var(--mono); color: var(--ink); opacity: .8; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+.tl-band.is-lit { box-shadow: 0 0 0 3px var(--cyan), 0 10px 28px rgba(14,165,198,.35); transform: translateY(-3px); z-index: 2; filter: saturate(1.25) }
+.tl-track { position: absolute; left: 0; right: 0; top: 204px; height: 3px; background: #b9c9dd; border-radius: 2px }
+.tl-sweep { position: absolute; top: 197px; width: 18px; height: 18px; margin-left: -9px; border-radius: 50%; background: radial-gradient(#fff 30%, var(--cyan)); box-shadow: 0 0 22px 8px rgba(14,165,198,.5); animation: tlsweep 1.8s cubic-bezier(.4,0,.2,1) forwards; z-index: 6 }
+@keyframes tlsweep { from { left: var(--from) } to { left: var(--to) } }
+.tl-ev { position: absolute; top: 198px; width: 0; height: 0; border: 0; background: none; padding: 0; z-index: 3 }
+.tl-ev .dot { position: absolute; left: -7px; top: 0; width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid var(--k, var(--navy)); transition: transform .3s, background .3s; box-shadow: 0 1px 3px rgba(0,0,0,.15) }
+.tl-ev.minor .dot { left: -5px; top: 2px; width: 10px; height: 10px; border-width: 2px }
+.tl-label { position: absolute; left: 0; transform: translateX(-50%); white-space: nowrap; font-size: 13px; font-weight: 600; color: var(--ink); background: #fff; border: 1.5px solid var(--k, var(--navy)); border-radius: 10px; padding: 4px 10px; box-shadow: 0 4px 14px rgba(20,40,80,.12); transition: box-shadow .3s, transform .3s }
+.tl-label b { display: block; font: 600 11.5px var(--mono); color: var(--k, var(--navy)); margin-bottom: 1px }
+.tl-ev.lane-0 .tl-label { bottom: 72px }
+.tl-ev.lane-1 .tl-label { top: 24px }
+.tl-ev.lane-2 .tl-label { bottom: 124px }
+.tl-ev.lane-3 .tl-label { top: 76px }
+.tl-ev.ms .tl-label::after { content: ''; position: absolute; left: 50%; width: 1.5px; background: var(--k, var(--navy)); opacity: .45 }
+.tl-ev.lane-0 .tl-label::after { top: 100%; height: 64px }
+.tl-ev.lane-2 .tl-label::after { top: 100%; height: 116px }
+.tl-ev.lane-1 .tl-label::after { bottom: 100%; height: 10px }
+.tl-ev.lane-3 .tl-label::after { bottom: 100%; height: 62px }
+.tl-ev.minor .tl-label { display: none; top: 24px; z-index: 8 }
+.tl-ev.minor:hover .tl-label, .tl-ev.minor.is-pulse .tl-label, .tl-ev.minor:focus .tl-label { display: block }
+.tl-ev.is-lit .dot { background: var(--k, var(--cyan)); transform: scale(1.2) }
+.tl-ev.is-pulse .dot { transform: scale(1.5); animation: ping 1.4s ease-out infinite }
+.tl-ev.is-pulse .tl-label { box-shadow: 0 0 0 3px var(--cyan-soft), 0 8px 24px rgba(14,165,198,.35); z-index: 9 }
+.tl-ev.date-pending .tl-label { border-style: dashed }
 @keyframes ping { 0% { box-shadow: 0 0 0 0 rgba(14,165,198,.55) } 100% { box-shadow: 0 0 0 16px rgba(14,165,198,0) } }
-.sweep { position: absolute; top: 184px; width: 16px; height: 16px; margin-left: -8px; border-radius: 50%; background: radial-gradient(#fff, var(--cyan)); box-shadow: 0 0 18px 6px rgba(14,165,198,.55); animation: sweep 1.8s cubic-bezier(.4,0,.2,1) forwards; z-index: 4 }
-@keyframes sweep { from { left: var(--from) } to { left: var(--to) } }
-.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--muted); margin-top: 8px }
-.legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 5px; vertical-align: -2px }
+.ev-treatment { --k: #1b3a6b } .ev-assessment { --k: #1f8a67 } .ev-relapse { --k: #d0492f } .ev-adverse_event { --k: #c07a0a }
+.ev-procedure { --k: #5b6fa8 } .ev-pathology { --k: #8a3f8f } .ev-diagnosis { --k: #33445c } .ev-clinical { --k: #6b7c93 }
+
+.tl-cols { display: grid; gap: 0; border-top: 1px solid var(--line); margin-top: 4px }
+.tl-col { padding: 8px 6px 4px; border-right: 1px dashed #dbe3ee; min-width: 0; transition: background .4s }
+.tl-col:last-child { border-right: 0 }
+.tl-col.is-lit { background: color-mix(in srgb, var(--fill) 55%, transparent) }
+.tl-row { display: block; width: 100%; text-align: left; border: 0; background: none; padding: 4px 6px 4px 9px; margin: 2px 0; border-radius: 8px; border-left: 3px solid var(--k, var(--navy)); transition: background .3s, box-shadow .3s }
+.tl-row b { display: block; font: 600 11px var(--mono); color: var(--k, var(--navy)) }
+.tl-row span { display: block; font-size: 12.5px; color: var(--ink); line-height: 1.35 }
+.tl-row small { display: block; font: 10.5px var(--mono); color: var(--muted); margin-top: 1px }
+.tl-row:hover, .tl-row.is-open { background: #eef4fb }
+.tl-row.is-lit { background: #e9f8fb }
+.tl-row.is-pulse { background: #d9f3f8; box-shadow: 0 0 0 2px var(--cyan) }
+.legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12.5px; color: var(--ink); margin-top: 10px }
+.legend .k { display: inline-block; width: 12px; height: 12px; border-radius: 50%; border: 3px solid var(--k); margin-right: 6px; vertical-align: -2px }
 .ev-detail { margin-top: 12px; border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; background: #fbfdff; animation: rise .4s ease }
 @keyframes rise { from { opacity: 0; transform: translateY(8px) } }
 
@@ -256,7 +272,7 @@ table.data tr.is-row { background: #e9f8fb; box-shadow: inset 4px 0 0 var(--cyan
 .trace { border-top: 1px solid var(--line) }
 .trace-head { display: flex; gap: 12px; align-items: center; padding: 4px 18px; font-size: 12px }
 .trace-head .ghost { font-size: 12.5px; font-weight: 600; color: var(--navy) }
-.trace-body { height: 170px; overflow: auto; padding: 0 18px 10px; font: 12px/1.7 var(--mono); background: #fbfcfe }
+.trace-body { height: 128px; overflow: auto; padding: 0 18px 10px; font: 12px/1.7 var(--mono); background: #fbfcfe }
 .trace-empty { color: var(--muted); padding: 10px 0; font-family: 'Noto Sans SC', sans-serif }
 .tr { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; padding: 1px 0; cursor: pointer; border-bottom: 1px dotted #edf1f6 }
 .tr:hover { background: #f1f6fb }

@@ -93,7 +93,7 @@ export interface Block {
 
 export interface CompareRow { id: string; label?: string; label_unit?: string; label_fact?: string; facts: string[] }
 export interface Phase { id: string; label: string; start: string; end: string | null; chapter: string[] }
-export interface TimelineEvent { id: string; date: string; kind: string; label: string; units: string[]; facts?: string[]; links?: string[] }
+export interface TimelineEvent { id: string; date: string; kind: string; label: string; milestone?: boolean; units: string[]; facts?: string[]; links?: string[] }
 export interface SeriesPoint { fact: string; corroborate?: string[] }
 export interface Series { id: string; label: string; scale: 'linear' | 'log'; points: SeriesPoint[]; held?: { fact: string; reason: string }[]; reference?: string; source_image?: string }
 export interface Pin { id: string; region: string; annotation: string; facts: string[]; date: string }

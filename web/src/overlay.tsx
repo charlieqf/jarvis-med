@@ -123,7 +123,6 @@ export function Caption() {
     <div className="caption-bar">
       <div className="cap-head">
         <span className="cap-q">{t.id} · {t.question}</span>
-        {!t.reviewed_by && <span className="badge badge-issue" title="回答计划已通过自动校验，但尚未人工审核">计划待审</span>}
         <span className="cap-step">{state.index + 1}/{t.steps.length} · {step.title}</span>
       </div>
       <div className="cap-body" key={state.epoch}>
