@@ -1,0 +1,10279 @@
+{
+ "source": "source.pptx",
+ "aspect": 1.7778,
+ "slides": [
+  {
+   "slide": 1,
+   "layout": "",
+   "shapes": [
+    {
+     "id": 12,
+     "name": "图片 11",
+     "bbox": [
+      0.2604,
+      -0.0001,
+      0.7396,
+      1.0
+     ],
+     "kind": "picture",
+     "file": "2f816baba467.jpg",
+     "px": [
+      1722,
+      1190
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 2,
+     "name": "AutoShape 2",
+     "bbox": [
+      0.0,
+      0.0,
+      0.2604,
+      1.0
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 3,
+     "name": "AutoShape 3",
+     "bbox": [
+      0.0,
+      0.9259,
+      0.2604,
+      0.0741
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 5,
+     "name": "AutoShape 5",
+     "bbox": [
+      0.0667,
+      0.3556,
+      0.1938,
+      0.1111
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "苏州大学",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "附属第一医院",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 6,
+     "name": "AutoShape 6",
+     "bbox": [
+      0.0667,
+      0.4926,
+      0.0625,
+      0.0056
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 7,
+     "name": "AutoShape 7",
+     "bbox": [
+      0.2924,
+      0.1852,
+      0.6458,
+      0.2778
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "一例复发难治多发性骨髓瘤",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "病例诊治分享",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 9,
+     "name": "AutoShape 9",
+     "bbox": [
+      0.3125,
+      0.737,
+      0.1458,
+      0.0074
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE",
+     "annotates": {
+      "picture_id": 12,
+      "rel_bbox": [
+       0.0704,
+       0.7371,
+       0.1971,
+       0.0074
+      ]
+     }
+    },
+    {
+     "id": 11,
+     "name": "图片 10",
+     "bbox": [
+      0.8683,
+      0.0,
+      0.1317,
+      0.2196
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 13,
+     "name": "AutoShape 5",
+     "bbox": [
+      0.0667,
+      0.5379,
+      0.1938,
+      0.1111
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 2,
+   "layout": "1_标题幻灯片",
+   "shapes": [
+    {
+     "id": 3,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0447,
+      0.0397,
+      0.5208,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "目录",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "内容占位符 2",
+     "bbox": [
+      0.0688,
+      0.2662,
+      0.8625,
+      0.6345
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "病例回顾",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "文献回顾",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "总结",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 3,
+   "layout": "1_标题幻灯片",
+   "shapes": [
+    {
+     "id": 3,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0447,
+      0.0397,
+      0.5208,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "目录",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "内容占位符 2",
+     "bbox": [
+      0.0688,
+      0.2662,
+      0.8625,
+      0.6345
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "病例回顾",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "文献回顾",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "总结",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 4,
+   "layout": "",
+   "shapes": [
+    {
+     "id": 2,
+     "name": "Connector 2",
+     "bbox": [
+      0.0625,
+      0.1074,
+      0.8279,
+      0.0056
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 3,
+     "name": "AutoShape 3",
+     "bbox": [
+      0.0625,
+      0.137,
+      0.0042,
+      0.063
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 4,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0771,
+      0.1407,
+      0.5208,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "患者基本情况",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "AutoShape 5",
+     "bbox": [
+      0.0625,
+      0.2333,
+      0.875,
+      0.0481
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "确诊多发性骨髓瘤3年余，多线治疗后复发难治，伴髓外浸润",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 6,
+     "name": "Table 6",
+     "bbox": [
+      0.0625,
+      0.3111,
+      0.875,
+      0.5244
+     ],
+     "kind": "table",
+     "rows": [
+      [
+       "项目",
+       "内容"
+      ],
+      [
+       "姓名 / 性别 / 年龄",
+       "WP ／ 女 ／ 39岁"
+      ],
+      [
+       "主诉",
+       "确诊多发性骨髓瘤3年余"
+      ],
+      [
+       "确诊诊断",
+       "多发性骨髓瘤（IgG-λ型，DS IIIA，ISS II，RISS II）"
+      ],
+      [
+       "既往史",
+       "既往体健"
+      ],
+      [
+       "一般情况",
+       "青年女性，慢性病程"
+      ]
+     ]
+    },
+    {
+     "id": 8,
+     "name": "AutoShape 8",
+     "bbox": [
+      0.8542,
+      0.9037,
+      0.0833,
+      0.0444
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 11,
+     "name": "图片 10",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 5,
+   "layout": "",
+   "shapes": [
+    {
+     "id": 2,
+     "name": "Connector 2",
+     "bbox": [
+      0.0625,
+      0.1033,
+      0.8273,
+      0.0041
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 3,
+     "name": "AutoShape 3",
+     "bbox": [
+      0.0625,
+      0.137,
+      0.0042,
+      0.063
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 4,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0771,
+      0.1407,
+      0.7292,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "初诊与基线评估",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "AutoShape 5",
+     "bbox": [
+      0.0625,
+      0.2296,
+      0.9127,
+      0.0481
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2023年1月起病：胸肋骨及腰背部疼痛，后累及全身，进行性加重，2023年6月至我院就诊",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 7,
+     "name": "AutoShape 7",
+     "bbox": [
+      0.0625,
+      0.9259,
+      0.3125,
+      0.0444
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 10,
+     "name": "图片 9",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 6,
+     "name": "Table 6",
+     "kind": "table",
+     "bbox": [
+      0.0496,
+      0.2926,
+      0.9504,
+      0.6939
+     ],
+     "rows": [
+      [
+       "检查项目",
+       "结果"
+      ],
+      [
+       "血常规",
+       "WBC ，Hb 98g/L，PLT"
+      ],
+      [
+       "生化",
+       "LDH 350U/L，TP 87.7g/L，ALB 31.4g/L，GLB 56.3g/L，LDH 350U/L，URIC 50mol/L"
+      ],
+      [
+       "体液免疫",
+       "IgG 51g/L，IgA 0.1g/L，IgM 0.13g/L，κ 0.4g/L，λ 4.3g/L"
+      ],
+      [
+       "骨髓形态与活检",
+       "幼浆/瘤细胞约12%；骨髓活检浆细胞15%~17%"
+      ],
+      [
+       "BM免疫分型（NGF）",
+       "克隆性浆细胞3.765%"
+      ],
+      [
+       "PB免疫分型（NGF）",
+       "克隆性浆细胞1.9*10-3"
+      ],
+      [
+       "MM-FISH（初诊）",
+       "13q14缺失14%，1q21扩增8%，Rb1缺失15%，P53缺失阴性，IgH重排阳性，加作为FGFR3/IgH重排阳性20%"
+      ],
+      [
+       "基因突变（初诊）",
+       "KRAS 9.6%，IGLL5 27.3%"
+      ]
+     ],
+     "alternate_content": true
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 6,
+   "layout": "",
+   "shapes": [
+    {
+     "id": 2,
+     "name": "Connector 2",
+     "bbox": [
+      0.0625,
+      0.1074,
+      0.8356,
+      0.001
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 3,
+     "name": "AutoShape 3",
+     "bbox": [
+      0.0625,
+      0.137,
+      0.0042,
+      0.063
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 4,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0771,
+      0.1407,
+      0.7917,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "初诊与基线评估（二）· 血清学与影像诊断",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "AutoShape 5",
+     "bbox": [
+      0.0625,
+      0.2296,
+      0.0021,
+      0.037
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 6,
+     "name": "AutoShape 6",
+     "bbox": [
+      0.0729,
+      0.2222,
+      0.3125,
+      0.0519
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "MM 全套（基线）",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Table 7",
+     "bbox": [
+      0.0625,
+      0.2889,
+      0.4167,
+      0.7037
+     ],
+     "kind": "table",
+     "rows": [
+      [
+       "指标",
+       "结果"
+      ],
+      [
+       "血清蛋白电泳",
+       "40.9%（36.8918g/L）"
+      ],
+      [
+       "血清免疫固定电泳",
+       "IgG-λ型"
+      ],
+      [
+       "血清游离轻链",
+       "κ <5.8 mg/L，λ 315 mg/L"
+      ],
+      [
+       "尿蛋白电泳",
+       "提示生理性蛋白尿"
+      ],
+      [
+       "尿免疫固定电泳",
+       "λ轻链型"
+      ],
+      [
+       "sBCMA",
+       "158.2 ng/mL"
+      ],
+      [
+       "β2-MG",
+       "2.17 mg/L"
+      ],
+      [
+       "24h尿蛋白",
+       "0.49 g"
+      ],
+      [
+       "VEGF",
+       "218.44 pg/ml"
+      ]
+     ]
+    },
+    {
+     "id": 8,
+     "name": "AutoShape 8",
+     "bbox": [
+      0.5,
+      0.2296,
+      0.0021,
+      0.037
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 9,
+     "name": "AutoShape 9",
+     "bbox": [
+      0.5104,
+      0.2222,
+      0.3125,
+      0.0519
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "影像评估",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 10,
+     "name": "AutoShape 10",
+     "bbox": [
+      0.5021,
+      0.4167,
+      0.4374,
+      0.2778
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "PET-CT：多发骨质破坏伴高代谢，SUVmax 15.2，左肩关节三角肌走行区局限性高代谢SUVmax 8.2），骨髓瘤侵犯可能。",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "类PET：胸骨、双侧肱骨、多发肋骨、胸腰椎及附件、骨盆及双侧股骨多发弥散受限，L5-S1椎间盘突出",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 14,
+     "name": "AutoShape 14",
+     "bbox": [
+      0.0625,
+      0.9259,
+      0.3125,
+      0.0444
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 15,
+     "name": "AutoShape 15",
+     "bbox": [
+      0.8542,
+      0.9259,
+      0.0833,
+      0.0444
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 16,
+     "name": "图片 15",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 7,
+   "layout": "",
+   "shapes": [
+    {
+     "id": 2,
+     "name": "Connector 2",
+     "bbox": [
+      0.0625,
+      0.1074,
+      0.8356,
+      0.001
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 3,
+     "name": "AutoShape 3",
+     "bbox": [
+      0.0625,
+      0.137,
+      0.0042,
+      0.063
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 4,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0771,
+      0.1407,
+      0.7917,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "确诊诊断",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 13,
+     "name": "AutoShape 13",
+     "bbox": [
+      0.0771,
+      0.4167,
+      0.777,
+      0.1667
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "青年女性，合并多发骨质破坏、椎体及肋骨病变，高危细胞遗传学异常，1q21+t（4；14）",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "多发性骨髓瘤（IgG-λ型）",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "DS分期 IIIA",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "ISS分期 II",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "RISS分期 II",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 14,
+     "name": "AutoShape 14",
+     "bbox": [
+      0.0625,
+      0.9259,
+      0.3125,
+      0.0444
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 15,
+     "name": "AutoShape 15",
+     "bbox": [
+      0.8542,
+      0.9259,
+      0.0833,
+      0.0444
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 16,
+     "name": "图片 15",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 8,
+   "layout": "",
+   "shapes": [
+    {
+     "id": 2,
+     "name": "Connector 2",
+     "bbox": [
+      0.0625,
+      0.1074,
+      0.8419,
+      0.001
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 3,
+     "name": "AutoShape 3",
+     "bbox": [
+      0.0625,
+      0.137,
+      0.0042,
+      0.063
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 4,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0771,
+      0.1407,
+      0.7292,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "治疗历程（一）· 一线治疗与自体移植",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "AutoShape 5",
+     "bbox": [
+      0.0625,
+      0.2459,
+      0.875,
+      0.037
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "初诊后于2023年6月起接受一线诱导治疗并序贯自体移植",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 6,
+     "name": "Connector 6",
+     "bbox": [
+      0.0688,
+      0.3222,
+      0.0,
+      0.647
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 7,
+     "name": "AutoShape 7",
+     "bbox": [
+      0.0625,
+      0.3111,
+      0.0125,
+      0.0222
+     ],
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 8,
+     "name": "AutoShape 8",
+     "bbox": [
+      0.0991,
+      0.3074,
+      0.5833,
+      0.0407
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2023.06.29",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 9,
+     "name": "AutoShape 9",
+     "bbox": [
+      0.0991,
+      0.3834,
+      0.8749,
+      0.2826
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "启动 VRD 方案治疗，共4周期",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "4疗程后复查",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "- M蛋白 0.9352g/L，IgG-λ型，κ 6.73mg/L，λ 8.01mg/L",
+       "level": 0,
+       "bold": true,
+       "emphasis": [
+        "0.9352g/L"
+       ]
+      },
+      {
+       "text": "- 骨髓形态浆细胞0.5%",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "- BM-NGF-MRD：分析9.1*10^{-4}的浆细胞群体为单克隆性浆细胞，BM-NGS-MRD：3.21*10^{-4}（基线1.46*10^{-1}）",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "- DWI-MRI：多骨弥散受限，较前2023-06-28明显好转",
+       "level": 0,
+       "bold": true,
+       "emphasis": [
+        "明显好转"
+       ]
+      },
+      {
+       "text": "疗效评估：VGPR",
+       "level": 0,
+       "bold": true,
+       "emphasis": [
+        "VGPR"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 10,
+     "name": "AutoShape 10",
+     "bbox": [
+      0.0625,
+      0.7111,
+      0.0125,
+      0.0222
+     ],
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 11,
+     "name": "AutoShape 11",
+     "bbox": [
+      0.0991,
+      0.7049,
+      0.5833,
+      0.0407
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2023.11.05",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 12,
+     "name": "AutoShape 12",
+     "bbox": [
+      0.0991,
+      0.7549,
+      0.7812,
+      0.0444
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "行干细胞采集，其中MNC：6.9*10^{8}/kg，CD34+ 5.106*10^{6}/kg",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 13,
+     "name": "AutoShape 13",
+     "bbox": [
+      0.0625,
+      0.8739,
+      0.0125,
+      0.0222
+     ],
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 14,
+     "name": "AutoShape 14",
+     "bbox": [
+      0.0991,
+      0.859,
+      0.5833,
+      0.0407
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2023.12.19",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 15,
+     "name": "AutoShape 15",
+     "bbox": [
+      0.0991,
+      0.9185,
+      0.875,
+      0.0407
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "行自体造血干细胞移植，美法仑200mg/m^{2}预处理，回输MNC：3.45*10^{8}/kg，CD34+ 2.553*10^{6}/kg，剩余冻存",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 25,
+     "name": "AutoShape 25",
+     "bbox": [
+      0.0625,
+      0.9593,
+      0.3125,
+      0.0444
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 27,
+     "name": "图片 26",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 9,
+   "layout": "",
+   "shapes": [
+    {
+     "id": 2,
+     "name": "Connector 2",
+     "bbox": [
+      0.0625,
+      0.1074,
+      0.8419,
+      0.001
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 3,
+     "name": "AutoShape 3",
+     "bbox": [
+      0.0625,
+      0.137,
+      0.0042,
+      0.063
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 4,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0771,
+      0.1407,
+      0.7292,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "治疗历程（二）· 采集淋巴细胞及巩固",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "AutoShape 5",
+     "bbox": [
+      0.074,
+      0.2442,
+      0.875,
+      0.037
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "移植后M蛋白未转阴，有升高趋势",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 6,
+     "name": "Connector 6",
+     "bbox": [
+      0.0802,
+      0.3222,
+      0.0,
+      0.5646
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 7,
+     "name": "AutoShape 7",
+     "bbox": [
+      0.074,
+      0.3111,
+      0.0125,
+      0.0222
+     ],
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 16,
+     "name": "AutoShape 16",
+     "bbox": [
+      0.074,
+      0.6074,
+      0.0125,
+      0.0222
+     ],
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 17,
+     "name": "AutoShape 17",
+     "bbox": [
+      0.1112,
+      0.3048,
+      0.5833,
+      0.0407
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2024.03.07",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 18,
+     "name": "AutoShape 18",
+     "bbox": [
+      0.1112,
+      0.3882,
+      0.7812,
+      0.1919
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "移植后3月复查",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "- M蛋白 3.7996g/L，IgG-λ型，κ 12.81mg/L，λ 16.29mg/L",
+       "level": 0,
+       "bold": true,
+       "emphasis": [
+        "3.7996g/L"
+       ]
+      },
+      {
+       "text": "- 骨髓形态浆细胞少见，骨髓活检浆细胞<2%",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "- BM-NGS-MRD：2.04*10^{-4}（移植前3.32*10^{-4}，基线1.46*10^{-1}）",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 19,
+     "name": "AutoShape 19",
+     "bbox": [
+      0.074,
+      0.763,
+      0.0125,
+      0.0222
+     ],
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 20,
+     "name": "AutoShape 20",
+     "bbox": [
+      0.1112,
+      0.5969,
+      0.5833,
+      0.0407
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2024.03.12",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 21,
+     "name": "AutoShape 21",
+     "bbox": [
+      0.1112,
+      0.6543,
+      0.7812,
+      0.0444
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "家属意愿积极，采集淋巴细胞，后续拟行CART治疗",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 25,
+     "name": "AutoShape 25",
+     "bbox": [
+      0.0625,
+      0.9704,
+      0.3125,
+      0.0444
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 27,
+     "name": "图片 26",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 28,
+     "name": "AutoShape 21",
+     "bbox": [
+      0.1112,
+      0.8123,
+      0.7812,
+      0.0444
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "行 KD 方案巩固，d1 20mg/m^{2}，d2 27mg/m^{2}，36mg/m^{2} d8-9，d15-16",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 29,
+     "name": "AutoShape 20",
+     "bbox": [
+      0.1112,
+      0.7549,
+      0.5833,
+      0.0407
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2024.03.12",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 10,
+   "layout": "",
+   "shapes": [
+    {
+     "id": 2,
+     "name": "Connector 2",
+     "bbox": [
+      0.0625,
+      0.1074,
+      0.8419,
+      0.001
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 3,
+     "name": "AutoShape 3",
+     "bbox": [
+      0.0625,
+      0.137,
+      0.0042,
+      0.063
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 4,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0771,
+      0.1407,
+      0.7292,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "治疗历程（二）· 髓外进展",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "AutoShape 5",
+     "bbox": [
+      0.074,
+      0.2423,
+      0.875,
+      0.037
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "KD巩固过程中出现右肩疼痛明显，查体可见质硬肿块，约5*7cm",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 6,
+     "name": "Connector 6",
+     "bbox": [
+      0.0802,
+      0.3222,
+      0.0,
+      0.6336
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 7,
+     "name": "AutoShape 7",
+     "bbox": [
+      0.074,
+      0.3111,
+      0.0125,
+      0.0222
+     ],
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 16,
+     "name": "AutoShape 16",
+     "bbox": [
+      0.074,
+      0.7314,
+      0.0125,
+      0.0222
+     ],
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 17,
+     "name": "AutoShape 17",
+     "bbox": [
+      0.1112,
+      0.3048,
+      0.5833,
+      0.0407
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2024.05.08",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 18,
+     "name": "AutoShape 18",
+     "bbox": [
+      0.1112,
+      0.4143,
+      0.5496,
+      0.1919
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "- M蛋白 10.6412g/L，IgG-λ型，κ 9.67mg/L，λ 87.82mg/L",
+       "level": 0,
+       "bold": true,
+       "emphasis": [
+        "10.6412g/L"
+       ]
+      },
+      {
+       "text": "- 骨髓形态浆细胞少见，骨髓活检浆细胞<2%",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "- BM-NGF-MRD：分析2.1*10^{-4}的浆细胞群体为单克隆性浆细胞，",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "- PET-CT：全身骨骼多处骨质破坏伴糖代谢增高，右侧肩胛骨后方肌肉肿块伴糖代谢增高（SUVmax：9.39，大小约76*54mm），右侧腮腺结节、胰腺、肝脏、脾脏等处糖代谢增高灶",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 20,
+     "name": "AutoShape 20",
+     "bbox": [
+      0.1112,
+      0.7299,
+      0.5833,
+      0.0407
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2024.05.12",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 21,
+     "name": "AutoShape 21",
+     "bbox": [
+      0.1112,
+      0.8056,
+      0.5259,
+      0.1249
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "完善右肩胛区肿块穿刺",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "- 组织-NGF-MRD：分析36.4%的浆细胞群体为单克隆性浆细胞，BCMA 99%",
+       "level": 0,
+       "bold": true,
+       "emphasis": [
+        "BCMA 99%"
+       ]
+      },
+      {
+       "text": "- 基因突变（组织）：NARS 34.8%，IGLL5 68.10%，TET1 37.8%",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 25,
+     "name": "AutoShape 25",
+     "bbox": [
+      0.0625,
+      0.9704,
+      0.3125,
+      0.0444
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 27,
+     "name": "图片 26",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 8,
+     "name": "图片 7",
+     "bbox": [
+      0.6811,
+      0.2306,
+      0.2944,
+      0.3322
+     ],
+     "kind": "picture",
+     "file": "ad2f74f544bf.png",
+     "px": [
+      1010,
+      641
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 9,
+     "name": "图片 8",
+     "bbox": [
+      0.6378,
+      0.615,
+      0.3622,
+      0.3401
+     ],
+     "kind": "picture",
+     "file": "d65c2753a8f3.png",
+     "px": [
+      890,
+      470
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 10,
+     "name": "椭圆 9",
+     "bbox": [
+      0.7235,
+      0.3468,
+      0.0679,
+      0.1172
+     ],
+     "kind": "shape",
+     "geom": "OVAL",
+     "annotates": {
+      "picture_id": 8,
+      "rel_bbox": [
+       0.144,
+       0.3498,
+       0.2306,
+       0.3528
+      ]
+     }
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 11,
+   "layout": "",
+   "shapes": [
+    {
+     "id": 2,
+     "name": "Connector 2",
+     "bbox": [
+      0.0625,
+      0.1074,
+      0.8245,
+      0.001
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 3,
+     "name": "AutoShape 3",
+     "bbox": [
+      0.0625,
+      0.137,
+      0.0042,
+      0.063
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 4,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0771,
+      0.1407,
+      0.7917,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "治疗历程（三）· BCMA CAR-T",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "Connector 5",
+     "bbox": [
+      0.0698,
+      0.2759,
+      0.0,
+      0.3857
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 6,
+     "name": "AutoShape 6",
+     "bbox": [
+      0.0635,
+      0.2648,
+      0.0125,
+      0.0222
+     ],
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 7,
+     "name": "AutoShape 7",
+     "bbox": [
+      0.101,
+      0.25,
+      0.3125,
+      0.0407
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2024.05.13",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 8,
+     "name": "AutoShape 8",
+     "bbox": [
+      0.101,
+      0.2931,
+      0.6595,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "FC 方案预处理，氟达拉滨 30mg/m^{2} d1-3，CTX 500mg/m^{2} d1-3",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 9,
+     "name": "AutoShape 9",
+     "bbox": [
+      0.0635,
+      0.4056,
+      0.0125,
+      0.0222
+     ],
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 10,
+     "name": "AutoShape 10",
+     "bbox": [
+      0.101,
+      0.3907,
+      0.3125,
+      0.0407
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2024.05.17",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 11,
+     "name": "AutoShape 11",
+     "bbox": [
+      0.101,
+      0.4475,
+      0.5269,
+      0.0331
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "回输 BCMA CAR-T 细胞，回输过程顺利，无明显不适",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 12,
+     "name": "AutoShape 12",
+     "bbox": [
+      0.0635,
+      0.5463,
+      0.0125,
+      0.0222
+     ],
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 13,
+     "name": "AutoShape 13",
+     "bbox": [
+      0.101,
+      0.5315,
+      0.3125,
+      0.0407
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2025.05.23",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 15,
+     "name": "AutoShape 15",
+     "bbox": [
+      0.1021,
+      0.609,
+      0.3588,
+      0.0511
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "出现反复发热，伴IL-6升高，考虑CRS反应2级，予以托珠单抗治疗后体温控制，指标回落",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 22,
+     "name": "AutoShape 22",
+     "bbox": [
+      0.0625,
+      0.9333,
+      0.3125,
+      0.0444
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 23,
+     "name": "AutoShape 23",
+     "bbox": [
+      0.8542,
+      0.9333,
+      0.0833,
+      0.0444
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE",
+     "annotates": {
+      "picture_id": 17,
+      "rel_bbox": [
+       0.5826,
+       0.9043,
+       0.1234,
+       0.0955
+      ]
+     }
+    },
+    {
+     "id": 27,
+     "name": "图片 26",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 17,
+     "name": "图片 16",
+     "bbox": [
+      0.4608,
+      0.5127,
+      0.6753,
+      0.4651
+     ],
+     "kind": "picture",
+     "file": "d778f8424d8c.png",
+     "px": [
+      1869,
+      724
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 12,
+   "layout": "",
+   "shapes": [
+    {
+     "id": 2,
+     "name": "Connector 2",
+     "bbox": [
+      0.0625,
+      0.1074,
+      0.8245,
+      0.001
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 3,
+     "name": "AutoShape 3",
+     "bbox": [
+      0.0625,
+      0.137,
+      0.0042,
+      0.063
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 4,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0771,
+      0.1271,
+      0.7917,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "治疗历程（三）· BCMA CAR-T 与持续缓解",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "Connector 5",
+     "bbox": [
+      0.0624,
+      0.2865,
+      0.0,
+      0.7072
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 6,
+     "name": "AutoShape 6",
+     "bbox": [
+      0.0583,
+      0.2754,
+      0.0125,
+      0.0222
+     ],
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 9,
+     "name": "AutoShape 9",
+     "bbox": [
+      0.0564,
+      0.6684,
+      0.0125,
+      0.0222
+     ],
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 13,
+     "name": "AutoShape 13",
+     "bbox": [
+      0.0861,
+      0.2627,
+      0.3125,
+      0.0407
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2024.06.20 评估",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 14,
+     "name": "AutoShape 14",
+     "bbox": [
+      0.0857,
+      0.2775,
+      0.6521,
+      0.375
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "- M蛋白  3.4017g/L，IgG-λ型，κ 0.58mg/L，λ 1.33mg/L",
+       "level": 0,
+       "bold": true,
+       "emphasis": [
+        "3.4017g/L"
+       ]
+      },
+      {
+       "text": "- 骨髓形态浆细胞少见，骨髓活检未见浆细胞",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "- BM-NGF-MRD：未见浆细胞（<2.8*10^{-5}，70w细胞）",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "- BM-NGS-MRD：阴性",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "- PET-CT：全身骨骼多处骨质破坏，部分糖代谢轻度增高，右侧肩胛骨后方肌肉伴糖代谢轻度增高（SUVmax：2.1），与前次PET/CT（2024-05-08）相比病灶代谢减低",
+       "level": 0,
+       "bold": true,
+       "emphasis": [
+        "部分糖代谢轻度增高"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 15,
+     "name": "AutoShape 15",
+     "bbox": [
+      0.0771,
+      0.7047,
+      0.7671,
+      0.1551
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "- M蛋白  0.0806g/L，IgG-λ型，κ 0.56mg/L，λ 1.32mg/L",
+       "level": 0,
+       "bold": true,
+       "emphasis": [
+        "0.0806g/L"
+       ]
+      },
+      {
+       "text": "- PET-CT：全身骨骼多处骨质密度不均，未伴葡萄糖代谢增高，与前次PET/CT（2024-06-20）相比病灶代谢减低，骨骼病灶代谢减低",
+       "level": 0,
+       "bold": true,
+       "emphasis": [
+        "未伴葡萄糖代谢增高"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 22,
+     "name": "AutoShape 22",
+     "bbox": [
+      0.0771,
+      0.9508,
+      0.2979,
+      0.0444
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 23,
+     "name": "AutoShape 23",
+     "bbox": [
+      0.9708,
+      0.9352,
+      0.0833,
+      0.0444
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 27,
+     "name": "图片 26",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 7,
+     "name": "AutoShape 13",
+     "bbox": [
+      0.0771,
+      0.6519,
+      0.3125,
+      0.0407
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2024.09.11 评估",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 10,
+     "name": "AutoShape 9",
+     "bbox": [
+      0.0558,
+      0.8911,
+      0.0125,
+      0.0222
+     ],
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 11,
+     "name": "AutoShape 13",
+     "bbox": [
+      0.0744,
+      0.8784,
+      0.3125,
+      0.0407
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2024.12.10 评估",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 17,
+     "name": "AutoShape 15",
+     "bbox": [
+      0.071,
+      0.895,
+      0.7671,
+      0.1224
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "- M蛋白  阴性，κ 1.25mg/L，λ 2.9mg/L，疗效评估sCR",
+       "level": 0,
+       "bold": true,
+       "emphasis": [
+        "阴性",
+        "疗效评估",
+        "sCR"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 25,
+     "name": "AutoShape 5",
+     "bbox": [
+      0.074,
+      0.2134,
+      0.875,
+      0.037
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "CART后予以泊马度胺维持治疗",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 28,
+     "name": "图片 27",
+     "bbox": [
+      0.6731,
+      0.0,
+      0.3432,
+      0.5338
+     ],
+     "kind": "picture",
+     "file": "f9ba58bdc203.png",
+     "px": [
+      750,
+      656
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 13,
+   "layout": "",
+   "shapes": [
+    {
+     "id": 2,
+     "name": "Connector 2",
+     "bbox": [
+      0.0625,
+      0.1067,
+      0.8419,
+      0.0007
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 3,
+     "name": "AutoShape 3",
+     "bbox": [
+      0.0625,
+      0.137,
+      0.0042,
+      0.063
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 4,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0771,
+      0.1407,
+      0.7292,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "治疗历程（四）·疾病再次髓外复发-乳腺",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "AutoShape 5",
+     "bbox": [
+      0.0625,
+      0.2481,
+      0.875,
+      0.0444
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "CAR-T 深度缓解约一年后出现髓外复发",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 6,
+     "name": "AutoShape 6",
+     "bbox": [
+      0.0625,
+      0.3313,
+      0.0021,
+      0.037
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 7,
+     "name": "AutoShape 7",
+     "bbox": [
+      0.0729,
+      0.3239,
+      0.3125,
+      0.0519
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "临床表现与检查",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 8,
+     "name": "AutoShape 8",
+     "bbox": [
+      0.0624,
+      0.437,
+      0.4281,
+      0.3519
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2025.09：左侧胸部出现硬块",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "-乳腺B超：左乳9点钟实性结节，BI-RADS 4b类，5点实性结节 BI-RADS 3类",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "-PET-CT：左侧乳腺内侧象限软组织肿物伴CXCR4 表达增高（SUVmax 3.73），髂骨右翼CXCR4 表达增高（SUVmax 5.32）",
+       "level": 0,
+       "bold": true,
+       "emphasis": [
+        "左侧乳腺内侧象限软组织肿物",
+        "髂骨右翼"
+       ]
+      },
+      {
+       "text": "-乳腺活检病理：符合浆细胞瘤，累及侵犯乳腺实质",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 9,
+     "name": "Connector 9",
+     "bbox": [
+      0.3281,
+      0.5546,
+      0.3542,
+      0.0019
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 10,
+     "name": "AutoShape 10",
+     "bbox": [
+      0.5052,
+      0.2704,
+      0.0021,
+      0.0333
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 11,
+     "name": "AutoShape 11",
+     "bbox": [
+      0.5177,
+      0.263,
+      0.3125,
+      0.0481
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "局部放疗计划",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 12,
+     "name": "Table 12",
+     "bbox": [
+      0.5177,
+      0.3407,
+      0.4354,
+      0.363
+     ],
+     "kind": "table",
+     "rows": [
+      [
+       "靶区",
+       "部位",
+       "剂量"
+      ],
+      [
+       "GTVp1",
+       "乳腺病灶",
+       "40Gy / 20次"
+      ],
+      [
+       "GTVp2",
+       "髂骨病灶",
+       "40Gy / 20次"
+      ],
+      [
+       "CTV1",
+       "左全乳",
+       "30Gy / 15次"
+      ]
+     ]
+    },
+    {
+     "id": 13,
+     "name": "AutoShape 13",
+     "bbox": [
+      0.5177,
+      0.7407,
+      0.4354,
+      0.1222
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "对髓外复发病灶行局部放疗，",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "控制局部进展并为进一步全身治疗争取时间",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 14,
+     "name": "AutoShape 14",
+     "bbox": [
+      0.0625,
+      0.9333,
+      0.3125,
+      0.0444
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 27,
+     "name": "图片 26",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 14,
+   "layout": "",
+   "shapes": [
+    {
+     "id": 2,
+     "name": "Connector 2",
+     "bbox": [
+      0.0625,
+      0.1067,
+      0.8419,
+      0.0007
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 3,
+     "name": "AutoShape 3",
+     "bbox": [
+      0.0625,
+      0.137,
+      0.0042,
+      0.063
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 4,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0771,
+      0.1407,
+      0.7292,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "治疗历程（四）·疾病再次髓外复发-乳腺",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 27,
+     "name": "图片 26",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 15,
+     "name": "图片 14",
+     "bbox": [
+      0.0625,
+      0.2818,
+      0.4127,
+      0.6523
+     ],
+     "kind": "picture",
+     "file": "623811d3fff3.png",
+     "px": [
+      1000,
+      889
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 16,
+     "name": "图片 15",
+     "bbox": [
+      0.5124,
+      0.2819,
+      0.4411,
+      0.6522
+     ],
+     "kind": "picture",
+     "file": "0e73d642b4db.png",
+     "px": [
+      1027,
+      854
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 17,
+     "name": "文本框 16",
+     "bbox": [
+      0.0625,
+      0.5708,
+      0.059,
+      0.0742
+     ],
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 18,
+     "name": "文本框 17",
+     "bbox": [
+      0.5124,
+      0.5894,
+      0.059,
+      0.0742
+     ],
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 19,
+     "name": "文本框 18",
+     "bbox": [
+      0.2496,
+      0.5708,
+      0.059,
+      0.0742
+     ],
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 20,
+     "name": "文本框 19",
+     "bbox": [
+      0.7035,
+      0.5894,
+      0.059,
+      0.0742
+     ],
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 21,
+     "name": "椭圆 20",
+     "bbox": [
+      0.1843,
+      0.6635,
+      0.059,
+      0.0904
+     ],
+     "kind": "shape",
+     "geom": "OVAL",
+     "annotates": {
+      "picture_id": 15,
+      "rel_bbox": [
+       0.2951,
+       0.5852,
+       0.143,
+       0.1386
+      ]
+     }
+    },
+    {
+     "id": 22,
+     "name": "椭圆 21",
+     "bbox": [
+      0.5715,
+      0.8572,
+      0.0464,
+      0.0769
+     ],
+     "kind": "shape",
+     "geom": "OVAL",
+     "annotates": {
+      "picture_id": 16,
+      "rel_bbox": [
+       0.134,
+       0.8821,
+       0.1052,
+       0.1179
+      ]
+     }
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 15,
+   "layout": "",
+   "shapes": [
+    {
+     "id": 2,
+     "name": "Connector 2",
+     "bbox": [
+      0.0625,
+      0.1074,
+      0.8133,
+      0.0027
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 3,
+     "name": "AutoShape 3",
+     "bbox": [
+      0.0625,
+      0.137,
+      0.0042,
+      0.063
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 4,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0771,
+      0.1407,
+      0.7917,
+      0.0741
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 5,
+     "name": "AutoShape 5",
+     "bbox": [
+      0.0625,
+      0.2395,
+      0.875,
+      0.0444
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "髓外复发放疗后再次进展，累及皮下软组织与腹股沟淋巴结",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 6,
+     "name": "AutoShape 6",
+     "bbox": [
+      0.0625,
+      0.3527,
+      0.0021,
+      0.037
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 7,
+     "name": "AutoShape 7",
+     "bbox": [
+      0.0729,
+      0.3453,
+      0.3125,
+      0.0519
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "临床发现与检查",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 8,
+     "name": "AutoShape 8",
+     "bbox": [
+      0.063,
+      0.336,
+      0.3958,
+      0.5265
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2026.01：右中腹和左侧上臂出现皮下结节，腹股沟区新发肿块，伴左大腿活动困难",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "- 低剂量CT：右侧腹皮下肿物，右侧腹股沟肿大淋巴结，较前2025-09-16新增",
+       "level": 0,
+       "bold": true,
+       "emphasis": [
+        "右侧腹皮下肿物",
+        "，",
+        "右侧腹股沟肿大淋巴结"
+       ]
+      },
+      {
+       "text": "- 全身MRI：多骨弥散受限，左股骨上段稍前进展，右腹壁皮下及右侧腹股沟异常信号",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "- B超：左侧上臂皮下异常回声",
+       "level": 0,
+       "bold": true,
+       "emphasis": [
+        "左侧上臂"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 9,
+     "name": "Connector 9",
+     "bbox": [
+      0.3125,
+      0.5954,
+      0.3542,
+      0.0019
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 11,
+     "name": "AutoShape 11",
+     "bbox": [
+      0.5021,
+      0.3037,
+      0.3125,
+      0.0481
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "实验室评估（2026.01）",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 12,
+     "name": "Table 12",
+     "bbox": [
+      0.5021,
+      0.3815,
+      0.4763,
+      0.5167
+     ],
+     "kind": "table",
+     "rows": [
+      [
+       "项目",
+       "结果"
+      ],
+      [
+       "血MM全套",
+       "SPEP 3.6%，IgG-λ型"
+      ],
+      [
+       "血清游离轻链",
+       "κ 7.07 / λ 15.1 mg/L，κ/λ 0.47"
+      ],
+      [
+       "尿MM全套",
+       "阴性"
+      ],
+      [
+       "骨髓穿刺",
+       "浆细胞少见"
+      ],
+      [
+       "MM免疫分型（BM）",
+       "1.2×10-3"
+      ]
+     ]
+    },
+    {
+     "id": 27,
+     "name": "图片 26",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 13,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0771,
+      0.1407,
+      0.7292,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "治疗历程（五）·疾病再次髓外复发-皮下及腹股沟区",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 16,
+   "layout": "",
+   "shapes": [
+    {
+     "id": 2,
+     "name": "Connector 2",
+     "bbox": [
+      0.0625,
+      0.1074,
+      0.8133,
+      0.0027
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 3,
+     "name": "AutoShape 3",
+     "bbox": [
+      0.0625,
+      0.137,
+      0.0042,
+      0.063
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 4,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0771,
+      0.1407,
+      0.7917,
+      0.0741
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 27,
+     "name": "图片 26",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 13,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0771,
+      0.1407,
+      0.7292,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "治疗历程（五）·疾病再次髓外复发-皮下及腹股沟区",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 10,
+     "name": "图片 9",
+     "bbox": [
+      0.0,
+      0.3238,
+      0.3609,
+      0.416
+     ],
+     "kind": "picture",
+     "file": "4c61f57f9d19.png",
+     "px": [
+      1049,
+      680
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 14,
+     "name": "图片 13",
+     "bbox": [
+      0.3393,
+      0.3237,
+      0.3392,
+      0.4161
+     ],
+     "kind": "picture",
+     "file": "d0abaddd59e7.png",
+     "px": [
+      1054,
+      727
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 15,
+     "name": "图片 14",
+     "bbox": [
+      0.6629,
+      0.3237,
+      0.3371,
+      0.416
+     ],
+     "kind": "picture",
+     "file": "b02ca8e5942a.png",
+     "px": [
+      977,
+      678
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 16,
+     "name": "图片 15",
+     "bbox": [
+      0.4695,
+      0.4616,
+      0.0609,
+      0.0769
+     ],
+     "kind": "picture",
+     "file": "5fd934049a49.png",
+     "px": [
+      117,
+      83
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 17,
+     "name": "椭圆 16",
+     "bbox": [
+      0.2544,
+      0.5168,
+      0.0464,
+      0.0769
+     ],
+     "kind": "shape",
+     "geom": "OVAL",
+     "annotates": {
+      "picture_id": 10,
+      "rel_bbox": [
+       0.7049,
+       0.4639,
+       0.1286,
+       0.1849
+      ]
+     }
+    },
+    {
+     "id": 18,
+     "name": "椭圆 17",
+     "bbox": [
+      0.4459,
+      0.3643,
+      0.0464,
+      0.0769
+     ],
+     "kind": "shape",
+     "geom": "OVAL",
+     "annotates": {
+      "picture_id": 14,
+      "rel_bbox": [
+       0.3143,
+       0.0976,
+       0.1368,
+       0.1848
+      ]
+     }
+    },
+    {
+     "id": 19,
+     "name": "椭圆 18",
+     "bbox": [
+      0.7792,
+      0.3828,
+      0.0464,
+      0.0769
+     ],
+     "kind": "shape",
+     "geom": "OVAL",
+     "annotates": {
+      "picture_id": 15,
+      "rel_bbox": [
+       0.345,
+       0.1421,
+       0.1376,
+       0.1849
+      ]
+     }
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 17,
+   "layout": "",
+   "shapes": [
+    {
+     "id": 2,
+     "name": "Connector 2",
+     "bbox": [
+      0.0625,
+      0.105,
+      0.8056,
+      0.0024
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 3,
+     "name": "AutoShape 3",
+     "bbox": [
+      0.0625,
+      0.137,
+      0.0042,
+      0.063
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 4,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0771,
+      0.1407,
+      0.7292,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "病理与分子特征（2026.01 左上臂穿刺）",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "AutoShape 5",
+     "bbox": [
+      0.0625,
+      0.2259,
+      0.875,
+      0.0444
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "组织病理：浆细胞瘤（母细胞样），BCMA 高表达，为 BCMA 靶向治疗提供依据",
+       "level": 0,
+       "bold": true,
+       "emphasis": [
+        "母细胞样"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 6,
+     "name": "AutoShape 6",
+     "bbox": [
+      0.0625,
+      0.3148,
+      0.0021,
+      0.037
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 7,
+     "name": "AutoShape 7",
+     "bbox": [
+      0.0729,
+      0.3074,
+      0.3125,
+      0.0519
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "免疫组化",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Table 8",
+     "bbox": [
+      0.0625,
+      0.3741,
+      0.4167,
+      0.5048
+     ],
+     "kind": "table",
+     "rows": [
+      [
+       "标志物",
+       "结果"
+      ],
+      [
+       "CD38 / CD138",
+       "（+）"
+      ],
+      [
+       "Kappa / Lambda",
+       "（-）/（+）"
+      ],
+      [
+       "C-myc",
+       "（+）约70%"
+      ],
+      [
+       "Ki-67",
+       "（+）约90%"
+      ],
+      [
+       "BCMA",
+       "（+）93.8%"
+      ],
+      [
+       "EBER",
+       "（-）"
+      ]
+     ]
+    },
+    {
+     "id": 9,
+     "name": "Connector 9",
+     "bbox": [
+      0.3229,
+      0.5546,
+      0.3542,
+      0.0019
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 10,
+     "name": "AutoShape 10",
+     "bbox": [
+      0.5,
+      0.2963,
+      0.0021,
+      0.0333
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 11,
+     "name": "AutoShape 11",
+     "bbox": [
+      0.5125,
+      0.2889,
+      0.3125,
+      0.0481
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "FISH 与基因突变",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 12,
+     "name": "Table 12",
+     "bbox": [
+      0.5125,
+      0.3667,
+      0.425,
+      0.3911
+     ],
+     "kind": "table",
+     "rows": [
+      [
+       "FISH 检测",
+       "结果"
+      ],
+      [
+       "13q14 缺失",
+       "90%"
+      ],
+      [
+       "Rb1 缺失",
+       "90%"
+      ],
+      [
+       "1q21 扩增",
+       "90%，4个拷贝数"
+      ],
+      [
+       "FGFR3/IgH 重排",
+       "90%"
+      ],
+      [
+       "P53 缺失",
+       "阴性"
+      ]
+     ]
+    },
+    {
+     "id": 13,
+     "name": "AutoShape 13",
+     "bbox": [
+      0.5125,
+      0.7667,
+      0.425,
+      0.1296
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "基因突变：NRAS 43.2%，IGLL5 80.9%",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 27,
+     "name": "图片 26",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 18,
+   "layout": "",
+   "shapes": [
+    {
+     "id": 2,
+     "name": "Connector 2",
+     "bbox": [
+      0.0625,
+      0.105,
+      0.8271,
+      0.0024
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 3,
+     "name": "AutoShape 3",
+     "bbox": [
+      0.0625,
+      0.137,
+      0.0042,
+      0.063
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 4,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0771,
+      0.1407,
+      0.8333,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "治疗历程（六）· 埃纳妥单抗联合兆珂速方案",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "AutoShape 5",
+     "bbox": [
+      0.0625,
+      0.2259,
+      0.875,
+      0.0444
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2026年1月起，针对难治复发伴髓外浸润 MM 启动双药联合治疗",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 6,
+     "name": "AutoShape 6",
+     "bbox": [
+      0.0625,
+      0.2963,
+      0.0021,
+      0.037
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 7,
+     "name": "AutoShape 7",
+     "bbox": [
+      0.0729,
+      0.2889,
+      0.3125,
+      0.0519
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "方案给药经过",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Connector 8",
+     "bbox": [
+      0.125,
+      0.463,
+      0.8656,
+      0.0
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 9,
+     "name": "AutoShape 9",
+     "bbox": [
+      0.1187,
+      0.4519,
+      0.0125,
+      0.0222
+     ],
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 10,
+     "name": "AutoShape 10",
+     "bbox": [
+      0.0729,
+      0.3926,
+      0.125,
+      0.0407
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2026.01.30",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 11,
+     "name": "AutoShape 11",
+     "bbox": [
+      0.0625,
+      0.4963,
+      0.1458,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "启动兆珂速",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "1800mg 每周1次",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 12,
+     "name": "AutoShape 12",
+     "bbox": [
+      0.2708,
+      0.4519,
+      0.0125,
+      0.0222
+     ],
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 13,
+     "name": "AutoShape 13",
+     "bbox": [
+      0.2222,
+      0.3926,
+      0.125,
+      0.0407
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2026.01.31",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 14,
+     "name": "AutoShape 14",
+     "bbox": [
+      0.2118,
+      0.4963,
+      0.1458,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "启动埃纳妥单抗",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "76mg 每周1次",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 15,
+     "name": "AutoShape 15",
+     "bbox": [
+      0.4131,
+      0.4519,
+      0.0125,
+      0.0222
+     ],
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 16,
+     "name": "AutoShape 16",
+     "bbox": [
+      0.3672,
+      0.3926,
+      0.125,
+      0.0407
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2026.02.23",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 17,
+     "name": "AutoShape 17",
+     "bbox": [
+      0.3568,
+      0.5148,
+      0.1554,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "埃纳妥单抗 76mg+兆珂速1800mg",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 18,
+     "name": "AutoShape 18",
+     "bbox": [
+      0.5778,
+      0.4519,
+      0.0125,
+      0.0222
+     ],
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 19,
+     "name": "AutoShape 19",
+     "bbox": [
+      0.532,
+      0.3926,
+      0.125,
+      0.0407
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2026.03.28",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 20,
+     "name": "AutoShape 20",
+     "bbox": [
+      0.5216,
+      0.4963,
+      0.1458,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "埃纳妥76mg +",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "兆珂速1800mg",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "C2",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 21,
+     "name": "Connector 21",
+     "bbox": [
+      0.0625,
+      0.6102,
+      0.875,
+      0.0019
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 22,
+     "name": "AutoShape 22",
+     "bbox": [
+      0.0625,
+      0.6407,
+      0.0021,
+      0.0333
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 23,
+     "name": "AutoShape 23",
+     "bbox": [
+      0.075,
+      0.6333,
+      0.3125,
+      0.0481
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "方案特点（双靶点联合）",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 24,
+     "name": "AutoShape 24",
+     "bbox": [
+      0.075,
+      0.7074,
+      0.8542,
+      0.1296
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "埃纳妥单抗　BCMA×CD3 双特异性抗体　→　靶向 BCMA",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "兆珂速　达雷妥尤单抗（抗CD38单抗）　→　靶向 CD38",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 25,
+     "name": "AutoShape 25",
+     "bbox": [
+      0.075,
+      0.8519,
+      0.8542,
+      0.0556
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "此后每月1次维持用药 · 本患者 BCMA 高表达（93.8%）为靶向治疗提供依据",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 27,
+     "name": "AutoShape 27",
+     "bbox": [
+      0.8542,
+      0.9333,
+      0.0833,
+      0.0444
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 28,
+     "name": "图片 27",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 26,
+     "name": "下箭头标注 25",
+     "bbox": [
+      0.4481,
+      0.304,
+      0.125,
+      0.1156
+     ],
+     "kind": "shape",
+     "geom": "DOWN_ARROW_CALLOUT"
+    },
+    {
+     "id": 29,
+     "name": "AutoShape 17",
+     "bbox": [
+      0.4478,
+      0.3069,
+      0.125,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "CMV病毒感染",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 30,
+     "name": "AutoShape 15",
+     "bbox": [
+      0.7315,
+      0.4504,
+      0.0125,
+      0.0222
+     ],
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 31,
+     "name": "AutoShape 16",
+     "bbox": [
+      0.6856,
+      0.3911,
+      0.125,
+      0.0407
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2026.04.06",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 32,
+     "name": "AutoShape 17",
+     "bbox": [
+      0.6752,
+      0.5133,
+      0.1554,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "埃纳妥单抗 76mg+兆珂速1800mg",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 33,
+     "name": "下箭头标注 32",
+     "bbox": [
+      0.7595,
+      0.2925,
+      0.125,
+      0.1156
+     ],
+     "kind": "shape",
+     "geom": "DOWN_ARROW_CALLOUT"
+    },
+    {
+     "id": 34,
+     "name": "AutoShape 17",
+     "bbox": [
+      0.7563,
+      0.2955,
+      0.125,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "CMV病毒感染",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 37,
+     "name": "AutoShape 15",
+     "bbox": [
+      0.905,
+      0.4514,
+      0.0125,
+      0.0222
+     ],
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 38,
+     "name": "AutoShape 16",
+     "bbox": [
+      0.8592,
+      0.3921,
+      0.125,
+      0.0407
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "2026.06.03",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 39,
+     "name": "AutoShape 17",
+     "bbox": [
+      0.8488,
+      0.5144,
+      0.1554,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "埃纳妥单抗 76mg+兆珂速1800mg",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 19,
+   "layout": "",
+   "shapes": [
+    {
+     "id": 2,
+     "name": "Connector 2",
+     "bbox": [
+      0.0625,
+      0.1074,
+      0.8169,
+      0.001
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 3,
+     "name": "AutoShape 3",
+     "bbox": [
+      0.0625,
+      0.137,
+      0.0042,
+      0.063
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 4,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0771,
+      0.1407,
+      0.7292,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "近期评估 · 2026.06 住院",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "AutoShape 5",
+     "bbox": [
+      0.0625,
+      0.2259,
+      0.875,
+      0.0444
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "维持联合治疗期间入院评估",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 6,
+     "name": "AutoShape 6",
+     "bbox": [
+      0.0625,
+      0.2889,
+      0.0021,
+      0.037
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 7,
+     "name": "AutoShape 7",
+     "bbox": [
+      0.0729,
+      0.2815,
+      0.3125,
+      0.0519
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "入院检查（06-02/06-03）",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Table 8",
+     "bbox": [
+      0.0625,
+      0.3407,
+      0.4167,
+      0.44
+     ],
+     "kind": "table",
+     "rows": [
+      [
+       "项目",
+       "结果"
+      ],
+      [
+       "血常规",
+       "WBC 4.07×10⁹/L，Hb 74g/L，中性粒 2.52×10⁹/L，血小板83×10⁹/L"
+      ],
+      [
+       "CRP",
+       "15.69mg/L"
+      ],
+      [
+       "生化",
+       "ALB 40.7g/L，肌酐 42μmol/L，球蛋白 28.7g/L，TP 69.4g/L"
+      ],
+      [
+       "心肌标志物",
+       "肌钙蛋白T 3.55，BNP前体 21.5"
+      ],
+      [
+       "凝血",
+       "纤维蛋白原 4.16g/L"
+      ]
+     ]
+    },
+    {
+     "id": 9,
+     "name": "Connector 9",
+     "bbox": [
+      0.4989,
+      0.2407,
+      0.0011,
+      0.5863
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 10,
+     "name": "AutoShape 10",
+     "bbox": [
+      0.5,
+      0.2704,
+      0.0021,
+      0.0333
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 11,
+     "name": "AutoShape 11",
+     "bbox": [
+      0.5125,
+      0.263,
+      0.3125,
+      0.0481
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "免疫与病毒学",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 12,
+     "name": "Table 12",
+     "bbox": [
+      0.5125,
+      0.3407,
+      0.425,
+      0.3948
+     ],
+     "kind": "table",
+     "rows": [
+      [
+       "项目",
+       "结果"
+      ],
+      [
+       "体液免疫",
+       "κ 163.00，λ 72.70\nIgA<0.07，IgG 2.39，IgM<0.04"
+      ],
+      [
+       "CMV-DNA",
+       "6.87×102（缬更昔洛韦抗病毒治疗）"
+      ],
+      [
+       "EBV-DNA",
+       "<1×102"
+      ],
+      [
+       "本次治疗",
+       "埃纳妥单抗 + 兆珂速 + 丙种球蛋白"
+      ]
+     ]
+    },
+    {
+     "id": 13,
+     "name": "Connector 13",
+     "bbox": [
+      0.0625,
+      0.8497,
+      0.875,
+      0.0019
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 14,
+     "name": "AutoShape 14",
+     "bbox": [
+      0.0625,
+      0.8474,
+      0.875,
+      0.0556
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 15,
+     "name": "AutoShape 15",
+     "bbox": [
+      0.0625,
+      0.8911,
+      0.875,
+      0.0519
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "- MRI：多骨弥散受限，较前（2026-01-12）好转，右腹壁皮下及右侧腹股沟区淋巴结异常信号较前明显缩小",
+       "level": 0,
+       "bold": true,
+       "emphasis": [
+        "右腹壁皮下及右侧腹股沟区淋巴结异常信号较前明显缩小"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 28,
+     "name": "图片 27",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 20,
+   "layout": "",
+   "shapes": [
+    {
+     "id": 2,
+     "name": "Connector 2",
+     "bbox": [
+      0.0625,
+      0.105,
+      0.8209,
+      0.0024
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 3,
+     "name": "AutoShape 3",
+     "bbox": [
+      0.0625,
+      0.137,
+      0.0042,
+      0.063
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 4,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0771,
+      0.1407,
+      0.7917,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "最新评估 · 2026.08 住院与检验报告",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "AutoShape 5",
+     "bbox": [
+      0.0625,
+      0.2259,
+      0.875,
+      0.0444
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "免疫固定电泳全阴性，M蛋白显著下降，疗效进一步加深",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 6,
+     "name": "AutoShape 6",
+     "bbox": [
+      0.0625,
+      0.2889,
+      0.0021,
+      0.037
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 7,
+     "name": "AutoShape 7",
+     "bbox": [
+      0.0729,
+      0.2815,
+      0.3125,
+      0.0519
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "入院检查（08-22）",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Table 8",
+     "bbox": [
+      0.0625,
+      0.3481,
+      0.4167,
+      0.4622
+     ],
+     "kind": "table",
+     "rows": [
+      [
+       "项目",
+       "结果"
+      ],
+      [
+       "血常规",
+       "CRP 4.36mg/L，WBC 6.27×109/L，Hb 110g/L，PLT 68×109/L"
+      ],
+      [
+       "生化",
+       "肌酐 50μmol/L，钾 3.67mmol/L"
+      ],
+      [
+       "心肌标志物",
+       "肌钙蛋白T 11.8，BNP <5.00"
+      ],
+      [
+       "心电图",
+       "窦性心律"
+      ],
+      [
+       "本次治疗",
+       "埃纳妥76mg + 兆珂速1800mg + 护胃补钙"
+      ]
+     ]
+    },
+    {
+     "id": 9,
+     "name": "Connector 9",
+     "bbox": [
+      0.349,
+      0.5083,
+      0.3021,
+      0.0019
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 10,
+     "name": "AutoShape 10",
+     "bbox": [
+      0.5,
+      0.2704,
+      0.0021,
+      0.0333
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 11,
+     "name": "AutoShape 11",
+     "bbox": [
+      0.5125,
+      0.263,
+      0.3125,
+      0.0481
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "检验报告（08-24 标本）",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 12,
+     "name": "Table 12",
+     "bbox": [
+      0.5125,
+      0.3407,
+      0.425,
+      0.3778
+     ],
+     "kind": "table",
+     "rows": [
+      [
+       "项目",
+       "结果"
+      ],
+      [
+       "免疫固定电泳",
+       "全阴性"
+      ],
+      [
+       "血清蛋白电泳",
+       "M蛋白 <0.1%，A/G 2.27"
+      ],
+      [
+       "血清游离轻链",
+       "κ 0.57 / λ 1.35，κ/λ 0.42"
+      ]
+     ]
+    },
+    {
+     "id": 13,
+     "name": "Connector 13",
+     "bbox": [
+      0.0625,
+      0.862,
+      0.875,
+      0.0019
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 14,
+     "name": "AutoShape 14",
+     "bbox": [
+      0.0625,
+      0.9329,
+      0.875,
+      0.0519
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 28,
+     "name": "图片 27",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 21,
+   "layout": "",
+   "shapes": [
+    {
+     "id": 2,
+     "name": "Connector 2",
+     "bbox": [
+      0.0625,
+      0.105,
+      0.8104,
+      0.0024
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 3,
+     "name": "AutoShape 3",
+     "bbox": [
+      0.0625,
+      0.137,
+      0.0042,
+      0.063
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 4,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0771,
+      0.1407,
+      0.7292,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "病例总结",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "AutoShape 5",
+     "bbox": [
+      0.0625,
+      0.2407,
+      0.0021,
+      0.0333
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 6,
+     "name": "AutoShape 6",
+     "bbox": [
+      0.075,
+      0.2333,
+      0.3125,
+      0.0481
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "病例特点",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 7,
+     "name": "AutoShape 7",
+     "bbox": [
+      0.075,
+      0.3125,
+      0.3958,
+      0.2778
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "· 青年女性，IgG-λ型 MM，DS IIIA / ISS II / RISS II",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "· 高危因素：1q21扩增、FGFR3/IgH重排、母细胞样形态、多次髓外浸润",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "· 历经 VRD、自体移植、KD、BCMA CAR-T、P、放疗等多线治疗后复发难治",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Connector 8",
+     "bbox": [
+      0.401,
+      0.3972,
+      0.1771,
+      0.0019
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 9,
+     "name": "AutoShape 9",
+     "bbox": [
+      0.4896,
+      0.2407,
+      0.0021,
+      0.0333
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 10,
+     "name": "AutoShape 10",
+     "bbox": [
+      0.5021,
+      0.2333,
+      0.3125,
+      0.0481
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "治疗与疗效",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 11,
+     "name": "AutoShape 11",
+     "bbox": [
+      0.4917,
+      0.2659,
+      0.4354,
+      0.2778
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "· 2026年1月启用埃纳妥单抗联合兆珂速方案",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "· 2026.08 评估：免疫固定电泳全阴性，M蛋白 <0.1%，sFLC κ/λ 0.42",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "· CMV 再激活经规范化管理控制，方案整体可耐受",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 12,
+     "name": "Connector 12",
+     "bbox": [
+      0.0625,
+      0.6504,
+      0.875,
+      0.0019
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 14,
+     "name": "AutoShape 14",
+     "bbox": [
+      0.075,
+      0.6296,
+      0.3125,
+      0.0481
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 15,
+     "name": "AutoShape 15",
+     "bbox": [
+      0.075,
+      0.6785,
+      0.8625,
+      0.1564
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "埃纳妥单抗（BCMA×CD3双抗）联合兆珂速（抗CD38单抗）",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "为多线治疗失败的复发难治 MM 伴髓外浸润患者提供双靶点治疗策略",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 16,
+     "name": "AutoShape 16",
+     "bbox": [
+      0.075,
+      0.8333,
+      0.8625,
+      0.0556
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "本病例 BCMA 高表达（93.8%），提示 BCMA 靶向治疗具有良好的应用潜力",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 28,
+     "name": "图片 27",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 22,
+   "layout": "1_标题幻灯片",
+   "shapes": [
+    {
+     "id": 3,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0447,
+      0.0397,
+      0.5208,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "目录",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "内容占位符 2",
+     "bbox": [
+      0.0688,
+      0.2662,
+      0.8625,
+      0.6345
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "病例汇报",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "文献回顾",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "总结",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 23,
+   "layout": "1_标题幻灯片",
+   "shapes": [
+    {
+     "id": 2,
+     "name": "文本框 1",
+     "bbox": [
+      0.02,
+      0.0228,
+      0.9407,
+      0.1104
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "MagnetisMM-3研究美国亚组：",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "探讨了埃纳妥单抗获得持续缓解后，降低频率给药的疗效和安全性",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 6,
+     "name": "文本框 5",
+     "bbox": [
+      0.0245,
+      0.9549,
+      0.4682,
+      0.0314
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "Lesokhin AM, et al. Nat Med 2023;29:2259-2267.",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Rectangle: Rounded Corners 3",
+     "bbox": [
+      0.0305,
+      0.4146,
+      0.9407,
+      0.4421
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 9,
+     "name": "Rectangle: Rounded Corners 3",
+     "bbox": [
+      0.0305,
+      0.1968,
+      0.9407,
+      0.2043
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 15,
+     "name": "矩形: 圆角 14",
+     "bbox": [
+      0.0305,
+      0.2032,
+      0.1349,
+      0.0635
+     ],
+     "kind": "text",
+     "geom": "ROUNDED_RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "研究方法",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 45,
+     "name": "文本框 44",
+     "bbox": [
+      0.0368,
+      0.2686,
+      0.9407,
+      0.1234
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "MagnetisMM-3研究是一项正在进行的多中心、开放标签、单臂、2期研究，旨在研究埃纳妥单抗治疗RRMM的疗效和安全性。队列A共纳入123名对≥1种IMiD、 ≥1种PI和≥1种抗CD38单抗难治且BCMA初治的RRMM患者，接受埃纳妥单抗治疗。主要终点为BICR评估的ORR^{1,2}",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "本次报告队列A美国亚组结果（n=47），数据截止2025年3月10日，中位随访时间为39.6个月（95% CI 38.7-41.5个月）^{2}",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 54,
+     "name": "矩形 53",
+     "bbox": [
+      0.0318,
+      0.4014,
+      0.2333,
+      0.2707
+     ],
+     "group": 49,
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 55,
+     "name": "矩形 54",
+     "bbox": [
+      0.0318,
+      0.388,
+      0.2333,
+      0.0578
+     ],
+     "group": 49,
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "RRMM患者",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 50,
+     "name": "文本框 49",
+     "bbox": [
+      0.0318,
+      0.4402,
+      0.2259,
+      0.1835
+     ],
+     "group": 48,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "对≥1种PI、 ≥1种IMiD和≥1种抗CD38单克隆抗体难治的患者",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "ECOG PS≤2",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 61,
+     "name": "矩形 60",
+     "bbox": [
+      0.0318,
+      0.4129,
+      0.2342,
+      0.1396
+     ],
+     "group": 57,
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 62,
+     "name": "矩形 61",
+     "bbox": [
+      0.0318,
+      0.3884,
+      0.2342,
+      0.0703
+     ],
+     "group": 57,
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "队列A美国亚组",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 60,
+     "name": "文本框 59",
+     "bbox": [
+      0.0353,
+      0.4596,
+      0.2265,
+      0.0586
+     ],
+     "group": 56,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "既往未接受过靶向BCMA疗法治疗的患者（n=47）",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 63,
+     "name": "object 43",
+     "bbox": [
+      0.1899,
+      0.6619,
+      0.0818,
+      0.1051
+     ],
+     "kind": "picture",
+     "file": "bdf04d47111d.png",
+     "px": [
+      401,
+      1104
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 64,
+     "name": "object 61",
+     "bbox": [
+      0.1998,
+      0.6311,
+      0.0588,
+      0.0243
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "剂量递增期",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 65,
+     "name": "object 61",
+     "bbox": [
+      0.1917,
+      0.6788,
+      0.0773,
+      0.0713
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "第1周期",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "第1天：12mg SC",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "第4天：32mg SC",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 67,
+     "name": "object 43",
+     "bbox": [
+      0.2672,
+      0.4587,
+      0.0758,
+      0.1051
+     ],
+     "group": 66,
+     "kind": "picture",
+     "file": "bdf04d47111d.png",
+     "px": [
+      401,
+      1104
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 68,
+     "name": "object 61",
+     "bbox": [
+      0.27,
+      0.5012,
+      0.0688,
+      0.025
+     ],
+     "group": 66,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "76mg SC QW",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 70,
+     "name": "object 43",
+     "bbox": [
+      0.4294,
+      0.4614,
+      0.078,
+      0.1051
+     ],
+     "group": 69,
+     "kind": "picture",
+     "file": "bdf04d47111d.png",
+     "px": [
+      401,
+      1104
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 71,
+     "name": "object 61",
+     "bbox": [
+      0.4289,
+      0.4996,
+      0.078,
+      0.026
+     ],
+     "group": 69,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "76mg SC Q2W",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 73,
+     "name": "object 43",
+     "bbox": [
+      0.5783,
+      0.4632,
+      0.078,
+      0.1051
+     ],
+     "group": 72,
+     "kind": "picture",
+     "file": "bdf04d47111d.png",
+     "px": [
+      401,
+      1104
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 74,
+     "name": "object 61",
+     "bbox": [
+      0.5801,
+      0.4997,
+      0.0744,
+      0.026
+     ],
+     "group": 72,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "76mg SC Q4W",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 75,
+     "name": "文本框 74",
+     "bbox": [
+      0.3646,
+      0.6544,
+      0.1154,
+      0.0539
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "QW≥6个周期，",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "≥PR且持续≥2个月",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 76,
+     "name": "文本框 75",
+     "bbox": [
+      0.5392,
+      0.6659,
+      0.0818,
+      0.0337
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "Q2W≥6个周期",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 77,
+     "name": "箭头: 右 76",
+     "bbox": [
+      0.2716,
+      0.7057,
+      0.0157,
+      0.0307
+     ],
+     "kind": "shape",
+     "geom": "RIGHT_ARROW"
+    },
+    {
+     "id": 78,
+     "name": "箭头: 右 77",
+     "bbox": [
+      0.3686,
+      0.7041,
+      0.0866,
+      0.0322
+     ],
+     "kind": "shape",
+     "geom": "RIGHT_ARROW"
+    },
+    {
+     "id": 79,
+     "name": "箭头: 右 78",
+     "bbox": [
+      0.5424,
+      0.7041,
+      0.0673,
+      0.0322
+     ],
+     "kind": "shape",
+     "geom": "RIGHT_ARROW"
+    },
+    {
+     "id": 80,
+     "name": "矩形: 圆角 79",
+     "bbox": [
+      0.8107,
+      0.4529,
+      0.1433,
+      0.3694
+     ],
+     "kind": "text",
+     "geom": "ROUNDED_RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "主要研究终点：",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "BICR评估的ORR",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "次要研究终点：",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "MRD阴性率 （10^{-5}）",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "TTR",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "DOR",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "PFS",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "OS",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "安全性等",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 81,
+     "name": "矩形: 圆角 80",
+     "bbox": [
+      0.7081,
+      0.4965,
+      0.0918,
+      0.2768
+     ],
+     "kind": "text",
+     "geom": "ROUNDED_RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "治疗至出现疾病进展或不可耐受的毒性",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 82,
+     "name": "object 61",
+     "bbox": [
+      0.4515,
+      0.6291,
+      0.0678,
+      0.0243
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "全剂量治疗期",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 83,
+     "name": "矩形 82",
+     "bbox": [
+      0.1858,
+      0.6244,
+      0.0905,
+      0.1489
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 84,
+     "name": "矩形 83",
+     "bbox": [
+      0.2835,
+      0.625,
+      0.4139,
+      0.1489
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 85,
+     "name": "直接箭头连接符 84",
+     "bbox": [
+      0.1654,
+      0.646,
+      0.0117,
+      0.0
+     ],
+     "kind": "line"
+    },
+    {
+     "id": 4,
+     "name": "图片 3",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 24,
+   "layout": "1_标题幻灯片",
+   "shapes": [
+    {
+     "id": 2,
+     "name": "文本框 1",
+     "bbox": [
+      0.0204,
+      0.0116,
+      0.9593,
+      0.1104
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "MagnetisMM-3研究美国亚组：",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "基线普遍预后不良，47%患者转为Q2W，17%进一步转为Q4W",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Table 8",
+     "bbox": [
+      0.4852,
+      0.204,
+      0.2253,
+      0.6417
+     ],
+     "kind": "table",
+     "rows": [
+      [
+       "",
+       "N=47"
+      ],
+      [
+       "中位年龄， 岁 (范围)*",
+       "68.0 (36.0-89.0)"
+      ],
+      [
+       "男性，n (%)",
+       "24 (51.1)"
+      ],
+      [
+       "种族/民族，n (%)",
+       ""
+      ],
+      [
+       "非裔美国人或黑人",
+       "8 (17.0)"
+      ],
+      [
+       "亚裔",
+       "3 (6.4)"
+      ],
+      [
+       "白人",
+       "34 (72.3)"
+      ],
+      [
+       "未知",
+       "1 (2.1)"
+      ],
+      [
+       "未报告",
+       "1 (2.1)"
+      ],
+      [
+       "ECOG PS，n (%)",
+       ""
+      ],
+      [
+       "0",
+       "15 (31.9)"
+      ],
+      [
+       "1",
+       "28 (59.6)"
+      ],
+      [
+       "2",
+       "4 (8.5)"
+      ],
+      [
+       "R-ISS疾病期，n (%)",
+       ""
+      ],
+      [
+       "Ⅰ",
+       "14 (29.8)"
+      ],
+      [
+       "Ⅱ",
+       "24 (51.1)"
+      ],
+      [
+       "Ⅲ",
+       "7 (14.9)"
+      ],
+      [
+       "未知",
+       "2 (4.3)"
+      ]
+     ]
+    },
+    {
+     "id": 4,
+     "name": "文本框 3",
+     "bbox": [
+      0.0275,
+      0.9142,
+      0.5536,
+      0.0494
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "Ajay Nooka, et al. Efficacy and Safety of Less Frequent Dosing With Elranatamab (ELRA) in Patients With Relapsed or Refractory Multiple Myeloma (RRMM): A US Subgroup Analysis from MagnetisMM-3. IMS 2025. Abstract PA-046.",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "Table 8",
+     "bbox": [
+      0.7159,
+      0.204,
+      0.251,
+      0.6622
+     ],
+     "kind": "table",
+     "rows": [
+      [
+       "",
+       "N=47"
+      ],
+      [
+       "细胞遗传学风险，n (%)",
+       ""
+      ],
+      [
+       "标危",
+       "32 (68.1)"
+      ],
+      [
+       "高危*",
+       "13 (27.7)"
+      ],
+      [
+       "缺失",
+       "2 (4.3)"
+      ],
+      [
+       "髓外疾病（BICR），n (%)",
+       ""
+      ],
+      [
+       "是†",
+       "15 (31.9)"
+      ],
+      [
+       "否",
+       "32 (68.1)"
+      ],
+      [
+       "具有≥1个预后不良因素‡",
+       "32 (68.1)"
+      ],
+      [
+       "既往治疗线数，中位数 (范围）",
+       "5.0 (2.0-22.0)"
+      ],
+      [
+       "既往干细胞移植治疗，n (%)",
+       "35 (74.5)"
+      ],
+      [
+       "暴露状态",
+       ""
+      ],
+      [
+       "三重暴露§",
+       "47 (100)"
+      ],
+      [
+       "五重暴露¶",
+       "37 (78.7)"
+      ],
+      [
+       "难治状态",
+       ""
+      ],
+      [
+       "三重难治§",
+       "44 (93.6)"
+      ],
+      [
+       "五重难治¶",
+       "22 (46.8)"
+      ],
+      [
+       "最后一线治疗难治，n (%)",
+       "46 (97.9)"
+      ]
+     ]
+    },
+    {
+     "id": 6,
+     "name": "Rectangle: Rounded Corners 9",
+     "bbox": [
+      0.0381,
+      0.204,
+      0.4343,
+      0.2467
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 7,
+     "name": "文本框 6",
+     "bbox": [
+      0.0552,
+      0.2197,
+      0.0909,
+      0.0539
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "患者特征",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Rectangle: Rounded Corners 9",
+     "bbox": [
+      0.0401,
+      0.4673,
+      0.4343,
+      0.3675
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 9,
+     "name": "文本框 8",
+     "bbox": [
+      0.0552,
+      0.4804,
+      0.0909,
+      0.0539
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "治疗特征",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 10,
+     "name": "文本框 9",
+     "bbox": [
+      0.0466,
+      0.2777,
+      0.4215,
+      0.1615
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "93.6%的患者三重耐药，46.8%的患者五重耐药",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "68.1%伴有≥1个预后不良特征",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "31.9%的患者伴有髓外病变",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 11,
+     "name": "文本框 10",
+     "bbox": [
+      0.0466,
+      0.5348,
+      0.4215,
+      0.2908
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "22例（47%）患者从QW转为Q2W，Q2W给药的中位治疗持续时间为11.1个月（范围：0.03-25.9）",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "在17例完成≥6个周期Q2W给药的患者中，8例（17%）患者转为Q4W，Q4W给药的中位治疗持续时间为15.0个月（范围：6.5-20.7）",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "至数据截止日期，5例（10.6%）患者仍在接受治疗",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 12,
+     "name": "文本框 11",
+     "bbox": [
+      0.0275,
+      0.8587,
+      0.7643,
+      0.0628
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "*包含t (4;14)、t(14;16) 及del (17p) 染色体异常；†髓外疾病定义为存在任何浆细胞瘤（含髓外浆细胞瘤和/或伴软组织成分的髓旁浆细胞瘤）； ‡不良预后特征指满足以下至少一项：ECOG PS 2 分、R-ISS Ⅲ 期、BICR确认基线存在EMD、高危细胞遗传学特征、BMPC比例≥50%；^{ §}三重指≥1种蛋白酶体抑制剂、≥1种免疫调节药物及≥1种抗CD38抗体治疗； ^{¶}五重指≥2种蛋白酶体抑制剂、≥2种免疫调节药物及≥1种抗CD38抗体治疗",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "BICR：盲法独立中心审查；BMPC：骨髓浆细胞；ECOG PS：美国东部肿瘤协作组体能状态评分；EMD：髓外疾病； Q2W：每2周1次；Q4W：每4周1次；QW：每周1次；R-ISS：修订版多发性骨髓瘤国际分期系统",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 14,
+     "name": "图片 13",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 25,
+   "layout": "1_标题幻灯片",
+   "shapes": [
+    {
+     "id": 10,
+     "name": "矩形: 圆角 9",
+     "bbox": [
+      0.4882,
+      0.2025,
+      0.4774,
+      0.6457
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 11,
+     "name": "矩形: 圆角 10",
+     "bbox": [
+      0.5371,
+      0.2216,
+      0.4031,
+      0.0635
+     ],
+     "kind": "text",
+     "geom": "ROUNDED_RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "主要终点：BICR评估的ORR*",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 2,
+     "name": "文本框 1",
+     "bbox": [
+      0.0204,
+      0.0074,
+      0.9593,
+      0.1104
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "MagnetisMM-3研究美国亚组：",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "埃纳妥单抗治疗实现快速且深度的缓解：中位起效时间 1.1个月，ORR 66%",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 3,
+     "name": "图表 2",
+     "bbox": [
+      0.5681,
+      0.2802,
+      0.3776,
+      0.5053
+     ],
+     "group": 12,
+     "kind": "chart",
+     "chart_type": "COLUMN_STACKED (52)",
+     "categories": [
+      ""
+     ],
+     "series": [
+      {
+       "name": "PR",
+       "values": [
+        6.4
+       ]
+      },
+      {
+       "name": "VGPR",
+       "values": [
+        17.0
+       ]
+      },
+      {
+       "name": "CR",
+       "values": [
+        14.9
+       ]
+      },
+      {
+       "name": "sCR",
+       "values": [
+        27.7
+       ]
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "左大括号 4",
+     "bbox": [
+      0.8085,
+      0.3323,
+      0.0113,
+      0.378
+     ],
+     "group": 12,
+     "kind": "shape",
+     "geom": "LEFT_BRACE"
+    },
+    {
+     "id": 6,
+     "name": "文本框 5",
+     "bbox": [
+      0.8198,
+      0.4947,
+      0.0596,
+      0.0673
+     ],
+     "group": 12,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "≥VGPR",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "59.6%",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 7,
+     "name": "左大括号 6",
+     "bbox": [
+      0.6883,
+      0.3323,
+      0.0111,
+      0.2677
+     ],
+     "group": 12,
+     "kind": "shape",
+     "geom": "LEFT_BRACE"
+    },
+    {
+     "id": 8,
+     "name": "文本框 7",
+     "bbox": [
+      0.64,
+      0.4327,
+      0.0539,
+      0.0673
+     ],
+     "group": 12,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "≥CR",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "42.6%",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 9,
+     "name": "文本框 8",
+     "bbox": [
+      0.6995,
+      0.2838,
+      0.1147,
+      0.0449
+     ],
+     "group": 12,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "ORR 66.0%",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 13,
+     "name": "Rectangle: Rounded Corners 9",
+     "bbox": [
+      0.0344,
+      0.2258,
+      0.4343,
+      0.5434
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 14,
+     "name": "文本框 13",
+     "bbox": [
+      0.0593,
+      0.2673,
+      0.2045,
+      0.0539
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "结果：缓解速度和深度",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 15,
+     "name": "文本框 14",
+     "bbox": [
+      0.0548,
+      0.3921,
+      0.3958,
+      0.2158
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "BICR评估的ORR为66.0%（95% CI 50.7-79.1）",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "sCR率 27.7%；CR率 14.9%",
+       "level": 1,
+       "bold": false
+      },
+      {
+       "text": "中位起效时间为1.1个月（范围：1.0-7.4）",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "中位至≥CR时间为4.76个月（范围：1.2-12.8）",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 16,
+     "name": "文本框 15",
+     "bbox": [
+      0.635,
+      0.7943,
+      0.2568,
+      0.0404
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "MagnetisMM-3队列A美国亚组（N=47）",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 17,
+     "name": "文本框 16",
+     "bbox": [
+      0.0273,
+      0.9068,
+      0.5536,
+      0.0494
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "Ajay Nooka, et al. Efficacy and Safety of Less Frequent Dosing With Elranatamab (ELRA) in Patients With Relapsed or Refractory Multiple Myeloma (RRMM): A US Subgroup Analysis from MagnetisMM-3. IMS 2025. Abstract PA-046.",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 18,
+     "name": "文本框 17",
+     "bbox": [
+      0.0273,
+      0.8658,
+      0.7585,
+      0.0337
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "BICR：盲法独立中心审查；CI：置信区间；CR：完全缓解；ORR：客观缓解率；PR：部分缓解；sCR，严格意义的完全缓解；TTR，起效时间；VGPR：非常好的部分缓解",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 19,
+     "name": "图片 18",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 26,
+   "layout": "1_标题幻灯片",
+   "shapes": [
+    {
+     "id": 2,
+     "name": "文本框 1",
+     "bbox": [
+      0.0204,
+      0.0155,
+      0.9593,
+      0.1104
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "MagnetisMM-3研究美国亚组：",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "埃纳妥单抗治疗实现持久的缓解，降低给药频率后仍可长期维持缓解",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 6,
+     "name": "Rectangle: Rounded Corners 9",
+     "bbox": [
+      0.0344,
+      0.2258,
+      0.4467,
+      0.5434
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 7,
+     "name": "文本框 6",
+     "bbox": [
+      0.0593,
+      0.2673,
+      0.1855,
+      0.0539
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "结果：缓解持续时间",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 8,
+     "name": "文本框 7",
+     "bbox": [
+      0.0392,
+      0.3477,
+      0.437,
+      0.3312
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "中位缓解持续时间长达40.8个月（95% CI 24.0-NE）且数据仍未成熟",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "降低给药频率（Q2W或Q4W） 仍能长期维持缓解",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "18例转为Q2W的患者中，14例（77.8%）在转换后≥6个月时仍维持缓解状态或缓解程度进一步改善",
+       "level": 1,
+       "bold": true
+      },
+      {
+       "text": "8例转为Q4W的患者中，7例（87.5%）在转换后≥6个月时仍维持缓解状态",
+       "level": 1,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 9,
+     "name": "文本框 8",
+     "bbox": [
+      0.0296,
+      0.8651,
+      0.9407,
+      0.0337
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "CI：置信区间；DOR：缓解持续时间；NE：不可评估；Q2W：每2周1次；Q4W：每4周1次",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 10,
+     "name": "文本框 9",
+     "bbox": [
+      0.0296,
+      0.9004,
+      0.5536,
+      0.0494
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "Ajay Nooka, et al. Efficacy and Safety of Less Frequent Dosing With Elranatamab (ELRA) in Patients With Relapsed or Refractory Multiple Myeloma (RRMM): A US Subgroup Analysis from MagnetisMM-3. IMS 2025. Abstract PA-046.",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 4,
+     "name": "矩形: 圆角 3",
+     "bbox": [
+      0.4936,
+      0.2025,
+      0.472,
+      0.5988
+     ],
+     "group": 20,
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE",
+     "annotates": {
+      "picture_id": 3,
+      "rel_bbox": [
+       -0.0036,
+       -0.1931,
+       1.0094,
+       1.2606
+      ]
+     }
+    },
+    {
+     "id": 5,
+     "name": "矩形: 圆角 4",
+     "bbox": [
+      0.5371,
+      0.2216,
+      0.4031,
+      0.0635
+     ],
+     "group": 20,
+     "kind": "text",
+     "geom": "ROUNDED_RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "缓解持续时间（DOR）",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 3,
+     "name": "图片 2",
+     "bbox": [
+      0.4953,
+      0.2942,
+      0.4676,
+      0.475
+     ],
+     "group": 20,
+     "kind": "picture",
+     "file": "c45f2a503df2.png",
+     "px": [
+      1286,
+      884
+     ],
+     "crop": [
+      0.0266,
+      0.1264,
+      0.0215,
+      0.0823
+     ]
+    },
+    {
+     "id": 12,
+     "name": "矩形 11",
+     "bbox": [
+      0.6971,
+      0.3704,
+      0.0415,
+      0.0303
+     ],
+     "group": 11,
+     "kind": "shape",
+     "geom": "RECTANGLE",
+     "annotates": {
+      "picture_id": 3,
+      "rel_bbox": [
+       0.4316,
+       0.1604,
+       0.0888,
+       0.0638
+      ]
+     }
+    },
+    {
+     "id": 13,
+     "name": "文本框 12",
+     "bbox": [
+      0.7001,
+      0.3716,
+      0.0355,
+      0.0337
+     ],
+     "group": 11,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "概率",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 15,
+     "name": "矩形 14",
+     "bbox": [
+      0.6971,
+      0.3704,
+      0.0415,
+      0.0303
+     ],
+     "group": 14,
+     "kind": "shape",
+     "geom": "RECTANGLE",
+     "annotates": {
+      "picture_id": 3,
+      "rel_bbox": [
+       0.4316,
+       0.1604,
+       0.0888,
+       0.0638
+      ]
+     }
+    },
+    {
+     "id": 16,
+     "name": "文本框 15",
+     "bbox": [
+      0.6967,
+      0.3648,
+      0.0389,
+      0.0359
+     ],
+     "group": 14,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "中位DOR 40.8个月（95% CI 24.0-NE）",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 18,
+     "name": "矩形 17",
+     "bbox": [
+      0.6971,
+      0.3704,
+      0.0415,
+      0.0303
+     ],
+     "group": 17,
+     "kind": "shape",
+     "geom": "RECTANGLE",
+     "annotates": {
+      "picture_id": 3,
+      "rel_bbox": [
+       0.4316,
+       0.1604,
+       0.0888,
+       0.0638
+      ]
+     }
+    },
+    {
+     "id": 19,
+     "name": "文本框 18",
+     "bbox": [
+      0.7001,
+      0.3716,
+      0.0355,
+      0.0337
+     ],
+     "group": 17,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "月",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 22,
+     "name": "图片 21",
+     "bbox": [
+      0.8958,
+      0.0,
+      0.1042,
+      0.1852
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 27,
+   "layout": "3_标题幻灯片",
+   "shapes": [
+    {
+     "id": 4,
+     "name": "文本框 3",
+     "bbox": [
+      0.026,
+      0.0104,
+      0.9444,
+      0.1212
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "MagnetisMM-3研究的回顾性分析：",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "旨在探讨埃纳妥单抗治疗RRMM持续缓解超6个月，停止治疗后的疗效和安全性",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "矩形: 圆角 4",
+     "bbox": [
+      0.0296,
+      0.171,
+      0.3115,
+      0.3136
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 6,
+     "name": "矩形: 圆角 5",
+     "bbox": [
+      0.0394,
+      0.186,
+      0.1905,
+      0.0635
+     ],
+     "kind": "text",
+     "geom": "ROUNDED_RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "研究背景",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 7,
+     "name": "矩形: 圆角 6",
+     "bbox": [
+      0.0296,
+      0.4912,
+      0.3115,
+      0.3016
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 8,
+     "name": "矩形: 圆角 7",
+     "bbox": [
+      0.0394,
+      0.5069,
+      0.1905,
+      0.0635
+     ],
+     "kind": "text",
+     "geom": "ROUNDED_RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "研究目的",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 9,
+     "name": "矩形: 圆角 8",
+     "bbox": [
+      0.351,
+      0.171,
+      0.6212,
+      0.6218
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 10,
+     "name": "矩形: 圆角 9",
+     "bbox": [
+      0.3665,
+      0.1853,
+      0.1905,
+      0.0635
+     ],
+     "kind": "text",
+     "geom": "ROUNDED_RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "研究方法",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 11,
+     "name": "文本框 10",
+     "bbox": [
+      0.0352,
+      0.2574,
+      0.2978,
+      0.1988
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "MagnetisMM-3 (NCT04649359) 是一项多中心、开放标签、单臂、Ⅱ期临床研究，旨在评估埃纳妥单抗在既往未接受或接受过BCMA靶向治疗的复发/难治性多发性骨髓瘤患者中的疗效和安全性",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 12,
+     "name": "文本框 11",
+     "bbox": [
+      0.0352,
+      0.5984,
+      0.2978,
+      0.1611
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "旨在通过对MagnetisMM-3进行事后分析，研究接受埃纳妥单抗治疗缓解维持超过6个月后长期中断或永久停止使用的患者的治疗结果",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 13,
+     "name": "文本框 12",
+     "bbox": [
+      0.351,
+      0.2498,
+      0.6195,
+      0.53
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "MagnetisMM-3研究评估了埃纳妥单抗单药治疗在复发/难治性多发性骨髓瘤患者中的疗效和安全性",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "主要终点为由盲态独立评审委员会 (BICR) 根据IMWG标准评估的ORR",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "安全性评估截止至新抗癌治疗启动、末次给药后90天或研究结束（以最早发生者为准）",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "本事后分析纳入了在整个研究期间任意时间点均未接受连续超过6个月的治疗（长期中断或永久停用埃纳妥单抗），但仍在接受疗效评估（未开始新的抗癌治疗）的患者",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "为确保充分随访并获取所有潜在的疾病进展（PD）事件，无进展生存期（PFS）通过计算机算法推导得出：若患者任一参数显示明确的PD（即，对于可通过SPEP/UPEP测量疾病的患者，由FLC评估PD），则判定出现PD",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "对于疾病可进行SPEP/UPEP评估且未出现PD的患者，末次有效评估以可测量参数作为依据，除非FLC检测于末次可测量评估后>28天进行",
+       "level": 1,
+       "bold": false
+      },
+      {
+       "text": "数据截止日期为2025年9月8日，约为最后一名患者首次给药后45个月",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 14,
+     "name": "文本框 13",
+     "bbox": [
+      0.0296,
+      0.9123,
+      0.7155,
+      0.0494
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "Lesokhin AM et al. Prolonged Elranatamab Treatment Interruption in Patients With Relapsed or Refractory Multiple Myeloma is Feasible: A Retrospective Analysis From MagnetisMM-3. Poster presented at ASH 2025 (Abstract 2269).",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 19,
+     "name": "文本框 18",
+     "bbox": [
+      0.0296,
+      0.8586,
+      0.7387,
+      0.0539
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "BCMA：B细胞成熟抗原；BICR：盲态独立中心评审；FLC：游离轻链；IMWG：国际骨髓瘤工作组；ORR：客观缓解率；PD：疾病进展；SPEP：血清蛋白电泳；UPEP：尿蛋白电泳",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 3,
+     "name": "图片 2",
+     "bbox": [
+      0.9292,
+      0.0,
+      0.0708,
+      0.1316
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 28,
+   "layout": "1_空白",
+   "shapes": [
+    {
+     "id": 4,
+     "name": "文本框 3",
+     "bbox": [
+      0.0304,
+      0.0313,
+      0.9655,
+      0.1032
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "MagnetisMM-3研究的回顾性分析",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "停药或中断后，大多数患者仍能维持深度缓解，最佳ORR率高达100%；且恢复用药后仍然有效",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "Rectangle: Rounded Corners 9",
+     "bbox": [
+      0.0398,
+      0.1663,
+      0.4765,
+      0.6458
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 6,
+     "name": "文本框 5",
+     "bbox": [
+      0.0542,
+      0.4392,
+      0.1287,
+      0.0539
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "结果：缓解率",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 7,
+     "name": "文本框 6",
+     "bbox": [
+      0.0488,
+      0.4945,
+      0.4512,
+      0.319
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "中断或停药时，ORR为86.7%，其中≥CR率达43.3%",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "任何时间点最佳ORR为100%，其中≥CR率高达60.0%",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "2名患者分别在剂量中断约12个月和14个月后重新启动埃纳妥单抗：",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "2名患者在剂量中断时已达到≥CR，数据截止时仍维持≥CR；",
+       "level": 1,
+       "bold": false
+      },
+      {
+       "text": "1名患者出现早期复发迹象（血清和尿免疫固定电泳阳性），恢复治疗后重新转阴",
+       "level": 1,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 11,
+     "name": "文本框 10",
+     "bbox": [
+      0.0307,
+      0.8302,
+      0.5107,
+      0.0942
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "截至数据截止日期，中位治疗持续时间为13.0（范围： 1.2-39.1）个月。中位停药持续时间为17.9（范围：6.5-36.3）个月；中位总体随访时间和中断/停药后的随访时间分别为45.2（范围：9.9–49.9）个月和 21.8（范围：7.5–46.9）个月",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "BOR：最佳缓解率；CI：置信区间；CR：完全缓解；MR：微小缓解；ORR：客观缓解率；PR：部分缓解；sCR：严格意义的完全缓解；SD：疾病稳定；VGPR：非常好的部分缓解",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 10,
+     "name": "矩形: 圆角 9",
+     "bbox": [
+      0.4435,
+      0.2215,
+      0.5287,
+      0.5921
+     ],
+     "group": 16,
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE",
+     "annotates": {
+      "picture_id": 8,
+      "rel_bbox": [
+       -0.0126,
+       -0.1,
+       1.0254,
+       1.0983
+      ]
+     }
+    },
+    {
+     "id": 8,
+     "name": "Picture 8",
+     "bbox": [
+      0.45,
+      0.2754,
+      0.5156,
+      0.5391
+     ],
+     "group": 15,
+     "kind": "picture",
+     "file": "d2d3c0054988.png",
+     "px": [
+      1075,
+      540
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 12,
+     "name": "文本框 11",
+     "bbox": [
+      0.5089,
+      0.7684,
+      0.2366,
+      0.03
+     ],
+     "group": 15,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "治疗中断/停药时",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 13,
+     "name": "文本框 12",
+     "bbox": [
+      0.7078,
+      0.7684,
+      0.2366,
+      0.03
+     ],
+     "group": 15,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "任何时间",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 14,
+     "name": "文本框 13",
+     "bbox": [
+      0.3533,
+      0.5561,
+      0.2287,
+      0.0463
+     ],
+     "group": 15,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "患者，%",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 9,
+     "name": "文本框 8",
+     "bbox": [
+      0.6501,
+      0.228,
+      0.1848,
+      0.0666
+     ],
+     "group": 16,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "最佳缓解率（BOR）",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 2,
+     "name": "文本框 1",
+     "bbox": [
+      0.0304,
+      0.9506,
+      0.5198,
+      0.0494
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "Lesokhin AM et al. Prolonged Elranatamab Treatment Interruption in Patients With Relapsed or Refractory Multiple Myeloma is Feasible: A Retrospective Analysis From MagnetisMM-3. Poster presented at ASH 2025 (Abstract 2269).",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 17,
+     "name": "矩形: 圆角 16",
+     "bbox": [
+      0.4383,
+      0.2016,
+      0.5339,
+      0.6554
+     ],
+     "group": 178,
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE",
+     "annotates": {
+      "picture_id": 8,
+      "rel_bbox": [
+       -0.0227,
+       -0.1369,
+       1.0355,
+       1.2157
+      ]
+     }
+    },
+    {
+     "id": 19,
+     "name": "Freeform: Shape 8",
+     "bbox": [
+      0.0622,
+      0.7747,
+      0.504,
+      0.003
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 20,
+     "name": "Freeform: Shape 9",
+     "bbox": [
+      0.0763,
+      0.7747,
+      0.0017,
+      0.0124
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 21,
+     "name": "Freeform: Shape 10",
+     "bbox": [
+      0.1493,
+      0.7747,
+      0.0017,
+      0.0124
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 22,
+     "name": "Freeform: Shape 11",
+     "bbox": [
+      0.2224,
+      0.7747,
+      0.0017,
+      0.0124
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 23,
+     "name": "Freeform: Shape 12",
+     "bbox": [
+      0.2955,
+      0.7747,
+      0.0017,
+      0.0124
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 24,
+     "name": "Freeform: Shape 13",
+     "bbox": [
+      0.3685,
+      0.7747,
+      0.0017,
+      0.0124
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 25,
+     "name": "Freeform: Shape 14",
+     "bbox": [
+      0.4416,
+      0.7747,
+      0.0017,
+      0.0124
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 26,
+     "name": "Freeform: Shape 16",
+     "bbox": [
+      0.5147,
+      0.7747,
+      0.0017,
+      0.0124
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 27,
+     "name": "Freeform: Shape 17",
+     "bbox": [
+      0.0761,
+      0.2909,
+      0.2495,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 28,
+     "name": "Freeform: Shape 18",
+     "bbox": [
+      0.3256,
+      0.2909,
+      0.1026,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 29,
+     "name": "Freeform: Shape 19",
+     "bbox": [
+      0.0761,
+      0.3067,
+      0.198,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 30,
+     "name": "Freeform: Shape 20",
+     "bbox": [
+      0.2743,
+      0.3067,
+      0.1505,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 31,
+     "name": "Freeform: Shape 21",
+     "bbox": [
+      0.0761,
+      0.3224,
+      0.2162,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 32,
+     "name": "Freeform: Shape 22",
+     "bbox": [
+      0.2925,
+      0.3224,
+      0.128,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 33,
+     "name": "Freeform: Shape 23",
+     "bbox": [
+      0.0761,
+      0.3373,
+      0.2935,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 34,
+     "name": "Freeform: Shape 24",
+     "bbox": [
+      0.3703,
+      0.3374,
+      0.049,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 35,
+     "name": "Freeform: Shape 25",
+     "bbox": [
+      0.0761,
+      0.3528,
+      0.172,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 36,
+     "name": "Freeform: Shape 26",
+     "bbox": [
+      0.2484,
+      0.3528,
+      0.0778,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 37,
+     "name": "Freeform: Shape 27",
+     "bbox": [
+      0.3262,
+      0.3528,
+      0.0402,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 38,
+     "name": "Freeform: Shape 28",
+     "bbox": [
+      0.3668,
+      0.3528,
+      0.0479,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 39,
+     "name": "Freeform: Shape 29",
+     "bbox": [
+      0.0761,
+      0.368,
+      0.1029,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 40,
+     "name": "Freeform: Shape 30",
+     "bbox": [
+      0.1794,
+      0.368,
+      0.1002,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 41,
+     "name": "Freeform: Shape 31",
+     "bbox": [
+      0.2796,
+      0.368,
+      0.0668,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 42,
+     "name": "Freeform: Shape 32",
+     "bbox": [
+      0.3467,
+      0.368,
+      0.0659,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 43,
+     "name": "Freeform: Shape 33",
+     "bbox": [
+      0.0761,
+      0.3838,
+      0.1439,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 44,
+     "name": "Freeform: Shape 34",
+     "bbox": [
+      0.2203,
+      0.3838,
+      0.1911,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 45,
+     "name": "Freeform: Shape 35",
+     "bbox": [
+      0.0761,
+      0.3997,
+      0.2767,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 46,
+     "name": "Freeform: Shape 36",
+     "bbox": [
+      0.3529,
+      0.3997,
+      0.0565,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 47,
+     "name": "Freeform: Shape 37",
+     "bbox": [
+      0.0761,
+      0.4157,
+      0.1384,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 48,
+     "name": "Freeform: Shape 38",
+     "bbox": [
+      0.2151,
+      0.4157,
+      0.1924,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 49,
+     "name": "Freeform: Shape 39",
+     "bbox": [
+      0.0761,
+      0.4316,
+      0.2223,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 50,
+     "name": "Freeform: Shape 40",
+     "bbox": [
+      0.2971,
+      0.4316,
+      0.1076,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 51,
+     "name": "Freeform: Shape 41",
+     "bbox": [
+      0.0761,
+      0.4475,
+      0.0639,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 52,
+     "name": "Freeform: Shape 42",
+     "bbox": [
+      0.14,
+      0.4475,
+      0.2632,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 53,
+     "name": "Freeform: Shape 43",
+     "bbox": [
+      0.0761,
+      0.4638,
+      0.0639,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 54,
+     "name": "Freeform: Shape 44",
+     "bbox": [
+      0.14,
+      0.4638,
+      0.2632,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 55,
+     "name": "Freeform: Shape 45",
+     "bbox": [
+      0.0761,
+      0.4802,
+      0.1459,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 56,
+     "name": "Freeform: Shape 46",
+     "bbox": [
+      0.2223,
+      0.4802,
+      0.1772,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 57,
+     "name": "Freeform: Shape 47",
+     "bbox": [
+      0.0761,
+      0.4966,
+      0.1818,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 58,
+     "name": "Freeform: Shape 48",
+     "bbox": [
+      0.2582,
+      0.4966,
+      0.1312,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 59,
+     "name": "Freeform: Shape 49",
+     "bbox": [
+      0.0761,
+      0.513,
+      0.0936,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 60,
+     "name": "Freeform: Shape 50",
+     "bbox": [
+      0.1697,
+      0.513,
+      0.2087,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 61,
+     "name": "Freeform: Shape 51",
+     "bbox": [
+      0.0761,
+      0.5297,
+      0.1112,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 62,
+     "name": "Freeform: Shape 52",
+     "bbox": [
+      0.1873,
+      0.5297,
+      0.1784,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 63,
+     "name": "Freeform: Shape 53",
+     "bbox": [
+      0.0761,
+      0.5447,
+      0.0177,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 64,
+     "name": "Freeform: Shape 54",
+     "bbox": [
+      0.0939,
+      0.5447,
+      0.2646,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 65,
+     "name": "Freeform: Shape 55",
+     "bbox": [
+      0.0761,
+      0.5604,
+      0.1938,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 66,
+     "name": "Freeform: Shape 56",
+     "bbox": [
+      0.2699,
+      0.5604,
+      0.0542,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 67,
+     "name": "Freeform: Shape 57",
+     "bbox": [
+      0.0761,
+      0.5761,
+      0.0138,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 68,
+     "name": "Freeform: Shape 58",
+     "bbox": [
+      0.0899,
+      0.5761,
+      0.2243,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 69,
+     "name": "Freeform: Shape 59",
+     "bbox": [
+      0.0761,
+      0.5937,
+      0.086,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 70,
+     "name": "Freeform: Shape 60",
+     "bbox": [
+      0.1627,
+      0.5937,
+      0.1425,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 71,
+     "name": "Freeform: Shape 61",
+     "bbox": [
+      0.0761,
+      0.6089,
+      0.0222,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 72,
+     "name": "Freeform: Shape 62",
+     "bbox": [
+      0.0984,
+      0.6089,
+      0.1815,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 73,
+     "name": "Freeform: Shape 63",
+     "bbox": [
+      0.0761,
+      0.6246,
+      0.1287,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 74,
+     "name": "Freeform: Shape 64",
+     "bbox": [
+      0.2047,
+      0.6246,
+      0.0617,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 75,
+     "name": "Freeform: Shape 65",
+     "bbox": [
+      0.0761,
+      0.6403,
+      0.0877,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 76,
+     "name": "Freeform: Shape 66",
+     "bbox": [
+      0.1639,
+      0.6403,
+      0.0922,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 77,
+     "name": "Freeform: Shape 67",
+     "bbox": [
+      0.0761,
+      0.6565,
+      0.0448,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 78,
+     "name": "Freeform: Shape 68",
+     "bbox": [
+      0.1215,
+      0.6565,
+      0.1229,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 79,
+     "name": "Freeform: Shape 69",
+     "bbox": [
+      0.0761,
+      0.6732,
+      0.0097,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 80,
+     "name": "Freeform: Shape 70",
+     "bbox": [
+      0.0858,
+      0.6732,
+      0.1501,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 81,
+     "name": "Freeform: Shape 71",
+     "bbox": [
+      0.0761,
+      0.6899,
+      0.0305,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 82,
+     "name": "Freeform: Shape 72",
+     "bbox": [
+      0.1066,
+      0.6899,
+      0.1243,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 83,
+     "name": "Freeform: Shape 73",
+     "bbox": [
+      0.0761,
+      0.7058,
+      0.0341,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 84,
+     "name": "Freeform: Shape 74",
+     "bbox": [
+      0.1102,
+      0.7058,
+      0.1089,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 85,
+     "name": "Freeform: Shape 75",
+     "bbox": [
+      0.0761,
+      0.7223,
+      0.0404,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 86,
+     "name": "Freeform: Shape 76",
+     "bbox": [
+      0.1166,
+      0.7223,
+      0.0888,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 87,
+     "name": "Freeform: Shape 77",
+     "bbox": [
+      0.0761,
+      0.7386,
+      0.0404,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 88,
+     "name": "Freeform: Shape 78",
+     "bbox": [
+      0.1172,
+      0.7386,
+      0.0852,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 89,
+     "name": "Freeform: Shape 79",
+     "bbox": [
+      0.0761,
+      0.7552,
+      0.0202,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 90,
+     "name": "Freeform: Shape 80",
+     "bbox": [
+      0.0966,
+      0.7552,
+      0.0517,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 91,
+     "name": "TextBox 81",
+     "bbox": [
+      0.0629,
+      0.7897,
+      0.0277,
+      0.0298
+     ],
+     "group": 18,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "0",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 92,
+     "name": "TextBox 82",
+     "bbox": [
+      0.1343,
+      0.7897,
+      0.0277,
+      0.0298
+     ],
+     "group": 18,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "10",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 93,
+     "name": "TextBox 83",
+     "bbox": [
+      0.2075,
+      0.7897,
+      0.0277,
+      0.0298
+     ],
+     "group": 18,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "20",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 94,
+     "name": "TextBox 84",
+     "bbox": [
+      0.2806,
+      0.7897,
+      0.0277,
+      0.0298
+     ],
+     "group": 18,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "30",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 95,
+     "name": "TextBox 85",
+     "bbox": [
+      0.3537,
+      0.7897,
+      0.0277,
+      0.0298
+     ],
+     "group": 18,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "40",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 96,
+     "name": "TextBox 86",
+     "bbox": [
+      0.4268,
+      0.7897,
+      0.0277,
+      0.0298
+     ],
+     "group": 18,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "50",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 97,
+     "name": "TextBox 87",
+     "bbox": [
+      0.4999,
+      0.7897,
+      0.0277,
+      0.0298
+     ],
+     "group": 18,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "60",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 98,
+     "name": "TextBox 88",
+     "bbox": [
+      0.0615,
+      0.8178,
+      0.504,
+      0.0212
+     ],
+     "group": 18,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "自首次给药以来的时间，月",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 99,
+     "name": "TextBox 89",
+     "bbox": [
+      -0.0778,
+      0.5185,
+      0.2721,
+      0.0286
+     ],
+     "group": 18,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "患者",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 100,
+     "name": "Diamond 90",
+     "bbox": [
+      0.1736,
+      0.2898,
+      0.0085,
+      0.0152
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "DIAMOND"
+    },
+    {
+     "id": 101,
+     "name": "Diamond 91",
+     "bbox": [
+      0.1694,
+      0.3062,
+      0.0085,
+      0.0152
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "DIAMOND"
+    },
+    {
+     "id": 102,
+     "name": "Diamond 92",
+     "bbox": [
+      0.1539,
+      0.3214,
+      0.0085,
+      0.0152
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "DIAMOND"
+    },
+    {
+     "id": 103,
+     "name": "Diamond 93",
+     "bbox": [
+      0.146,
+      0.3367,
+      0.0085,
+      0.0152
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "DIAMOND"
+    },
+    {
+     "id": 104,
+     "name": "Diamond 94",
+     "bbox": [
+      0.1352,
+      0.3671,
+      0.0085,
+      0.0152
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "DIAMOND"
+    },
+    {
+     "id": 105,
+     "name": "Diamond 95",
+     "bbox": [
+      0.0933,
+      0.4145,
+      0.0085,
+      0.0152
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "DIAMOND"
+    },
+    {
+     "id": 106,
+     "name": "Diamond 96",
+     "bbox": [
+      0.1253,
+      0.4303,
+      0.0085,
+      0.0152
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "DIAMOND"
+    },
+    {
+     "id": 107,
+     "name": "Diamond 97",
+     "bbox": [
+      0.1805,
+      0.4958,
+      0.0085,
+      0.0152
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "DIAMOND"
+    },
+    {
+     "id": 108,
+     "name": "Diamond 98",
+     "bbox": [
+      0.164,
+      0.511,
+      0.0085,
+      0.0152
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "DIAMOND"
+    },
+    {
+     "id": 109,
+     "name": "Diamond 99",
+     "bbox": [
+      0.1132,
+      0.5759,
+      0.0085,
+      0.0152
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "DIAMOND"
+    },
+    {
+     "id": 110,
+     "name": "Diamond 100",
+     "bbox": [
+      0.2201,
+      0.6069,
+      0.0085,
+      0.0152
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "DIAMOND"
+    },
+    {
+     "id": 111,
+     "name": "Diamond 101",
+     "bbox": [
+      0.1059,
+      0.704,
+      0.0085,
+      0.0152
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "DIAMOND"
+    },
+    {
+     "id": 112,
+     "name": "Oval 102",
+     "bbox": [
+      0.1014,
+      0.3534,
+      0.0063,
+      0.0113
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 113,
+     "name": "Oval 103",
+     "bbox": [
+      0.1953,
+      0.3844,
+      0.0063,
+      0.0113
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 114,
+     "name": "Oval 104",
+     "bbox": [
+      0.1191,
+      0.5452,
+      0.0063,
+      0.0113
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 115,
+     "name": "Oval 105",
+     "bbox": [
+      0.208,
+      0.5609,
+      0.0063,
+      0.0113
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 116,
+     "name": "Oval 106",
+     "bbox": [
+      0.1756,
+      0.6247,
+      0.0063,
+      0.0113
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 117,
+     "name": "Oval 107",
+     "bbox": [
+      0.0868,
+      0.5937,
+      0.0063,
+      0.0113
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 118,
+     "name": "Oval 108",
+     "bbox": [
+      0.2024,
+      0.7227,
+      0.0063,
+      0.0113
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 119,
+     "name": "Oval 109",
+     "bbox": [
+      0.1449,
+      0.7554,
+      0.0063,
+      0.0113
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 120,
+     "name": "Oval 110",
+     "bbox": [
+      0.3391,
+      0.6438,
+      0.0063,
+      0.0113
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 121,
+     "name": "Oval 111",
+     "bbox": [
+      0.2632,
+      0.6251,
+      0.0063,
+      0.0113
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 122,
+     "name": "Oval 112",
+     "bbox": [
+      0.3203,
+      0.5608,
+      0.0063,
+      0.0113
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 123,
+     "name": "Oval 113",
+     "bbox": [
+      0.3838,
+      0.7402,
+      0.0063,
+      0.0113
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 124,
+     "name": "Isosceles Triangle 114",
+     "bbox": [
+      0.1166,
+      0.5281,
+      0.0085,
+      0.013
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "ISOSCELES_TRIANGLE"
+    },
+    {
+     "id": 125,
+     "name": "Isosceles Triangle 115",
+     "bbox": [
+      0.0788,
+      0.6381,
+      0.0085,
+      0.013
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "ISOSCELES_TRIANGLE"
+    },
+    {
+     "id": 126,
+     "name": "Isosceles Triangle 116",
+     "bbox": [
+      0.0999,
+      0.672,
+      0.0085,
+      0.013
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "ISOSCELES_TRIANGLE"
+    },
+    {
+     "id": 127,
+     "name": "Isosceles Triangle 117",
+     "bbox": [
+      0.1222,
+      0.6883,
+      0.0085,
+      0.013
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "ISOSCELES_TRIANGLE"
+    },
+    {
+     "id": 128,
+     "name": "Isosceles Triangle 118",
+     "bbox": [
+      0.1094,
+      0.72,
+      0.0085,
+      0.013
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "ISOSCELES_TRIANGLE"
+    },
+    {
+     "id": 129,
+     "name": "Isosceles Triangle 119",
+     "bbox": [
+      0.0793,
+      0.7536,
+      0.0085,
+      0.013
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "ISOSCELES_TRIANGLE"
+    },
+    {
+     "id": 130,
+     "name": "Isosceles Triangle 120",
+     "bbox": [
+      0.0932,
+      0.4792,
+      0.0085,
+      0.013
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "ISOSCELES_TRIANGLE"
+    },
+    {
+     "id": 131,
+     "name": "Isosceles Triangle 121",
+     "bbox": [
+      0.1417,
+      0.4623,
+      0.0085,
+      0.013
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "ISOSCELES_TRIANGLE"
+    },
+    {
+     "id": 132,
+     "name": "Isosceles Triangle 122",
+     "bbox": [
+      0.0793,
+      0.4465,
+      0.0085,
+      0.013
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "ISOSCELES_TRIANGLE"
+    },
+    {
+     "id": 133,
+     "name": "Isosceles Triangle 123",
+     "bbox": [
+      0.1081,
+      0.3984,
+      0.0085,
+      0.013
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "ISOSCELES_TRIANGLE"
+    },
+    {
+     "id": 134,
+     "name": "Star: 5 Points 124",
+     "bbox": [
+      0.1149,
+      0.6528,
+      0.0085,
+      0.0151
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "STAR_5_POINT"
+    },
+    {
+     "id": 135,
+     "name": "Star: 5 Points 125",
+     "bbox": [
+      0.1127,
+      0.7372,
+      0.0085,
+      0.0151
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "STAR_5_POINT"
+    },
+    {
+     "id": 136,
+     "name": "Flowchart: Merge 126",
+     "bbox": [
+      0.433,
+      0.2884,
+      0.0061,
+      0.0158
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "FLOWCHART_MERGE"
+    },
+    {
+     "id": 137,
+     "name": "Flowchart: Merge 127",
+     "bbox": [
+      0.4296,
+      0.3046,
+      0.0061,
+      0.0158
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "FLOWCHART_MERGE"
+    },
+    {
+     "id": 138,
+     "name": "Flowchart: Merge 128",
+     "bbox": [
+      0.4252,
+      0.3203,
+      0.0061,
+      0.0158
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "FLOWCHART_MERGE"
+    },
+    {
+     "id": 139,
+     "name": "Flowchart: Merge 129",
+     "bbox": [
+      0.4233,
+      0.3355,
+      0.0061,
+      0.0158
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "FLOWCHART_MERGE"
+    },
+    {
+     "id": 140,
+     "name": "Flowchart: Merge 130",
+     "bbox": [
+      0.4195,
+      0.3507,
+      0.0061,
+      0.0158
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "FLOWCHART_MERGE"
+    },
+    {
+     "id": 141,
+     "name": "Flowchart: Merge 131",
+     "bbox": [
+      0.4185,
+      0.366,
+      0.0061,
+      0.0158
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "FLOWCHART_MERGE"
+    },
+    {
+     "id": 142,
+     "name": "Flowchart: Merge 132",
+     "bbox": [
+      0.4169,
+      0.3823,
+      0.0061,
+      0.0158
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "FLOWCHART_MERGE"
+    },
+    {
+     "id": 143,
+     "name": "Flowchart: Merge 133",
+     "bbox": [
+      0.4144,
+      0.3975,
+      0.0061,
+      0.0158
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "FLOWCHART_MERGE"
+    },
+    {
+     "id": 144,
+     "name": "Flowchart: Merge 134",
+     "bbox": [
+      0.4118,
+      0.4139,
+      0.0061,
+      0.0158
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "FLOWCHART_MERGE"
+    },
+    {
+     "id": 145,
+     "name": "Flowchart: Merge 135",
+     "bbox": [
+      0.409,
+      0.4297,
+      0.0061,
+      0.0158
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "FLOWCHART_MERGE"
+    },
+    {
+     "id": 146,
+     "name": "Flowchart: Merge 136",
+     "bbox": [
+      0.408,
+      0.4455,
+      0.0061,
+      0.0158
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "FLOWCHART_MERGE"
+    },
+    {
+     "id": 147,
+     "name": "Flowchart: Merge 137",
+     "bbox": [
+      0.4068,
+      0.4618,
+      0.0061,
+      0.0158
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "FLOWCHART_MERGE"
+    },
+    {
+     "id": 148,
+     "name": "Flowchart: Merge 138",
+     "bbox": [
+      0.4049,
+      0.4782,
+      0.0061,
+      0.0158
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "FLOWCHART_MERGE"
+    },
+    {
+     "id": 149,
+     "name": "Flowchart: Merge 139",
+     "bbox": [
+      0.3938,
+      0.4946,
+      0.0061,
+      0.0158
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "FLOWCHART_MERGE"
+    },
+    {
+     "id": 150,
+     "name": "Flowchart: Merge 140",
+     "bbox": [
+      0.3833,
+      0.5109,
+      0.0061,
+      0.0158
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "FLOWCHART_MERGE"
+    },
+    {
+     "id": 151,
+     "name": "Flowchart: Merge 141",
+     "bbox": [
+      0.3697,
+      0.5273,
+      0.0061,
+      0.0158
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "FLOWCHART_MERGE"
+    },
+    {
+     "id": 152,
+     "name": "Flowchart: Merge 142",
+     "bbox": [
+      0.3189,
+      0.5741,
+      0.0061,
+      0.0158
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "FLOWCHART_MERGE"
+    },
+    {
+     "id": 153,
+     "name": "Freeform: Shape 143",
+     "bbox": [
+      0.3538,
+      0.5456,
+      0.0081,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 154,
+     "name": "Freeform: Shape 144",
+     "bbox": [
+      0.2761,
+      0.6107,
+      0.0081,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 155,
+     "name": "Freeform: Shape 145",
+     "bbox": [
+      0.1983,
+      0.7402,
+      0.0081,
+      0.0108
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 159,
+     "name": "Oval 149",
+     "bbox": [
+      0.901,
+      0.8147,
+      0.0055,
+      0.0098
+     ],
+     "group": 156,
+     "kind": "shape",
+     "geom": "OVAL"
+    },
+    {
+     "id": 160,
+     "name": "Oval 150",
+     "bbox": [
+      0.901,
+      0.7318,
+      0.0055,
+      0.0098
+     ],
+     "group": 156,
+     "kind": "shape",
+     "geom": "OVAL",
+     "annotates": {
+      "picture_id": 8,
+      "rel_bbox": [
+       0.8747,
+       0.8466,
+       0.0107,
+       0.0182
+      ]
+     }
+    },
+    {
+     "id": 161,
+     "name": "Diamond 151",
+     "bbox": [
+      0.9002,
+      0.7444,
+      0.0072,
+      0.0127
+     ],
+     "group": 156,
+     "kind": "shape",
+     "geom": "DIAMOND"
+    },
+    {
+     "id": 162,
+     "name": "Star: 5 Points 152",
+     "bbox": [
+      0.8998,
+      0.7774,
+      0.008,
+      0.0142
+     ],
+     "group": 156,
+     "kind": "shape",
+     "geom": "STAR_5_POINT"
+    },
+    {
+     "id": 163,
+     "name": "Isosceles Triangle 153",
+     "bbox": [
+      0.9002,
+      0.7618,
+      0.0071,
+      0.0108
+     ],
+     "group": 156,
+     "kind": "shape",
+     "geom": "ISOSCELES_TRIANGLE"
+    },
+    {
+     "id": 164,
+     "name": "Freeform: Shape 154",
+     "bbox": [
+      0.9009,
+      0.7978,
+      0.0058,
+      0.0077
+     ],
+     "group": 156,
+     "kind": "shape",
+     "geom": null
+    },
+    {
+     "id": 165,
+     "name": "Flowchart: Merge 155",
+     "bbox": [
+      0.9012,
+      0.829,
+      0.0052,
+      0.0136
+     ],
+     "group": 156,
+     "kind": "shape",
+     "geom": "FLOWCHART_MERGE"
+    },
+    {
+     "id": 166,
+     "name": "Rectangle 156",
+     "bbox": [
+      0.9005,
+      0.8488,
+      0.0055,
+      0.0097
+     ],
+     "group": 156,
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 167,
+     "name": "Rectangle 157",
+     "bbox": [
+      0.9005,
+      0.8668,
+      0.0055,
+      0.0097
+     ],
+     "group": 156,
+     "kind": "shape",
+     "geom": "RECTANGLE"
+    },
+    {
+     "id": 168,
+     "name": "TextBox 158",
+     "bbox": [
+      0.9099,
+      0.7249,
+      0.0171,
+      0.0184
+     ],
+     "group": 156,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "sCR",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 169,
+     "name": "TextBox 159",
+     "bbox": [
+      0.9099,
+      0.742,
+      0.0171,
+      0.0184
+     ],
+     "group": 156,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "CR",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 170,
+     "name": "TextBox 160",
+     "bbox": [
+      0.9099,
+      0.7592,
+      0.0228,
+      0.0184
+     ],
+     "group": 156,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "VGPR",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 171,
+     "name": "TextBox 161",
+     "bbox": [
+      0.9099,
+      0.7763,
+      0.0228,
+      0.0184
+     ],
+     "group": 156,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "PR",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 172,
+     "name": "TextBox 162",
+     "bbox": [
+      0.9099,
+      0.7935,
+      0.0531,
+      0.0184
+     ],
+     "group": 156,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "明确的PD",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 173,
+     "name": "TextBox 163",
+     "bbox": [
+      0.9099,
+      0.8106,
+      0.021,
+      0.0184
+     ],
+     "group": 156,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "死亡",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 174,
+     "name": "TextBox 164",
+     "bbox": [
+      0.9099,
+      0.8278,
+      0.0692,
+      0.0185
+     ],
+     "group": 156,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "持续进行，无事件发生",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 175,
+     "name": "TextBox 165",
+     "bbox": [
+      0.9099,
+      0.8449,
+      0.0506,
+      0.0184
+     ],
+     "group": 156,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "正在接受治疗",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 176,
+     "name": "TextBox 166",
+     "bbox": [
+      0.9099,
+      0.862,
+      0.0506,
+      0.0184
+     ],
+     "group": 156,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "停止治疗",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 157,
+     "name": "Right Bracket 147",
+     "bbox": [
+      0.4339,
+      0.5204,
+      0.0064,
+      0.0956
+     ],
+     "group": 18,
+     "kind": "shape",
+     "geom": "RIGHT_BRACKET"
+    },
+    {
+     "id": 158,
+     "name": "TextBox 148",
+     "bbox": [
+      0.3781,
+      0.542,
+      0.0472,
+      0.0523
+     ],
+     "group": 18,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "最佳总体缓解",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 177,
+     "name": "文本框 176",
+     "bbox": [
+      0.6311,
+      0.2184,
+      0.2352,
+      0.0672
+     ],
+     "group": 178,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "治疗和缓解的持续时间",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 3,
+     "name": "文本框 2",
+     "bbox": [
+      0.0488,
+      0.2059,
+      0.4706,
+      0.2212
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "在MagnetisMM-3纳入的187名患者中，30名患者符合事后分析纳入标准",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "中位年龄68.5岁（范围：52-84），50.0%为女性，66.7%为白人",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "患者中位既往治疗线数为5（范围：2-14）；100%三重难治，33.3%五重难治",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 180,
+     "name": "图片 179",
+     "bbox": [
+      0.927,
+      0.0,
+      0.073,
+      0.1345
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 29,
+   "layout": "1_空白",
+   "shapes": [
+    {
+     "id": 19,
+     "name": "矩形 18",
+     "bbox": [
+      0.3375,
+      0.2237,
+      0.64,
+      0.5441
+     ],
+     "kind": "shape",
+     "geom": "RECTANGLE",
+     "annotates": {
+      "picture_id": 3,
+      "rel_bbox": [
+       -0.0337,
+       -0.2408,
+       1.0464,
+       1.2881
+      ]
+     }
+    },
+    {
+     "id": 2,
+     "name": "TextBox 5",
+     "bbox": [
+      0.6166,
+      0.2437,
+      0.1042,
+      0.0539
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "PFS和OS",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 4,
+     "name": "Rectangle: Rounded Corners 9",
+     "bbox": [
+      0.0278,
+      0.2237,
+      0.3017,
+      0.5441
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE"
+    },
+    {
+     "id": 5,
+     "name": "文本框 4",
+     "bbox": [
+      0.042,
+      0.3215,
+      0.2719,
+      0.0539
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "结果：PFS和OS",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 6,
+     "name": "文本框 5",
+     "bbox": [
+      0.0326,
+      0.4045,
+      0.2922,
+      0.2795
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "中位PFS尚未达到（95% CI：NE-NE），45个月无事件生存率为 72.7%（95% CI：50.7–86.1",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "中位OS尚未达到（ 95% CI：NE-NE ），45个月生存率为76.6%（95% CI：54.8–88.9）",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Picture 8",
+     "bbox": [
+      0.3581,
+      0.3254,
+      0.6116,
+      0.4224
+     ],
+     "group": 15,
+     "kind": "picture",
+     "file": "b4008a33270a.png",
+     "px": [
+      1794,
+      697
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 7,
+     "name": "文本框 6",
+     "bbox": [
+      0.4151,
+      0.6847,
+      0.2366,
+      0.03
+     ],
+     "group": 15,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "月",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 8,
+     "name": "文本框 7",
+     "bbox": [
+      0.7086,
+      0.6847,
+      0.2366,
+      0.03
+     ],
+     "group": 15,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "月",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 9,
+     "name": "文本框 8",
+     "bbox": [
+      0.3112,
+      0.5005,
+      0.1244,
+      0.0305
+     ],
+     "group": 15,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "概率，%",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 10,
+     "name": "文本框 9",
+     "bbox": [
+      0.6136,
+      0.5005,
+      0.1244,
+      0.0305
+     ],
+     "group": 15,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "概率，%",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 11,
+     "name": "文本框 10",
+     "bbox": [
+      0.8556,
+      0.425,
+      0.0703,
+      0.0361
+     ],
+     "group": 15,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "45个月概率",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 12,
+     "name": "文本框 11",
+     "bbox": [
+      0.5488,
+      0.443,
+      0.0703,
+      0.0361
+     ],
+     "group": 15,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "45个月概率",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 13,
+     "name": "文本框 12",
+     "bbox": [
+      0.6578,
+      0.693,
+      0.0449,
+      0.0436
+     ],
+     "group": 15,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "存在",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "风险人数",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 14,
+     "name": "文本框 13",
+     "bbox": [
+      0.3544,
+      0.693,
+      0.0394,
+      0.0436
+     ],
+     "group": 15,
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "存在",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "风险人数",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 16,
+     "name": "文本框 15",
+     "bbox": [
+      0.0278,
+      0.8328,
+      0.856,
+      0.0337
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "CI：置信区间；NE：不可评估；OS：总生存期；PFS：无进展生存期",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 17,
+     "name": "文本框 16",
+     "bbox": [
+      0.0278,
+      0.028,
+      0.9444,
+      0.1032
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "MagnetisMM-3研究的回顾性分析：",
+       "level": 0,
+       "bold": true
+      },
+      {
+       "text": "持续缓解超6个月停止治疗后，仍可实现长期生存获益：45个月PFS和OS率均高于70%",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 18,
+     "name": "文本框 17",
+     "bbox": [
+      0.0271,
+      0.8949,
+      0.5954,
+      0.0494
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "Lesokhin AM et al. Prolonged Elranatamab Treatment Interruption in Patients With Relapsed or Refractory Multiple Myeloma is Feasible: A Retrospective Analysis From MagnetisMM-3. Poster presented at ASH 2025 (Abstract 2269).",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 30,
+   "layout": "1_标题幻灯片",
+   "shapes": [
+    {
+     "id": 3,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0447,
+      0.0397,
+      0.5208,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "目录",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "内容占位符 2",
+     "bbox": [
+      0.0688,
+      0.2662,
+      0.8625,
+      0.6345
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "病例汇报",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "文献回顾",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "总结",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 31,
+   "layout": "1_标题幻灯片",
+   "shapes": [
+    {
+     "id": 3,
+     "name": "文本框 2",
+     "bbox": [
+      0.0843,
+      0.2287,
+      0.8047,
+      0.8077
+     ],
+     "kind": "text",
+     "geom": null,
+     "paragraphs": [
+      {
+       "text": "埃纳妥单抗可用于BCMA CAR-T 治疗后复发的患者，对于BCMA高表达的患者仍有显著疗效。",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "埃纳妥单抗治疗实现持久的缓解，降低给药频率后仍可长期维持缓解。",
+       "level": 0,
+       "bold": false
+      },
+      {
+       "text": "停药或中断后，大多数患者仍能维持深度缓解，最佳ORR率高达100%；且恢复用药后仍然有效。",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    },
+    {
+     "id": 4,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.0332,
+      0.0529,
+      0.5208,
+      0.0741
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "总结",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  },
+  {
+   "slide": 32,
+   "layout": "",
+   "shapes": [
+    {
+     "id": 11,
+     "name": "图片 10",
+     "bbox": [
+      0.1792,
+      -0.071,
+      0.6416,
+      1.0941
+     ],
+     "kind": "picture",
+     "file": "847170826837.jpg",
+     "px": [
+      200,
+      200
+     ],
+     "crop": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "id": 3,
+     "name": "AutoShape 3",
+     "bbox": [
+      0.3125,
+      0.3852,
+      0.375,
+      0.1296
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "感谢聆听",
+       "level": 0,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": 4,
+     "name": "AutoShape 4",
+     "bbox": [
+      0.425,
+      0.5481,
+      0.15,
+      0.0056
+     ],
+     "kind": "shape",
+     "geom": "ROUNDED_RECTANGLE",
+     "annotates": {
+      "picture_id": 11,
+      "rel_bbox": [
+       0.3831,
+       0.5659,
+       0.2338,
+       0.0051
+      ]
+     }
+    },
+    {
+     "id": 5,
+     "name": "AutoShape 5",
+     "bbox": [
+      0.3125,
+      0.5889,
+      0.375,
+      0.0593
+     ],
+     "kind": "text",
+     "geom": "RECTANGLE",
+     "paragraphs": [
+      {
+       "text": "苏州大学附属第一医院",
+       "level": 0,
+       "bold": false
+      }
+     ]
+    }
+   ],
+   "notes": "",
+   "animation_nodes": 0
+  }
+ ]
+}
