@@ -1,0 +1,295 @@
+{
+ "id": "T4",
+ "question": "BCMA CAR-T 治疗的效果和不良反应如何？",
+ "content_version": "d61d7ae723d6",
+ "reviewed_by": null,
+ "steps": [
+  {
+   "id": "T4.s1",
+   "seq": 0,
+   "camera": "b.events",
+   "title": "预处理与回输",
+   "actions": [
+    {
+     "op": "timelineSweep",
+     "targets": [
+      "ev.fc",
+      "ev.cart"
+     ]
+    },
+    {
+     "op": "phaseHighlight",
+     "targets": [
+      "ph.cart"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T4.s1.c0",
+     "type": "quote",
+     "text": "FC 方案预处理，氟达拉滨 30mg/m² d1-3，CTX 500mg/m² d1-3",
+     "cite": [
+      "u.11.8.p0"
+     ],
+     "verbatim": true
+    },
+    {
+     "claim": "T4.s1.c1",
+     "type": "quote",
+     "text": "回输 BCMA CAR-T 细胞，回输过程顺利，无明显不适",
+     "cite": [
+      "u.11.11.p0"
+     ],
+     "verbatim": true
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T4.s2",
+   "seq": 1,
+   "camera": "b.s.il6",
+   "title": "细胞因子释放综合征",
+   "actions": [
+    {
+     "op": "chartDraw",
+     "targets": [
+      "b.s.il6"
+     ]
+    },
+    {
+     "op": "pointPulse",
+     "targets": [
+      "f.il6.06"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T4.s2.c0",
+     "type": "value",
+     "text": "IL-6 峰值 967.49，出现在 2024.05.24",
+     "cite": [
+      "f.il6.06",
+      "f.il6.06"
+     ],
+     "flags": [
+      "image_reading"
+     ]
+    },
+    {
+     "claim": "T4.s2.c1",
+     "type": "quote",
+     "text": "出现反复发热，伴IL-6升高，考虑CRS反应2级，予以托珠单抗治疗后体温控制，指标回落",
+     "cite": [
+      "u.11.15.p0"
+     ],
+     "verbatim": true
+    },
+    {
+     "claim": "T4.s2.c2",
+     "type": "value",
+     "text": "原稿记录的 CRS 日期：2025.05.23（原文如此；疑为 2024.05.23，未确认）",
+     "cite": [
+      "f.crs.grade"
+     ],
+     "flags": [
+      "pending_review"
+     ]
+    }
+   ],
+   "callouts": [
+    {
+     "target": "f.il6.06",
+     "claim": "T4.s2.c0"
+    }
+   ]
+  },
+  {
+   "id": "T4.s3",
+   "seq": 2,
+   "camera": "b.s.ngs",
+   "title": "骨髓 MRD 转阴",
+   "actions": [
+    {
+     "op": "chartDraw",
+     "targets": [
+      "b.s.ngs"
+     ]
+    },
+    {
+     "op": "pointPulse",
+     "targets": [
+      "f.ngs.img.3"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T4.s3.c0",
+     "type": "value",
+     "text": "2024.06.20 BM-NGS-MRD 阴性；BM-NGF-MRD <2.8×10⁻⁵",
+     "cite": [
+      "f.ngs.2024-06-20.text",
+      "f.ngs.2024-06-20.text",
+      "f.ngf.2024-06-20"
+     ],
+     "flags": []
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T4.s4",
+   "seq": 3,
+   "camera": "b.s.suv_scapula",
+   "title": "右肩胛区病灶代谢（同一部位、同一显像方式）",
+   "actions": [
+    {
+     "op": "chartDraw",
+     "targets": [
+      "b.s.suv_scapula"
+     ]
+    },
+    {
+     "op": "pointPulse",
+     "targets": [
+      "f.suv.scapula.2024-05-08",
+      "f.suv.scapula.2024-06-20"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T4.s4.c0",
+     "type": "change",
+     "text": "右侧肩胛骨后方肌肉 SUVmax：9.39 → 2.1（下降 77.6%）",
+     "cite": [
+      "f.suv.scapula.2024-05-08",
+      "f.suv.scapula.2024-06-20"
+     ],
+     "flags": []
+    }
+   ],
+   "callouts": [
+    {
+     "target": "f.suv.scapula.2024-06-20",
+     "claim": "T4.s4.c0"
+    }
+   ]
+  },
+  {
+   "id": "T4.s5",
+   "seq": 4,
+   "camera": "b.events",
+   "title": "深度缓解",
+   "actions": [
+    {
+     "op": "pulse",
+     "targets": [
+      "ev.scr"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T4.s5.c0",
+     "type": "value",
+     "text": "2024.12.10 M蛋白 阴性，疗效评估 sCR",
+     "cite": [
+      "f.resp.scr",
+      "f.mprot.2024-12-10",
+      "f.resp.scr"
+     ],
+     "flags": []
+    }
+   ],
+   "callouts": []
+  }
+ ],
+ "checks": [
+  {
+   "claim": "T4.s1.c0",
+   "type": "quote",
+   "cite": [
+    "u.11.8.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T4.s1.c1",
+   "type": "quote",
+   "cite": [
+    "u.11.11.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T4.s2.c0",
+   "type": "value",
+   "cite": [
+    "f.il6.06",
+    "f.il6.06"
+   ],
+   "flags": [
+    "image_reading"
+   ],
+   "result": "pass"
+  },
+  {
+   "claim": "T4.s2.c1",
+   "type": "quote",
+   "cite": [
+    "u.11.15.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T4.s2.c2",
+   "type": "value",
+   "cite": [
+    "f.crs.grade"
+   ],
+   "flags": [
+    "pending_review"
+   ],
+   "result": "pass"
+  },
+  {
+   "claim": "T4.s3.c0",
+   "type": "value",
+   "cite": [
+    "f.ngs.2024-06-20.text",
+    "f.ngs.2024-06-20.text",
+    "f.ngf.2024-06-20"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T4.s4.c0",
+   "type": "change",
+   "cite": [
+    "f.suv.scapula.2024-05-08",
+    "f.suv.scapula.2024-06-20"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T4.s5.c0",
+   "type": "value",
+   "cite": [
+    "f.resp.scr",
+    "f.mprot.2024-12-10",
+    "f.resp.scr"
+   ],
+   "flags": [],
+   "result": "pass"
+  }
+ ]
+}

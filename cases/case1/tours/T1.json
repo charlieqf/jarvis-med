@@ -1,0 +1,372 @@
+{
+ "id": "T1",
+ "question": "这位患者 3 年多的治疗历程是怎样的？",
+ "content_version": "d61d7ae723d6",
+ "reviewed_by": null,
+ "steps": [
+  {
+   "id": "T1.s1",
+   "seq": 0,
+   "camera": "b.patient",
+   "title": "病例概要",
+   "actions": [
+    {
+     "op": "spotlight",
+     "targets": [
+      "b.patient"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T1.s1.c0",
+     "type": "quote",
+     "text": "确诊多发性骨髓瘤3年余，多线治疗后复发难治，伴髓外浸润",
+     "cite": [
+      "u.4.5.p0"
+     ],
+     "verbatim": true
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T1.s2",
+   "seq": 1,
+   "camera": "b.events",
+   "title": "一线治疗与自体移植",
+   "actions": [
+    {
+     "op": "timelineSweep",
+     "targets": [
+      "ev.vrd_start",
+      "ev.asct"
+     ]
+    },
+    {
+     "op": "phaseHighlight",
+     "targets": [
+      "ph.vrd"
+     ]
+    },
+    {
+     "op": "phaseHighlight",
+     "targets": [
+      "ph.asct"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T1.s2.c0",
+     "type": "value",
+     "text": "2023.06.29 启动 VRD，诱导后疗效评估 VGPR；2023.12.19 行自体造血干细胞移植",
+     "cite": [
+      "d.2023-06-29",
+      "f.resp.vgpr",
+      "d.2023-12-19",
+      "u.8.9.p0",
+      "u.8.15.p0"
+     ],
+     "flags": []
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T1.s3",
+   "seq": 2,
+   "camera": "b.events",
+   "title": "巩固期间髓外进展",
+   "actions": [
+    {
+     "op": "timelineSweep",
+     "targets": [
+      "ev.post_asct",
+      "ev.emd1_biopsy"
+     ]
+    },
+    {
+     "op": "phaseHighlight",
+     "targets": [
+      "ph.kd"
+     ]
+    },
+    {
+     "op": "pulse",
+     "targets": [
+      "ev.emd1"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T1.s3.c0",
+     "type": "quote",
+     "text": "移植后M蛋白未转阴，有升高趋势",
+     "cite": [
+      "u.9.5.p0"
+     ],
+     "verbatim": true
+    },
+    {
+     "claim": "T1.s3.c1",
+     "type": "quote",
+     "text": "KD巩固过程中出现右肩疼痛明显，查体可见质硬肿块，约5×7cm",
+     "cite": [
+      "u.10.5.p0"
+     ],
+     "verbatim": true
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T1.s4",
+   "seq": 3,
+   "camera": "b.events",
+   "title": "BCMA CAR-T 与深度缓解",
+   "actions": [
+    {
+     "op": "timelineSweep",
+     "targets": [
+      "ev.fc",
+      "ev.scr"
+     ]
+    },
+    {
+     "op": "phaseHighlight",
+     "targets": [
+      "ph.cart"
+     ]
+    },
+    {
+     "op": "pulse",
+     "targets": [
+      "ev.scr"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T1.s4.c0",
+     "type": "value",
+     "text": "2024.05.17 回输 BCMA CAR-T；2024.12.10 疗效评估 sCR",
+     "cite": [
+      "d.2024-05-17",
+      "f.resp.scr",
+      "f.resp.scr",
+      "u.11.11.p0"
+     ],
+     "flags": []
+    },
+    {
+     "claim": "T1.s4.c1",
+     "type": "quote",
+     "text": "CART后予以泊马度胺维持治疗",
+     "cite": [
+      "u.12.25.p0"
+     ],
+     "verbatim": true
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T1.s5",
+   "seq": 4,
+   "camera": "b.events",
+   "title": "两次髓外复发",
+   "actions": [
+    {
+     "op": "timelineSweep",
+     "targets": [
+      "ev.emd2",
+      "ev.emd3"
+     ]
+    },
+    {
+     "op": "phaseHighlight",
+     "targets": [
+      "ph.rt"
+     ]
+    },
+    {
+     "op": "pulse",
+     "targets": [
+      "ev.emd2",
+      "ev.emd3"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T1.s5.c0",
+     "type": "quote",
+     "text": "CAR-T 深度缓解约一年后出现髓外复发",
+     "cite": [
+      "u.13.5.p0"
+     ],
+     "verbatim": true
+    },
+    {
+     "claim": "T1.s5.c1",
+     "type": "quote",
+     "text": "髓外复发放疗后再次进展，累及皮下软组织与腹股沟淋巴结",
+     "cite": [
+      "u.15.5.p0"
+     ],
+     "verbatim": true
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T1.s6",
+   "seq": 5,
+   "camera": "b.events",
+   "title": "埃纳妥单抗联合兆珂速与最新评估",
+   "actions": [
+    {
+     "op": "timelineSweep",
+     "targets": [
+      "ev.dara",
+      "ev.adm_0822"
+     ]
+    },
+    {
+     "op": "phaseHighlight",
+     "targets": [
+      "ph.elra"
+     ]
+    },
+    {
+     "op": "pulse",
+     "targets": [
+      "ev.adm_0822"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T1.s6.c0",
+     "type": "quote",
+     "text": "2026年1月启用埃纳妥单抗联合兆珂速方案",
+     "cite": [
+      "u.21.11.p0"
+     ],
+     "verbatim": true
+    },
+    {
+     "claim": "T1.s6.c1",
+     "type": "quote",
+     "text": "2026.08 评估：免疫固定电泳全阴性，M蛋白 <0.1%，sFLC κ/λ 0.42",
+     "cite": [
+      "u.21.11.p1"
+     ],
+     "verbatim": true
+    }
+   ],
+   "callouts": []
+  }
+ ],
+ "checks": [
+  {
+   "claim": "T1.s1.c0",
+   "type": "quote",
+   "cite": [
+    "u.4.5.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T1.s2.c0",
+   "type": "value",
+   "cite": [
+    "d.2023-06-29",
+    "f.resp.vgpr",
+    "d.2023-12-19",
+    "u.8.9.p0",
+    "u.8.15.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T1.s3.c0",
+   "type": "quote",
+   "cite": [
+    "u.9.5.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T1.s3.c1",
+   "type": "quote",
+   "cite": [
+    "u.10.5.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T1.s4.c0",
+   "type": "value",
+   "cite": [
+    "d.2024-05-17",
+    "f.resp.scr",
+    "f.resp.scr",
+    "u.11.11.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T1.s4.c1",
+   "type": "quote",
+   "cite": [
+    "u.12.25.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T1.s5.c0",
+   "type": "quote",
+   "cite": [
+    "u.13.5.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T1.s5.c1",
+   "type": "quote",
+   "cite": [
+    "u.15.5.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T1.s6.c0",
+   "type": "quote",
+   "cite": [
+    "u.21.11.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T1.s6.c1",
+   "type": "quote",
+   "cite": [
+    "u.21.11.p1"
+   ],
+   "flags": [],
+   "result": "pass"
+  }
+ ]
+}

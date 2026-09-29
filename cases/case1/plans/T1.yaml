@@ -1,0 +1,65 @@
+id: T1
+question: 这位患者 3 年多的治疗历程是怎样的？
+reviewed_by: null   # 待人工审核
+steps:
+  - id: s1
+    title: 病例概要
+    camera: b.patient
+    actions:
+      - {op: spotlight, targets: [b.patient]}
+    claims:
+      - {type: quote, fact: u.4.5.p0}
+
+  - id: s2
+    title: 一线治疗与自体移植
+    camera: b.events
+    actions:
+      - {op: timelineSweep, targets: [ev.vrd_start, ev.asct]}
+      - {op: phaseHighlight, targets: [ph.vrd]}
+      - {op: phaseHighlight, targets: [ph.asct]}
+    claims:
+      - {type: value, template: "{{d.2023-06-29}} 启动 VRD，诱导后疗效评估 {{f.resp.vgpr}}；{{d.2023-12-19}} 行自体造血干细胞移植", cite: [u.8.9.p0, u.8.15.p0]}
+
+  - id: s3
+    title: 巩固期间髓外进展
+    camera: b.events
+    actions:
+      - {op: timelineSweep, targets: [ev.post_asct, ev.emd1_biopsy]}
+      - {op: phaseHighlight, targets: [ph.kd]}
+      - {op: pulse, targets: [ev.emd1]}
+    claims:
+      - {type: quote, fact: u.9.5.p0}
+      - {type: quote, fact: u.10.5.p0}
+
+  - id: s4
+    title: BCMA CAR-T 与深度缓解
+    camera: b.events
+    actions:
+      - {op: timelineSweep, targets: [ev.fc, ev.scr]}
+      - {op: phaseHighlight, targets: [ph.cart]}
+      - {op: pulse, targets: [ev.scr]}
+    claims:
+      - {type: value, template: "{{d.2024-05-17}} 回输 BCMA CAR-T；{{date:f.resp.scr}} 疗效评估 {{f.resp.scr}}", cite: [u.11.11.p0]}
+      - {type: quote, fact: u.12.25.p0}
+
+  - id: s5
+    title: 两次髓外复发
+    camera: b.events
+    actions:
+      - {op: timelineSweep, targets: [ev.emd2, ev.emd3]}
+      - {op: phaseHighlight, targets: [ph.rt]}
+      - {op: pulse, targets: [ev.emd2, ev.emd3]}
+    claims:
+      - {type: quote, fact: u.13.5.p0}
+      - {type: quote, fact: u.15.5.p0}
+
+  - id: s6
+    title: 埃纳妥单抗联合兆珂速与最新评估
+    camera: b.events
+    actions:
+      - {op: timelineSweep, targets: [ev.dara, ev.adm_0822]}
+      - {op: phaseHighlight, targets: [ph.elra]}
+      - {op: pulse, targets: [ev.adm_0822]}
+    claims:
+      - {type: quote, fact: u.21.11.p0}
+      - {type: quote, fact: u.21.11.p1}

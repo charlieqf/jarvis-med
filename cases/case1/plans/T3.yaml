@@ -1,0 +1,61 @@
+id: T3
+question: 患者有哪些高危因素？髓外病灶出现在哪些部位？
+reviewed_by: null   # 待人工审核
+steps:
+  - id: s1
+    title: 高危细胞遗传学（两次检测来自不同样本，仅并列）
+    camera: b.molecular
+    actions:
+      - {op: compareRow, targets: [b.mol.1q21]}
+      - {op: compareRow, targets: [b.mol.fgfr3]}
+    claims:
+      - {type: value, template: "1q21 扩增：初诊样本 {{f.fish.1q21.2023-06}}；左上臂组织 {{f.fish.1q21.2026-01}}，{{f.fish.1q21cn.2026-01}}"}
+      - {type: value, template: "FGFR3/IgH 重排：初诊样本 {{f.fish.fgfr3.2023-06}}；左上臂组织 {{f.fish.fgfr3.2026-01}}"}
+
+  - id: s2
+    title: 第一次髓外进展
+    camera: b.img.emd1_ct
+    actions:
+      - {op: imageOpen, targets: [b.img.emd1_ct]}
+      - {op: drawHotspot, targets: [b.img.emd1_ct.h1]}
+    claims:
+      - {type: value, template: "{{date:f.site.emd1}} {{f.site.emd1}}（SUVmax {{f.suv.scapula.2024-05-08}}）"}
+    callouts:
+      - {target: b.img.emd1_ct.h1, claim: 0}
+
+  - id: s3
+    title: 第二次：左乳与右髂骨
+    camera: b.img.emd2_breast
+    actions:
+      - {op: imageOpen, targets: [b.img.emd2_breast]}
+      - {op: drawHotspot, targets: [b.img.emd2_breast.h1]}
+      - {op: imageOpen, targets: [b.img.emd2_iliac]}
+      - {op: drawHotspot, targets: [b.img.emd2_iliac.h1]}
+    claims:
+      - {type: value, template: "{{date:f.site.emd2.breast}} {{f.site.emd2.breast}}、{{f.site.emd2.iliac}}（CXCR4 显像）"}
+
+  - id: s4
+    title: 第三次：皮下与腹股沟
+    camera: b.img.emd3_arm
+    actions:
+      - {op: bodyMap, targets: [b.img.emd3_arm.h1, b.img.emd3_abd.h1, b.img.emd3_groin.h1]}
+      - {op: drawHotspot, targets: [b.img.emd3_arm.h1, b.img.emd3_abd.h1, b.img.emd3_groin.h1]}
+    claims:
+      - {type: value, template: "{{date:f.site.emd3.abd}} {{f.site.emd3.abd}}、{{f.site.emd3.groin}}、{{f.site.emd3.arm}}"}
+
+  - id: s5
+    title: 左上臂组织病理
+    camera: b.ihc
+    actions:
+      - {op: cellZoom, targets: [f.ihc.ki67.2026-01]}
+      - {op: spotlight, targets: [b.path_heading]}
+    claims:
+      - {type: value, template: "左上臂组织：浆细胞瘤（{{f.path.blastoid}}），Ki-67 {{f.ihc.ki67.2026-01}}"}
+
+  - id: s6
+    title: 原稿列出的高危因素
+    camera: b.case_summary
+    actions:
+      - {op: spotlight, targets: [b.sum.features]}
+    claims:
+      - {type: quote, fact: u.21.7.p1}

@@ -1,0 +1,314 @@
+{
+ "id": "T2",
+ "question": "M 蛋白、游离轻链和 MRD 在各治疗阶段是怎么变化的？",
+ "content_version": "d61d7ae723d6",
+ "reviewed_by": null,
+ "steps": [
+  {
+   "id": "T2.s1",
+   "seq": 0,
+   "camera": "b.s.mprot",
+   "title": "M 蛋白：诱导后明显下降",
+   "actions": [
+    {
+     "op": "chartDraw",
+     "targets": [
+      "b.s.mprot"
+     ]
+    },
+    {
+     "op": "pointPulse",
+     "targets": [
+      "f.mprot.2023-06",
+      "f.mprot.2023-10"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T2.s1.c0",
+     "type": "change",
+     "text": "M蛋白：初诊 → VRD 诱导后 36.8918g/L → 0.9352g/L（下降 97.5%）",
+     "cite": [
+      "f.mprot.2023-06",
+      "f.mprot.2023-10",
+      "u.8.9.p0"
+     ],
+     "flags": []
+    }
+   ],
+   "callouts": [
+    {
+     "target": "f.mprot.2023-10",
+     "claim": "T2.s1.c0"
+    }
+   ]
+  },
+  {
+   "id": "T2.s2",
+   "seq": 1,
+   "camera": "b.s.mprot",
+   "title": "移植后回升，髓外进展时达到高点",
+   "actions": [
+    {
+     "op": "pointPulse",
+     "targets": [
+      "f.mprot.2024-03-07",
+      "f.mprot.2024-05-08"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T2.s2.c0",
+     "type": "value",
+     "text": "2024.03.07 M蛋白 3.7996g/L；2024.05.08 升至 10.6412g/L",
+     "cite": [
+      "f.mprot.2024-03-07",
+      "f.mprot.2024-03-07",
+      "f.mprot.2024-05-08",
+      "f.mprot.2024-05-08"
+     ],
+     "flags": []
+    }
+   ],
+   "callouts": [
+    {
+     "target": "f.mprot.2024-05-08",
+     "claim": "T2.s2.c0"
+    }
+   ]
+  },
+  {
+   "id": "T2.s3",
+   "seq": 2,
+   "camera": "b.s.mprot",
+   "title": "CAR-T 后转阴",
+   "actions": [
+    {
+     "op": "pointPulse",
+     "targets": [
+      "f.mprot.2024-06-20",
+      "f.mprot.2024-09-11",
+      "f.mprot.2024-12-10"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T2.s3.c0",
+     "type": "value",
+     "text": "2024.12.10 M蛋白 阴性，疗效评估 sCR",
+     "cite": [
+      "f.mprot.2024-12-10",
+      "f.mprot.2024-12-10",
+      "f.resp.scr"
+     ],
+     "flags": []
+    }
+   ],
+   "callouts": [
+    {
+     "target": "f.mprot.2024-12-10",
+     "claim": "T2.s3.c0"
+    }
+   ]
+  },
+  {
+   "id": "T2.s4",
+   "seq": 3,
+   "camera": "b.s.flcl",
+   "title": "受累轻链 λ",
+   "actions": [
+    {
+     "op": "chartDraw",
+     "targets": [
+      "b.s.flcl"
+     ]
+    },
+    {
+     "op": "pointPulse",
+     "targets": [
+      "f.flcl.2024-05-08",
+      "f.flcl.2024-06-20"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T2.s4.c0",
+     "type": "change",
+     "text": "血清游离轻链 λ：CAR-T 前后 87.82mg/L → 1.33mg/L（下降 98.5%）",
+     "cite": [
+      "f.flcl.2024-05-08",
+      "f.flcl.2024-06-20",
+      "u.11.11.p0"
+     ],
+     "flags": []
+    }
+   ],
+   "callouts": [
+    {
+     "target": "f.flcl.2024-06-20",
+     "claim": "T2.s4.c0"
+    }
+   ]
+  },
+  {
+   "id": "T2.s5",
+   "seq": 4,
+   "camera": "b.s.ngs",
+   "title": "骨髓 NGS-MRD",
+   "actions": [
+    {
+     "op": "chartDraw",
+     "targets": [
+      "b.s.ngs"
+     ]
+    },
+    {
+     "op": "pointPulse",
+     "targets": [
+      "f.ngs.img.base",
+      "f.ngs.img.3"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T2.s5.c0",
+     "type": "value",
+     "text": "NGS-MRD：基线 1.46×10⁻¹；2024.06.19 起为 未检出（原文 0）",
+     "cite": [
+      "f.ngs.img.base",
+      "f.ngs.img.3",
+      "f.ngs.img.3",
+      "u.8.9.p4"
+     ],
+     "flags": [
+      "image_reading"
+     ]
+    }
+   ],
+   "callouts": [
+    {
+     "target": "f.ngs.img.3",
+     "claim": "T2.s5.c0"
+    }
+   ]
+  },
+  {
+   "id": "T2.s6",
+   "seq": 5,
+   "camera": "b.s.spep_pct",
+   "title": "2026 年的 M 蛋白（百分比报告）",
+   "actions": [
+    {
+     "op": "chartDraw",
+     "targets": [
+      "b.s.spep_pct"
+     ]
+    },
+    {
+     "op": "pointPulse",
+     "targets": [
+      "f.spep_pct.2026-01",
+      "f.spep_pct.2026-08-24"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T2.s6.c0",
+     "type": "value",
+     "text": "血清蛋白电泳 M蛋白：2026.01 3.6%；2026.08.24 <0.1%，免疫固定电泳 全阴性",
+     "cite": [
+      "f.spep_pct.2026-01",
+      "f.spep_pct.2026-01",
+      "f.spep_pct.2026-08-24",
+      "f.spep_pct.2026-08-24",
+      "f.ife.2026-08-24",
+      "u.20.12.r2c0"
+     ],
+     "flags": []
+    }
+   ],
+   "callouts": []
+  }
+ ],
+ "checks": [
+  {
+   "claim": "T2.s1.c0",
+   "type": "change",
+   "cite": [
+    "f.mprot.2023-06",
+    "f.mprot.2023-10",
+    "u.8.9.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T2.s2.c0",
+   "type": "value",
+   "cite": [
+    "f.mprot.2024-03-07",
+    "f.mprot.2024-03-07",
+    "f.mprot.2024-05-08",
+    "f.mprot.2024-05-08"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T2.s3.c0",
+   "type": "value",
+   "cite": [
+    "f.mprot.2024-12-10",
+    "f.mprot.2024-12-10",
+    "f.resp.scr"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T2.s4.c0",
+   "type": "change",
+   "cite": [
+    "f.flcl.2024-05-08",
+    "f.flcl.2024-06-20",
+    "u.11.11.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T2.s5.c0",
+   "type": "value",
+   "cite": [
+    "f.ngs.img.base",
+    "f.ngs.img.3",
+    "f.ngs.img.3",
+    "u.8.9.p4"
+   ],
+   "flags": [
+    "image_reading"
+   ],
+   "result": "pass"
+  },
+  {
+   "claim": "T2.s6.c0",
+   "type": "value",
+   "cite": [
+    "f.spep_pct.2026-01",
+    "f.spep_pct.2026-01",
+    "f.spep_pct.2026-08-24",
+    "f.spep_pct.2026-08-24",
+    "f.ife.2026-08-24",
+    "u.20.12.r2c0"
+   ],
+   "flags": [],
+   "result": "pass"
+  }
+ ]
+}

@@ -64,7 +64,7 @@ def locate(text, needle, occ=0):
 # ---------------------------------------------------------------- values
 
 NUM_RE = re.compile(
-    r"^(?P<cmp><=|>=|≤|≥|<|>)?\s*"
+    r"^(?P<approx>约)?(?P<cmp><=|>=|≤|≥|<|>)?\s*"
     r"(?P<mant>\d+(?:\.\d+)?)"
     r"(?:[eE](?P<exp0>[-+]?\d+))?"
     r"(?:\s*[*×xX]\s*10\s*(?:\^\{(?P<exp1>[-−]?\d+)\}|(?P<exp2>[-−]\d+)|(?P<exp3>[⁻⁰¹²³⁴⁵⁶⁷⁸⁹]+)))?"
@@ -92,6 +92,8 @@ def parse_value(raw, kind):
         if kind == "bound" and not cmp_:
             raise ValueError(f"bound value lacks comparator: {raw!r}")
         out = {"kind": kind, "value": round(value, 12), "unit": unit}
+        if m["approx"]:
+            out["approx"] = True
         if cmp_:
             out["comparator"] = cmp_
         return out
@@ -114,9 +116,10 @@ def compare_parsed(authored, reparsed):
                 diffs.append((k, a, v))
         elif a != v:
             diffs.append((k, a, v))
-    # authored may not add a comparator the raw text does not have
-    if "comparator" in authored and "comparator" not in reparsed:
-        diffs.append(("comparator", authored["comparator"], None))
+    # authored may not add a comparator / approximation the raw text does not have
+    for k in ("comparator", "approx"):
+        if k in authored and k not in reparsed:
+            diffs.append((k, authored[k], None))
     return diffs
 
 

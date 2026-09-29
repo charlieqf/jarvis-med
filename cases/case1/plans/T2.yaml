@@ -1,0 +1,65 @@
+id: T2
+question: M 蛋白、游离轻链和 MRD 在各治疗阶段是怎么变化的？
+reviewed_by: null   # 待人工审核
+steps:
+  - id: s1
+    title: M 蛋白：诱导后明显下降
+    camera: b.s.mprot
+    actions:
+      - {op: chartDraw, targets: [b.s.mprot]}
+      - {op: pointPulse, targets: [f.mprot.2023-06, f.mprot.2023-10]}
+    claims:
+      - {type: change, template: "M蛋白：初诊 → VRD 诱导后 {{change:f.mprot.2023-06,f.mprot.2023-10}}", cite: [u.8.9.p0]}
+    callouts:
+      - {target: f.mprot.2023-10, claim: 0}
+
+  - id: s2
+    title: 移植后回升，髓外进展时达到高点
+    camera: b.s.mprot
+    actions:
+      - {op: pointPulse, targets: [f.mprot.2024-03-07, f.mprot.2024-05-08]}
+    claims:
+      - {type: value, template: "{{date:f.mprot.2024-03-07}} M蛋白 {{f.mprot.2024-03-07}}；{{date:f.mprot.2024-05-08}} 升至 {{f.mprot.2024-05-08}}"}
+    callouts:
+      - {target: f.mprot.2024-05-08, claim: 0}
+
+  - id: s3
+    title: CAR-T 后转阴
+    camera: b.s.mprot
+    actions:
+      - {op: pointPulse, targets: [f.mprot.2024-06-20, f.mprot.2024-09-11, f.mprot.2024-12-10]}
+    claims:
+      - {type: value, template: "{{date:f.mprot.2024-12-10}} M蛋白 {{f.mprot.2024-12-10}}，疗效评估 {{f.resp.scr}}"}
+    callouts:
+      - {target: f.mprot.2024-12-10, claim: 0}
+
+  - id: s4
+    title: 受累轻链 λ
+    camera: b.s.flcl
+    actions:
+      - {op: chartDraw, targets: [b.s.flcl]}
+      - {op: pointPulse, targets: [f.flcl.2024-05-08, f.flcl.2024-06-20]}
+    claims:
+      - {type: change, template: "血清游离轻链 λ：CAR-T 前后 {{change:f.flcl.2024-05-08,f.flcl.2024-06-20}}", cite: [u.11.11.p0]}
+    callouts:
+      - {target: f.flcl.2024-06-20, claim: 0}
+
+  - id: s5
+    title: 骨髓 NGS-MRD
+    camera: b.s.ngs
+    actions:
+      - {op: chartDraw, targets: [b.s.ngs]}
+      - {op: pointPulse, targets: [f.ngs.img.base, f.ngs.img.3]}
+    claims:
+      - {type: value, template: "NGS-MRD：基线 {{f.ngs.img.base}}；{{date:f.ngs.img.3}} 起为 {{f.ngs.img.3}}", cite: [u.8.9.p4]}
+    callouts:
+      - {target: f.ngs.img.3, claim: 0}
+
+  - id: s6
+    title: 2026 年的 M 蛋白（百分比报告）
+    camera: b.s.spep_pct
+    actions:
+      - {op: chartDraw, targets: [b.s.spep_pct]}
+      - {op: pointPulse, targets: [f.spep_pct.2026-01, f.spep_pct.2026-08-24]}
+    claims:
+      - {type: value, template: "血清蛋白电泳 M蛋白：{{date:f.spep_pct.2026-01}} {{f.spep_pct.2026-01}}；{{date:f.spep_pct.2026-08-24}} {{f.spep_pct.2026-08-24}}，免疫固定电泳 {{f.ife.2026-08-24}}", cite: [u.20.12.r2c0]}

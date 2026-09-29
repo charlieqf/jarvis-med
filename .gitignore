@@ -7,3 +7,5 @@ dist/
 .DS_Store
 ~$*.pptx
 .pytest_cache/
+web/public/cases/
+node_modules/

@@ -1,0 +1,379 @@
+{
+ "id": "T5",
+ "question": "为什么选择埃纳妥单抗联合兆珂速？目前疗效如何？文献证据是什么？",
+ "content_version": "d61d7ae723d6",
+ "reviewed_by": null,
+ "steps": [
+  {
+   "id": "T5.s1",
+   "seq": 0,
+   "camera": "b.regimen",
+   "title": "原稿给出的选择依据",
+   "actions": [
+    {
+     "op": "spotlight",
+     "targets": [
+      "b.regimen"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T5.s1.c0",
+     "type": "quote",
+     "text": "埃纳妥单抗　BCMA×CD3 双特异性抗体　→　靶向 BCMA",
+     "cite": [
+      "u.18.24.p0"
+     ],
+     "verbatim": true
+    },
+    {
+     "claim": "T5.s1.c1",
+     "type": "quote",
+     "text": "兆珂速　达雷妥尤单抗（抗CD38单抗）　→　靶向 CD38",
+     "cite": [
+      "u.18.24.p1"
+     ],
+     "verbatim": true
+    },
+    {
+     "claim": "T5.s1.c2",
+     "type": "quote",
+     "text": "此后每月1次维持用药 · 本患者 BCMA 高表达（93.8%）为靶向治疗提供依据",
+     "cite": [
+      "u.18.25.p0"
+     ],
+     "verbatim": true
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T5.s2",
+   "seq": 1,
+   "camera": "b.ihc",
+   "title": "BCMA 表达",
+   "actions": [
+    {
+     "op": "cellZoom",
+     "targets": [
+      "f.bcma.2026-01"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T5.s2.c0",
+     "type": "value",
+     "text": "左上臂组织 BCMA 93.8%",
+     "cite": [
+      "f.bcma.2026-01"
+     ],
+     "flags": []
+    },
+    {
+     "claim": "T5.s2.c1",
+     "type": "quote",
+     "text": "本病例 BCMA 高表达（93.8%），提示 BCMA 靶向治疗具有良好的应用潜力",
+     "cite": [
+      "u.21.16.p0"
+     ],
+     "verbatim": true
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T5.s3",
+   "seq": 2,
+   "camera": "b.events",
+   "title": "给药经过与安全性",
+   "actions": [
+    {
+     "op": "timelineSweep",
+     "targets": [
+      "ev.dara",
+      "ev.dose_0603"
+     ]
+    },
+    {
+     "op": "pulse",
+     "targets": [
+      "ev.cmv1",
+      "ev.cmv2"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T5.s3.c0",
+     "type": "quote",
+     "text": "2026年1月起，针对难治复发伴髓外浸润 MM 启动双药联合治疗",
+     "cite": [
+      "u.18.5.p0"
+     ],
+     "verbatim": true
+    },
+    {
+     "claim": "T5.s3.c1",
+     "type": "quote",
+     "text": "CMV 再激活经规范化管理控制，方案整体可耐受",
+     "cite": [
+      "u.21.11.p2"
+     ],
+     "verbatim": true
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T5.s4",
+   "seq": 3,
+   "camera": "b.report_0824",
+   "title": "最新评估",
+   "actions": [
+    {
+     "op": "rowFlash",
+     "targets": [
+      "b.report_0824.r1",
+      "b.report_0824.r2",
+      "b.report_0824.r3"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T5.s4.c0",
+     "type": "value",
+     "text": "2026.08.24 免疫固定电泳 全阴性；M蛋白 <0.1%；κ/λ 0.42",
+     "cite": [
+      "f.ife.2026-08-24",
+      "f.ife.2026-08-24",
+      "f.spep_pct.2026-08-24",
+      "f.flcr.2026-08-24"
+     ],
+     "flags": []
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T5.s5",
+   "seq": 4,
+   "camera": "b.lit.us.orr_chart",
+   "title": "文献：MagnetisMM-3 美国亚组",
+   "actions": [
+    {
+     "op": "chartDraw",
+     "targets": [
+      "b.lit.us.orr_chart"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T5.s5.c0",
+     "type": "quote",
+     "text": "BICR评估的ORR为66.0%（95% CI 50.7-79.1）",
+     "cite": [
+      "u.25.15.p0"
+     ],
+     "verbatim": true
+    },
+    {
+     "claim": "T5.s5.c1",
+     "type": "quote",
+     "text": "中位缓解持续时间长达40.8个月（95% CI 24.0-NE）且数据仍未成熟",
+     "cite": [
+      "u.26.8.p0"
+     ],
+     "verbatim": true
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T5.s6",
+   "seq": 5,
+   "camera": "b.lit.int.response",
+   "title": "文献：停药或中断后的结果",
+   "actions": [
+    {
+     "op": "spotlight",
+     "targets": [
+      "b.lit.int.response"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T5.s6.c0",
+     "type": "quote",
+     "text": "任何时间点最佳ORR为100%，其中≥CR率高达60.0%",
+     "cite": [
+      "u.28.7.p1"
+     ],
+     "verbatim": true
+    },
+    {
+     "claim": "T5.s6.c1",
+     "type": "quote",
+     "text": "持续缓解超6个月停止治疗后，仍可实现长期生存获益：45个月PFS和OS率均高于70%",
+     "cite": [
+      "u.29.17.p1"
+     ],
+     "verbatim": true
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T5.s7",
+   "seq": 6,
+   "camera": "b.conclusion",
+   "title": "原稿总结",
+   "actions": [
+    {
+     "op": "spotlight",
+     "targets": [
+      "b.conclusion"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T5.s7.c0",
+     "type": "quote",
+     "text": "埃纳妥单抗可用于BCMA CAR-T 治疗后复发的患者，对于BCMA高表达的患者仍有显著疗效。",
+     "cite": [
+      "u.31.3.p0"
+     ],
+     "verbatim": true
+    }
+   ],
+   "callouts": []
+  }
+ ],
+ "checks": [
+  {
+   "claim": "T5.s1.c0",
+   "type": "quote",
+   "cite": [
+    "u.18.24.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T5.s1.c1",
+   "type": "quote",
+   "cite": [
+    "u.18.24.p1"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T5.s1.c2",
+   "type": "quote",
+   "cite": [
+    "u.18.25.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T5.s2.c0",
+   "type": "value",
+   "cite": [
+    "f.bcma.2026-01"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T5.s2.c1",
+   "type": "quote",
+   "cite": [
+    "u.21.16.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T5.s3.c0",
+   "type": "quote",
+   "cite": [
+    "u.18.5.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T5.s3.c1",
+   "type": "quote",
+   "cite": [
+    "u.21.11.p2"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T5.s4.c0",
+   "type": "value",
+   "cite": [
+    "f.ife.2026-08-24",
+    "f.ife.2026-08-24",
+    "f.spep_pct.2026-08-24",
+    "f.flcr.2026-08-24"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T5.s5.c0",
+   "type": "quote",
+   "cite": [
+    "u.25.15.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T5.s5.c1",
+   "type": "quote",
+   "cite": [
+    "u.26.8.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T5.s6.c0",
+   "type": "quote",
+   "cite": [
+    "u.28.7.p1"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T5.s6.c1",
+   "type": "quote",
+   "cite": [
+    "u.29.17.p1"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T5.s7.c0",
+   "type": "quote",
+   "cite": [
+    "u.31.3.p0"
+   ],
+   "flags": [],
+   "result": "pass"
+  }
+ ]
+}

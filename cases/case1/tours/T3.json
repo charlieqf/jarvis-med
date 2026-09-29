@@ -1,0 +1,311 @@
+{
+ "id": "T3",
+ "question": "患者有哪些高危因素？髓外病灶出现在哪些部位？",
+ "content_version": "d61d7ae723d6",
+ "reviewed_by": null,
+ "steps": [
+  {
+   "id": "T3.s1",
+   "seq": 0,
+   "camera": "b.molecular",
+   "title": "高危细胞遗传学（两次检测来自不同样本，仅并列）",
+   "actions": [
+    {
+     "op": "compareRow",
+     "targets": [
+      "b.mol.1q21"
+     ]
+    },
+    {
+     "op": "compareRow",
+     "targets": [
+      "b.mol.fgfr3"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T3.s1.c0",
+     "type": "value",
+     "text": "1q21 扩增：初诊样本 8%；左上臂组织 90%，4个拷贝数",
+     "cite": [
+      "f.fish.1q21.2023-06",
+      "f.fish.1q21.2026-01",
+      "f.fish.1q21cn.2026-01"
+     ],
+     "flags": []
+    },
+    {
+     "claim": "T3.s1.c1",
+     "type": "value",
+     "text": "FGFR3/IgH 重排：初诊样本 20%；左上臂组织 90%",
+     "cite": [
+      "f.fish.fgfr3.2023-06",
+      "f.fish.fgfr3.2026-01"
+     ],
+     "flags": []
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T3.s2",
+   "seq": 1,
+   "camera": "b.img.emd1_ct",
+   "title": "第一次髓外进展",
+   "actions": [
+    {
+     "op": "imageOpen",
+     "targets": [
+      "b.img.emd1_ct"
+     ]
+    },
+    {
+     "op": "drawHotspot",
+     "targets": [
+      "b.img.emd1_ct.h1"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T3.s2.c0",
+     "type": "value",
+     "text": "2024.05.08 右侧肩胛骨后方肌肉肿块（SUVmax 9.39）",
+     "cite": [
+      "f.site.emd1",
+      "f.site.emd1",
+      "f.suv.scapula.2024-05-08"
+     ],
+     "flags": []
+    }
+   ],
+   "callouts": [
+    {
+     "target": "b.img.emd1_ct.h1",
+     "claim": "T3.s2.c0"
+    }
+   ]
+  },
+  {
+   "id": "T3.s3",
+   "seq": 2,
+   "camera": "b.img.emd2_breast",
+   "title": "第二次：左乳与右髂骨",
+   "actions": [
+    {
+     "op": "imageOpen",
+     "targets": [
+      "b.img.emd2_breast"
+     ]
+    },
+    {
+     "op": "drawHotspot",
+     "targets": [
+      "b.img.emd2_breast.h1"
+     ]
+    },
+    {
+     "op": "imageOpen",
+     "targets": [
+      "b.img.emd2_iliac"
+     ]
+    },
+    {
+     "op": "drawHotspot",
+     "targets": [
+      "b.img.emd2_iliac.h1"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T3.s3.c0",
+     "type": "value",
+     "text": "2025.09 左侧乳腺内侧象限软组织肿物、髂骨右翼（CXCR4 显像）",
+     "cite": [
+      "f.site.emd2.breast",
+      "f.site.emd2.breast",
+      "f.site.emd2.iliac"
+     ],
+     "flags": []
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T3.s4",
+   "seq": 3,
+   "camera": "b.img.emd3_arm",
+   "title": "第三次：皮下与腹股沟",
+   "actions": [
+    {
+     "op": "bodyMap",
+     "targets": [
+      "b.img.emd3_arm.h1",
+      "b.img.emd3_abd.h1",
+      "b.img.emd3_groin.h1"
+     ]
+    },
+    {
+     "op": "drawHotspot",
+     "targets": [
+      "b.img.emd3_arm.h1",
+      "b.img.emd3_abd.h1",
+      "b.img.emd3_groin.h1"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T3.s4.c0",
+     "type": "value",
+     "text": "2026.01 右侧腹皮下肿物、右侧腹股沟肿大淋巴结、左侧上臂皮下异常回声",
+     "cite": [
+      "f.site.emd3.abd",
+      "f.site.emd3.abd",
+      "f.site.emd3.groin",
+      "f.site.emd3.arm"
+     ],
+     "flags": []
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T3.s5",
+   "seq": 4,
+   "camera": "b.ihc",
+   "title": "左上臂组织病理",
+   "actions": [
+    {
+     "op": "cellZoom",
+     "targets": [
+      "f.ihc.ki67.2026-01"
+     ]
+    },
+    {
+     "op": "spotlight",
+     "targets": [
+      "b.path_heading"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T3.s5.c0",
+     "type": "value",
+     "text": "左上臂组织：浆细胞瘤（母细胞样），Ki-67 约90%",
+     "cite": [
+      "f.path.blastoid",
+      "f.ihc.ki67.2026-01"
+     ],
+     "flags": []
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "id": "T3.s6",
+   "seq": 5,
+   "camera": "b.case_summary",
+   "title": "原稿列出的高危因素",
+   "actions": [
+    {
+     "op": "spotlight",
+     "targets": [
+      "b.sum.features"
+     ]
+    }
+   ],
+   "say": [
+    {
+     "claim": "T3.s6.c0",
+     "type": "quote",
+     "text": "高危因素：1q21扩增、FGFR3/IgH重排、母细胞样形态、多次髓外浸润",
+     "cite": [
+      "u.21.7.p1"
+     ],
+     "verbatim": true
+    }
+   ],
+   "callouts": []
+  }
+ ],
+ "checks": [
+  {
+   "claim": "T3.s1.c0",
+   "type": "value",
+   "cite": [
+    "f.fish.1q21.2023-06",
+    "f.fish.1q21.2026-01",
+    "f.fish.1q21cn.2026-01"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T3.s1.c1",
+   "type": "value",
+   "cite": [
+    "f.fish.fgfr3.2023-06",
+    "f.fish.fgfr3.2026-01"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T3.s2.c0",
+   "type": "value",
+   "cite": [
+    "f.site.emd1",
+    "f.site.emd1",
+    "f.suv.scapula.2024-05-08"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T3.s3.c0",
+   "type": "value",
+   "cite": [
+    "f.site.emd2.breast",
+    "f.site.emd2.breast",
+    "f.site.emd2.iliac"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T3.s4.c0",
+   "type": "value",
+   "cite": [
+    "f.site.emd3.abd",
+    "f.site.emd3.abd",
+    "f.site.emd3.groin",
+    "f.site.emd3.arm"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T3.s5.c0",
+   "type": "value",
+   "cite": [
+    "f.path.blastoid",
+    "f.ihc.ki67.2026-01"
+   ],
+   "flags": [],
+   "result": "pass"
+  },
+  {
+   "claim": "T3.s6.c0",
+   "type": "quote",
+   "cite": [
+    "u.21.7.p1"
+   ],
+   "flags": [],
+   "result": "pass"
+  }
+ ]
+}

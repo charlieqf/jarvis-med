@@ -1,0 +1,54 @@
+id: T4
+question: BCMA CAR-T 治疗的效果和不良反应如何？
+reviewed_by: null   # 待人工审核
+steps:
+  - id: s1
+    title: 预处理与回输
+    camera: b.events
+    actions:
+      - {op: timelineSweep, targets: [ev.fc, ev.cart]}
+      - {op: phaseHighlight, targets: [ph.cart]}
+    claims:
+      - {type: quote, fact: u.11.8.p0}
+      - {type: quote, fact: u.11.11.p0}
+
+  - id: s2
+    title: 细胞因子释放综合征
+    camera: b.s.il6
+    actions:
+      - {op: chartDraw, targets: [b.s.il6]}
+      - {op: pointPulse, targets: [f.il6.06]}
+    claims:
+      - {type: value, template: "IL-6 峰值 {{f.il6.06}}，出现在 {{date:f.il6.06}}"}
+      - {type: quote, fact: u.11.15.p0}
+      - {type: value, template: "原稿记录的 CRS 日期：{{date:f.crs.grade}}"}
+    callouts:
+      - {target: f.il6.06, claim: 0}
+
+  - id: s3
+    title: 骨髓 MRD 转阴
+    camera: b.s.ngs
+    actions:
+      - {op: chartDraw, targets: [b.s.ngs]}
+      - {op: pointPulse, targets: [f.ngs.img.3]}
+    claims:
+      - {type: value, template: "{{date:f.ngs.2024-06-20.text}} BM-NGS-MRD {{f.ngs.2024-06-20.text}}；BM-NGF-MRD {{f.ngf.2024-06-20}}"}
+
+  - id: s4
+    title: 右肩胛区病灶代谢（同一部位、同一显像方式）
+    camera: b.s.suv_scapula
+    actions:
+      - {op: chartDraw, targets: [b.s.suv_scapula]}
+      - {op: pointPulse, targets: [f.suv.scapula.2024-05-08, f.suv.scapula.2024-06-20]}
+    claims:
+      - {type: change, template: "右侧肩胛骨后方肌肉 SUVmax：{{change:f.suv.scapula.2024-05-08,f.suv.scapula.2024-06-20}}"}
+    callouts:
+      - {target: f.suv.scapula.2024-06-20, claim: 0}
+
+  - id: s5
+    title: 深度缓解
+    camera: b.events
+    actions:
+      - {op: pulse, targets: [ev.scr]}
+    claims:
+      - {type: value, template: "{{date:f.resp.scr}} M蛋白 {{f.mprot.2024-12-10}}，疗效评估 {{f.resp.scr}}"}

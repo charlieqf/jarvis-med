@@ -13615,7 +13615,7 @@
   },
   {
    "id": "f.ihc.cmyc.2026-01",
-   "raw": "70%",
+   "raw": "约70%",
    "kind": "exact",
    "date": "d.2026-01.path",
    "attrs": {
@@ -13632,15 +13632,16 @@
     "col": 1,
     "unit": "u.17.8.r3c1",
     "span": [
-     4,
+     3,
      7
     ]
    },
-   "ctx": "（+）约",
+   "ctx": "（+）",
    "parsed": {
     "kind": "exact",
     "value": 70.0,
     "unit": "%",
+    "approx": true,
     "canonical": {
      "value": 0.7,
      "unit": "fraction"
@@ -13649,7 +13650,7 @@
   },
   {
    "id": "f.ihc.ki67.2026-01",
-   "raw": "90%",
+   "raw": "约90%",
    "kind": "exact",
    "date": "d.2026-01.path",
    "attrs": {
@@ -13666,15 +13667,16 @@
     "col": 1,
     "unit": "u.17.8.r4c1",
     "span": [
-     4,
+     3,
      7
     ]
    },
-   "ctx": "（+）约",
+   "ctx": "（+）",
    "parsed": {
     "kind": "exact",
     "value": 90.0,
     "unit": "%",
+    "approx": true,
     "canonical": {
      "value": 0.9,
      "unit": "fraction"

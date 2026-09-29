@@ -244,8 +244,8 @@ facts:
      attrs: {analyte: 克隆性浆细胞比例, method: NGF, specimen: 骨髓}, implied_unit: {unit: fraction, basis: "MM免疫分型克隆比例"}}
 
   # ---------------- slide 17: pathology 2026.01
-  - {id: f.ihc.cmyc.2026-01, in: u.17.8.r3c1, raw: "70%", kind: exact, date: d.2026-01.path, attrs: {analyte: C-myc阳性率, method: IHC, specimen: 左上臂组织}}
-  - {id: f.ihc.ki67.2026-01, in: u.17.8.r4c1, raw: "90%", kind: exact, date: d.2026-01.path, attrs: {analyte: Ki-67阳性率, method: IHC, specimen: 左上臂组织}}
+  - {id: f.ihc.cmyc.2026-01, in: u.17.8.r3c1, raw: "约70%", kind: exact, date: d.2026-01.path, attrs: {analyte: C-myc阳性率, method: IHC, specimen: 左上臂组织}}
+  - {id: f.ihc.ki67.2026-01, in: u.17.8.r4c1, raw: "约90%", kind: exact, date: d.2026-01.path, attrs: {analyte: Ki-67阳性率, method: IHC, specimen: 左上臂组织}}
   - {id: f.bcma.2026-01, in: u.17.8.r5c1, raw: "93.8%", kind: exact, date: d.2026-01.path, attrs: {analyte: BCMA阳性率, method: IHC, specimen: 左上臂组织}}
   - {id: f.fish.13q14.2026-01, in: u.17.12.r1c1, raw: "90%", kind: exact, date: d.2026-01.path, attrs: {analyte: 13q14缺失, method: FISH, specimen: 左上臂组织}}
   - {id: f.fish.rb1.2026-01, in: u.17.12.r2c1, raw: "90%", kind: exact, date: d.2026-01.path, attrs: {analyte: Rb1缺失, method: FISH, specimen: 左上臂组织}}

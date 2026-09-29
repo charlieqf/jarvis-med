@@ -1,0 +1,66 @@
+id: T5
+question: 为什么选择埃纳妥单抗联合兆珂速？目前疗效如何？文献证据是什么？
+reviewed_by: null   # 待人工审核
+steps:
+  - id: s1
+    title: 原稿给出的选择依据
+    camera: b.regimen
+    actions:
+      - {op: spotlight, targets: [b.regimen]}
+    claims:
+      - {type: quote, fact: u.18.24.p0}
+      - {type: quote, fact: u.18.24.p1}
+      - {type: quote, fact: u.18.25.p0}
+
+  - id: s2
+    title: BCMA 表达
+    camera: b.ihc
+    actions:
+      - {op: cellZoom, targets: [f.bcma.2026-01]}
+    claims:
+      - {type: value, template: "左上臂组织 BCMA {{f.bcma.2026-01}}"}
+      - {type: quote, fact: u.21.16.p0}
+
+  - id: s3
+    title: 给药经过与安全性
+    camera: b.events
+    actions:
+      - {op: timelineSweep, targets: [ev.dara, ev.dose_0603]}
+      - {op: pulse, targets: [ev.cmv1, ev.cmv2]}
+    claims:
+      - {type: quote, fact: u.18.5.p0}
+      - {type: quote, fact: u.21.11.p2}
+
+  - id: s4
+    title: 最新评估
+    camera: b.report_0824
+    actions:
+      - {op: rowFlash, targets: [b.report_0824.r1, b.report_0824.r2, b.report_0824.r3]}
+    claims:
+      - {type: value, template: "{{date:f.ife.2026-08-24}} 免疫固定电泳 {{f.ife.2026-08-24}}；M蛋白 {{f.spep_pct.2026-08-24}}；κ/λ {{f.flcr.2026-08-24}}"}
+
+  - id: s5
+    title: 文献：MagnetisMM-3 美国亚组
+    camera: b.lit.us.orr_chart
+    actions:
+      - {op: chartDraw, targets: [b.lit.us.orr_chart]}
+    claims:
+      - {type: quote, fact: u.25.15.p0}
+      - {type: quote, fact: u.26.8.p0}
+
+  - id: s6
+    title: 文献：停药或中断后的结果
+    camera: b.lit.int.response
+    actions:
+      - {op: spotlight, targets: [b.lit.int.response]}
+    claims:
+      - {type: quote, fact: u.28.7.p1}
+      - {type: quote, fact: u.29.17.p1}
+
+  - id: s7
+    title: 原稿总结
+    camera: b.conclusion
+    actions:
+      - {op: spotlight, targets: [b.conclusion]}
+    claims:
+      - {type: quote, fact: u.31.3.p0}
